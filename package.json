@@ -1,0 +1,22 @@
+{
+  "name": "digital4_tech",
+  "version": "1.0.0",
+  "description": "Decidimos hacer un e-commerce de venta de computadoras, accesorios para pc y lo mas importante o el enfoque es el armado personalizado de pc.\r ### Público objetivo:\r Esta destinado para el público gammer.\r ### Listado de al menos 5 referentes:\r Lo primero que hicimos fue buscar paginas similares al rubro para observar como ofrecer los productos y sacar nuestras ideas mas importantes:\r iBUYPOWER®: Gaming Computers, \r Custom PCs and Laptops: iBUYPOWER®\r ORIGIN PC | Custom Computers | Gaming Desktops and Laptops\r https://www.malditohard.com.ar/\r Compra Gamer\r Mexx | Gamers Por Naturaleza",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julichavarria/Digital4_Tech.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julichavarria/Digital4_Tech/issues"
+  },
+  "homepage": "https://github.com/julichavarria/Digital4_Tech#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
