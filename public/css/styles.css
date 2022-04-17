@@ -2,6 +2,106 @@
     overflow-x: hidden;
     box-sizing: border-box;  
     font-family: 'Oswald', sans-serif; 
+}
+body{
+    font-family: 'Oswald';
 } /*Magenta: #e31a52
 Gris claro: #808080
 background footer: #131313*/
+.main-header{
+    background-color: black ;
+    padding: 20px;
+    display: flex;
+	flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:  space-around;
+    align-items: center;
+
+}
+
+.main-header img{
+    display: flex;
+	flex-wrap: wrap;
+}
+.logo{
+    width: 120px;
+}
+.menu-burger img{
+    width: 40px;
+}
+.login {
+    width: 40px;
+}
+.carrito{
+    width: 40px;
+}
+.lupa{
+    width: 40px;
+}
+.burger-botton{
+    display: none;
+
+}
+.main-navbar a {
+    
+    text-decoration: none;
+    color: whitesmoke;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+/*.burger-botton sera display:block en el @media para escritorio*/
+
+@media (min-width: 768px){
+    .main-header{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .burger-botton{
+        display: none;
+        color: aliceblue;
+    }
+    .main-navbar{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .main-navbar ul{
+        display: flex;
+    }
+    .main-navbar li {
+        margin: 0 5px;
+    }
+}
+
+@media (min-width: 1200px){
+    .logo{
+        width: 250px;
+    }
+    .main-header, .main-navbar {
+        max-width: 1200px;
+        margin: auto; /*si son de bloque con eso se equilibra*/
+    }
+    .main-header{
+        align-items: center; 
+    }
+    .burger-botton{
+        display: inline-block;
+        display: flex; 
+        flex-wrap: wrap;
+        
+    }
+    
+    .menu-secundario{
+        display: inline-block;
+    }
+    
+    .main-navbar{
+        margin-top: 40px;
+    }
+    .main-navbar li {
+        margin: 0 10px;
+    }
+    
+}
