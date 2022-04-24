@@ -1,0 +1,3 @@
+- meter el menu mobile en otro nav
+- extender el fondo del header negro
+- agregar media query 1024 
