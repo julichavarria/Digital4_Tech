@@ -13,3 +13,5 @@ app.get ("/", (req,res)=> res.sendFile(path.join(__dirname, "./views/index.html"
 app.get ("/", (req,res)=> res.sendFile(path.join(__dirname, "./public/css/styles.css" ) ));
 
 app.get ("/", (req,res)=> res.sendFile(path.join(__dirname, "./public/css/normalize.css" ) ));
+
+app.get ("/register.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/register.html" ) ));
