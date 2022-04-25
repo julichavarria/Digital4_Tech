@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;  
+}
+
+body{
+    font-family: 'Oswald', sans-serif; 
+}
+
+.iconosMarcas img{
+    width: 50px;
+}
+
+.fotoProducto img{
+    width: 400px;
+}
+.fotoProducto{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contenedorIconosMarca{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.seccionIN{
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+.txtMagenta{
+    color: #e31a52;
+}
+
+.nombreProducto{
+    color: #e31a52;
+    font-size: 35px;
+    font-weight: 200;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+.caracteristicas{
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: #e31a52 1px solid;
+    color: #e31a52;
+    font-weight: 200;
+    margin: 0 20px;
+}
+.caracteristicas span{
+    color: #333;
+    position: absolute;
+    left: 120px;
+    font-weight: 400;
+}
