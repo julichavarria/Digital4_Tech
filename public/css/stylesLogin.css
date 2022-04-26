@@ -1,0 +1,70 @@
+main.log {
+    background-color: #808080;
+    width: auto;
+}
+.iconoLogin {
+    width: 20%;
+}
+.completar-login {
+    border-color: #e31a52;
+    border-radius: 6px;
+    font-size: 16px;
+    height: 40px;
+    margin: 1.5% 0;
+    width: 50%;
+}
+#enviar:hover {
+    background-color: #f5386e;
+    cursor: pointer;
+}
+#enviar {
+    background-color: #e31a52;
+    color: #FFF;
+    border-color: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    padding: 0 10%;
+    text-align: center;
+    margin: 0 0;
+    align-self: center;
+    width: 50%;
+    margin-top: 30px;
+}
+#crear-cuenta {
+    background-color: transparent;
+    color: #e31a52;
+    border-color: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    padding: 0 10%;
+    text-align: center;
+    margin: 0 0;
+    align-self: center;
+    width: 50%;
+}
+#crear-cuenta:hover{
+    background-color: #f25481;
+    color: #FFF;
+}
+#olvidaste-contraseña {
+    background-color: transparent;
+    color: #e31a52;
+    border-color: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    padding: 0 10%;
+    text-align: center;
+    margin: 0 0;
+    align-self: center;
+    width: 50%;
+}
+#olvidaste-contraseña:hover {
+    background-color: #ee7e9e;
+    color: #FFF;
+}
