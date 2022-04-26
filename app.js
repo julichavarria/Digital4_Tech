@@ -14,5 +14,10 @@ app.get ("/", (req,res)=> res.sendFile(path.join(__dirname, "./public/css/styles
 
 app.get ("/", (req,res)=> res.sendFile(path.join(__dirname, "./public/css/normalize.css" ) ));
 
-app.get ("/register.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/register.html" ) ));
-app.get ("/productDetail.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/productDetail.html" ) ));
+app.get ("/register", (req,res)=> res.sendFile(path.join(__dirname, "./views/register.html" ) ));
+
+app.get ("/productDetail", (req,res)=> res.sendFile(path.join(__dirname, "./views/productDetail.html" ) ));
+
+app.get ("/login", (req,res)=> res.sendFile(path.join(__dirname, "./views/login.html" ) ));
+
+app.get ("/carrito", (req,res)=> res.sendFile(path.join(__dirname, "./views/carrito.html" ) ));
