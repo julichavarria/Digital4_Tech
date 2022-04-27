@@ -1,3 +1,4 @@
+
 /* ////////////////// GENERAL ////////////////////////////// */
 
 *{
@@ -33,13 +34,62 @@ a:link, a:visited, a:active {
 
 /* ///////////////////// FIN GENERAL //////////////////////// */
 
-form div input {
-    margin-left: 80px;
-    max-width: 300px;
+main {
+    max-width: 80%;
+    margin: auto;
+}
+
+form input {
+	background: rgb(236, 236, 236);
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    border-radius: 20px;
+    color: black;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #afafaf;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #afafaf;
+}
+
+.controlGeneral {
+    color: #fff;
+    background-color: #666;
+    border-radius: 20px;
+    margin: 20px 0px;
+    padding: 50px;
+    
 }
 .campoFormulario {
-    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
+form div label {
+    flex-grow: 0.4;
+    max-width: 140px;
+    margin-bottom: 10px;
+} 
+form div input {
+    flex-grow: 0.6;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+}
+
+.contenedorBotones:first-child {
+    margin-top: 20px;
+}
+
 .contenedorBotones {
     background-color: #000;
     border: #e31a52 solid 1px;
@@ -47,9 +97,9 @@ form div input {
     color: #fff;
     font-weight: 200;
     letter-spacing: 3px;
-    margin: 20px 0px;
+    margin-bottom: 20px;
     padding: 10px 35px;
-    width: 100%;
+    width: 70%;
     transition: all 500ms;
 }
 
@@ -57,4 +107,10 @@ form div input {
     background-color: #e31a52;
     cursor: pointer;
     transform: scale(1.03);
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

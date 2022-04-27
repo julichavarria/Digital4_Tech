@@ -17,44 +17,47 @@
 
 <body>
     <main>
-        <h2> Registrarse</h2>
-        <p>Completa la siguiente información para poder registrarse en nuestro sitio Web</p>
-        <form>
-            <div class="campoFormulario">
-                <label for="nombre"> Nombre: </label>
-                <input type="text" id="nombre" name="nombre" placeholder="Juan" class="controlFormulario">
-            </div>
-            <div class="campoFormulario">
-                <label for="apellido"> Apellido: </label>
-                <input type="text" id="apellido" name="apellido" placeholder="Lopéz" class="controlFormulario">
-            </div>
-            <div class="campoFormulario">
-                <label for="mail"> Email: </label>
-                <input type="email" id="email" name="email" placeholder="user@digital4.com.ar"
-                    class="controlFormulario">
-            </div>
-            <div class="campoFormulario">
-                <label for="mail"> Repetir Email: </label>
-                <input type="confirmarEmail" id="confirmarEmail" name="confirmarEmail"
-                    placeholder="user@digital4.com.ar" class="controlFormulario">
-            </div>
-            <div class="campoFormulario">
-                <label for="usuario"> Usuario: </label>
-                <input type="text" id="usuario" name="usuraio" placeholder="Digital4" class="controlFormulario">
-            </div>
-            <div class="campoFormulario">
-                <label for="contrasena"> Contraseña: </label>
-                <input type="password" id="contrasena" name="contrasena" class="controlFormulario">
-            </div>
-            <div class="campoFormulario">
-                <label for="confirmarContrasena"> Repetir Contraseña: </label>
-                <input type="password" id="confirmarContrasena" name="confirmarContrasena" class="controlFormulario">
-            </div>
-            <div class="campoFormulario">
-                <button class="contenedorBotones" type="submit"> Registrarse </button>
-                <button class="contenedorBotones" type="reset"> Borrar </button>
-            </div>
-        </form>
+        <div class="controlGeneral">
+            <h2> Registrarse</h2>
+            <p>Completa la siguiente información para poder registrarse en nuestro sitio Web</p>
+            <hr>
+            <br>
+            <form>
+                <div class="campoFormulario">
+                    <label for="nombre"> Nombre: </label>
+                    <input required="required" type="text" id="nombre" name="nombre" placeholder="Juan" maxlength="25" class="controlFormulario">
+                </div>
+                <div class="campoFormulario">
+                    <label for="apellido"> Apellido: </label>
+                    <input required="required" type="text" id="apellido" name="apellido" placeholder="Lopéz" maxlength="20"class="controlFormulario">
+                </div>
+                <div class="campoFormulario">
+                    <label for="mail"> Email: </label>
+                    <input required="required" type="email" id="email" name="email" placeholder="user@digital4.com.ar" class="controlFormulario">
+                </div>
+                <div class="campoFormulario">
+                    <label for="mail"> Repetir Email: </label>
+                    <input required="required" type="confirmarEmail" id="confirmarEmail" name="confirmarEmail" placeholder="user@digital4.com.ar" class="controlFormulario">
+                </div>
+                <div class="campoFormulario">
+                    <label for="usuario"> Usuario: </label>
+                    <input required="required" type="text" id="usuario" name="usuraio" placeholder="Digital4" class="controlFormulario">
+                </div>
+                <div class="campoFormulario">
+                    <label for="contrasena"> Contraseña: </label>
+                    <input required="required" type="password" id="contrasena" name="contrasena" minlength="6" class="controlFormulario">
+                </div>
+                <div class="campoFormulario">
+                    <label for="confirmarContrasena"> Repetir Contraseña: </label>
+                    <input required="required" type="password" id="confirmarContrasena" name="confirmarContrasena" minlength="6" class="controlFormulario">
+                </div>
+                <div class="botones">
+                    <button class="contenedorBotones" type="submit"> Registrarse </button>
+                    <button class="contenedorBotones" type="reset"> Borrar </button>
+                </div>
+            </form>
+        </div>
+        
     </main>
     <footer>
 
