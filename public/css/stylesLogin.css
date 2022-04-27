@@ -1,4 +1,4 @@
-main.log {
+/*main.log {
     background-color: #808080;
     width: auto;
 }
@@ -67,4 +67,129 @@ main.log {
 #olvidaste-contraseña:hover {
     background-color: #ee7e9e;
     color: #FFF;
+}*/
+/* ////////////////// GENERAL ////////////////////////////// */
+
+*{
+    box-sizing: border-box;  
 }
+
+body{
+    font-family: 'Oswald', sans-serif; 
+}
+
+.seccionIN{
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+.txtMagenta{
+    color: #e31a52;
+}
+
+.grisesSecundarios{
+    color: #666;
+    font-size: 16px;
+    font-weight: 200;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+.contenedorPrecio a:hover {
+    color: #000;
+}
+
+/* ///////////////////// FIN GENERAL //////////////////////// */
+/*/////////////////ESTILOS LOGIN /////////////////*/
+main.log {
+    max-width: 80%;
+    margin: auto;
+    background-color: #666
+    }
+.iconoLogin {
+    width: 25%;
+    padding: 10px;
+    margin-left: 80px;
+}
+.completar-login {
+    border-color: #e31a52;
+    border-radius: 6px;
+    font-size: 16px;
+    height: 40px;
+    margin: 1.5% 0;
+    width: 50%;
+}
+#enviar:hover {
+    background-color: #f5386e;
+    cursor: pointer;
+}
+#enviar {
+    background-color: #e31a52;
+    color: #FFF;
+    border-color: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    padding: 0 10%;
+    text-align: center;
+    margin: 0 0;
+    align-self: center;
+    width: 50%;
+    margin-top: 30px;
+}
+#crear-cuenta {
+    background-color: transparent;
+    color: #e31a52;
+    border-color: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    padding: 0 10%;
+    text-align: center;
+    margin: 0 0;
+    align-self: center;
+    width: 50%;
+}
+#crear-cuenta:hover{
+    background-color: #f25481;
+    color: #FFF;
+}
+#olvidaste-contraseña {
+    background-color: transparent;
+    color: #e31a52;
+    border-color: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    padding: 0 10%;
+    text-align: center;
+    margin: 0 0;
+    align-self: center;
+    width: 50%;
+}
+#olvidaste-contraseña:hover {
+    background-color: #ee7e9e;
+    color: #FFF;
+}
+.log {
+    color: #fff;
+    background-color: #666;
+    border-radius: 10px;
+    padding: 50px;
+    
+}
+main.log {
+    color: #fff;
+    background-color: #666;
+    border-radius: 20px;
+    margin: 20px 0px;
+    padding: 50px;
+    margin-left: 80px;
+    padding-left: 250px ;
+}
+/*////////////////FIN ESTILO LOGIN //////////////////*/
