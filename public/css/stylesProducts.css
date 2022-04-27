@@ -1,0 +1,188 @@
+/* ////////////////// GENERAL ////////////////////////////// */
+
+*{
+    box-sizing: border-box;  
+}
+
+body{
+    font-family: 'Oswald', sans-serif; 
+}
+
+.seccionIN{
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+.txtMagenta{
+    color: #e31a52;
+}
+
+.grisesSecundarios{
+    color: #666;
+    font-size: 16px;
+    font-weight: 200;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+.contenedorPrecio a:hover {
+    color: #000;
+}
+
+/* ////////////////// Bloque Fotos ////////////////////////////// */
+
+.fotoProducto img{
+  width: 100%;
+  max-width: 400px;
+}
+.fotoProducto{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contenedorIconosMarca{
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0px;
+    max-width: 400px;
+    padding: 0px 50px;
+}
+.iconosMarcas img{
+    max-width: 50px;
+}
+
+/* ////////////////// Bloque Caracteristicas ////////////////////////////// */
+
+.nombreProducto{
+    color: #e31a52;
+    font-size: 35px;
+    font-weight: 200;
+    text-align: center;
+    margin: 20px 0;
+}
+.contenedorCaracteristicas{
+    text-align: left;
+}
+.caracteristicas{
+    padding: 10px;
+    font-size: 12px;
+    border-bottom: #e31a52 1px solid;
+    color: #e31a52;
+    font-weight: 200;
+    margin: 0 20px;
+}
+.contenedorDetallesProducto{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.caracteristicas span{
+    color: #333;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+/* ////////////////// Bloque Botones y precio ////////////////////////////// */
+
+
+.contenedorPrecioBotones{
+padding: 0px 15px;
+}
+
+.precio{
+    color: #e31a52;
+    font-size: 35px;
+    font-weight: 200;
+    margin-right: 20px;
+    
+}
+
+.contenedorPrecio{
+    display: flex;
+    align-items: center;
+}
+
+.contenedorCantidades{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+}
+
+.contenedorCantidades form{
+    padding: 5px 15px;
+    
+}
+.contenedorCantidades form select{
+    border:none;
+    outline: none;
+    text-align: right;
+    padding-right: 5px;
+    font-weight: 200;
+}
+
+.selectorCantidades{
+    border: #e31a52 solid 1px;
+    border-radius: 20px;
+    margin-right: 15px;
+
+}
+
+.contenedorPrecioBotones form button{
+    background-color: #000;
+    border: #e31a52 solid 1px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin: 20px 0px;
+    padding: 10px 35px;
+    width: 100%;
+    transition: all 500ms;
+}
+
+.contenedorPrecioBotones form button:hover{
+    background-color: #e31a52;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+
+
+/* ////////////////// MEDIA QUERYS ////////////////////////////// */
+
+
+@media (min-width: 768px){
+    .contenedorSeccion{
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        max-width: 1024px;
+    }
+
+    .contenedorFotoIconos{
+        display: block;
+    }
+
+    .contenedorDetallesProducto{
+        width: 100%;
+        margin: 0px;
+        padding-left: 30px;
+
+    }
+
+    .nombreProducto{
+        text-align: left;
+    }
+
+    .contenedorPrecioBotones{
+
+    }
+
+}

@@ -25,3 +25,5 @@ www.netflix.com
 
 *Detalle del producto:
 www.mercadolibre.com
+
+Enlace de tablero de trabajo: https://trello.com/b/r9OV3c9p
