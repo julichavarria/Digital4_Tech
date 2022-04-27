@@ -11,7 +11,7 @@ Oswald (google fonts)
 
 ////////////////////////////////////////////
 RESOLUCIONES TRABAJADAS: (width)
-mobile: 380px
+mobile: 480px
 tablet: 768px
 desktop: 1024px
 desktop grande: 1200px
