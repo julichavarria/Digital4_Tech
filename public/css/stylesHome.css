@@ -1,5 +1,5 @@
 *{
-    overflow-x: hidden;
+   
     box-sizing: border-box;  
     font-family: 'Oswald', sans-serif; 
 }
@@ -73,7 +73,8 @@ header{
 }
 .publicidad-descuento{
     background-color:#e31a52;
-    padding: 10%;
+    padding: 40px;
+    color: whitesmoke;
    
 }
 .publicidad-subs{
@@ -85,6 +86,10 @@ button{
 }
 .en-magenta{
     color: #e31a52;
+}
+.en-negro{
+    color: black;
+    font-weight: 600;
 }
 .en-blanco{
     color: whitesmoke;
