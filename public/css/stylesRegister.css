@@ -33,6 +33,13 @@ a:link, a:visited, a:active {
 
 /* ///////////////////// FIN GENERAL //////////////////////// */
 
+form div input {
+    margin-left: 80px;
+    max-width: 300px;
+}
+.campoFormulario {
+    margin: 20px;
+}
 .contenedorBotones {
     background-color: #000;
     border: #e31a52 solid 1px;
