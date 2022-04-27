@@ -8,8 +8,8 @@
        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-       <link rel="stylesheet" href="/Grupo_4_Digital4Tech/public/css/normalize.css">
-        <link rel="stylesheet" href="/Grupo_4_Digital4Tech/public/css/styles.css">
+       <link rel="stylesheet" href="/public/css/normalize.css">
+        <link rel="stylesheet" href="/public/css/styles.css">
         <script src="https://kit.fontawesome.com/2a3f2150aa.js" crossorigin="anonymous"></script>
        <title>Digital 4 Tech</title>  
    </head>
@@ -17,19 +17,19 @@
         <header class="main-header">
             
             <div class="menu">
-                <a href="#" class="menu-burger"><img src="/Grupo_4_Digital4Tech/public/img/icon_burger.svg" alt="menu hamburgesa"></a>
+                <a href="#" class="menu-burger"><img src="/public/img/icon_burger.svg" alt="menu hamburgesa"></a>
             </div>
             <div class="lupa">
-                <a href="#" class="buscar"><img src="/Grupo_4_Digital4Tech/public/img/icon_search.svg" alt="Buscar"></a>
+                <a href="#" class="buscar"><img src="/public/img/icon_search.svg" alt="Buscar"></a>
             </div>
             <div class="main-header-top">
-                <a href="#"><img src="/Grupo_4_Digital4Tech/public/img/logo.svg" alt="Logo" class="logo"></a>
+                <a href="#"><img src="/public/img/logo.svg" alt="Logo" class="logo"></a>
             </div>
             <div class="login">
-                <a href="#" class="login-i"><img src="/Grupo_4_Digital4Tech/public/img/icon_login.svg" alt="logear"></a>
+                <a href="#" class="login-i"><img src="/public/img/icon_login.svg" alt="logear"></a>
             </div>
             <div class="carrito">
-                <a href="#" class="carrito-compra"><img src="/Grupo_4_Digital4Tech/public/img/icon_shop.svg" alt="Compras"></a>
+                <a href="#" class="carrito-compra"><img src="/public/img/icon_shop.svg" alt="Compras"></a>
             </div>
             <nav class="main-navbar burger-botton">
                 <ul class="menu-principal">
@@ -48,10 +48,84 @@
             </nav>
         </header>
          <main>
-
+            <div class="carrusel">
+                <!--Aca va a ir el carrusel-->
+                <img src="/public/img/bannerHome_slide1.jpg" alt="Imagen 1 del carrusel">
+            </div>
+            <div class="productosHome"> <!--Se puede hacer con 2 carruseles-->
+                <h2 class="seccion-productos">Computadoras Armadas <span class="en-magenta"> //</span></h2>
+                <article class="productos-home">
+                    <div class="computadoras">
+                        <img src="/public/img/productos_pcArmadas/pc 1.jpeg" alt="PC 1">
+                    </div>
+                    <div class="computadoras">
+                        <img src="/public/img/productos_pcArmadas/pc 2.jpeg" alt="PC 2">
+                    </div>
+                    <div class="computadoras">
+                        <img src="/public/img/productos_pcArmadas/pc 5.jpeg" alt="PC 3">
+                    </div>
+                </article>
+                <h2 class="seccion-productos">Accesorios <span class="en-magenta"> //</span></h2>
+                <article class="productos-home">
+                    <div class="accesorios">
+                        <img src="/public/img/productos_pcArmadas/pc 10.jpeg" alt="Mouse"><!--Buscar las imagenes que corresponden y modificar-->
+                    </div>
+                    <div class="accesorios">
+                        <img src="/public/img/productos_pcArmadas/pc 5.jpeg" alt="Teclado"><!--Buscar las imagenes que corresponden y modificar-->
+                    </div>
+                    <div class="accesorios">
+                        <img src="/public/img/productos_pcArmadas/pc 9.jpeg" alt="Auriculares"><!--Buscar las imagenes que corresponden y modificar-->
+                    </div>
+                </article>
+            </div>
+            <div class="publicidad-descuento">
+                <h2>
+                    <span class="en-negro">INGRESA EL CODIGO</span><br>
+                    <span class="en-blanco"><b>OTOÑO 2022</b></span><br>
+                    <span class="en-blanco">Y OBTEN UN 5% DE DESCUENTO</span><br>
+                </h2>
+                <h4><span class="en-negro">*EN COMPRAS SUPERIORES A LOS $20.000</span>
+                </h4>
+            </div>
+            <div class="publicidad-subs">
+                <h2>
+                    <span class="en-negro"><b>SUSCRIBITE A NUESTRO</b></span>
+                    <span class="en-blanco"><b>NEWSLETTER</b></span>
+                </h2>
+                <h3>
+                    <span class="en-blanco"><b>Y RECIBÍ TODAS LAS OFERTAS</b></span>
+                </h3>
+                <form action="/registro" method="POST">                           
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                    <br>
+                    <button type="submit">SUSCRIBIRME ></button>
+                </form>
+                   
+            </div>
         </main>
         <footer>
-
+            <div class="texto-footer">
+                <h2><b></b>
+                    CONTACTO
+                </h2><br>
+                <h4>contacto@digital4tech.com  <br>
+                    +54 911 9876 1234 <br>
+                    Av. Rivadavia 1234, CABA - Buenos Aires
+                </h4> 
+            </div>
+            <div class="redes">
+                <h2><b>SEGUINOS</b></h2>
+                <div class="iconos-redes">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter-square"></i>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <img src="/public/img/logo_grey.svg" alt="Logo">
+                <h6>Sitio web realizado por <span class="en-magenta">Grupo 4</span> Digital House</h6>
+            </div>
         </footer>
    </body>
    </html>

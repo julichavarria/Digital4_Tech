@@ -8,8 +8,13 @@ body{
 } /*Magenta: #e31a52
 Gris claro: #808080
 background footer: #131313*/
-.main-header{
+header{
+    width: 100%;
     background-color: black ;
+    
+}
+.main-header{
+    
     padding: 20px;
     display: flex;
 	flex-wrap: wrap;
@@ -50,6 +55,53 @@ background footer: #131313*/
     padding: 5px 0;
     font-size: 17px;
 }
+.carrusel img{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.productos-home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.publicidad-descuento,
+.publicidad-subs{
+    text-align: center;
+}
+.publicidad-descuento{
+    background-color:#e31a52;
+    padding: 10%;
+   
+}
+.publicidad-subs{
+    background-color: #808080;
+    padding: 10%;
+}
+button{
+    margin-top: 20px;
+}
+.en-magenta{
+    color: #e31a52;
+}
+.en-blanco{
+    color: whitesmoke;
+}
+.footer-copyright{
+    display: flex;
+    justify-content: space-around
+}
+.footer-copyright img{
+    width: 20%;
+    
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: #808080;
+}
 /*.burger-botton sera display:block en el @media para escritorio*/
 
 @media (min-width: 768px){
@@ -75,6 +127,7 @@ background footer: #131313*/
     }
 }
 
+
 @media (min-width: 1200px){
     .logo{
         width: 250px;
@@ -85,6 +138,7 @@ background footer: #131313*/
     }
     .main-header{
         align-items: center; 
+        width: 100%;
     }
     .burger-botton{
         display: inline-block;
