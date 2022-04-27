@@ -1,0 +1,53 @@
+/* ////////////////// GENERAL ////////////////////////////// */
+
+*{
+    box-sizing: border-box;  
+}
+
+body{
+    font-family: 'Oswald', sans-serif; 
+}
+
+.seccionIN{
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+.txtMagenta{
+    color: #e31a52;
+}
+
+.grisesSecundarios{
+    color: #666;
+    font-size: 16px;
+    font-weight: 200;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+.contenedorPrecio a:hover {
+    color: #000;
+}
+
+/* ///////////////////// FIN GENERAL //////////////////////// */
+
+.contenedorBotones {
+    background-color: #000;
+    border: #e31a52 solid 1px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin: 20px 0px;
+    padding: 10px 35px;
+    width: 100%;
+    transition: all 500ms;
+}
+
+.contenedorBotones:hover{
+    background-color: #e31a52;
+    cursor: pointer;
+    transform: scale(1.03);
+}
