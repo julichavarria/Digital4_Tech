@@ -1,126 +1,119 @@
+/* ////////////////// GENERAL ////////////////////////////// */
+
+*{
+    box-sizing: border-box;  
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+
+
+.menu2 a {
+    color: #FFFFFF;
+}
+
+.menu2 a:hover {
+    color: #666;
+    font-weight: 300;
+}
+
 body{
-    font-family: 'Oswald';
-} /*Magenta: #e31a52
-Gris claro: #808080
-background footer: #131313*/
+    font-family: 'Oswald', sans-serif; 
+    color: #FFFFFF;
+    font-weight: 200;
+}
 
-/*HEADER*/
 header{
-    width: 100%;
-    background-color: black ;
-    
+    background-color: black;
 }
-.main-header{
-    
-    padding: 20px;
+.menu1{
     display: flex;
-	flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:  space-around;
+    flex-wrap: wrap;
+    background-color: black;
+    justify-content: space-around;
+    padding: 15px 0px;
     align-items: center;
-
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.main-header img{
-    display: flex;
-	flex-wrap: wrap;
+.fa-angle-down{
+    padding-left: 2px;
+    color: #e31a52;
+    font-size: 10px;
 }
-.logo{
-    width: 120px;
+
+.menu1 img{
+   width: 100%;
+   max-height: 60px;
 }
-.menu-burger img{
-    width: 40px;
+
+.menu2{
+    display: none;
 }
-.login {
-    width: 40px;
+
+.seccionActiva a{
+    color: #e31a52;
+    font-weight: 400;
 }
-.carrito{
-    width: 40px;
-}
-.lupa{
-    width: 40px;
-}
-.burger-botton{
+
+.barraDeBusqueda{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 2px 5px 2px 15px;
     display: none;
 
 }
-.main-navbar a {
-    
-    text-decoration: none;
-    color: whitesmoke;
-    display: inline-block;
-    padding: 5px 0;
-    font-size: 17px;
+
+.barraDeBusqueda input{
+ outline: none;
+ border: none;
+ font-weight: 200;
 }
 
-/*FOOTER*/
-.footer-copyright{
-    display: flex;
-    justify-content: space-around
-}
-.footer-copyright img{
-    width: 20%;
-    
-}
-footer{
-    text-align: center;
-    background-color: black;
-    color: #808080;
+.barraDeBusqueda button{
+    border:none;
+    background-color: #FFFFFF;
+    color: #666;
+    cursor: pointer;
 }
 
-/*MEDIA QUERIES*/
+
 @media (min-width: 768px){
-    .main-header{
-        display: flex;
-        justify-content: space-between;
-
-    }
-    .burger-botton{
+    .iconBurgerMobile{
         display: none;
-        color: aliceblue;
     }
-    .main-navbar{
-        display: flex;
-        justify-content: space-between;
-        
-    }
-    .main-navbar ul{
-        display: flex;
-    }
-    .main-navbar li {
-        margin: 0 5px;
-    }
-}
 
+    .iconSearchMobile{
+        display: none;
+    }
 
-@media (min-width: 1200px){
-    .logo{
-        width: 250px;
-    }
-    .main-header, .main-navbar {
-        max-width: 1200px;
-        margin: auto; /*si son de bloque con eso se equilibra*/
-    }
-    .main-header{
-        align-items: center; 
+    .menu1 img{
         width: 100%;
+        max-height: 40px;
+     }
+
+     .logo img{
+        max-height: 60px; 
+     }
+
+    .menu2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
-    .burger-botton{
-        display: inline-block;
-        display: flex; 
-        flex-wrap: wrap;
-        
+    .menu2 div{
+      margin-right: 20px;
     }
+
+ 
     
-    .menu-secundario{
-        display: inline-block;
-    }
+    .barraDeBusqueda{
+        display: flex;
     
-    .main-navbar{
-        margin-top: 40px;
     }
-    .main-navbar li {
-        margin: 0 10px;
-    }
-    
+
 }
