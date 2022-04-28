@@ -10,11 +10,11 @@ a:link, a:visited, a:active {
 
 
 
-.menu2 a {
+.menu2 a,footer a {
     color: #FFFFFF;
 }
 
-.menu2 a:hover {
+.menu2 a:hover, footer a:hover {
     color: #666;
     font-weight: 300;
 }
@@ -25,12 +25,17 @@ body{
     font-weight: 200;
 }
 
+
 header{
+    background-color: black;
+}
+
+footer{
     background-color: black;
 }
 .menu1{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     background-color: black;
     justify-content: space-around;
     padding: 15px 0px;
@@ -50,6 +55,10 @@ header{
    width: 100%;
    max-height: 60px;
 }
+
+.menu1 div span{
+   display: none;
+ }
 
 .menu2{
     display: none;
@@ -81,6 +90,37 @@ header{
     cursor: pointer;
 }
 
+footer section {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1024px;
+    padding:20px;
+}
+
+footer div span {
+    color: #e31a52;
+}
+
+.logoFooter img{
+    max-width: 150px;
+    margin-top: 20px;
+   
+}
+
+.rrss i{
+margin: 0 20px;
+}
+
+
+footer div {
+    border-bottom: #333 solid 1px;
+    padding: 20px 0px;
+}
+
+.rrss{
+    border:none;
+    margin: 10px 0px;
+}
 
 @media (min-width: 768px){
     .iconBurgerMobile{
@@ -98,6 +138,7 @@ header{
 
      .logo img{
         max-height: 60px; 
+        padding-left: 30px;
      }
 
     .menu2{
@@ -109,11 +150,30 @@ header{
       margin-right: 20px;
     }
 
- 
+    .menu1 div span{
+        display: flex;
+        margin-top: -5px;
+        color:#FFF;
+        font-size: 12px;
+      }
+
+      .menu1 a span:hover {
+        color:#e31a52;
+      }
     
     .barraDeBusqueda{
         display: flex;
     
+    }
+
+    footer section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    footer div {
+        border:none;
     }
 
 }
