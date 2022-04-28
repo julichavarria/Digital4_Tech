@@ -1,0 +1,154 @@
+/* ////////////////// GENERAL ////////////////////////////// */
+
+*{
+    box-sizing: border-box;  
+}
+
+body{
+    font-family: 'Oswald', sans-serif; 
+}
+
+.seccionIN{
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+.txtMagenta{
+    color: #e31a52;
+}
+
+.grisesSecundarios{
+    color: #666;
+    font-size: 16px;
+    font-weight: 200;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+.contenedorPrecio a:hover {
+    color: #000;
+}
+.precio{
+    color: #e31a52;
+    font-size: 35px;
+    font-weight: 200;
+    margin: 10px 0px;
+    text-align: right;
+}
+
+.precio span{
+    color: #000;
+    font-size: 20px;
+    margin-right: 20px;
+    
+}
+
+.productoEnLista{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: #e31a52 1px solid;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.tituloSeccion{
+    color: #e31a52;
+    font-size: 35px;
+    font-weight: 200;
+    margin: 20px 0;
+}
+
+
+.contenedorSeccion form button{
+    background-color: #000;
+    border: #e31a52 solid 1px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin: 20px 0px;
+    padding: 10px 35px;
+    width: 100%;
+    max-width: 300px;
+    transition: all 500ms;
+    
+}
+
+.contenedorSeccion form button:hover{
+    background-color: #e31a52;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.contenedorBoton{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.selectorCantidades{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    text-align: right;
+    
+}
+
+.selectorCantidades form{
+    padding: 0px 10px;
+    border: #e31a52 solid 1px;
+    border-radius: 20px;
+    margin-right: 20px;
+   
+    
+}
+.selectorCantidades form select{
+    border:none;
+    outline: none;
+    text-align: center;
+    padding-right: 5px;
+    font-weight: 200;
+}
+
+.fotoProducto img{
+    width: 100%;
+    height: 180px;
+}
+
+.detallesProductoListado{
+    text-align: right;
+    padding-top:30px;
+}
+
+.productoEnLista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.detallesProductoListado .nombreProducto{
+    color: #e31a52;
+}
+
+.detallesProductoListado .caracteristicas{
+    font-weight: 200;
+}
+
+.fa-circle-xmark{
+    color: #e31a52;
+}
+
+
+
+/* ////////////////// MEDIA QUERYS ////////////////////////////// */
+
+
+@media (min-width: 768px){
+    .contenedorSeccion{
+        margin: 0 auto;
+        text-align: center;
+        max-width: 1024px;
+    }
+}
