@@ -10,6 +10,8 @@ app.listen(3030, ()=> console.log ("Server running in 3030 port ") );
 
 app.get ("/", (req,res)=> res.sendFile(path.join(__dirname, "./views/home.html" ) ));
 
+app.get ("/home.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/home.html" ) ));
+
 app.get ("/register.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/register.html" ) ));
 
 app.get ("/productDetail.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/productDetail.html" ) ));

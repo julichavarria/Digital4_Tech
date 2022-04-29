@@ -9,11 +9,38 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="./css/normalize.css">
         <link rel="stylesheet" href="./css/stylesHome.css">
+        <link rel="stylesheet" href="./css/stylesHeaderFooter.css">
         
         <script src="https://kit.fontawesome.com/2a3f2150aa.js" crossorigin="anonymous"></script>
         <title>Digital 4 Tech</title>  
    </head>
    <body>
+    <header>
+        <nav class="menu1">
+          <div class="iconBurgerMobile"><a href="#"><img src="img/icon_burger.svg" alt=""></a> </div>
+          <div class="iconSearchMobile"><a href="#"><img src="img/icon_search.svg" alt=""></a></div>
+          <div class="logo"><a href="./home.html"><img src="img/logo.svg" alt=""></a></div>
+    
+          <nav class="menu2">
+            <div class="seccionActiva"><a href="./home.html">HOME</a></div>
+            <div><a href="./productDetail.html">PC <i class="fa-solid fa-angle-down"></i></a></div>
+            <div><a href="#">ACCESORIOS <i class="fa-solid fa-angle-down"></i></a></div>
+            <div><a href="#">NOSOTROS</a></div>
+            <div><a href="#">CONTACTO</a></div>
+          </nav>
+    
+    
+    
+            <form>
+              <div class="barraDeBusqueda">
+                <input type="text" placeholder="Buscar productos">
+                <button><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+            <div><a href="./login.html"><img src="img/icon_login.svg" alt=""><span>INGRESAR</span></a></div>
+            <div><a href="./carrito.html"><img src="img/icon_shop.svg" alt=""><span>CARRITO</span></a></div>
+        </nav>
+      </header>
         
          <main>
             <div class="carrusel">
@@ -71,6 +98,28 @@
                    
             </div>
         </main>
+        <footer>
+            <section>
+            <div>
+              <h4>CONTACTO</h4>
+              <a href="#"><p>contacto@digital4tech.com</p></a>
+              <p>+54 911 9876 1234</p>
+              <p>Av. Rivadavia 1234, CABA -  Buenos Aires</p>
+            </div>
+            <div>
+              <h4>SEGUINOS</h4>
+              <div class="rrss">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            </div>
+            <div class="logoFooter">
+              <h4><img src="img/logo_grey.svg" alt=""></h4>
+              <p>Sitio web realizado por <span>Grupo4</span> Digital House</p>
+            </div>
+          </section>
+          </footer>
         
    </body>
 </html>
