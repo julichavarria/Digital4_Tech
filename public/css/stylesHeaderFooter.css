@@ -19,19 +19,17 @@ a:link, a:visited, a:active {
     font-weight: 300;
 }
 
-body{
-    font-family: 'Oswald', sans-serif; 
+
+header{
+    background-color: black;
     color: #FFFFFF;
     font-weight: 200;
 }
 
-
-header{
-    background-color: black;
-}
-
 footer{
     background-color: black;
+    color: #FFFFFF;
+    font-weight: 200;
 }
 .menu1{
     display: flex;

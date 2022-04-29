@@ -8,11 +8,7 @@ body{
 } /*Magenta: #e31a52
 Gris claro: #808080
 background footer: #131313*/
-header{
-    width: 100%;
-    background-color: black ;
-    
-}
+
 .main-header{
     
     padding: 20px;
@@ -28,9 +24,7 @@ header{
     display: flex;
 	flex-wrap: wrap;
 }
-.logo{
-    width: 120px;
-}
+
 .menu-burger img{
     width: 40px;
 }
@@ -57,11 +51,14 @@ header{
 }
 .carrusel img{
     width: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    max-width: 1024px;
 }
+.carrusel{
+    background-color: #131313;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .productos-home{
     display: flex;
     flex-wrap: wrap;
@@ -81,7 +78,7 @@ header{
     background-color: #808080;
     padding: 10%;
 }
-button{
+main button{
     margin-top: 20px;
 }
 .en-magenta{
@@ -94,19 +91,7 @@ button{
 .en-blanco{
     color: whitesmoke;
 }
-.footer-copyright{
-    display: flex;
-    justify-content: space-around
-}
-.footer-copyright img{
-    width: 20%;
-    
-}
-footer{
-    text-align: center;
-    background-color: black;
-    color: #808080;
-}
+
 /*.burger-botton sera display:block en el @media para escritorio*/
 
 @media (min-width: 768px){
@@ -134,9 +119,7 @@ footer{
 
 
 @media (min-width: 1200px){
-    .logo{
-        width: 250px;
-    }
+    
     .main-header, .main-navbar {
         max-width: 1200px;
         margin: auto; /*si son de bloque con eso se equilibra*/

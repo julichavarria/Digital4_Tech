@@ -39,7 +39,7 @@ main {
     margin: auto;
 }
 
-form input {
+main form input {
 	background: rgb(236, 236, 236);
 	color: inherit;
 	border: none;
@@ -51,12 +51,12 @@ form input {
     color: black;
 }
 
-input::-webkit-input-placeholder,
+main input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #afafaf;
 }
 
-input:-moz-placeholder,
+main input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #afafaf;
 }
@@ -74,12 +74,12 @@ textarea:-moz-placeholder {
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
-form div label {
+main form div label {
     flex-grow: 0.4;
     max-width: 140px;
     margin-bottom: 10px;
 } 
-form div input {
+main form div input {
     flex-grow: 0.6;
     align-items: flex-start;
     width: 100%;
