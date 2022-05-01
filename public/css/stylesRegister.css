@@ -39,7 +39,14 @@ main {
     margin: auto;
 }
 
-main form input {
+h2 {
+    color: #e31a52;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+/* main form input {
 	background: rgb(236, 236, 236);
 	color: inherit;
 	border: none;
@@ -49,22 +56,20 @@ main form input {
 	outline: inherit;
     border-radius: 20px;
     color: black;
-}
+} */
 
-main input::-webkit-input-placeholder,
+/* main input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #afafaf;
-}
+} */
 
-main input:-moz-placeholder,
+/* main input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #afafaf;
-}
+} */
 
 .controlGeneral {
-    color: #fff;
-    background-color: #666;
-    border-radius: 20px;
+    color: #000;
     margin: 20px 0px;
     padding: 50px;
     
@@ -73,44 +78,76 @@ textarea:-moz-placeholder {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    border-radius: 20px;
 }
-main form div label {
+/* main form div label {
     flex-grow: 0.4;
     max-width: 140px;
     margin-bottom: 10px;
-} 
+}  */
 main form div input {
     flex-grow: 0.6;
     align-items: flex-start;
     width: 100%;
     padding: 10px;
+    border-radius: 50px;
 }
 
-.contenedorBotones:first-child {
-    margin-top: 20px;
+.botonVolver {
+    background-color: #e31a52;
+    /* border: #000 solid 1px; */
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 3px;
+    padding: 10px 35px;
+    width: 45%;
+    transition: all 500ms;
 }
 
-.contenedorBotones {
+.botonRegistro {
     background-color: #000;
     border: #e31a52 solid 1px;
     border-radius: 20px;
     color: #fff;
     font-weight: 200;
     letter-spacing: 3px;
-    margin-bottom: 20px;
     padding: 10px 35px;
-    width: 70%;
+    width: 45%;
     transition: all 500ms;
 }
 
-.contenedorBotones:hover{
+.botonRegistro:hover{
     background-color: #e31a52;
     cursor: pointer;
-    transform: scale(1.03);
+    transform: scale(1.01);
+}
+
+.botonVolver:hover{
+    background-color: #000;
+    cursor: pointer;
+    transform: scale(1.01);
 }
 
 .botones {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+
+/* ////////////// inicio de @media //////////////// */
+
+@media (max-width: 768px){
+    .botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botonRegistro,
+    .botonVolver {
+        width: 90%;
+        margin: 10px 0px;
+    }
 }
