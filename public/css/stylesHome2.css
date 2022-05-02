@@ -1,0 +1,226 @@
+/* ////////////////// GENERAL ////////////////////////////// */
+
+*{
+    box-sizing: border-box;  
+}
+
+body{
+    font-family: 'Oswald', sans-serif; 
+}
+
+.seccionIN{
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+.txtMagenta{
+    color: #e31a52;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+main {
+    margin:40px 0px 0px 0px;
+}
+
+/* ////////////////// MAIN ////////////////////////////// */
+
+h1{
+font-weight: 200;
+color: #e31a52;
+font-size: 20px;
+text-align: center;
+margin: 40px;
+}
+
+h1 span{
+    color: #333;
+    
+}
+
+
+.carruselPcArmadas, .carruselAccesorios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1024px;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contenedorArticulos{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 250px;
+    border-right:1px solid #d7d7d7;
+    text-align: right;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.fotoProducto img{
+    width: 100%;
+}
+
+.fotoProducto{
+    width: 60%;
+}
+.contenedorPrecioBtn{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.iconosMarcas img{
+    max-width: 50px;
+}
+
+.caracteristicas{
+    font-weight: 200;
+    color: #666;
+    text-align: center;
+}
+
+.iconosMarcas{
+    padding-top: 20px;
+}
+
+.contenedorArticulos button, .anuncio2 button{
+    background-color: #000;
+    border: #e31a52 solid 1px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+    padding: 5px;
+    width: 80%;
+    transition: all 500ms;
+    font-size: 12px;
+}
+
+.contenedorArticulos  button:hover, .anuncio2  button:hover{
+    background-color: #e31a52;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.precioPcArmada{
+    width: 100px;
+    font-weight: 200;
+    padding-right:15px ;
+}
+
+.precioPcArmada span{
+    font-weight: 800;
+    color: #e31a52;
+    font-size: 16px;
+}
+
+.nombrePC{
+    color: #e31a52;
+}
+
+
+.carruselAccesorios .contenedorArticulos{
+    display: block;
+}
+
+.carruselAccesorios .contenedorArticulos .fotoProducto{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carruselAccesorios .contenedorPrecioBtn{
+    width: 100%;
+}
+
+.contenedorAnuncios{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-items: center;
+ 
+}
+
+.anuncio1{
+    background-color: #e31a52;
+    width: 100%;
+    padding:10%;
+    text-align: center;
+    align-self: stretch;
+}
+
+.anuncio1 h2 span {
+    font-weight: 200;
+}
+
+.contenedorAnuncios .bajadaAnuncio{
+    font-size: 25px;
+   color: #fff;
+}
+
+.anuncio1 h2 p {
+    line-height: 0px;
+    margin: 25px;
+    color: #fff;
+}
+
+.anuncio2{
+    background-color: #9999;
+    width: 100%;
+    padding:10%;
+    text-align: center;
+    align-self: stretch;
+    
+}
+
+
+
+
+.anuncio2 input {
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px 20px;
+    text-align: center;
+    width: 80%;
+}
+
+.anuncio2 button{
+    font-weight: 200;
+    letter-spacing: 3px;
+max-width: 200px ;
+    padding: 10px 35px;
+    transition: all 500ms;
+}
+
+.contenedorAnuncios h2{
+    font-size: 40px;
+}
+.contenedorAnuncios h3{
+    line-height: 0px;
+    margin-top: -10px;
+    font-weight: 200;
+}
+
+.anuncio2 h2 span{
+ color: #fff;
+}
+
+
+
+/* ////////////////// MEDIA QUERYS ////////////////////////////// */
+
+
+@media (min-width: 768px){
+    .anuncio2, .anuncio1{
+        width: 50%;
+    }
+}
