@@ -176,6 +176,9 @@ button:hover{
     cursor: pointer;
     transform: scale(1.03);
 }
+/* button .button-main .info{
+    position: absolute; 
+} */
 input{
     border-radius: 8px;
 }
