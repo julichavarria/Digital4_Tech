@@ -122,11 +122,7 @@ main button{
     position: relative;
     border-right: #e31a52 solid 1px;
 }
-h2 .seccion-productos{
-    position: relative;
-    display: inline-block;
-    text-indent: 1em;
-}
+
 .container .card:hover{
     transform: translateY(-15px);
     box-shadow: 0 12px 16 px rgba(0, 0, 0, 0.2);
