@@ -40,18 +40,23 @@
             <div><a href="./login.html"><img src="img/icon_login.svg" alt=""><span>INGRESAR</span></a></div>
             <div><a href="./carrito.html"><img src="img/icon_shop.svg" alt=""><span>CARRITO</span></a></div>
         </nav>
-      </header>
+    </header>
     <main class="log">
-        <div class="iconoLogin">
-            <img src="./img/icon_login.svg">
+        <div>
+            <img class="iconoLogin" src="./img/icon_login.svg" >
+        </div>
+        <div class="contenedorTitulo">
+            <div class="tituloSeccion">INGRESAR</div>
         </div>
         <form action="./" method="get">
-            <input class="completar-login" type="text" name="usuario" placeholder="Nombre">
+            <input class="completar-login" type="text" name="usuario" placeholder="Usuario">
             <input class="completar-login" type="password" name="contraseña" placeholder="Contraseña">
-            <input id="enviar" type="submit" value="Continuar">
-        </form>   
-        <button><a href="./register.html">Crear cuenta</a></button>
-        <button><a href="#"></a>¿Olvidaste tu contraseña?</button>
+        </form> 
+        <div class="contenedorBoton">
+            <input id="ingresar" type="submit" value="Ingresar">
+            <input id="volver" type="submit" value="Volver">
+            <button class="crear-cuenta"><a href="./register.html">Crear cuenta</a></button>
+        </div>
     </main>
     <footer>
         <section>
@@ -74,6 +79,6 @@
           <p>Sitio web realizado por <span>Grupo4</span> Digital House</p>
         </div>
       </section>
-      </footer>
+    </footer>
 </body>
 </html>

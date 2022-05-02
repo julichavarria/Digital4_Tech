@@ -34,34 +34,59 @@ a:link, a:visited, a:active {
 /* ///////////////////// FIN GENERAL //////////////////////// */
 /*/////////////////ESTILOS LOGIN /////////////////*/
 main.log {
-    max-width: 80%;
-    margin: auto;
-    background-color: #666
-    }
+    color: #fff;
+    margin: 20px 0px;
+    padding: 50px;
+}
 .iconoLogin {
-    width: 25%;
-    padding: 10px;
-    margin-left: 80px;
+    width: 10%;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+.contenedorTitulo{
+    font-weight: 200;
+    margin: 30px;
+}
+.tituloSeccion{
+    color: #e31a52;
+    font-size: 35px;
+    text-align: center;
+}
+.contenedorBoton{
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    margin: 1% 0;
 }
 .completar-login {
-    border-color: #e31a52;
-    border-radius: 6px;
+    border-color: #666;
+    border-radius: 20px;
+    border-width: 1px;
     font-size: 16px;
+    font-weight: 100;
     height: 40px;
-    margin: 1.5% 0;
-    width: 50%;
+    margin: 1% 0;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-#enviar:hover {
-    background-color: #f5386e;
+#ingresar:hover {
+    background-color: #484747;
     cursor: pointer;
 }
-#enviar {
-    background-color: #e31a52;
+#ingresar {
+    background-color: #040404;
     color: #FFF;
     border-color: transparent;
-    border-radius: 6px;
+    border-radius: 20px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 150;
     height: 40px;
     padding: 0 10%;
     text-align: center;
@@ -69,57 +94,62 @@ main.log {
     align-self: center;
     width: 50%;
     margin-top: 30px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 1%;
 }
-#crear-cuenta {
+.crear-cuenta {
     background-color: transparent;
     color: #e31a52;
     border-color: transparent;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 600;
-    height: 40px;
-    padding: 0 10%;
-    text-align: center;
-    margin: 0 0;
-    align-self: center;
-    width: 50%;
-}
-#crear-cuenta:hover{
-    background-color: #f25481;
-    color: #FFF;
-}
-#olvidaste-contraseña {
-    background-color: transparent;
-    color: #e31a52;
-    border-color: transparent;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 600;
-    height: 40px;
-    padding: 0 10%;
-    text-align: center;
-    margin: 0 0;
-    align-self: center;
-    width: 50%;
-}
-#olvidaste-contraseña:hover {
-    background-color: #ee7e9e;
-    color: #FFF;
-}
-.log {
-    color: #fff;
-    background-color: #666;
-    border-radius: 10px;
-    padding: 50px;
-    
-}
-main.log {
-    color: #fff;
-    background-color: #666;
     border-radius: 20px;
-    margin: 20px 0px;
-    padding: 50px;
-    margin-left: 80px;
-    padding-left: 250px ;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    padding: 0 10%;
+    text-align: center;
+    margin: 0 0;
+    align-self: center;
+    width: 50%;
+    margin-top: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+a {
+    color: #e31a52;
+}
+.crear-cuenta:hover {
+    background-color: #e8a7b9;
+    cursor: pointer;
+    color: #FFF;
+}
+a:hover {
+    color: #FFF;
+}
+#volver {
+    background-color: #e31a52;
+    color: #FFF;
+    border-color: transparent;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 150;
+    height: 40px;
+    padding: 0 10%;
+    text-align: center;
+    margin: 0 0;
+    align-self: center;
+    width: 50%;
+    margin-top: 30px;
+    margin: 0 auto;
+    text-align: center;
+}
+#volver:hover {
+    background-color: #f99eb8;
+    cursor: pointer
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 /*////////////////FIN ESTILO LOGIN //////////////////*/
