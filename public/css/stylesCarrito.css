@@ -8,6 +8,10 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
+main {
+    margin:40px 0px;
+}
+
 .seccionIN{
     font-weight: 200;
     letter-spacing: 3px;
@@ -133,8 +137,8 @@ a:link, a:visited, a:active {
     flex-wrap: nowrap;
     border-bottom: #e31a52 1px solid;
     margin: 10px;
-    padding: 20px 0;
-    justify-content: space-between;
+    padding: 20px 0px;
+    justify-content: space-around;
     align-items: center;
 }
 

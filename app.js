@@ -21,3 +21,5 @@ app.get ("/login.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/l
 app.get ("/carrito.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/carrito.html" ) ));
 
 app.get ("/headerFooter.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/headerFooter.html" ) ));
+
+app.get ("/home2.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/home2.html" ) ));
