@@ -15,4 +15,16 @@ Implementando la dinámica de la estrella de mar:
    
 5. Dejar de hacer----->Deberiamos dejar de 
    
+
+
 Sprint 2 ---->
+
+1. Comenzar a hacer -----> un archivo md o un espacio en trello donde podríamos dejar review internas del trabajo que los demás compañeros les toco
+
+2. Hacer más-----> dejar un espacio corto de las reuniones generales que hacemos para preguntarnos o hacer una autoevaluación de si el trabajo que estamos haciendo nos gusta realmente o se hace para cumplir
+
+3. Continuar haciendo-----> la división de tareas aún más pequeñas para para resoluciones mucho más simples
+
+4. Hacer menos-----> un rejunte de tareas y tratar de unificar más los criterios de como codear, está claro y se nota sin saber quién hizo que, que existen varias manos codeando. si bien es nuestro primer proyecto de programación y nuestro primer proyecto en grupo, se nota que no se aplican los mismo criterios para escribir, para nombrar las cosas, etc
+
+5. Dejar de hacer-----> dejar de subir commits por cambios pequeños y planificar más las instancias de subida al repositorio
