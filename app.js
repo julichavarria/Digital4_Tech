@@ -22,4 +22,4 @@ app.get ("/carrito.html", (req,res)=> res.sendFile(path.join(__dirname, "./views
 
 app.get ("/headerFooter.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/headerFooter.html" ) ));
 
-app.get ("/home2.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/home2.html" ) ));
+app.get ("/home2.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/home_romi.html" ) ));

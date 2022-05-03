@@ -22,9 +22,6 @@ a:link, a:visited, a:active {
     text-decoration:none;
 }
 
-main {
-    margin:40px 0px 0px 0px;
-}
 
 /* ////////////////// MAIN ////////////////////////////// */
 
@@ -212,6 +209,18 @@ max-width: 200px ;
 
 .anuncio2 h2 span{
  color: #fff;
+}
+
+.slider img{
+    width: 100%;
+    max-width: 1024px;
+   
+}
+
+.slider {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #131313;
 }
 
 
