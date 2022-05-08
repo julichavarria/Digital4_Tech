@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+   <html lang="en">
+    <%- include ('../partials/head') %>
+<body>
+    <%- include ('../partials/header') %>
+    <main class="log">
+        <div>
+            <img class="iconoLogin" src="./img/icon_login.svg" >
+        </div>
+        <div class="contenedorTitulo">
+            <div class="tituloSeccion">INGRESAR</div>
+        </div>
+        <form action="./" method="get">
+            <input class="completar-login" type="text" name="usuario" placeholder="Usuario">
+            <input class="completar-login" type="password" name="contraseña" placeholder="Contraseña">
+        </form> 
+        <div class="contenedorBoton">
+            <input id="ingresar" type="submit" value="Ingresar">
+            <input id="volver" type="submit" value="Volver">
+            <button class="crear-cuenta"><a href="./register">Crear cuenta</a></button>
+        </div>
+    </main>
+    <%- include ('../partials/footer') %>
+</body>
+</html>

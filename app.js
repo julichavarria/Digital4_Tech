@@ -8,18 +8,14 @@ app.use(express.static("public"));
 
 app.listen(3030, ()=> console.log ("Server running in 3030 port ") );
 
-app.get ("/", (req,res)=> res.sendFile(path.join(__dirname, "./views/index.html" ) ));
+app.get ("/", (req,res)=> res.render(path.join(__dirname, "./views/index.ejs" ) ));
 
-app.get ("/index.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/index.html" ) ));
+app.get ("/index", (req,res)=> res.render(path.join(__dirname, "./views/index.ejs" ) ));
 
-app.get ("/register.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/register.html" ) ));
+app.get ("/register", (req,res)=> res.render(path.join(__dirname, "./views/users/register.ejs" ) ));
 
-app.get ("/productDetail.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/productDetail.html" ) ));
+app.get ("/productDetail", (req,res)=> res.render(path.join(__dirname, "./views/product/productDetail.ejs" ) ));
 
-app.get ("/login.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/login.html" ) ));
+app.get ("/login", (req,res)=> res.render(path.join(__dirname, "./views/users/login.ejs" ) ));
 
-app.get ("/productCart.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/productCart.html" ) ));
-
-app.get ("/headerFooter.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/headerFooter.html" ) ));
-
-app.get ("/home2.html", (req,res)=> res.sendFile(path.join(__dirname, "./views/home_romi.html" ) ));
+app.get ("/productCart", (req,res)=> res.render(path.join(__dirname, "./views/product/productCart.ejs" ) ));
