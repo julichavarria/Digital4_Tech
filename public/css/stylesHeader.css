@@ -1,14 +1,5 @@
 /* ////////////////// GENERAL ////////////////////////////// */
 
-*{
-    box-sizing: border-box;  
-}
-
-a:link, a:visited, a:active {
-    text-decoration:none;
-}
-
-
 
 .menu2 a,footer a {
     color: #FFFFFF;
@@ -26,11 +17,7 @@ header{
     font-weight: 200;
 }
 
-footer{
-    background-color: black;
-    color: #FFFFFF;
-    font-weight: 200;
-}
+
 .menu1{
     display: flex;
     flex-wrap: nowrap;
@@ -88,37 +75,7 @@ footer{
     cursor: pointer;
 }
 
-footer section {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 1024px;
-    padding:20px;
-}
 
-footer div span {
-    color: #e31a52;
-}
-
-.logoFooter img{
-    max-width: 150px;
-    margin-top: 20px;
-   
-}
-
-.rrss i{
-margin: 0 20px;
-}
-
-
-footer div {
-    border-bottom: #333 solid 1px;
-    padding: 20px 0px;
-}
-
-.rrss{
-    border:none;
-    margin: 10px 0px;
-}
 
 @media (min-width: 768px){
     .iconBurgerMobile{
@@ -164,14 +121,5 @@ footer div {
     
     }
 
-    footer section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    footer div {
-        border:none;
-    }
 
 }

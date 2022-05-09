@@ -18,6 +18,16 @@ body{
     color: #e31a52;
 }
 
+
+main {
+    margin:40px 0px;
+}
+
+.grisesSecundarios{
+    color: #666;
+    font-size: 16px;
+    font-weight: 200;
+}
 a:link, a:visited, a:active {
     text-decoration:none;
 }
@@ -25,7 +35,7 @@ a:link, a:visited, a:active {
 
 /* ////////////////// MAIN ////////////////////////////// */
 
-h1{
+.mainIndex h1{
 font-weight: 200;
 color: #e31a52;
 font-size: 20px;
@@ -33,7 +43,7 @@ text-align: center;
 margin: 40px;
 }
 
-h1 span{
+.mainIndex h1 span{
     color: #333;
     
 }

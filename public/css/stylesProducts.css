@@ -1,47 +1,16 @@
 /* ////////////////// GENERAL ////////////////////////////// */
 
-*{
-    box-sizing: border-box;  
-}
-
-body{
-    font-family: 'Oswald', sans-serif; 
-}
-
-.seccionIN{
-    font-weight: 200;
-    letter-spacing: 3px;
-    margin: 20px;
-}
-
-main {
-    margin:40px 0px;
-}
-
-.txtMagenta{
-    color: #e31a52;
-}
-
-.grisesSecundarios{
-    color: #666;
-    font-size: 16px;
-    font-weight: 200;
-}
-a:link, a:visited, a:active {
-    text-decoration:none;
-}
-
 .contenedorPrecio a:hover {
     color: #000;
 }
 
 /* ////////////////// Bloque Fotos ////////////////////////////// */
 
-.fotoProducto img{
+.fotoProducto_P img{
   width: 100%;
   max-width: 400px;
 }
-.fotoProducto{
+.fotoProducto_P{
     margin: 0 auto;
     text-align: center;
 }
@@ -72,7 +41,7 @@ a:link, a:visited, a:active {
 .contenedorCaracteristicas{
     text-align: left;
 }
-.caracteristicas{
+.caracteristicas_P{
     padding: 10px;
     font-size: 12px;
     border-bottom: #e31a52 1px solid;
@@ -86,7 +55,7 @@ a:link, a:visited, a:active {
     text-align: center;
 }
 
-.caracteristicas span{
+.caracteristicas_P span{
     color: #333;
     font-weight: 400;
     padding-left: 5px;
@@ -131,7 +100,7 @@ padding: 0px 15px;
     font-weight: 200;
 }
 
-.selectorCantidades{
+.selectorCantidades_P{
     border: #e31a52 solid 1px;
     border-radius: 20px;
     margin-right: 15px;
@@ -163,7 +132,7 @@ padding: 0px 15px;
 
 
 @media (min-width: 768px){
-    .contenedorSeccion{
+    .contenedorSeccion_P{
         margin: 0 auto;
         text-align: center;
         display: flex;

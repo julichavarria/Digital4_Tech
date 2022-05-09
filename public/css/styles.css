@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;  
+}
+
+body{
+    font-family: 'Oswald', sans-serif; 
+}
+
+.seccionIN{
+    font-weight: 200;
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+.txtMagenta{
+    color: #e31a52;
+}
+
+
+main {
+    margin:40px 0px;
+}
+
+.grisesSecundarios{
+    color: #666;
+    font-size: 16px;
+    font-weight: 200;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
