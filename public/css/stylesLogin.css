@@ -45,7 +45,7 @@ main.log {
     display: block;
 }
 .contenedorTitulo{
-    font-weight: 200;
+    font-weight: 300;
     margin: 30px;
 }
 .tituloSeccion{
@@ -76,11 +76,12 @@ main.log {
     flex-wrap: wrap;
     justify-content: center;
 }
-#ingresar:hover {
+.ingresar:hover {
     background-color: #484747;
     cursor: pointer;
+    transform: scale(1.01);
 }
-#ingresar {
+.ingresar {
     background-color: #040404;
     color: #FFF;
     border-color: transparent;
@@ -119,14 +120,12 @@ a {
     color: #e31a52;
 }
 .crear-cuenta:hover {
-    background-color: #e8a7b9;
     cursor: pointer;
-    color: #FFF;
 }
 a:hover {
-    color: #FFF;
+    color: rgb(10, 10, 10);
 }
-#volver {
+.borrar {
     background-color: #e31a52;
     color: #FFF;
     border-color: transparent;
@@ -142,10 +141,12 @@ a:hover {
     margin-top: 30px;
     margin: 0 auto;
     text-align: center;
+    transition: all 500ms;
 }
-#volver:hover {
+.borrar:hover {
     background-color: #f99eb8;
-    cursor: pointer
+    cursor: pointer;
+    transform: scale(1.01);
 }
 form {
     display: flex;
@@ -153,3 +154,16 @@ form {
     justify-content: center;
 }
 /*////////////////FIN ESTILO LOGIN //////////////////*/
+@media (max-width: 768px){
+    .contenedorBoton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ingresar,
+    .borrar {
+        width: 90%;
+        margin: 10px 0px;
+    }
+}
