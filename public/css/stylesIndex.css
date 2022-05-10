@@ -1,14 +1,14 @@
 /* ////////////////// GENERAL ////////////////////////////// */
 
-*{
+.index-css *{
     box-sizing: border-box;  
 }
 
-body{
+.index-css body{
     font-family: 'Oswald', sans-serif; 
 }
 
-.seccionIN{
+.index-css .seccionIN{
     font-weight: 200;
     letter-spacing: 3px;
     margin: 20px;
