@@ -34,11 +34,6 @@ a:link, a:visited, a:active {
 
 /* ///////////////////// FIN GENERAL //////////////////////// */
 
-main {
-    max-width: 80%;
-    margin: auto;
-}
-
 h2 {
     color: #e31a52;
     text-transform: uppercase;
@@ -46,6 +41,10 @@ h2 {
     font-size: 40px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
 /* main form input {
 	background: rgb(236, 236, 236);
 	color: inherit;
@@ -72,7 +71,8 @@ textarea:-moz-placeholder {
     color: #000;
     margin: 20px 0px;
     padding: 50px;
-    
+    max-width: 80%;
+    margin: auto;
 }
 .campoFormulario {
     display: flex;
