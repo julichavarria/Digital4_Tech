@@ -1,59 +1,60 @@
 /* ////////////////// GENERAL ////////////////////////////// */
 
-*{
+.login-css *{
     box-sizing: border-box;  
 }
 
-body{
+.login-css body{
     font-family: 'Oswald', sans-serif; 
 }
 
-.seccionIN{
+.login-css .seccionIN{
     font-weight: 200;
     letter-spacing: 3px;
     margin: 20px;
 }
 
-.txtMagenta{
+.login-css.txtMagenta{
     color: #e31a52;
 }
 
-.grisesSecundarios{
+.login-css.grisesSecundarios{
     color: #666;
     font-size: 16px;
     font-weight: 200;
 }
-a:link, a:visited, a:active {
+.login-css a:link, a:visited, a:active {
     text-decoration:none;
 }
 
-.contenedorPrecio a:hover {
+.login-css.contenedorPrecio a:hover {
     color: #000;
 }
 
 /* ///////////////////// FIN GENERAL //////////////////////// */
 /*/////////////////ESTILOS LOGIN /////////////////*/
-main.log {
+.login-css main.log {
     color: #fff;
     margin: 20px 0px;
     padding: 50px;
+    align-items: center;
 }
-.iconoLogin {
+.login-css .iconoLogin {
     width: 10%;
     margin: auto;
     text-align: center;
     display: block;
 }
-.contenedorTitulo{
+.login-css .contenedorTitulo{
     font-weight: 300;
     margin: 30px;
 }
-.tituloSeccion{
+.login-css .tituloSeccion{
     color: #e31a52;
     font-size: 35px;
     text-align: center;
 }
-.contenedorBoton{
+.login-css .contenedorBoton{
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -61,35 +62,45 @@ main.log {
     margin-bottom: 20px;
     border-radius: 20px;
     margin: 1% 0;
+    padding: 1% 20%;
+    align-items: center;
 }
-.completar-login {
+.login-css .generalCompletar-login {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0% 10%;
+}
+.login-css .completar-login {
     border-color: #666;
     border-radius: 20px;
     border-width: 1px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 100;
     height: 40px;
-    margin: 1% 0;
-    width: 80%;
+    margin: 10px 0px;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
 }
-.ingresar:hover {
+.login-css .ingresar:hover {
     background-color: #484747;
     cursor: pointer;
     transform: scale(1.01);
 }
-.ingresar {
+.login-css .ingresar {
     background-color: #040404;
     color: #FFF;
     border-color: transparent;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 150;
     height: 40px;
-    padding: 0 10%;
+    padding: 0 5%;
     text-align: center;
     margin: 0 0;
     align-self: center;
@@ -99,12 +110,12 @@ main.log {
     text-align: center;
     margin-bottom: 1%;
 }
-.crear-cuenta {
+.login-css .crear-cuenta {
     background-color: transparent;
     color: #e31a52;
     border-color: transparent;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     height: 40px;
     padding: 0 10%;
@@ -116,21 +127,21 @@ main.log {
     margin: 0 auto;
     text-align: center;
 }
-a {
+.login-css a {
     color: #e31a52;
 }
-.crear-cuenta:hover {
+.login-css .crear-cuenta:hover {
     cursor: pointer;
 }
-a:hover {
+.login-css a:hover {
     color: rgb(10, 10, 10);
 }
-.borrar {
+.login-css .borrar {
     background-color: #e31a52;
     color: #FFF;
     border-color: transparent;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 150;
     height: 40px;
     padding: 0 10%;
@@ -143,26 +154,26 @@ a:hover {
     text-align: center;
     transition: all 500ms;
 }
-.borrar:hover {
+.login-css .borrar:hover {
     background-color: #f99eb8;
     cursor: pointer;
     transform: scale(1.01);
 }
-form {
+.login-css form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 /*////////////////FIN ESTILO LOGIN //////////////////*/
 @media (max-width: 768px){
-    .contenedorBoton {
+    .login-css .contenedorBoton {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .ingresar,
-    .borrar {
+    .login-css .ingresar,
+    .login-css .borrar {
         width: 90%;
         margin: 10px 0px;
     }

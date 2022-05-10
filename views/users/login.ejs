@@ -3,7 +3,7 @@
     <%- include ('../partials/head') %>
 <body>
     <%- include ('../partials/header') %>
-    <main class="log">
+    <main class="log login-css">
         <div>
             <img class="iconoLogin" src="./img/icon_login.svg" >
         </div>
@@ -11,9 +11,10 @@
             <div class="tituloSeccion">INGRESAR</div>
         </div>
         <form action="./" method="get">
+            <div class="generalCompletar-login">
             <input class="completar-login" type="text" name="usuario" placeholder="USUARIO">
             <input class="completar-login" type="password" name="contraseña" placeholder="CONTRASEÑA">
-        
+        </div>
         <div class="contenedorBoton">
             <button class="ingresar" type="submit"> INGRESAR</button>
             <button class="borrar" type="reset"> BORRAR</button>
