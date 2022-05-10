@@ -1,11 +1,13 @@
 const path = require ("path");
 
+const pcArmadas =require ("./pcArmadas");
+
 const mainController = {
     raiz:function (req,res) {
         res.render(path.join(__dirname, "../views/index.ejs" ) );
     },
     index:function (req,res) {
-        res.render(path.join(__dirname, "../views/index.ejs" ) );
+        res.render("index", {pcArmadas:pcArmadas});
     },
     register:function (req,res) {
         res.render(path.join(__dirname, "../views/users/register.ejs" ) );
