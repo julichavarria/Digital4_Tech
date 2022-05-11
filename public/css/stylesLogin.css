@@ -1,59 +1,15 @@
-/* ////////////////// GENERAL ////////////////////////////// */
 
-.login-css *{
-    box-sizing: border-box;  
-}
-
-.login-css body{
-    font-family: 'Oswald', sans-serif; 
-}
-
-.login-css .seccionIN{
-    font-weight: 200;
-    letter-spacing: 3px;
-    margin: 20px;
-}
-
-.login-css.txtMagenta{
-    color: #e31a52;
-}
-
-.login-css.grisesSecundarios{
-    color: #666;
-    font-size: 16px;
-    font-weight: 200;
-}
-.login-css a:link, a:visited, a:active {
-    text-decoration:none;
-}
-
-.login-css.contenedorPrecio a:hover {
-    color: #000;
-}
-
-/* ///////////////////// FIN GENERAL //////////////////////// */
 /*/////////////////ESTILOS LOGIN /////////////////*/
-.login-css main.log {
-    color: #fff;
-    margin: 20px 0px;
-    padding: 50px;
-    align-items: center;
-}
+
 .login-css .iconoLogin {
-    width: 10%;
-    margin: auto;
+    width: 100px;
     text-align: center;
-    display: block;
-}
-.login-css .contenedorTitulo{
-    font-weight: 300;
-    margin: 30px;
-}
-.login-css .tituloSeccion{
-    color: #e31a52;
-    font-size: 35px;
+    margin: 0 auto;
     text-align: center;
+    margin-bottom: -40px;
 }
+
+
 .login-css .contenedorBoton{
     margin: 0 auto;
     text-align: center;
@@ -68,65 +24,35 @@
 .login-css .generalCompletar-login {
     display: flex;
     flex-wrap: wrap;
-    border-radius: 10px;
-    width: 100%;
-    padding: 0% 10%;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+
 }
 .login-css .completar-login {
-    border-color: #666;
-    border-radius: 20px;
-    border-width: 1px;
-    font-size: 14px;
-    font-weight: 100;
     height: 40px;
     margin: 10px 0px;
     width: 100%;
+    max-width: 400px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
 }
-.login-css .ingresar:hover {
-    background-color: #484747;
-    cursor: pointer;
-    transform: scale(1.01);
-}
-.login-css .ingresar {
-    background-color: #040404;
-    color: #FFF;
-    border-color: transparent;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 150;
-    height: 40px;
-    padding: 0 5%;
-    text-align: center;
-    margin: 0 0;
-    align-self: center;
-    width: 50%;
-    margin-top: 30px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 1%;
-}
+
 .login-css .crear-cuenta {
-    background-color: transparent;
-    color: #e31a52;
-    border-color: transparent;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 400;
-    height: 40px;
-    padding: 0 10%;
-    text-align: center;
-    margin: 0 0;
+    border:none;
     align-self: center;
-    width: 50%;
-    margin-top: 30px;
-    margin: 0 auto;
-    text-align: center;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #fff;
+    font-weight: 400;
+
 }
+
 .login-css a {
     color: #e31a52;
 }
@@ -136,33 +62,12 @@
 .login-css a:hover {
     color: rgb(10, 10, 10);
 }
-.login-css .borrar {
-    background-color: #e31a52;
-    color: #FFF;
-    border-color: transparent;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 150;
-    height: 40px;
-    padding: 0 10%;
-    text-align: center;
-    margin: 0 0;
-    align-self: center;
-    width: 50%;
-    margin-top: 30px;
-    margin: 0 auto;
-    text-align: center;
-    transition: all 500ms;
-}
-.login-css .borrar:hover {
-    background-color: #f99eb8;
-    cursor: pointer;
-    transform: scale(1.01);
-}
+
 .login-css form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 /*////////////////FIN ESTILO LOGIN //////////////////*/
 @media (max-width: 768px){

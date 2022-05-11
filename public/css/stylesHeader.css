@@ -1,27 +1,18 @@
 /* ////////////////// GENERAL ////////////////////////////// */
 
 
-.menu2 a,footer a {
-    color: #FFFFFF;
-}
-
 .menu2 a:hover, footer a:hover {
     color: #666;
-    font-weight: 300;
 }
 
 
 header{
     background-color: black;
-    color: #FFFFFF;
-    font-weight: 200;
 }
-
 
 .menu1{
     display: flex;
     flex-wrap: nowrap;
-    background-color: black;
     justify-content: space-around;
     padding: 15px 0px;
     align-items: center;
@@ -65,7 +56,6 @@ header{
 .barraDeBusqueda input{
  outline: none;
  border: none;
- font-weight: 200;
 }
 
 .barraDeBusqueda button{
@@ -108,8 +98,7 @@ header{
     .menu1 div span{
         display: flex;
         margin-top: -5px;
-        color:#FFF;
-        font-size: 12px;
+    
       }
 
       .menu1 a span:hover {

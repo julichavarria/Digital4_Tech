@@ -1,47 +1,13 @@
 
-/* ////////////////// GENERAL ////////////////////////////// */
 
-*{
-    box-sizing: border-box;  
-}
-
-body{
-    font-family: 'Oswald', sans-serif; 
-}
-
-.seccionIN{
-    font-weight: 200;
-    letter-spacing: 3px;
-    margin: 20px;
-}
-
-.txtMagenta{
-    color: #e31a52;
-}
-
-.grisesSecundarios{
-    color: #666;
-    font-size: 16px;
-    font-weight: 200;
-}
-a:link, a:visited, a:active {
-    text-decoration:none;
-}
-
-.contenedorPrecio a:hover {
-    color: #000;
-}
-
-/* ///////////////////// FIN GENERAL //////////////////////// */
-
-h2 {
+.mainRegister h2 {
     color: #e31a52;
     text-transform: uppercase;
     font-weight: 300;
     font-size: 40px;
 }
 
-form {
+.mainRegister form {
     display: flex;
     flex-direction: column;
 }
@@ -67,69 +33,39 @@ textarea:-moz-placeholder {
   color: #afafaf;
 } */
 
-.controlGeneral {
-    color: #000;
-    margin: 20px 0px;
-    padding: 50px;
-    max-width: 80%;
-    margin: auto;
+.mainRegister .controlGeneral {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 400px;
+    
+
 }
-.campoFormulario {
+.mainRegister .campoFormulario {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
     border-radius: 20px;
+    
 }
 /* main form div label {
     flex-grow: 0.4;
     max-width: 140px;
     margin-bottom: 10px;
 }  */
-main form div input {
+.mainRegister form div input {
     flex-grow: 0.6;
-    align-items: flex-start;
     width: 100%;
     padding: 10px;
-    border-radius: 50px;
-}
-
-.botonVolver {
-    background-color: #e31a52;
-    /* border: #000 solid 1px; */
     border-radius: 20px;
-    color: #fff;
-    font-weight: 200;
-    letter-spacing: 3px;
-    padding: 10px 35px;
-    width: 45%;
-    transition: all 500ms;
+    text-align: center;
 }
 
-.botonRegistro {
-    background-color: #000;
-    border: #e31a52 solid 1px;
-    border-radius: 20px;
-    color: #fff;
-    font-weight: 200;
-    letter-spacing: 3px;
-    padding: 10px 35px;
-    width: 45%;
-    transition: all 500ms;
+.mainRegister .btnSecundario, .mainRegister .btnPrincipal {
+    width: 48%;
 }
 
-.botonRegistro:hover{
-    background-color: #e31a52;
-    cursor: pointer;
-    transform: scale(1.01);
-}
 
-.botonVolver:hover{
-    background-color: #000;
-    cursor: pointer;
-    transform: scale(1.01);
-}
-
-.botones {
+.mainRegister .botones {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
@@ -139,15 +75,11 @@ main form div input {
 /* ////////////// inicio de @media //////////////// */
 
 @media (max-width: 768px){
-    .botones {
+    .mainRegister .botones {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .botonRegistro,
-    .botonVolver {
-        width: 90%;
-        margin: 10px 0px;
-    }
+
 }

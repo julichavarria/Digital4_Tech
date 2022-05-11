@@ -2,12 +2,22 @@
     box-sizing: border-box;  
 }
 
+
 body{
     font-family: 'Oswald', sans-serif; 
+    font-size: 14px;
+    font-weight: 200;
+    color: #333;
+}
+
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
 }
 
 .seccionIN{
-    font-weight: 200;
     letter-spacing: 3px;
     margin: 20px;
 }
@@ -17,15 +27,99 @@ body{
 }
 
 
-main {
-    margin:40px 0px;
-}
-
 .grisesSecundarios{
     color: #666;
     font-size: 16px;
-    font-weight: 200;
 }
+
+.grisesSecundarios a{
+    color: #666;
+}
+
 a:link, a:visited, a:active {
     text-decoration:none;
+}
+
+h1{
+    color: #e31a52;
+    font-weight: 200;
+    font-size: 35px;
+}
+h2{
+    font-weight: 200;
+    font-size: 20px;
+}
+
+h3{
+    font-weight: 200;
+    font-size: 18px;
+}
+form select{
+    font-weight: 200;
+    border:none;
+    outline: none;
+    text-align: center;
+    padding-right: 5px;
+}
+
+form input {
+    font-weight: 200;
+    border: #cacaca solid 1px;
+    border-radius: 20px;
+}
+
+nav, nav a {
+    color: #fff;
+}
+
+
+.selectorCantidades{
+    border: #e31a52 solid 1px;
+    border-radius: 20px;
+    margin-right: 15px;
+    
+}
+
+.selectorCantidades form{
+    padding: 2px 15px;
+    
+}
+
+
+
+/* ////////////////////// BOTONES ////////////////////// */
+
+button {
+font-weight: 200;
+}
+
+.btnPrincipal, .btnSecundario{
+    border-radius: 20px;
+    letter-spacing: 3px;
+    margin: 5px 0px;
+    padding: 10px 35px;
+    width: 100%;
+    transition: all 500ms;
+}
+.btnSecundario{
+    background-color: #999;
+    border: #000 solid 0px;
+    color: #fff;
+}
+.btnPrincipal{
+    background-color: #000;
+    border: #e31a52 solid 1px;
+    color: #fff;
+}
+
+/* BTONES OVER */
+.btnPrincipal:hover, .btnSecundario:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.btnPrincipal:hover{
+    background-color: #e31a52;
+}
+.btnSecundario:hover{
+    background-color: #666;
 }

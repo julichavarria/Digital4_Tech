@@ -3,44 +3,55 @@
 
 <%- include ('../partials/head') %>
 
-<body>
-    <%- include ('../partials/header') %>
-    <main>
-        <div class="controlGeneral">
-            <h2> Registrarse</h2>
-            <p>Completa la siguiente información para poder registrarse en nuestro sitio Web</p>
-            <hr>
-            <br>
-            <form>
-                <div class="campoFormulario">
-                    <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE" maxlength="25" class="controlFormulario">
-                </div>
-                <div class="campoFormulario">
-                    <input required="required" type="text" id="apellido" name="apellido" placeholder="APELLIDO" maxlength="20"class="controlFormulario">
-                </div>
-                <div class="campoFormulario">
-                    <input required="required" type="email" id="email" name="email" placeholder="EMAIL" class="controlFormulario">
-                </div>
-                <div class="campoFormulario">
-                    <input required="required" type="confirmarEmail" id="confirmarEmail" name="confirmarEmail" placeholder="REPETIR EMAIL" class="controlFormulario">
-                </div>
-                <div class="campoFormulario">
-                    <input required="required" type="text" id="usuario" name="usuraio" placeholder="USUARIO" class="controlFormulario">
-                </div>
-                <div class="campoFormulario">
-                    <input required="required" type="password" id="contrasena" name="contrasena" placeholder="CONTRASEÑA" minlength="6" class="controlFormulario">
-                </div>
-                <div class="campoFormulario">
-                    <input required="required" type="password" id="confirmarContrasena" name="confirmarContrasena" placeholder="REPETIR CONTRASEÑA" minlength="6" class="controlFormulario">
-                </div>
-                <div class="botones">
-                    <button class="botonRegistro" type="submit"> REGISTRARSE </button>
-                    <button class="botonVolver" type="reset"> BORRAR </button>
-                </div>
-            </form>
-        </div>
-        
-    </main>
-    <%- include ('../partials/footer') %>
-</body>
+    <body>
+        <%- include ('../partials/header') %>
+            <main class="mainRegister">
+            
+                    <h1> REGISTRARSE</h1>
+                    <h3>Completa la siguiente información para poder registrarse en nuestro sitio Web</h3>
+
+
+                    <div class="controlGeneral">
+                        <form>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
+                                    maxlength="25" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="apellido" name="apellido"
+                                    placeholder="APELLIDO" maxlength="20" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="email" id="email" name="email" placeholder="EMAIL"
+                                    class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="confirmarEmail" id="confirmarEmail"
+                                    name="confirmarEmail" placeholder="REPETIR EMAIL" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="usuario" name="usuraio" placeholder="USUARIO"
+                                    class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="password" id="contrasena" name="contrasena"
+                                    placeholder="CONTRASEÑA" minlength="6" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="password" id="confirmarContrasena"
+                                    name="confirmarContrasena" placeholder="REPETIR CONTRASEÑA" minlength="6"
+                                    class="controlFormulario">
+                            </div>
+                            <div class="botones">
+                                <button class="btnPrincipal" type="submit"> REGISTRARSE </button>
+                                <button class="btnSecundario" type="reset"> BORRAR </button>
+                            </div>
+                        </form>
+                    </div>
+               
+
+            </main>
+            <%- include ('../partials/footer') %>
+    </body>
+
 </html>

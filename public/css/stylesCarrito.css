@@ -1,23 +1,14 @@
-/* ////////////////// GENERAL ////////////////////////////// */
-
-
-
-
-.contenedorPrecio a:hover {
-    color: #000;
-}
-.precio_C, .subtotal{
+.mainCart .precio_C, .subtotal{
     color: #e31a52;
     font-size: 35px;
-    font-weight: 200;
     margin: 10px 0px;
 }
 
-.precio_C{
+.mainCart .precio_C{
     text-align: right;
 }
 
-.subtotal{
+.mainCart .subtotal{
     margin-top: 30px;
     vertical-align: middle;
     align-items: center;
@@ -25,86 +16,42 @@
     justify-content: center;
 }
 
-.subtotal span{
-    color: #000;
+.mainCart .subtotal span{
     font-size: 20px;
     margin-right: 10px;
     text-align: center;
 
 }
 
-.contenedorTitulo{
-    font-weight: 200;
+.mainCart .contenedorTitulo{
     margin: 30px;
 }
 
-.tituloSeccion{
-    color: #e31a52;
-    font-size: 35px;
-}
 
-
-.contenedorSeccion form button{
-    background-color: #000;
-    border: #e31a52 solid 1px;
-    border-radius: 20px;
-    color: #fff;
-    font-weight: 200;
-    letter-spacing: 3px;
-    margin: 20px 0px;
-    padding: 10px 35px;
-    width: 100%;
-    max-width: 300px;
-    transition: all 500ms;
-
-}
-
-.contenedorSeccion form button:hover{
-    background-color: #e31a52;
-    cursor: pointer;
-    transform: scale(1.03);
-}
-
-.contenedorBoton{
+.mainCart .contenedorBoton{
     margin: 0 auto;
     text-align: center;
 }
 
-.selectorCantidades{
+.mainCart .contenedorCantidadesBorrar{
     display: flex;
     align-items: center;
     height: 30px;
     text-align: right;
-    justify-content: right;
+    justify-content: center;
 }
 
-.selectorCantidades form{
-    padding: 0px 10px;
-    border: #e31a52 solid 1px;
-    border-radius: 20px;
-    margin-right: 20px;
-
-
-}
-.selectorCantidades form select{
-    border:none;
-    outline: none;
-    text-align: center;
-    padding-right: 5px;
-    font-weight: 200;
-}
-
-.fotoProducto_C img{
+.mainCart .fotoProducto_C img{
     width: 100%;
     max-height: 180px;
 }
 
-.detallesProductoListado{
+.mainCart .detallesProductoListado{
     text-align: right;
     padding-top:30px;
 }
 
-.productoEnLista{
+.mainCart .productoEnLista{
     display: flex;
     flex-wrap: nowrap;
     border-bottom: #e31a52 1px solid;
@@ -114,52 +61,47 @@
     align-items: center;
 }
 
-.detallesProductoListado .nombreProducto_C{
-    color: #e31a52;
-}
-
-.detallesProductoListado .caracteristicas_C{
-    font-weight: 200;
-}
-
-.fa-circle-xmark{
+.mainCart .fa-circle-xmark{
     color: #e31a52;
     font-size: 20px;
 }
 
 
-.btnEliminarMobile .fa-circle-xmark{
+.mainCart .btnEliminarMobile .fa-circle-xmark{
     margin-right: 5px;
 }
 
-.btnEliminar{
+.mainCart .btnEliminar{
     display: none;
 }
 
-.btnEliminarMobile{
+.mainCart .btnEliminarMobile{
     display: flex;
     align-content: center;
 }
 
-.precioUnitario{
+.mainCart .precioUnitario{
     display: none;
 }
 
-.subtotalFijo{
+.mainCart .subtotalFijo{
     display: none;
 }
+
+
+
 
 /* ////////////////// MEDIA QUERYS ////////////////////////////// */
 
 
 @media (min-width: 768px){
-    .contenedorSeccion{
+    .mainCart .contenedorSeccion{
         margin: 0 auto;
         text-align: center;
         max-width: 1024px;
     }
 
-    .detallesProductoListado{
+    .mainCart .detallesProductoListado{
         flex-grow: 1;
         display: flex;
         align-items: center;
@@ -167,12 +109,12 @@
         justify-content: space-around;
     }
 
-    .nombreYCaracteristicas {
+    .mainCart .nombreYCaracteristicas {
 padding-right: 30px;
     }
 
 
-    .precioYCantidades{
+    .mainCart .precioYCantidades{
         flex-grow: 0.4;
 border-right: 1px solid #d7d7d7;
 border-left: 1px solid #d7d7d7;
@@ -180,59 +122,58 @@ padding: 0 30px;
 
     }
 
-    .precio_C{
+    .mainCart .precio_C{
         text-align: center;
     }
 
 
-    .btnEliminarMobile{
+    .mainCart .btnEliminarMobile{
         display: none;
     }
 
-    .btnEliminar{
+    .mainCart .btnEliminar{
         display: flex;
         flex-wrap: wrap;
         text-align: center;
         max-width: 50px;
         margin: 0 20px;
+        justify-content: center;
     }
 
-    .btnEliminar i{
+    .mainCart .btnEliminar i{
         width: 100%;
         padding-bottom: 5px;
     }
 
-    .fa-circle-xmark{
+    .mainCart .fa-circle-xmark{
         font-size: 40px;
 
     }
 
-    .selectorCantidades form{
+    .mainCart .Cantidades form{
         margin: 0 auto;
         text-align: center;
     }
 
-    .precioUnitario{
-        font-weight: 200;
+
+    .mainCart .precioUnitario{
         display: flex;
         flex-wrap: wrap;
         border-left: 1px solid #d7d7d7;
         align-self: stretch;
         align-items: center;
         padding: 0 20px;
-        font-size: 14px;
         color: #666;
         
     }
 
-    .precioUnitario span{
+    .mainCart .precioUnitario span{
         color: #e31a52;
     }
 
 
-    .subtotalFijo{
+    .mainCart .subtotalFijo{
         display: block;
-        font-weight: 200;
         position: fixed;
         top: 140px;
         right: 0px;
@@ -243,7 +184,7 @@ padding: 0 30px;
         opacity: 0.5;
     }
 
-    .subtotalFijo span {
+    .mainCart .subtotalFijo span {
         color: #fff;
     }
 

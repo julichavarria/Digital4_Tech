@@ -1,21 +1,26 @@
 /* ////////////////// GENERAL ////////////////////////////// */
 
-.contenedorPrecio a:hover {
+
+.mainProduct h2{
+    text-align: left;
+}
+
+.mainProduct .contenedorPrecio a:hover {
     color: #000;
 }
 
 /* ////////////////// Bloque Fotos ////////////////////////////// */
 
-.fotoProducto_P img{
+.mainProduct .fotoProducto_P img{
   width: 100%;
   max-width: 400px;
 }
-.fotoProducto_P{
+.mainProduct .fotoProducto_P{
     margin: 0 auto;
     text-align: center;
 }
 
-.contenedorIconosMarca{
+.mainProduct .contenedorIconosMarca{
     display: flex;
     flex-wrap:nowrap;
     justify-content: space-around;
@@ -25,37 +30,34 @@
     max-width: 400px;
     padding: 0px 50px;
 }
-.iconosMarcas img{
+.mainProduct .iconosMarcas img{
     max-width: 50px;
 }
 
 /* ////////////////// Bloque Caracteristicas ////////////////////////////// */
 
-.nombreProducto{
-    color: #e31a52;
-    font-size: 35px;
-    font-weight: 200;
-    text-align: center;
-    margin: 20px 0;
-}
-.contenedorCaracteristicas{
+
+.mainProduct .contenedorCaracteristicas{
     text-align: left;
 }
-.caracteristicas_P{
+.mainProduct .caracteristicas_P{
     padding: 10px;
     font-size: 12px;
     border-bottom: #e31a52 1px solid;
     color: #e31a52;
-    font-weight: 200;
     margin: 0 20px;
 }
-.contenedorDetallesProducto{
+.mainProduct .contenedorDetallesProducto{
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
 }
 
-.caracteristicas_P span{
+.mainProduct .contenedorDetallesProducto h1{
+    text-align: left;
+}
+
+.mainProduct .caracteristicas_P span{
     color: #333;
     font-weight: 400;
     padding-left: 5px;
@@ -64,67 +66,27 @@
 /* ////////////////// Bloque Botones y precio ////////////////////////////// */
 
 
-.contenedorPrecioBotones{
+.mainProduct .contenedorPrecioBotones{
 padding: 0px 15px;
 }
 
-.precio{
-    color: #e31a52;
-    font-size: 35px;
-    font-weight: 200;
-    margin-right: 20px;
+.mainProduct .contenedorPrecio p{
+    padding-left: 15px;
+}
+
+.mainProduct .contenedorPrecio{
+    display: flex;
+    align-items: center;
     
 }
 
-.contenedorPrecio{
-    display: flex;
-    align-items: center;
-}
-
-.contenedorCantidades{
+.mainProduct .contenedorCantidades{
     display: flex;
     flex-wrap: wrap;
     text-align: left;
     align-items: center;
 }
 
-.contenedorCantidades form{
-    padding: 5px 15px;
-    
-}
-.contenedorCantidades form select{
-    border:none;
-    outline: none;
-    text-align: right;
-    padding-right: 5px;
-    font-weight: 200;
-}
-
-.selectorCantidades_P{
-    border: #e31a52 solid 1px;
-    border-radius: 20px;
-    margin-right: 15px;
-
-}
-
-.contenedorPrecioBotones form button{
-    background-color: #000;
-    border: #e31a52 solid 1px;
-    border-radius: 20px;
-    color: #fff;
-    font-weight: 200;
-    letter-spacing: 3px;
-    margin: 20px 0px;
-    padding: 10px 35px;
-    width: 100%;
-    transition: all 500ms;
-}
-
-.contenedorPrecioBotones form button:hover{
-    background-color: #e31a52;
-    cursor: pointer;
-    transform: scale(1.03);
-}
 
 
 
@@ -132,25 +94,24 @@ padding: 0px 15px;
 
 
 @media (min-width: 768px){
-    .contenedorSeccion_P{
+    .mainProduct .contenedorSeccion_P{
         margin: 0 auto;
         text-align: center;
         display: flex;
-        max-width: 1024px;
     }
 
-    .contenedorFotoIconos{
+    .mainProduct .contenedorFotoIconos{
         display: block;
     }
 
-    .contenedorDetallesProducto{
+    .mainProduct .contenedorDetallesProducto{
         width: 100%;
         margin: 0px;
         padding-left: 30px;
 
     }
 
-    .nombreProducto{
+    .mainProduct .nombreProducto{
         text-align: left;
     }
 

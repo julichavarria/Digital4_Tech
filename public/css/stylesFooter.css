@@ -1,11 +1,12 @@
 /* ////////////////// GENERAL ////////////////////////////// */
 
-
-
 footer{
     background-color: black;
     color: #FFFFFF;
-    font-weight: 200;
+}
+
+footer a{
+    color: #FFFFFF;
 }
 
 
