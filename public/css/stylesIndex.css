@@ -97,6 +97,16 @@ margin: 40px;
     width: 100%;
 }
 
+.adminIndex .btnPrincipal{
+    width: auto;
+    padding: 10px 15px;
+    margin-bottom: 10px ;
+}
+
+.adminIndex .btnPrincipal i{
+    margin-right: 5px;
+}
+
 
 /* ////////////////////////////// ANUNCIOS ////////////////////////////// */
  .contenedorAnuncios{

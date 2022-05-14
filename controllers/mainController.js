@@ -21,6 +21,9 @@ const mainController = {
     productCart:function (req,res) {
         res.render(path.join(__dirname, "../views/product/productCart.ejs" ) );
     },
+    newProduct:function (req,res) {
+        res.render(path.join(__dirname, "../views/product/newProduct.ejs" ) );
+    },
 }    
     
 

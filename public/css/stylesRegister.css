@@ -47,6 +47,16 @@ textarea:-moz-placeholder {
     border-radius: 20px;
     
 }
+
+.campoFormulario label{
+    color: #e31a52;
+    font-weight: 400;
+    margin: 10px;
+}
+.campoFormulario label i{
+    margin-right: 10px;
+}
+
 /* main form div label {
     flex-grow: 0.4;
     max-width: 140px;
