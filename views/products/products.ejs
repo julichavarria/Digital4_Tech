@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include ('../partials/head') %>
+<!-- /////// CARGA CSS  PARTICULAR/////// -->
+<!-- <link rel="stylesheet" href="/css/stylesIndex.css"> -->
+<link rel="stylesheet" href="/css/stylesProducts.css">
+<link rel="stylesheet" href="/css/stylesIndex.css">
+</head>
+
+    <body>
+        <%- include ('../partials/header') %>
+            <main class="mainIndex">
+                
+                <h2> <span class="txtMagenta">\\</span> COMPUTADORAS ARMADAS <span class="txtMagenta">//</span></h2>
+                
+                <div class="adminIndex">
+                <a href="newProduct"><button class="btnPrincipal"><span
+                    class="txtMagenta"><i class="fa-solid fa-circle-plus"></i></span>Agregar nueva PC Armada </button></a>
+                </div>
+
+                <section class="carruselPcArmadas">
+                    <!-- <i class="fas fa-angle-left"></i> -->
+
+                    <!-- /////////////// PC ARMADA INICIO /////////////// -->
+                    <article>
+                            <div class="datosdinamicos">
+                            <!--  INICIO DE DATOS DINAMICOS //////////////////    -->
+                            <% for (let i=0; i < pcArmadas.length; i++){ %>
+                            <div class="contenedorArticulos">
+                                <div class="fotoProducto"><img src= <%= pcArmadas[i].imagen %>
+                                    alt="Pc Armada 02">
+                                </div>
+                                <div class="contenedorPrecioBtn">
+                                    <div class="iconosMarcas">
+                                        <img src="/img/logo_amd.jpg" alt="AMD">
+                                    </div>
+                                    <div class="precioPcArmada">Efectivo: <span> $ <%= pcArmadas[i].precio %> </span>
+                                    </div>
+                                    <a href="/products/productDetail/<%=i%>">
+                                        <button class="btnPrincipal"> INFO 
+                                            <span class="txtMagenta">//</span>
+                                        </button>
+                                    </a>
+                                    </div>
+                                    <div class="nombrePC"><%= pcArmadas[i].titulo %>
+                                    </div>
+                                    <div class="caracteristicas"> <%= pcArmadas[i].prcesador %>, <%= pcArmadas[i].memoriaRam %>, <%= pcArmadas[i].placaDeVideo %>,
+                                        <%= pcArmadas[i].discoRigido %>
+                                        <a href="/products/editProduct/<%=i%>"><div class="btnEdit"><i class="fa-solid fa-pen"></i><span>EDITAR </span> </div></a>
+                                    </div>
+
+                                </div>
+                            <% } %>
+                            </div>
+                
+                        
+                    </article>
+
+                    <!-- <i class="fas fa-angle-right"></i> -->
+                </section>
+                
+            </main>
+            <%- include ('../partials/footer') %>
+    </body>
+
+</html>

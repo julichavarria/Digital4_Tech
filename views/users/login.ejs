@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ('../partials/head') %>
 
+<head>
+<%- include ('../partials/head') %>
+<!-- /////// CARGA CSS  PARTICULAR/////// -->
+<link rel="stylesheet" href="../css/stylesLogin.css">
+</head>
     <body>
         <%- include ('../partials/header') %>
             <main class="log login-css">
 
                 <div class="iconoLogin">
-                    <img src="./img/icon_login.svg">
+                    <img src="../img/icon_login.svg">
                 </div>
 
                 <h1>INGRESAR</h1>
 
                 <div class="contenedorForms">
-                    <form action="./" method="get">
+                    <form action="../index" method="get">
                         <div class="generalCompletar-login">
-                            <input class="completar-login" type="text" name="usuario" placeholder="USUARIO">
-                            <input class="completar-login" type="password" name="contraseña" placeholder="CONTRASEÑA">
+                            <input class="completar-login" type="text" name="usuario" placeholder="USUARIO" minlength="6">
+                            <input class="completar-login" type="password" name="contraseña" placeholder="CONTRASEÑA" minlength="6">
                         </div>
 
                         <div class="contenedorBoton">
                             <button class="btnPrincipal" type="submit"> INGRESAR</button>
                             <button class="btnSecundario" type="reset"> BORRAR</button>
-                            <button class="crear-cuenta"><a href="./register"> Registrarse aquí</a></button>
+                            <button class="crear-cuenta"><a href="../users/register"> Registrarse aquí</a></button>
                         </div>
 
                     </form>

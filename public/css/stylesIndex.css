@@ -1,3 +1,6 @@
+.datosdinamicos{
+    display: flex;
+}
 .slider img{
     width: 100%;
     max-width: 1024px;   

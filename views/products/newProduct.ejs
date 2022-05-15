@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<%- include ('../partials/head') %>
+ <!-- /////// CARGA CSS  PARTICULAR/////// -->
+ <link rel="stylesheet" href="/css/stylesRegister.css">
+</head>
+
+    <body>
+        <%- include ('../partials/header') %>
+            <main class="mainRegister">
+            
+                    <h1> <i class="fa-solid fa-circle-plus"></i> PRODUCTO NUEVO</h1>
+                    <h3>Completa la información del nuevo producto</h3>
+
+
+                    <div class="controlGeneral">
+                        <form>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
+                                     class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="procesador" name="procesador"
+                                    placeholder="PROCESADOR" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="mother" name="mother"
+                                    placeholder="MOTHER" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="video" name="video"
+                                    placeholder="PLACA DE VIDEO" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="ram" name="ram"
+                                    placeholder="MEMORIA RAM" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="disco" name="disco"
+                                    placeholder="DISCO RIGIDO" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="gabinete" name="gabinete"
+                                    placeholder="GABINETE" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="fuente" name="fuente"
+                                    placeholder="FUENTE" class="controlFormulario">
+                            </div>
+                            <div class="campoFormulario">
+                                <input required="required" type="text" id="precio" name="precio"
+                                    placeholder="PRECIO" class="controlFormulario">
+                            </div>
+
+                            <div class="campoFormulario">
+                                <label for=""><i class="fa-solid fa-camera"></i>Seleccioná la fotografía del producto </label>
+                                <input type="file" id="foto" name="foto" accept=".jpg"
+                                    placeholder="PRECIO" class="controlFormulario">
+                            </div>
+
+
+                            <div class="botones">
+                                <button class="btnPrincipal" type="submit"> CREAR  </button>
+                                <button class="btnSecundario" type="reset"> BORRAR </button>
+                            </div>
+                        </form>
+                    </div>
+               
+
+            </main>
+            <%- include ('../partials/footer') %>
+    </body>
+
+</html>

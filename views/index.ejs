@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
 <%- include ('./partials/head') %>
+<!-- /////// CARGA CSS  PARTICULAR/////// -->
+<link rel="stylesheet" href="/css/stylesIndex.css">
+</head>
 
     <body>
         <%- include ('./partials/header') %>
         <div class="slider">
-            <img src="./img/banner_home.jpg" alt="Imagen 1 del carrusel">
+            <img src="/img/banner_home.jpg" alt="Imagen 1 del carrusel">
         </div>
             <main class="mainIndex">
                 
                 <h2> <span class="txtMagenta">\\</span> COMPUTADORAS ARMADAS <span class="txtMagenta">//</span></h2>
                 
                 <div class="adminIndex">
-                <a href="./productDetail"><button class="btnPrincipal"><span
+                <a href="products/newProduct"><button class="btnPrincipal"><span
                     class="txtMagenta"><i class="fa-solid fa-circle-plus"></i></span>Agregar nueva PC Armada </button></a>
                 </div>
 
@@ -22,79 +25,36 @@
 
                     <!-- /////////////// PC ARMADA INICIO /////////////// -->
                     <article>
-                        <div class="contenedorArticulos">
-                            <div class="fotoProducto"><img src="/img/productos_pcArmadas/pcArmada_01.jpg"
-                                    alt="Pc Armada 01">
-                            </div>
-                            <div class="contenedorPrecioBtn">
-                                <div class="iconosMarcas"><img src="/img/logo_amd.jpg" alt="AMD"></div>
-                                <div class="precioPcArmada">Efectivo: <span>$100.000</span></div>
-                                <a href="./productDetail"><button class="btnPrincipal">INFO <span
-                                            class="txtMagenta">//</span></button></a>
-                            </div>
-                            <div class="nombrePC">PC GAMER GM CARBIDE</div>
-                            <div class="caracteristicas">AMD Ryzen 9 5900X CPU, 16GB DDR4-3200 RGB RAM, GeForce RTX 3080
-                                10GB,
-                                1TB M.2 NVMe SSD
-                            </div>
-                        </div>
-                    </article>
-                    <!-- /////////////// PC ARMADA INICIO /////////////// -->
-                    <article>
-                        <div class="contenedorArticulos">
-                            <div class="fotoProducto"><img src="/img/productos_pcArmadas/pcArmada_02.jpg"
+                            <div class="datosdinamicos">
+                            <!--  INICIO DE DATOS DINAMICOS //////////////////    -->
+                            <% for (let i=0; i < pcArmadas.length; i++){ %>
+                            <div class="contenedorArticulos">
+                                <div class="fotoProducto"><img src= <%= pcArmadas[i].imagen %>
                                     alt="Pc Armada 02">
+                                </div>
+                                <div class="contenedorPrecioBtn">
+                                    <div class="iconosMarcas">
+                                        <img src="/img/logo_amd.jpg" alt="AMD">
+                                    </div>
+                                    <div class="precioPcArmada">Efectivo: <span> $ <%= pcArmadas[i].precio %> </span>
+                                    </div>
+                                    <a href="/products/productDetail/<%=i%>">
+                                        <button class="btnPrincipal"> INFO 
+                                            <span class="txtMagenta">//</span>
+                                        </button>
+                                    </a>
+                                    </div>
+                                    <div class="nombrePC"><%= pcArmadas[i].titulo %>
+                                    </div>
+                                    <div class="caracteristicas"> <%= pcArmadas[i].prcesador %>, <%= pcArmadas[i].memoriaRam %>, <%= pcArmadas[i].placaDeVideo %>,
+                                        <%= pcArmadas[i].discoRigido %>
+                                    </div>
+
+                                </div>
+                            <% } %>
                             </div>
-                            <div class="contenedorPrecioBtn">
-                                <div class="iconosMarcas"><img src="/img/logo_amd.jpg" alt="AMD"></div>
-                                <div class="precioPcArmada">Efectivo: <span>$100.000</span></div>
-                                <a href="./productDetail"><button class="btnPrincipal">INFO <span
-                                            class="txtMagenta">//</span></button></a>
-                            </div>
-                            <div class="nombrePC">PC GAMER GM CARBIDE</div>
-                            <div class="caracteristicas">AMD Ryzen 9 5900X CPU, 16GB DDR4-3200 RGB RAM, GeForce RTX 3080
-                                10GB,
-                                1TB M.2 NVMe SSD
-                            </div>
-                        </div>
-                    </article>
-                    <!-- /////////////// PC ARMADA INICIO /////////////// -->
-                    <article>
-                        <div class="contenedorArticulos">
-                            <div class="fotoProducto"><img src="/img/productos_pcArmadas/pcArmada_03.jpg"
-                                    alt="Pc Armada 03">
-                            </div>
-                            <div class="contenedorPrecioBtn">
-                                <div class="iconosMarcas"><img src="/img/logo_amd.jpg" alt="AMD"></div>
-                                <div class="precioPcArmada">Efectivo: <span>$100.000</span></div>
-                                <a href="./productDetail"><button class="btnPrincipal">INFO <span
-                                            class="txtMagenta">//</span></button></a>
-                            </div>
-                            <div class="nombrePC">PC GAMER GM CARBIDE</div>
-                            <div class="caracteristicas">AMD Ryzen 9 5900X CPU, 16GB DDR4-3200 RGB RAM, GeForce RTX 3080
-                                10GB,
-                                1TB M.2 NVMe SSD
-                            </div>
-                        </div>
-                    </article>
-                    <!-- /////////////// PC ARMADA INICIO /////////////// -->
-                    <article>
-                        <div class="contenedorArticulos">
-                            <div class="fotoProducto"><img src="/img/productos_pcArmadas/pcArmada_04.jpg"
-                                    alt="Pc Armada 04">
-                            </div>
-                            <div class="contenedorPrecioBtn">
-                                <div class="iconosMarcas"><img src="/img/logo_amd.jpg" alt="AMD"></div>
-                                <div class="precioPcArmada">Efectivo: <span>$100.000</span></div>
-                                <a href="./productDetail"><button class="btnPrincipal">INFO <span
-                                            class="txtMagenta">//</span></button></a>
-                            </div>
-                            <div class="nombrePC">PC GAMER GM CARBIDE</div>
-                            <div class="caracteristicas">AMD Ryzen 9 5900X CPU, 16GB DDR4-3200 RGB RAM, GeForce RTX 3080
-                                10GB,
-                                1TB M.2 NVMe SSD
-                            </div>
-                        </div>
+                
+                        
                     </article>
 
                     <!-- <i class="fas fa-angle-right"></i> -->

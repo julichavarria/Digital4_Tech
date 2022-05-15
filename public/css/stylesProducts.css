@@ -1,5 +1,7 @@
 /* ////////////////// GENERAL ////////////////////////////// */
-
+.datosdinamicos{
+    display: flex;
+}
 
 .mainProduct h2{
     text-align: left;
