@@ -28,3 +28,15 @@ Sprint 2 ---->
 4. Hacer menos-----> un rejunte de tareas y tratar de unificar más los criterios de como codear, está claro y se nota sin saber quién hizo que, que existen varias manos codeando. si bien es nuestro primer proyecto de programación y nuestro primer proyecto en grupo, se nota que no se aplican los mismo criterios para escribir, para nombrar las cosas, etc
 
 5. Dejar de hacer-----> dejar de subir commits por cambios pequeños y planificar más las instancias de subida al repositorio
+
+Sprint 3 ------>
+
+1. Comenzar a hacer -----> reuniones más seguidas de equipo.
+
+2. Hacer más-----> por lo mnos una reunion, con uno de los integrantes compartiendo pantalla y generar cosas entre todos.
+
+3. Continuar haciendo-----> la división de tareas, la buena comunicacion en el grupo.
+
+4. Hacer menos-----> desorden a la hor de poner estilos, tratar de unificar la forma de nombrar las clases.
+
+5. Dejar de hacer-----> no encontramos nada para dejar de hacer, si para mejorar y coninuar hciendo. Cada semana que pasa estamos mas oranizados a la hora de trabajar y plantear las tareas.
