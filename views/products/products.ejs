@@ -4,7 +4,6 @@
 <%- include ('../partials/head') %>
 <!-- /////// CARGA CSS  PARTICULAR/////// -->
 <!-- <link rel="stylesheet" href="/css/stylesIndex.css"> -->
-<link rel="stylesheet" href="/css/stylesProducts.css">
 <link rel="stylesheet" href="/css/stylesIndex.css">
 </head>
 
@@ -14,7 +13,7 @@
                 
                 <h2> <span class="txtMagenta">\\</span> COMPUTADORAS ARMADAS <span class="txtMagenta">//</span></h2>
                 
-                <div class="adminIndex">
+                <div class="admin">
                 <a href="newProduct"><button class="btnPrincipal"><span
                     class="txtMagenta"><i class="fa-solid fa-circle-plus"></i></span>Agregar nueva PC Armada </button></a>
                 </div>
@@ -47,7 +46,9 @@
                                     </div>
                                     <div class="caracteristicas"> <%= pcArmadas[i].prcesador %>, <%= pcArmadas[i].memoriaRam %>, <%= pcArmadas[i].placaDeVideo %>,
                                         <%= pcArmadas[i].discoRigido %>
-                                        <a href="/products/editProduct/<%=i%>"><div class="btnEdit"><i class="fa-solid fa-pen"></i><span>EDITAR </span> </div></a>
+                                        <div class="admin">
+                                        <a href="/products/editProduct/<%=i%>"><div class="btnSecundario"><i class="fa-solid fa-pen"></i><span>Editar </span> </div></a>
+                                    </div>
                                     </div>
 
                                 </div>

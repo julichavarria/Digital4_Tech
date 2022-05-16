@@ -86,7 +86,6 @@ nav, nav a {
 }
 
 
-
 /* ////////////////////// BOTONES ////////////////////// */
 
 button {
@@ -106,7 +105,7 @@ font-weight: 200;
     border: #000 solid 0px;
     color: #fff;
 }
-.btnPrincipal, .btnEdit{
+.btnPrincipal {
     background-color: #000;
     border: #e31a52 solid 1px;
     color: #fff;

@@ -7,6 +7,7 @@ const productController = {
     productDetail:function (req,res) {
         let prodSelect = pcArmadas[req.params.id];
         res.render("products/productDetail", {pcArmadas: prodSelect});
+        
     },
     productCart:function (req,res) {
         res.render("products/productCart");
@@ -23,7 +24,9 @@ const productController = {
         res.render("products/editProduct", {pcArmadas: prodSelect});
     },
     processEditProduct:function(req,res) {
-        
+        let prodSelect = pcArmadas[req.params.id];
+        res.render("products/editProduct", {pcArmadas: prodSelect});
+
     }
 }
 module.exports = productController;
