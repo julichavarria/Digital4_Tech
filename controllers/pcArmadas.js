@@ -13,7 +13,7 @@ let pcArmadas = [
         precio: 206000
     }, 
     {
-        id: 2,
+        id: 108,
         titulo: "PC GAMER GM CARBIDE 2",
         imagen: "/img/productos_pcArmadas/pcArmada_02.jpg" ,
         prcesador:"INTEL CORE I5 11600F",
@@ -52,25 +52,9 @@ let pcArmadas = [
         precio: 166000
     }
     ]  
-    
-
-    let productosDinamicos = {
-        obtenerProducto: function (idProducto){
-            let producto = null;
-            for (let i = 0; i<pcArmadas.length;i++){
-                if (idProducto == (pcArmadas[i].id)){
-                    producto = pcArmadas[i];
-                    break;
-                }
-            }
-            return producto;
-        },
-        
-        pcArmadas: pcArmadas
-    }
 
 
-    // module.exports = pcArmadas;
-    module.exports = productosDinamicos;
+
+    module.exports = pcArmadas;
 
     
