@@ -1,15 +1,15 @@
-const pcArmadas =require ("./pcArmadas");
+const productosDinamicos =require ("./pcArmadas");
 
 const productController = {
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
     product: function(req, res) {
-        res.render("products/products", {pcArmadas: pcArmadas});
+        res.render("products/products", {pcArmadas: productosDinamicos.pcArmadas});
     },
 
     ////////////////// DETALLE DE PC SELECCIONADA
     productDetail:function (req,res) {
-        let prodSelect = pcArmadas[req.params.id];
+        let prodSelect = productosDinamicos.obtenerProducto(req.params.id);
         res.render("products/productDetail", {pcArmadas: prodSelect});
     },
 
@@ -25,22 +25,19 @@ const productController = {
 
     ////////////////// EDITAR PC ARMADA
     editProduct:function (req,res) {
-        let prodSelect = pcArmadas[req.params.id];
+        let prodSelect = productosDinamicos.obtenerProducto(req.params.id);
         res.render("products/editProduct", {pcArmadas: prodSelect});
     },
  
- 
+    // editIndProduct:function (req, res) {
+    //     let prodSelect = pcArmadas[req.params.id];
+    //     res.render("products/editProduct", {pcArmadas: prodSelect});
+    // },
+    // processEditProduct:function(req,res) {
+    //     let prodSelect = pcArmadas[req.params.id];
+    //     res.render("products/editProduct", {pcArmadas: prodSelect});
 
-
-    editIndProduct:function (req, res) {
-        let prodSelect = pcArmadas[req.params.id];
-        res.render("products/editProduct", {pcArmadas: prodSelect});
-    },
-    processEditProduct:function(req,res) {
-        let prodSelect = pcArmadas[req.params.id];
-        res.render("products/editProduct", {pcArmadas: prodSelect});
-
-    }
+    // }
 
 
 

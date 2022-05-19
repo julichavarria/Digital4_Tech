@@ -36,7 +36,7 @@
                                     </div>
                                     <div class="precioPcArmada">Efectivo: <span> $ <%= pcArmadas[i].precio %> </span>
                                     </div>
-                                    <a href="/products/productDetail/<%=i%>">
+                                    <a href="/products/productDetail/<%= pcArmadas[i].id%>">
                                         <button class="btnPrincipal"> INFO 
                                             <span class="txtMagenta">//</span>
                                         </button>
@@ -47,7 +47,7 @@
                                     <div class="caracteristicas"> <%= pcArmadas[i].prcesador %>, <%= pcArmadas[i].memoriaRam %>, <%= pcArmadas[i].placaDeVideo %>,
                                         <%= pcArmadas[i].discoRigido %>
                                         <div class="admin">
-                                        <a href="/products/editProduct/<%=i%>"><div class="btnSecundario"><i class="fa-solid fa-pen"></i><span>Editar </span> </div></a>
+                                        <a href="/products/editProduct/<%= pcArmadas[i].id%>"><div class="btnSecundario"><i class="fa-solid fa-pen"></i><span>Editar </span> </div></a>
                                     </div>
                                     </div>
 

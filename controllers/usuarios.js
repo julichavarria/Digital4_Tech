@@ -1,12 +1,12 @@
 // let usuarios [
 //     {
 //         id:
-//         Nombre: 
-//         Apellido: 
+//         nombre: 
+//         apellido: 
 //         usuario:
-//         Email: 
-//         Contraseña: 
-//         Categoría: admin/cliente
+//         email: 
+//         contraseña: 
+//         rol: admin/cliente
 //         avatar: seleccionar de una base, o subir
 
 // }
