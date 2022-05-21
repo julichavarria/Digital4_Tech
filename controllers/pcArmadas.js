@@ -13,7 +13,7 @@ let pcArmadas = [
         precio: 206000
     }, 
     {
-        id: 108,
+        id: 2,
         titulo: "PC GAMER GM CARBIDE 2",
         imagen: "/img/productos_pcArmadas/pcArmada_02.jpg" ,
         prcesador:"INTEL CORE I5 11600F",
