@@ -18,8 +18,6 @@ function obtenerProducto (idProducto){
         return producto;
 }
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
 const productController = {
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
