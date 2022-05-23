@@ -28,4 +28,4 @@ app.use ("/products", routerProduct);
 
 app.use((req, res, next) => {
     res.status(404).render('not-found');
-    })
+})

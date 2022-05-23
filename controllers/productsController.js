@@ -11,6 +11,8 @@ function obtenerProducto (idProducto){
         return producto;
 }
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 const productController = {
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
@@ -39,18 +41,24 @@ const productController = {
         let prodSelect = obtenerProducto(req.params.id);
         res.render("products/editProduct", {pcArmadas: prodSelect});
     },
- 
-    // editIndProduct:function (req, res) {
-    //     let prodSelect = pcArmadas[req.params.id];
-    //     res.render("products/editProduct", {pcArmadas: prodSelect});
-    // },
-    // processEditProduct:function(req,res) {
-    //     let prodSelect = pcArmadas[req.params.id];
-    //     res.render("products/editProduct", {pcArmadas: prodSelect});
 
-    // }
+    processEditProduct: function (req, res) {
+        let prodSelect = obtenerProducto(req.params.id);
+        console.log(prodSelect);
+        pcArmadas[prodSelect].titulo = req.body.titulo,
+        pcArmadas[prodSelect].imagen =req.body.imagen,
+        pcArmadas[prodSelect].prcesador = req.body.procesador,
+        pcArmadas[prodSelect].mother = req.body.mother,
+        pcArmadas[prodSelect].placaDeVideo = req.body.placaDeVideo,
+        pcArmadas[prodSelect].memoriaRam = req.body.memoriaRam,
+        pcArmadas[prodSelect].discoRigido = req.body.discoRigido,
+        pcArmadas[prodSelect].gabinete = req.body.gabinete,
+        pcArmadas[prodSelect].fuente = req.body.fuente,
+        pcArmadas[prodSelect].precio = toThousand(req.body.titulo),
 
-
+        console.log (req.body.titulo);
+        res.redirect ('/product');
+    }
 
 }
 

@@ -4,7 +4,7 @@
 <%- include ('../partials/head') %>
 <!-- /////// CARGA CSS  PARTICULAR/////// -->
 <!-- <link rel="stylesheet" href="/css/stylesIndex.css"> -->
-<link rel="stylesheet" href="/css/stylesIndex.css">
+<link rel="stylesheet" href="/css/stylesAllProducts.css">
 </head>
 
     <body>
@@ -28,13 +28,13 @@
                             <% for (let i=0; i < pcArmadas.length; i++){ %>
                             <div class="contenedorArticulos">
                                 <div class="fotoProducto"><img src= <%= pcArmadas[i].imagen %>
-                                    alt="Pc Armada 02">
+                                    alt="Imagen de Equipo">
                                 </div>
                                 <div class="contenedorPrecioBtn">
                                     <div class="iconosMarcas">
-                                        <img src="/img/logo_amd.jpg" alt="AMD">
+                                        <img src= <%= pcArmadas[i].logoMarca %> alt="Logo Marca">
                                     </div>
-                                    <div class="precioPcArmada">Efectivo: <span> $ <%= pcArmadas[i].precio %> </span>
+                                    <div class="precioPcArmada">Efectivo:<span> <br>$ <%= pcArmadas[i].precio %> </span>
                                     </div>
                                     <a href="/products/productDetail/<%= pcArmadas[i].id%>">
                                         <button class="btnPrincipal"> INFO 
