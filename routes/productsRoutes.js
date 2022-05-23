@@ -15,7 +15,7 @@ router.get ("/productCart", productsController.productCart);
 
 //UPDATE
 router.get ("/editProduct/:id", productsController.editProduct);
-// router.put ("/editProduct/:id", productsController.processEditProduct);
+router.put ("/editProduct/:id", productsController.processEditProduct);
 // router.get ("/products/productDetail/:id?/editProduct", productsController.editIndProduct);
 
 //DELETE

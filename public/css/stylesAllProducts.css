@@ -1,0 +1,103 @@
+.contenedorArticulos{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 240px;
+    border:1px solid #d7d7d7;
+    text-align: right;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 5px;
+    
+}
+
+.fotoProducto img{
+    width: 100%;
+}
+
+.fotoProducto{
+    width: 60%;
+}
+.contenedorPrecioBtn{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.iconosMarcas img{
+    max-width: 50px;
+}
+
+.caracteristicas{
+    text-align: center;
+}
+
+.iconosMarcas{
+    padding-top: 20px;
+}
+
+.btnPrincipal{
+    letter-spacing: 1px;
+    padding: 5px;
+    width: 80%;
+}
+
+
+.precioPcArmada{
+    width: 100px;
+    padding-right:15px ;
+}
+
+.precioPcArmada span{
+    font-weight: 800;
+    color: #e31a52;
+    font-size: 16px;
+}
+
+.nombrePC{
+    color: #e31a52;
+    font-weight: 400;
+}
+
+
+.contenedorArticulos .fotoProducto{
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* .contenedorPrecioBtn{
+    width: 100%;
+} */
+
+.admin .btnPrincipal, .admin .btnSecundario {
+    width: auto;
+    padding: 10px 15px;
+    margin: 15px ;
+}
+
+
+.admin .btnPrincipal i, .admin .btnSecundario i{
+    margin-right: 5px;
+}
+
+
+/* ////////////////////////////// ANUNCIOS ////////////////////////////// */
+
+
+.datosdinamicos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+
+
+/* ////////////////// MEDIA QUERYS ////////////////////////////// */
+
+
+@media (min-width: 768px){
+    .anuncio2, .anuncio1{
+        width: 50%;
+    }
+}

@@ -4,7 +4,7 @@
 <%- include ('../partials/head') %>
 <!-- /////// CARGA CSS  PARTICULAR/////// -->
 <!-- <link rel="stylesheet" href="/css/stylesIndex.css"> -->
-<link rel="stylesheet" href="/css/stylesIndex.css">
+<link rel="stylesheet" href="/css/stylesAllProducts.css">
 </head>
 
     <body>
@@ -25,29 +25,29 @@
                     <article>
                             <div class="datosdinamicos">
                             <!--  INICIO DE DATOS DINAMICOS //////////////////    -->
-                            <% for (let i=0; i < pcArmadas.length; i++){ %>
+                            <% for (let i=0; i < pcArmadasJSON.length; i++){ %>
                             <div class="contenedorArticulos">
-                                <div class="fotoProducto"><img src= <%= pcArmadas[i].imagen %>
-                                    alt="Pc Armada 02">
+                                <div class="fotoProducto"><img src= <%= pcArmadasJSON[i].imagen %>
+                                    alt="Imagen de Equipo">
                                 </div>
                                 <div class="contenedorPrecioBtn">
                                     <div class="iconosMarcas">
-                                        <img src="/img/logo_amd.jpg" alt="AMD">
+                                        <img src= <%= pcArmadasJSON[i].logoMarca %> alt="Logo Marca">
                                     </div>
-                                    <div class="precioPcArmada">Efectivo: <span> $ <%= pcArmadas[i].precio %> </span>
+                                    <div class="precioPcArmada">Efectivo:<span> <br>$ <%= pcArmadasJSON[i].precio %> </span>
                                     </div>
-                                    <a href="/products/productDetail/<%= pcArmadas[i].id%>">
+                                    <a href="/products/productDetail/<%= pcArmadasJSON[i].id%>">
                                         <button class="btnPrincipal"> INFO 
                                             <span class="txtMagenta">//</span>
                                         </button>
                                     </a>
                                     </div>
-                                    <div class="nombrePC"><%= pcArmadas[i].titulo %>
+                                    <div class="nombrePC"><%= pcArmadasJSON[i].titulo %>
                                     </div>
-                                    <div class="caracteristicas"> <%= pcArmadas[i].prcesador %>, <%= pcArmadas[i].memoriaRam %>, <%= pcArmadas[i].placaDeVideo %>,
-                                        <%= pcArmadas[i].discoRigido %>
+                                    <div class="caracteristicas"> <%= pcArmadasJSON[i].procesador %>, <%= pcArmadasJSON[i].memoriaRam %>, <%= pcArmadasJSON[i].placaDeVideo %>,
+                                        <%= pcArmadasJSON[i].discoRigido %>
                                         <div class="admin">
-                                        <a href="/products/editProduct/<%= pcArmadas[i].id%>"><div class="btnSecundario"><i class="fa-solid fa-pen"></i><span>Editar </span> </div></a>
+                                        <a href="/products/editProduct/<%= pcArmadasJSON[i].id%>"><div class="btnSecundario"><i class="fa-solid fa-pen"></i><span>Editar </span> </div></a>
                                     </div>
                                     </div>
 
