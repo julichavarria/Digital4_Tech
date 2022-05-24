@@ -1,34 +1,40 @@
-// const pcArmadas =require ("./pcArmadas");
 const fs = require ('fs');
 const path = require ('path');
 
+
 const pcArmadasFilePath = path.join (__dirname, '../data/pcArmadas.json');
-const pcArmadasJSON = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
+const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+// funciones necesarias para usar controladores
+
+// funcion buscar ojetro segun ID
 function obtenerProducto (idProducto){
     let producto = null;
-         for (let i = 0; i<pcArmadasJSON.length;i++){
-            if (idProducto == (pcArmadasJSON[i].id)){
-                producto = pcArmadasJSON[i];
+         for (let i = 0; i<pcArmadasJS.length;i++){
+            if (idProducto == (pcArmadasJS[i].id)){
+                producto = pcArmadasJS[i];
                 break;
             }
         }
         return producto;
 }
 
+//funcion ordenar array de objetos literal
+//pcArmadasJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
+
 const productController = {
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
     product: function(req, res) {
-        res.render("products/products", {pcArmadasJSON});
+        res.render("products/products", {pcArmadasJS});
     },
 
     ////////////////// DETALLE DE PC SELECCIONADA
     productDetail:function (req,res) {
         let prodSelect = obtenerProducto(req.params.id);
-        res.render("products/productDetail", {pcArmadasJSON: prodSelect});
+        res.render("products/productDetail", {pcArmadasJS: prodSelect});
     },
 
     ////////////////// SECCION CARRITO
@@ -38,31 +44,78 @@ const productController = {
 
     ////////////////// CREAR NUEVO PRODUCTO PC ARMADA
     newProduct:function (req,res) {
-        console.log (req.body)
         res.render("products/newProduct");
     },
+
+    createNewProduct: function(req, res) {
+        let destinationFolder = '/img/productos_pcArmadas/';
+        let defoulImage = destinationFolder + 'defoulImage.jpg'
+        let productNew = {
+            id: pcArmadasJS.length + 1,
+            imagen: (req.file ? destinationFolder + req.file.filename : defoulImage),
+            logoMarca: req.body.logoMarca,
+            titulo: req.body.nombre,
+            procesador: req.body.procesador,
+            mother: req.body.mother,
+            placaDeVideo: req.body.video,
+            memoriaRam: req.body.ram,
+            discoRigido: req.body.disco,
+            gabinete: req.body.gabinete,
+            fuente: req.body.fuente,
+            precio: toThousand(req.body.precio),
+        }
+        pcArmadasJS.push (productNew);
+        pcArmadasJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
+        let pcArmadasJSON = JSON.stringify(pcArmadasJS);
+        fs.writeFileSync (pcArmadasFilePath, pcArmadasJSON);
+
+        res.redirect ('/products/products');
+    },
+
+    ////////////////// FIN DE PRODUCTOS NUEVOS
 
     ////////////////// EDITAR PC ARMADA
     editProduct:function (req,res) {
         let prodSelect = obtenerProducto(req.params.id);
-        res.render("products/editProduct", {pcArmadasJSON: prodSelect});
+        res.render("products/editProduct", {pcArmadasJS: prodSelect});
     },
 
     processEditProduct: function (req, res) {
+        let productSelect = obtenerProducto(req.params.id); //podSelect contiene todo el producto[i]
+        let productEdit = {
+            id: req.params.id,
+            imagen: (req.file ? req.file.filename : productSelect.imagen),
+            logoMarca: (req.body.logoMarca ? req.body.logoMarca : productSelect.logoMarca),
+            titulo: req.body.nombre,
+            procesador: req.body.procesador,
+            mother: req.body.mother,
+            placaDeVideo: req.body.video,
+            memoriaRam: req.body.ram,
+            discoRigido: req.body.disco,
+            gabinete: req.body.gabinete,
+            fuente: req.body.fuente,
+            precio: toThousand(req.body.precio),
+        }
+
+        /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
+        let pcArmadasJSsinEditado = pcArmadasJS.filter (product => product.id != req.params.id);
+        pcArmadasJSsinEditado.push (productEdit)
+        pcArmadasJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
+
+        /// PASAMOS JS A JSON
+        let pcArmadasJSON = JSON.stringify(pcArmadasJSsinEditado);
+        fs.writeFileSync (pcArmadasFilePath, pcArmadasJSON);
+
+        /// REDIRECCIONAMOS VISTA
+        res.redirect ('/products/products')
+    },
+
+    ///////////////// FIN DE EDITAR PRODUCTOS
+
+    ///////////////// ELIMINAR PRODUCTOS
+    deleteProduct: function (req,res) {
         let prodSelect = obtenerProducto(req.params.id);
-        
-        pcArmadasJSON[prodSelect].titulo = req.body.titulo,
-        pcArmadasJSON[prodSelect].imagen =req.body.imagen,
-        pcArmadasJSON[prodSelect].procesador = req.body.procesador,
-        pcArmadasJSON[prodSelect].mother = req.body.mother,
-        pcArmadasJSON[prodSelect].placaDeVideo = req.body.placaDeVideo,
-        pcArmadasJSON[prodSelect].memoriaRam = req.body.memoriaRam,
-        pcArmadasJSON[prodSelect].discoRigido = req.body.discoRigido,
-        pcArmadasJSON[prodSelect].gabinete = req.body.gabinete,
-        pcArmadasJSON[prodSelect].fuente = req.body.fuente,
-        pcArmadasJSON[prodSelect].precio = toThousand(req.body.precio),
-        console.log(prodSelect);
-        res.redirect ('/product');
-    }
+        res.render("products/editProduct", {pcArmadasJS: prodSelect});
+    },
 }
 module.exports = productController;

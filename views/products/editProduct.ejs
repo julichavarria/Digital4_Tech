@@ -16,42 +16,44 @@
 
 
                     <div class="controlGeneral">
-                        <form action="/products/editProduct/<%= pcArmadasJSON.id %>?_method=PUT" method="post">
+                        <form action="/products/editProduct/<%= pcArmadasJS.id %>?_method=PUT" method="POST">
                             <div class="campoFormulario">
+                                <label> Titulo </label>
                                 <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
-                                     class="controlFormulario" value="<%= pcArmadasJSON.titulo %>">
+                                     class="controlFormulario" value="<%= pcArmadasJS.titulo %>">
                             </div>
                             <div class="campoFormulario">
+                                <label> Procesador </label>
                                 <input required="required" type="text" id="procesador" name="procesador"
-                                    placeholder="PROCESADOR" class="controlFormulario" value="<%= pcArmadasJSON.procesador %>">
+                                    placeholder="PROCESADOR" class="controlFormulario" value="<%= pcArmadasJS.procesador %>">
                             </div>
                             <div class="campoFormulario">
                                 <input required="required" type="text" id="mother" name="mother"
-                                    placeholder="MOTHER" class="controlFormulario" value="<%= pcArmadasJSON.mother %>">
+                                    placeholder="MOTHER" class="controlFormulario" value="<%= pcArmadasJS.mother %>">
                             </div>
                             <div class="campoFormulario">
                                 <input required="required" type="text" id="video" name="video"
-                                    placeholder="PLACA DE VIDEO" class="controlFormulario" value="<%= pcArmadasJSON.placaDeVideo %>">
+                                    placeholder="PLACA DE VIDEO" class="controlFormulario" value="<%= pcArmadasJS.placaDeVideo %>">
                             </div>
                             <div class="campoFormulario">
                                 <input required="required" type="text" id="ram" name="ram"
-                                    placeholder="MEMORIA RAM" class="controlFormulario" value="<%= pcArmadasJSON.memoriaRam %>">
+                                    placeholder="MEMORIA RAM" class="controlFormulario" value="<%= pcArmadasJS.memoriaRam %>">
                             </div>
                             <div class="campoFormulario">
                                 <input required="required" type="text" id="disco" name="disco"
-                                    placeholder="DISCO RIGIDO" class="controlFormulario" value="<%= pcArmadasJSON.discoRigido %>">
+                                    placeholder="DISCO RIGIDO" class="controlFormulario" value="<%= pcArmadasJS.discoRigido %>">
                             </div>
                             <div class="campoFormulario">
                                 <input required="required" type="text" id="gabinete" name="gabinete"
-                                    placeholder="GABINETE" class="controlFormulario" value="<%= pcArmadasJSON.gabinete %>">
+                                    placeholder="GABINETE" class="controlFormulario" value="<%= pcArmadasJS.gabinete %>">
                             </div>
                             <div class="campoFormulario">
                                 <input required="required" type="text" id="fuente" name="fuente"
-                                    placeholder="FUENTE" class="controlFormulario" value="<%= pcArmadasJSON.fuente %>">
+                                    placeholder="FUENTE" class="controlFormulario" value="<%= pcArmadasJS.fuente %>">
                             </div>
                             <div class="campoFormulario">
                                 <input required="required" type="text" id="precio" name="precio"
-                                    placeholder="PRECIO" class="controlFormulario" value="<%= pcArmadasJSON.precio %>">
+                                    placeholder="PRECIO" class="controlFormulario" value="<%= pcArmadasJS.precio %>">
                             </div>
                             
                             <div class="campoFormulario">
@@ -60,7 +62,13 @@
                                      class="controlFormulario">
                             </div>
                             <p>Imagen Actual</p>
-                            <img src= <%= pcArmadasJSON.imagen %> alt="imagen de equipo">
+                            <img src= <%= pcArmadasJS.imagen %> alt="imagen de equipo">
+
+                            <div class="campoFormulario">
+                                <label for="logoMarca"> Seleccioná el logo de la Marca </label>
+                                <input type="radio" id="logoMarca" name="logoMarca" class="controlFormulario" value="/img/logo_amd.jpg"> AMD
+                                <input type="radio" id="logoMarca" name="logoMarca" class="controlFormulario" value="/img/logo_intel.jpg"> INTEL
+                            </div>
 
                             <div class="botones">
                                 <button class="btnPrincipal" type="submit"> GUARDAR </button>

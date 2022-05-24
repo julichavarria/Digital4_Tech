@@ -14,14 +14,14 @@
   <main class="mainProduct">
 
     <h2>COMPUTADORAS ARMADAS <span class="txtMagenta">//</span></h2>
-    <a href="/products/editProduct/<%= pcArmadasJSON.id %>"><div class="btnEdit"><i class="fa-solid fa-pen"></i><span>EDITAR </span> </div></a>
+    <a href="/products/editProduct/<%= pcArmadasJS.id %>"><div class="btnEdit"><i class="fa-solid fa-pen"></i><span>EDITAR </span> </div></a>
     <a href=""><div class="btnDelete"><i class="fa-solid fa-trash-can"></i><span>ELIMINAR </span> </div></a>
 
     <article class="contenedorSeccion_P">
       <div class="contenedorFotoIconos">
-        <div class="fotoProducto_P"><img src= <%= pcArmadasJSON.imagen %> alt="Pc Armada 01"></div>
+        <div class="fotoProducto_P"><img src= <%= pcArmadasJS.imagen %> alt="Pc Armada 01"></div>
         <div class="contenedorIconosMarca">
-          <div class="iconosMarcas"><img src= <%= pcArmadasJSON.logoMarca %> alt="Intel Inside"></div>
+          <div class="iconosMarcas"><img src= <%= pcArmadasJS.logoMarca %> alt="Intel Inside"></div>
           <div class="iconosMarcas"><img src="/img/icon_gigabyte.jpg" alt="Gigabyte"></div>
           <div class="iconosMarcas"><img src="/img/icon_msi.jpg" alt="MSI"></div>
           <div class="iconosMarcas"><img src="/img/icon_kingstone.jpg" alt="Kingstone"></div>
@@ -31,22 +31,22 @@
 
       <div class="contenedorDetallesProducto">
 
-        <h1> <%= pcArmadasJSON.titulo %> </h1>
+        <h1> <%= pcArmadasJS.titulo %> </h1>
         <div class="contenedorCaracteristicas">
-          <div class="caracteristicas_P">PROCESADOR:<span> <%= pcArmadasJSON.procesador %> </span></div>
-          <div class="caracteristicas_P">MOTHER:<span> <%= pcArmadasJSON.mother %> </span></div>
-          <div class="caracteristicas_P">PLACA DE VÍDEO:<span> <%= pcArmadasJSON.placaDeVideo %> </span></div>
-          <div class="caracteristicas_P">MEMORIA RAM:<span> <%= pcArmadasJSON.memoriaRam %> </span></div>
-          <div class="caracteristicas_P">DISCO RÍGIDO:<span> <%= pcArmadasJSON.discoRigido %> </span></div>
-          <div class="caracteristicas_P">GABINETE:<span> <%= pcArmadasJSON.gabinete %></span></div>
-          <div class="caracteristicas_P">FUENTE:<span> <%= pcArmadasJSON.fuente %> </span></div>
+          <div class="caracteristicas_P">PROCESADOR:<span> <%= pcArmadasJS.procesador %> </span></div>
+          <div class="caracteristicas_P">MOTHER:<span> <%= pcArmadasJS.mother %> </span></div>
+          <div class="caracteristicas_P">PLACA DE VÍDEO:<span> <%= pcArmadasJS.placaDeVideo %> </span></div>
+          <div class="caracteristicas_P">MEMORIA RAM:<span> <%= pcArmadasJS.memoriaRam %> </span></div>
+          <div class="caracteristicas_P">DISCO RÍGIDO:<span> <%= pcArmadasJS.discoRigido %> </span></div>
+          <div class="caracteristicas_P">GABINETE:<span> <%= pcArmadasJS.gabinete %></span></div>
+          <div class="caracteristicas_P">FUENTE:<span> <%= pcArmadasJS.fuente %> </span></div>
         </div>
 
 
 
         <div class="contenedorPrecioBotones">
           <div class="contenedorPrecio">
-            <h1> $ <%= pcArmadasJSON.precio %> </h1>
+            <h1> $ <%= pcArmadasJS.precio %> </h1>
             <p class="grisesSecundarios"><a  href="#">Ver los medios de pago</a></p>
           </div>
 

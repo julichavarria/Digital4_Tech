@@ -16,7 +16,7 @@
 
 
                     <div class="controlGeneral">
-                        <form>
+                        <form method="post" action="/products/newProduct" enctype="multipart/form-data">
                             <div class="campoFormulario">
                                 <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
                                      class="controlFormulario">
@@ -55,9 +55,15 @@
                             </div>
 
                             <div class="campoFormulario">
-                                <label for=""><i class="fa-solid fa-camera"></i>Seleccioná la fotografía del producto </label>
+                                <label for="foto"><i class="fa-solid fa-camera"></i>Seleccioná la fotografía del producto </label>
                                 <input type="file" id="foto" name="foto" accept=".jpg"
                                     placeholder="PRECIO" class="controlFormulario">
+                            </div>
+
+                            <div class="campoFormulario">
+                                <label for="logoMarca"> Seleccioná el logo de la Marca </label>
+                                <input type="radio" required="required" id="logoMarca" name="logoMarca" class="controlFormulario" value="/img/logo_amd.jpg"> AMD
+                                <input type="radio" required="required" id="logoMarca" name="logoMarca" class="controlFormulario" value="/img/logo_intel.jpg"> INTEL
                             </div>
 
 

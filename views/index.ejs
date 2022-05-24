@@ -26,25 +26,25 @@
                             <% for (let i=0; i < 4; i++){ %>
                             <div class="contenedorArticulos">
                                 <% let random = (0 + Math.floor(Math.random()*30)) %>
-                                <div class="fotoProducto"><img src= <%= pcArmadasJSON[random].imagen %>
+                                <div class="fotoProducto"><img src= <%= pcArmadasJS[random].imagen %>
                                     alt="Pc Armada 02">
                                 </div>
                                 <div class="contenedorPrecioBtn">
                                     <div class="iconosMarcas">
-                                        <img src= <%= pcArmadasJSON[random].logoMarca %> alt="AMD">
+                                        <img src= <%= pcArmadasJS[random].logoMarca %> alt="AMD">
                                     </div>
-                                    <div class="precioPcArmada">Efectivo: <span><br> $ <%= pcArmadasJSON[random].precio %> </span>
+                                    <div class="precioPcArmada">Efectivo: <span><br> $ <%= pcArmadasJS[random].precio %> </span>
                                     </div>
-                                    <a href="/products/productDetail/<%=pcArmadasJSON[random].id%>">
+                                    <a href="/products/productDetail/<%=pcArmadasJS[random].id%>">
                                         <button class="btnPrincipal"> INFO 
                                             <span class="txtMagenta">//</span>
                                         </button>
                                     </a>
                                     </div>
-                                    <div class="nombrePC"><%= pcArmadasJSON[random].titulo %>
+                                    <div class="nombrePC"><%= pcArmadasJS[random].titulo %>
                                     </div>
-                                    <div class="caracteristicas"> <%= pcArmadasJSON[random].procesador %>, <%= pcArmadasJSON[random].memoriaRam %>, <%= pcArmadasJSON[random].placaDeVideo %>,
-                                        <%= pcArmadasJSON[random].discoRigido %>
+                                    <div class="caracteristicas"> <%= pcArmadasJS[random].procesador %>, <%= pcArmadasJS[random].memoriaRam %>, <%= pcArmadasJS[random].placaDeVideo %>,
+                                        <%= pcArmadasJS[random].discoRigido %>
                                     </div>
 
                                 </div>

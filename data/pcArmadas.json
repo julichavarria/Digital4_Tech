@@ -11,7 +11,7 @@
         "discoRigido" :"SSD M.2 WD 2TB Black SN750",
         "gabinete" : "Cooler Master Mastercase H500",
         "fuente" :"AEROCOOL CYLON 500W RGB CON 80 PLUS BRONZE",
-        "precio" : 206000
+        "precio" : 206.555
     }, 
     {
         "id" : 2,
@@ -25,7 +25,7 @@
         "discoRigido"  :"1TB SEAGATE BARRACUDA",
         "gabinete" :"Mid TOWER SENTEY Z20",
         "fuente" :"THERMALTAKE SMART 600W 80 PLUS WHITE",
-        "precio" : 159779
+        "precio" : 159.779
     },
     {
         "id" : 3,
@@ -39,7 +39,7 @@
         "discoRigido"  :"1TB SEAGATE BARRACUDA",
         "gabinete" :"GAMER RGB LED AEROCOOL BOLT",
         "fuente" :"THERMALTAKE SMART 600W 80 PLUS WHITE",
-        "precio" : 151079
+        "precio" : 151.079
     },
     {
         "id" : 4,
@@ -53,12 +53,12 @@
         "discoRigido"  :"SSD - 480GB - PARA ENSAMBLADO",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 300755
+        "precio" : 300.755
     },
     {
         "id" : 5,
         "titulo" : "VITO CORLEONE",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_04.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_05.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 PRO 4750G 4.45 GHZ",
         "mother" : "GIGABYTE GA-B450M GAMING",
@@ -67,12 +67,12 @@
         "discoRigido"  :"SSD - 480GB - PARA ENSAMBLADO",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 267638
+        "precio" : 267.638
     },
     {
         "id" : 6,
         "titulo" : "LUKE SKYWALKER",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_01.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_06.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 PRO 4750G 4.45 GHZ",
         "mother" : "ASUS PRIME B450M-A II",
@@ -81,12 +81,12 @@
         "discoRigido"  :"SOLIDO SSD 240Gb GIGABYTE",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 193598
+        "precio" : 193.598
     },
     {
         "id" : 7,
         "titulo" : "GOLLUM",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_03.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_07.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 5 5600X 3.7 GHZ",
         "mother" : "GIGABYTE GA-B450M GAMING",
@@ -95,12 +95,12 @@
         "discoRigido"  :"SOLIDO SSD 480Gb KINGSTON",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"THERMALTAKE SMART 600W 80 PLUS WHITE",
-        "precio" : 184578
+        "precio" : 184.578
     },
     {
         "id" : 8,
         "titulo" : "MORFEO",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_02.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_08.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 5 3600 4.2 GHZ",
         "mother" : "ASUS PRIME A320M-K",
@@ -109,12 +109,12 @@
         "discoRigido"  :"SOLIDO SSD 240Gb KINGSTON",
         "gabinete" :"Mid TOWER SENTEY Z20 LITE",
         "fuente" :"THERMALTAKE SMART 600W 80 PLUS WHITE",
-        "precio" : 163479
+        "precio" : 163.479
     },
     {
         "id" : 9,
         "titulo" : "MARTY MCFLY",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_04.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_09.jpg",
         "logoMarca" : "/img/logo_intel.jpg",
         "procesador" :"INTEL CORE I7 11700F 5.0 GHZ",
         "mother" : "GIGABYTE GA-Z590 UD",
@@ -123,12 +123,12 @@
         "discoRigido"  :"SOLIDO SSD 480Gb KINGSTON",
         "gabinete" :"Mid TOWER SENTEY Z20 LITE",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 452248
+        "precio" : 452.248
     },
     {
         "id" : 10,
         "titulo" : "NEYTIRI",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_04.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_10.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 PRO 4750G 4.45 GHZ",
         "mother" : "GIGABYTE GA-B450M GAMING",
@@ -137,12 +137,12 @@
         "discoRigido"  :"SOLIDO SSD 480Gb KINGSTON",
         "gabinete" :"Mid TOWER SENTEY Z20 LITE",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 207719
+        "precio" : 207.719
     },
     {
         "id" : 11,
         "titulo" : "R2-D2",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_01.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_11.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 PRO 4750G 4.45 GHZ",
         "mother" : "GIGABYTE GA-B450M GAMING",
@@ -151,12 +151,12 @@
         "discoRigido"  :"1TB SEAGATE BARRACUDA",
         "gabinete" :"Mid TOWER SENTEY Z20 LITE",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 199689
+        "precio" : 199.689
     },
     {
         "id" : 12,
         "titulo" : "AGENTE SMITH",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_03.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_12.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 PRO 4750G 4.45 GHZ",
         "mother" : "GIGABYTE GA-B450M GAMING",
@@ -165,12 +165,12 @@
         "discoRigido"  :"1TB SEAGATE BARRACUDA",
         "gabinete" :"MINI TOWER SENTEY F10 RGB",
         "fuente" :"CROMAX KC-DAA-500 500W",
-        "precio" : 97329
+        "precio" : 97.329
     },
     {
         "id" : 13,
         "titulo" : "JAKE SULLY",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_03.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_13.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 5 3600 4.2 GHZ",
         "mother" : "ASUS PRIME A320M-K",
@@ -179,12 +179,12 @@
         "discoRigido"  :"1TB SEAGATE BARRACUDA",
         "gabinete" :"MINI TOWER SENTEY F10 RGB",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 164379
+        "precio" : 164.379
     },
     {
         "id" : 14,
         "titulo" : "KHAL DROGO",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_02.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_22.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 5 3600 4.2 GHZ",
         "mother" : "ASUS PRIME A320M-K",
@@ -193,12 +193,12 @@
         "discoRigido"  :"1TB SEAGATE BARRACUDA",
         "gabinete" :"MINI TOWER SENTEY F10 RGB",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 164379
+        "precio" : 164.379
     },
     {
         "id" : 15,
         "titulo" : "LAGERTHA",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_01.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_15.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 PRO 4750G 4.45 GHZ",
         "mother" : "GIGABYTE GA-B450M GAMING",
@@ -207,12 +207,12 @@
         "discoRigido"  :"SOLIDO SSD M2 PCI-E - 960GB",
         "gabinete" :"Mid TOWER SENTEY Z20 LITE",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 277128
+        "precio" : 277.128
     },
     {
         "id" : 16,
         "titulo" : "UHTRED OF BEBBANBURG",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_04.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_16.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 5800X 4.7 GHZ",
         "mother" : "ASUS PRIME B450M-A II",
@@ -221,12 +221,12 @@
         "discoRigido"  :"SOLIDO SSD 240Gb KINGSTON",
         "gabinete" :"Mid TOWER SENTEY Z20 LITE",
         "fuente" :"THERMALTAKE SMART 600W 80 PLUS WHITE",
-        "precio" : 205316
+        "precio" : 205.316
     },
     {
         "id" : 17,
         "titulo" : "JOHN LOCKE",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_02.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_17.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 PRO 4750G 4.45 GHZ",
         "mother" : "GIGABYTE GA-B450M GAMING",
@@ -235,12 +235,12 @@
         "discoRigido"  :"SOLIDO SSD 240Gb KINGSTON",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 268327
+        "precio" : 268.327
     },
     {
         "id" : 18,
         "titulo" : "TONY STARK",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_01.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_18.jpg",
         "logoMarca" : "/img/logo_intel.jpg",
         "procesador" :"INTEL CORE I7 11700KF 5.0 GHZ",
         "mother" : "MSI Z590 GAMING PLUS",
@@ -249,12 +249,12 @@
         "discoRigido"  :"SOLIDO SSD 240Gb KINGSTON",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"THERMALTAKE SMART 600W 80 PLUS WHITE",
-        "precio" : 241248
+        "precio" : 241.248
     },
     {
         "id" : 19,
         "titulo" : "BJÖRN LOTHBROK",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_03.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_19.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 5800X 4.7 GHZ",
         "mother" : "ASUS PRIME B450M-A II",
@@ -263,12 +263,12 @@
         "discoRigido"  :"SOLIDO SSD 480Gb KINGSTON",
         "gabinete" :" Mid TOWER SENTEY Z20 LITE",
         "fuente" :"THERMALTAKE SMART 600W 80 PLUS WHITE",
-        "precio" : 200258
+        "precio" : 200.258
     },
     {
         "id" : 20,
         "titulo" : "SAUL GOODMAN",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_04.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_20.jpg",
         "logoMarca" : "/img/logo_intel.jpg",
         "procesador" :"INTEL CORE I9 11900KF 5.3 GHZ",
         "mother" : "MSI Z590 GAMING PLUS",
@@ -277,12 +277,12 @@
         "discoRigido"  :"SOLIDO SSD 240Gb KINGSTON",
         "gabinete" :" Mid TOWER SENTEY Z20 LITE",
         "fuente" :"THERMALTAKE SMART 600W 80 PLUS WHITE",
-        "precio" : 255279	
+        "precio" : 255.279	
     },
     {
         "id" : 21,
         "titulo" : "BRIAN O'CONNER",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_02.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_21.jpg",
         "logoMarca" : "/img/logo_intel.jpg",
         "procesador" :"INTEL CORE I9 12900 5.1 GHZ",
         "mother" : "MSI Z690-A WIFI DDR4",
@@ -291,12 +291,12 @@
         "discoRigido"  :"SOLIDO SSD 480Gb KINGSTON",
         "gabinete" :" Mid TOWER SENTEY Z20 LITE",
         "fuente" :"THERMALTAKE SMART 600W 80 PLUS WHITE",
-        "precio" : 280838	
+        "precio" : 280.838	
     },
     {
         "id" : 22,
         "titulo" : "ATHELSTAN",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_01.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_14.jpg",
         "logoMarca" : "/img/logo_intel.jpg",
         "procesador" :"INTEL CORE I9 12900 5.1 GHZ",
         "mother" : "MSI Z690-A WIFI DDR4",
@@ -305,12 +305,12 @@
         "discoRigido"  :"SOLIDO SSD 240Gb GIGABYTE",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"AEROCOOL DORADO 850W RGB 80 PLUS GOLD",
-        "precio" : 495008	
+        "precio" : 495.008	
     },
     {
         "id" : 23,
         "titulo" : "HUGO HURLEY REYES",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_03.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_23.jpg",
         "logoMarca" : "/img/logo_intel.jpg",
         "procesador" :"INTEL CORE I9 12900 5.1 GHZ",
         "mother" : "MSI Z690-A WIFI DDR4",
@@ -319,12 +319,12 @@
         "discoRigido"  :"SOLIDO SSD 240Gb GIGABYTE",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 306916
+        "precio" : 306.916
     },
     {
         "id" : 24,
         "titulo" : "HUGO HURLEY REYES",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_01.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_24.jpg",
         "logoMarca" : "/img/logo_intel.jpg",
         "procesador" :"INTEL CORE I9 12900 5.1 GHZ",
         "mother" : "MSI Z690-A WIFI DDR4",
@@ -333,12 +333,12 @@
         "discoRigido"  :"SOLIDO SSD 240Gb GIGABYTE",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 306916
+        "precio" : 306.916
     },
     {
         "id" : 25,
         "titulo" : "PETER PARKER",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_04.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_25.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 PRO 4750G 4.45 GHZ",
         "mother" : "GIGABYTE GA-B450M GAMING",
@@ -347,12 +347,12 @@
         "discoRigido"  :"SOLIDO SSD 240Gb GIGABYTE",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 271517
+        "precio" : 271.517
     },
     {
         "id" : 26,
         "titulo" : "DUSTIN HENDERSON",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_02.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_26.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 5800X 4.7 GHZ",
         "mother" : "GIGABYTE GA-B450M GAMING",
@@ -361,12 +361,12 @@
         "discoRigido"  :"SOLIDO SSD 480Gb GIGABYTE",
         "gabinete" :"Mid TOWER SENTEY Z20 LITE",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 320678
+        "precio" : 320.678
     },
     {
         "id" : 27,
         "titulo" : "DOMINIC TORETTO",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_02.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_27.jpg",
         "logoMarca" : "/img/logo_intel.jpg",
         "procesador" :"INTEL CORE I7 12700F 4.9 GHZ",
         "mother" : "MSI PRO Z690-A DDR5",
@@ -375,12 +375,12 @@
         "discoRigido"  :"SOLIDO SSD 480Gb GIGABYTE",
         "gabinete" :"Mid TOWER SENTEY Z20 LITE",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 340841
+        "precio" : 340.841
     },
     {
         "id" : 28,
         "titulo" : "STEVE ROGERS",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_03.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_28.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 7 5800X 4.7 GHZ",
         "mother" : "ASUS PRIME B450M-A II",
@@ -389,12 +389,12 @@
         "discoRigido"  :"SOLIDO SSD 480Gb GIGABYTE",
         "gabinete" :"Mid TOWER SENTEY Z20 LITE",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 357245
+        "precio" : 357.245
     },
     {
         "id" : 29,
         "titulo" : "REY EGBERTO DE WESSEX",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_04.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_29.jpg",
         "logoMarca" : "/img/logo_intel.jpg",
         "procesador" :"INTEL CORE I5 12400 4.4 GHZ",
         "mother" : "ASUS PRIME H610M-E DDR4",
@@ -403,12 +403,12 @@
         "discoRigido"  :"SOLIDO SSD M2 - 240GB",
         "gabinete" :"Mid TOWER SENTEY Z20 LITE",
         "fuente" :"THERMALTAKE SMART 600W 80 PLUS WHITE",
-        "precio" : 180031
+        "precio" : 180.031
     },
     {
         "id" : 30,
         "titulo" : "KATE AUSTEN",
-        "imagen" : "/img/productos_pcArmadas/pcArmada_01.jpg",
+        "imagen" : "/img/productos_pcArmadas/pcArmada_30.jpg",
         "logoMarca" : "/img/logo_amd.jpg",
         "procesador" :"AMD RYZEN 9 5900X 4.8 GHZ",
         "mother" : "GIGABYTE GA-B450M GAMING",
@@ -417,7 +417,7 @@
         "discoRigido"  :"SOLIDO SSD 480Gb KINGSTON",
         "gabinete" :"Mid TOWER AEROCOOL PLAYA",
         "fuente" :"GIGABYTE 750W 80 PLUS GOLD",
-        "precio" : 455647
+        "precio" : 455.647
     }
 ]
     

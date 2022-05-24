@@ -1,5 +1,24 @@
 const express = require ("express");
+const path = require ('path');
 const router = express.Router ();
+const multer = require ('multer');
+
+
+// CONFIGURACIÓN DEL MULTER PARA GUARDAR Y ASIGNAR NOMBRE A LA SUBIDA DE ARCHIVOS POR UN FORMULARIO 
+let storage = multer.diskStorage ({
+
+    destination: (req, file, cb) => {
+        let destinationFolder = path.join (__dirname, '../public/img/productos_pcArmadas');
+        cb (null, destinationFolder);
+    },
+
+    filename: (req, file, cb) => {
+        let imageName = "/pcArmadas_" + Date.now() + path.extname (file.originalname);
+        cb (null, imageName);
+    }
+})
+
+let updateFile = multer ({storage});
 
 // REQUERIMOS EL CONTROLADOR PARA DESPUES ACCEDER A SUS METODOS
 const productsController = require ("../controllers/productsController");
@@ -7,6 +26,7 @@ const productsController = require ("../controllers/productsController");
 
 //CREATE
 router.get ("/newProduct", productsController.newProduct);
+router.post ("/newProduct", updateFile.single('foto'), productsController.createNewProduct);
 
 //READ
 router.get ("/products", productsController.product);
@@ -19,5 +39,6 @@ router.put ("/editProduct/:id", productsController.processEditProduct);
 // router.get ("/products/productDetail/:id?/editProduct", productsController.editIndProduct);
 
 //DELETE
+router.get ("/editProduct/:id", productsController.deleteProduct);
 
 module.exports = router;
