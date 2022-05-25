@@ -15,7 +15,11 @@
 
     <h2>COMPUTADORAS ARMADAS <span class="txtMagenta">//</span></h2>
     <a href="/products/editProduct/<%= pcArmadasJS.id %>"><div class="btnEdit"><i class="fa-solid fa-pen"></i><span>EDITAR </span> </div></a>
-    <a href="/products/deleteProduct/<%= pcArmadasJS.id %>"><div class="btnDelete"><i class="fa-solid fa-trash-can"></i><span>ELIMINAR </span> </div></a>
+    <form action="/products/editProduct/<%= pcArmadasJS.id %>/deleteProduct?_method=DELETE" method="POST">
+      <button class="btnDelete" type="submit" ><i class="fa-solid fa-trash-can"></i> Eliminar </button>
+      <!-- <a href=""><div class="btnDelete"><i class="fa-solid fa-trash-can"></i><span>ELIMINAR </span> </div></a> -->
+    </form>
+    
 
     <article class="contenedorSeccion_P">
       <div class="contenedorFotoIconos">

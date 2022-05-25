@@ -39,6 +39,6 @@ router.put ("/editProduct/:id", productsController.processEditProduct);
 // router.get ("/products/productDetail/:id?/editProduct", productsController.editIndProduct);
 
 //DELETE
-router.get ("/editProduct/:id", productsController.deleteProduct);
+router.delete ("/editProduct/:id/deleteProduct/", productsController.deleteProduct);
 
 module.exports = router;

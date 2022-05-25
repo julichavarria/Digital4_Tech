@@ -100,8 +100,6 @@ const productController = {
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
         }
-        console.log(selectorDeMarca(req.body.categoria))
-        console.log(productEdit.logoMarca)
         /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
         let pcArmadasJSsinEditado = pcArmadasJS.filter (product => product.id != req.params.id);
         /// AGREGA AL NUEVO ARRAY EL PRODUCTO EDITADO
@@ -120,9 +118,20 @@ const productController = {
     ///////////////// FIN DE EDITAR PRODUCTOS
 
     ///////////////// ELIMINAR PRODUCTOS
+
     deleteProduct: function (req,res) {
-        let prodSelect = obtenerProducto(req.params.id);
-        res.render("products/editProduct", {pcArmadasJS: prodSelect});
+        let idParams = req.params.id;
+        
+        /// FILTRAMOS TODOS MENOS EL PASADO POR ":id" A UN ARRAY NUEVO  
+        let pcArmadasJSsinElEliminado = pcArmadasJS.filter (product => product.id != idParams);
+        
+        /// PASAMOS JS A JSON
+        pcArmadasJSONsinELEliminado = JSON.stringify(pcArmadasJSsinElEliminado);
+        fs.writeFileSync (pcArmadasFilePath, pcArmadasJSONsinELEliminado);
+
+        /// REDIRECCIONAMOS VISTA
+        res.redirect ('/products/products')
     },
+    
 }
 module.exports = productController;
