@@ -21,9 +21,6 @@ function obtenerProducto (idProducto){
         return producto;
 }
 
-//funcion ordenar array de objetos literal
-//pcArmadasJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
-
 const productController = {
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
@@ -83,7 +80,7 @@ const productController = {
     processEditProduct: function (req, res) {
         let productSelect = obtenerProducto(req.params.id); //podSelect contiene todo el producto[i]
         let productEdit = {
-            id: req.params.id,
+            id: parseInt(req.params.id), //// paseInt CONVIERTE EN NUMERO UN STRING ESTO ES PORQUE DESPUES DE EDITAR UN PRODUCTO DEVOLVIA EL ID EN FORMA DE STRING
             imagen: (req.file ? req.file.filename : productSelect.imagen),
             logoMarca: (req.body.logoMarca ? req.body.logoMarca : productSelect.logoMarca),
             titulo: req.body.nombre,
@@ -99,12 +96,14 @@ const productController = {
 
         /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
         let pcArmadasJSsinEditado = pcArmadasJS.filter (product => product.id != req.params.id);
+        /// AGREGA AL NUEVO ARRAY EL PRODUCTO EDITADO
         pcArmadasJSsinEditado.push (productEdit)
-        pcArmadasJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
+        /// ORDENA EL ARRAY DE OBJETOS LITERALES MEDIANTE EL PARMETRO "id"
+        let pcArmadasOrdenadoJS = pcArmadasJSsinEditado.sort( (a, b) => (a.id > b.id) ? 1 : -1)
 
         /// PASAMOS JS A JSON
-        let pcArmadasJSON = JSON.stringify(pcArmadasJSsinEditado);
-        fs.writeFileSync (pcArmadasFilePath, pcArmadasJSON);
+        pcArmadasOrdenadoJS = JSON.stringify(pcArmadasJSsinEditado);
+        fs.writeFileSync (pcArmadasFilePath, pcArmadasOrdenadoJS);
 
         /// REDIRECCIONAMOS VISTA
         res.redirect ('/products/products')
