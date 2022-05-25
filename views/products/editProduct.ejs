@@ -64,11 +64,21 @@
                             <p>Imagen Actual</p>
                             <img src= <%= pcArmadasJS.imagen %> alt="imagen de equipo">
 
+                            <!-- <div class="campoFormulario">
+                                <label for="categoria"> Seleccioná el logo de la Marca </label>
+                                <select name="categoria">
+                                    <option value="AMD">AMD</option>
+                                    <option value="INTEL">INTEL</option>
+                                </select>
+                            </div> -->
                             <div class="campoFormulario">
-                                <label for="logoMarca"> Seleccioná el logo de la Marca </label>
-                                <input type="radio" id="logoMarca" name="logoMarca" class="controlFormulario" value="/img/logo_amd.jpg"> AMD
-                                <input type="radio" id="logoMarca" name="logoMarca" class="controlFormulario" value="/img/logo_intel.jpg"> INTEL
+                                <label for="categoria"> Seleccioná el logo de la Marca </label>
+                                <input type="radio" required="required" id="categoria" name="categoria" class="controlFormulario" value="AMD"> AMD
+                                <input type="radio" required="required" id="categoria" name="categoria" class="controlFormulario" value="INTEL"> INTEL
+                                <!-- checked = '<%= pcArmadasJS.categoria %> ' -->
+                                <!-- required="required" -->
                             </div>
+                            
 
                             <div class="botones">
                                 <button class="btnPrincipal" type="submit"> GUARDAR </button>

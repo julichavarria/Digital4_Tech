@@ -21,6 +21,10 @@ function obtenerProducto (idProducto){
         return producto;
 }
 
+function selectorDeMarca (marca){
+   return marca == 'INTEL' ? '/img/logo_intel.jpg' : '/img/logo_amd.jpg'
+}
+
 const productController = {
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
@@ -50,7 +54,8 @@ const productController = {
         let productNew = {
             id: pcArmadasJS.length + 1,
             imagen: (req.file ? destinationFolder + req.file.filename : defoulImage),
-            logoMarca: req.body.logoMarca,
+            categoria: req.body.categoria,
+            logoMarca: (req.body.categoria == 'AMD' ? '/img/logo_amd.jpg' : '/img/logo_intel.jpg'),
             titulo: req.body.nombre,
             procesador: req.body.procesador,
             mother: req.body.mother,
@@ -61,6 +66,7 @@ const productController = {
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
         }
+        console.log(productNew.logoMarca);
         pcArmadasJS.push (productNew);
         pcArmadasJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
         let pcArmadasJSON = JSON.stringify(pcArmadasJS);
@@ -82,7 +88,8 @@ const productController = {
         let productEdit = {
             id: parseInt(req.params.id), //// paseInt CONVIERTE EN NUMERO UN STRING ESTO ES PORQUE DESPUES DE EDITAR UN PRODUCTO DEVOLVIA EL ID EN FORMA DE STRING
             imagen: (req.file ? req.file.filename : productSelect.imagen),
-            logoMarca: (req.body.logoMarca ? req.body.logoMarca : productSelect.logoMarca),
+            categoria: (req.body.categoria ? req.body.categoria : productSelect.categoria),
+            logoMarca: (req.body.categoria ? selectorDeMarca(req.body.categoria) : productSelect.logoMarca),
             titulo: req.body.nombre,
             procesador: req.body.procesador,
             mother: req.body.mother,
@@ -93,7 +100,8 @@ const productController = {
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
         }
-
+        console.log(selectorDeMarca(req.body.categoria))
+        console.log(productEdit.logoMarca)
         /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
         let pcArmadasJSsinEditado = pcArmadasJS.filter (product => product.id != req.params.id);
         /// AGREGA AL NUEVO ARRAY EL PRODUCTO EDITADO
