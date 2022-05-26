@@ -63,18 +63,26 @@
                                     </div>
                             </div>
 
-
-
-
-                            <div class="campoFormulario">
+                            <!-- EL CODIOGO COMENTADO DEL RADIO BUTTONS QUE ESTAN ANTES DE LA PRUEBA DE IMAGEN -->
+                            <!-- <div class="campoFormulario">
                                 <label for="categoria"> Seleccioná la categoría de procesador </label>
                                 <div class="contenedorRadioButtons">
                                     <div class="inputRadio"><input type="radio" required="required" id="categoria" name="categoria" value="AMD"> AMD</div>
                                     <div class="inputRadio"><input type="radio" required="required" id="categoria" name="categoria" value="INTEL"> INTEL</div>
                                 </div>
+                            </div> -->
+
+                            <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
+                            <div>
+                                Seleccioná la categoría de procesador 
+                                <label for="categoria">
+                                    <input class="botonCateoria" type="radio" required="required" id="categoria" name="categoria" value="INTEL"> <img src="/img/logo_intel.jpg"></input>
+                                </label>
+                                <label>
+                                    <input class="botonCateoria" type="radio" required="required" id="categoria" name="categoria" value="AMD"> <img src="/img/logo_amd.jpg"></input>
+                                </label>
                             </div>
-
-
+                            <!-- HASTA ACA HAY QUE BORRAR SI NO QUIEREN DEJAR LOS RADIO BUTTON COMO IMAGEN -->
 
                             <div class="botonesNew">
                                 <button class="btnPrincipal" type="submit"> CREAR PRODUCTO  </button>
