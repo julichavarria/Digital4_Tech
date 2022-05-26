@@ -53,23 +53,32 @@
                                 <input required="required" type="text" id="precio" name="precio"
                                     placeholder="PRECIO" class="controlFormulario">
                             </div>
-
-                            <div class="campoFormulario">
-                                <label for="foto"><i class="fa-solid fa-camera"></i>Seleccioná la fotografía del producto </label>
-                                <input type="file" id="foto" name="foto" accept=".jpg"
-                                    placeholder="PRECIO" class="controlFormulario">
+                            
+                            <div class="contenedorImgEdit">
+                               
+                                <div>
+                                    <label for=""><i class="fa-solid fa-camera"></i>Seleccioná la fotografía del producto </label>
+                                    <input type="file" id="foto" name="foto" accept=".jpg"
+                                         class="controlFormulario">
+                                    </div>
                             </div>
 
+
+
+
                             <div class="campoFormulario">
-                                <label for="categoria"> Seleccioná el logo de la Marca </label>
-                                <input type="radio" required="required" id="categoria" name="categoria" class="controlFormulario" value="AMD"> AMD
-                                <input type="radio" required="required" id="categoria" name="categoria" class="controlFormulario" value="INTEL"> INTEL
+                                <label for="categoria"> Seleccioná la categoría de procesador </label>
+                                <div class="contenedorRadioButtons">
+                                    <div class="inputRadio"><input type="radio" required="required" id="categoria" name="categoria" value="AMD"> AMD</div>
+                                    <div class="inputRadio"><input type="radio" required="required" id="categoria" name="categoria" value="INTEL"> INTEL</div>
+                                </div>
                             </div>
+
 
 
                             <div class="botones">
-                                <button class="btnPrincipal" type="submit"> CREAR  </button>
-                                <button class="btnSecundario" type="reset"> BORRAR </button>
+                                <button class="btnPrincipal" type="submit"> CREAR PRODUCTO  </button>
+                                <button class="btnSecundario" type="reset"> LIMPIAR FORMULARIO </button>
                             </div>
                         </form>
                     </div>

@@ -48,14 +48,32 @@ textarea:-moz-placeholder {
     
 }
 
-.campoFormulario label{
+.campoFormulario label, .contenedorImgEdit label{
     color: #e31a52;
     font-weight: 400;
-    margin: 10px;
+    margin: 5px;
+    width: 100%;
 }
-.campoFormulario label i{
+
+.contenedorImgEdit{
+    margin: 35px 0px;
+    border-top: 1px #cacaca solid;
+    border-bottom: 1px #cacaca solid;
+    padding: 30px 0px;
+}
+
+.contenedorImgEdit label i{
     margin-right: 10px;
+    margin-bottom: 10px;
 }
+
+.contenedorImgEdit p {
+   text-align: left;
+}
+.contenedorImgEdit i {
+    color: #e31a52;
+    margin-right:15px;
+ }
 
 /* main form div label {
     flex-grow: 0.4;
@@ -85,6 +103,27 @@ img {
     max-width: 150px;
     margin: auto;
 }
+
+.contenedorRadioButtons{
+display: flex;
+justify-content: center;
+width: 100%;
+   }
+
+.inputRadio{
+    border: #cacaca solid 1px;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.contenedorImgEdit{
+    display: flex;
+    align-items: center;
+}
+
+
 
 /* ////////////// inicio de @media //////////////// */
 

@@ -18,7 +18,7 @@
                     <div class="controlGeneral">
                         <form action="/products/editProduct/<%= pcArmadasJS.id %>?_method=PUT" method="POST">
                             <div class="campoFormulario">
-                                <label> Titulo </label>
+                                <label> Nombre de la PC </label>
                                 <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
                                      class="controlFormulario" value="<%= pcArmadasJS.titulo %>">
                             </div>
@@ -28,41 +28,53 @@
                                     placeholder="PROCESADOR" class="controlFormulario" value="<%= pcArmadasJS.procesador %>">
                             </div>
                             <div class="campoFormulario">
+                                <label> Motherboard </label>
                                 <input required="required" type="text" id="mother" name="mother"
                                     placeholder="MOTHER" class="controlFormulario" value="<%= pcArmadasJS.mother %>">
                             </div>
                             <div class="campoFormulario">
+                                <label> Placa de video </label>
                                 <input required="required" type="text" id="video" name="video"
                                     placeholder="PLACA DE VIDEO" class="controlFormulario" value="<%= pcArmadasJS.placaDeVideo %>">
                             </div>
                             <div class="campoFormulario">
+                                <label> Memoria Ram </label>
                                 <input required="required" type="text" id="ram" name="ram"
                                     placeholder="MEMORIA RAM" class="controlFormulario" value="<%= pcArmadasJS.memoriaRam %>">
                             </div>
                             <div class="campoFormulario">
+                                <label> Disco Rígido </label>
                                 <input required="required" type="text" id="disco" name="disco"
                                     placeholder="DISCO RIGIDO" class="controlFormulario" value="<%= pcArmadasJS.discoRigido %>">
                             </div>
                             <div class="campoFormulario">
+                                <label> Gabinete </label>
                                 <input required="required" type="text" id="gabinete" name="gabinete"
                                     placeholder="GABINETE" class="controlFormulario" value="<%= pcArmadasJS.gabinete %>">
                             </div>
                             <div class="campoFormulario">
+                                <label> Fuente </label>
                                 <input required="required" type="text" id="fuente" name="fuente"
                                     placeholder="FUENTE" class="controlFormulario" value="<%= pcArmadasJS.fuente %>">
                             </div>
                             <div class="campoFormulario">
+                                <label> Precio </label>
                                 <input required="required" type="text" id="precio" name="precio"
                                     placeholder="PRECIO" class="controlFormulario" value="<%= pcArmadasJS.precio %>">
                             </div>
                             
-                            <div class="campoFormulario">
+                            <div class="contenedorImgEdit">
+                            <div>
+                                <img src= <%= pcArmadasJS.imagen %> alt="imagen de equipo">
+                            </div>
+                            <div>
+                                <p><i class="fas fa-angle-left"></i>Imagen Actual</p>
                                 <label for=""><i class="fa-solid fa-camera"></i>Seleccioná la fotografía del producto </label>
                                 <input type="file" id="foto" name="foto" accept=".jpg"
                                      class="controlFormulario">
+                                </div>
                             </div>
-                            <p>Imagen Actual</p>
-                            <img src= <%= pcArmadasJS.imagen %> alt="imagen de equipo">
+                            
 
                             <!-- <div class="campoFormulario">
                                 <label for="categoria"> Seleccioná el logo de la Marca </label>
@@ -71,16 +83,19 @@
                                     <option value="INTEL">INTEL</option>
                                 </select>
                             </div> -->
+                            
                             <div class="campoFormulario">
-                                <label for="categoria"> Seleccioná el logo de la Marca </label>
-                                <input type="radio" required="required" id="categoria" name="categoria" class="controlFormulario" value="AMD"> AMD
-                                <input type="radio" required="required" id="categoria" name="categoria" class="controlFormulario" value="INTEL"> INTEL
+                                <label for="categoria"> Seleccioná la categoría de procesador </label>
+                                <div class="contenedorRadioButtons">
+                                    <div class="inputRadio"><input type="radio" required="required" id="categoria" name="categoria" value="AMD"> AMD</div>
+                                    <div class="inputRadio"><input type="radio" required="required" id="categoria" name="categoria" value="INTEL"> INTEL</div>
+                                </div>
                             </div>
                             
 
                             <div class="botones">
-                                <button class="btnPrincipal" type="submit"> GUARDAR </button>
-                                <button class="btnSecundario" type="reset"> BORRAR </button>
+                                <button class="btnPrincipal" type="submit"> GUARDAR CAMBIOS </button>
+                                <button class="btnSecundario" type="reset"> BORRAR PRODUCTO </button>
                             </div>
                         </form>
                     </div>
