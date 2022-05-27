@@ -13,6 +13,9 @@ const mainController = {
     index:function (req,res) {
         res.render("index", {pcArmadasJS: pcArmadasJS});
     },
+    nosotros:function (req,res) {
+        res.render("nosotros");
+    },
 }    
     
 module.exports = mainController;

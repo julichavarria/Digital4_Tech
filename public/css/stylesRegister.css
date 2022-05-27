@@ -109,18 +109,22 @@ img {
     margin: auto;
 }
 
-.contenedorRadioButtons{
+.contenedorRadioButtonsLogos{
 display: flex;
 justify-content: center;
-width: 100%;
-   }
+width: 150px;
+margin: 0 auto;
+}
 
-.inputRadio{
-    border: #cacaca solid 1px;
-    padding: 15px;
-    margin: 5px;
-    border-radius: 10px;
-    width: 100px;
+.contenedorRadioButtonsAvatar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedorRadioButtonsAvatar label {
+    width: auto;
 }
 
 .contenedorImgEdit{
@@ -150,11 +154,12 @@ width: 100%;
     opacity: 0;
     width: 1px;
     height: 1px;
+    
   }
   /* IMAGE STYLES */
   [type=radio] + img {
     cursor: pointer;
-    width: 90px;
+    width: 100px;
     opacity: 40%;
   }
   /* CHECKED STYLES */
@@ -163,6 +168,16 @@ width: 100%;
     border-radius: 10%;
     opacity: 100%;
   }
+
+  /* IMAGE STYLES */
+  .contenedorRadioButtonsAvatar [type=radio] + img {
+    width: 60px;
+  }
+
+
+
+
+
 /* FIN DE LA PRUEBA DE ESTILO DE RADIO BUTTON CON IMAGEN */
 
 /* ////////////// inicio de @media //////////////// */

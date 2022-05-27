@@ -2,59 +2,103 @@
 <html lang="en">
 
 <head>
-<%- include ('../partials/head') %>
-<!-- /////// CARGA CSS  PARTICULAR/////// -->
-<link rel="stylesheet" href="/css/stylesRegister.css">
+    <%- include ('../partials/head') %>
+        <!-- /////// CARGA CSS  PARTICULAR/////// -->
+        <link rel="stylesheet" href="/css/stylesRegister.css">
 </head>
-    <body>
-        <%- include ('../partials/header') %>
-            <main class="mainRegister">
-            
-                    <h1> REGISTRARSE</h1>
-                    <h3>Completa la siguiente información para poder registrarse en nuestro sitio Web</h3>
+
+<body>
+    <%- include ('../partials/header') %>
+        <main class="mainRegister">
+
+            <h1> REGISTRARSE</h1>
+            <h3>Completa la siguiente información para poder registrarse en nuestro sitio Web</h3>
 
 
-                    <div class="controlGeneral">
-                        <form>
-                            <div class="campoFormulario">
-                                <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
-                                    maxlength="25" class="controlFormulario">
-                            </div>
-                            <div class="campoFormulario">
-                                <input required="required" type="text" id="apellido" name="apellido"
-                                    placeholder="APELLIDO" maxlength="20" class="controlFormulario">
-                            </div>
-                            <div class="campoFormulario">
-                                <input required="required" type="email" id="email" name="email" placeholder="EMAIL"
-                                    class="controlFormulario">
-                            </div>
-                            <div class="campoFormulario">
-                                <input required="required" type="confirmarEmail" id="confirmarEmail"
-                                    name="confirmarEmail" placeholder="REPETIR EMAIL" class="controlFormulario">
-                            </div>
-                            <div class="campoFormulario">
-                                <input required="required" type="text" id="usuario" name="usuraio" placeholder="USUARIO"
-                                    class="controlFormulario">
-                            </div>
-                            <div class="campoFormulario">
-                                <input required="required" type="password" id="contrasena" name="contrasena"
-                                    placeholder="CONTRASEÑA" minlength="6" class="controlFormulario">
-                            </div>
-                            <div class="campoFormulario">
-                                <input required="required" type="password" id="confirmarContrasena"
-                                    name="confirmarContrasena" placeholder="REPETIR CONTRASEÑA" minlength="6"
-                                    class="controlFormulario">
-                            </div>
-                            <div class="botones">
-                                <button class="btnPrincipal" type="submit"> REGISTRARSE </button>
-                                <button class="btnSecundario" type="reset"> BORRAR </button>
-                            </div>
-                        </form>
+            <div class="controlGeneral">
+                <form>
+                    <div class="campoFormulario">
+                        <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
+                            maxlength="25" class="controlFormulario">
                     </div>
-               
+                    <div class="campoFormulario">
+                        <input required="required" type="text" id="apellido" name="apellido" placeholder="APELLIDO"
+                            maxlength="20" class="controlFormulario">
+                    </div>
+                    <div class="campoFormulario">
+                        <input required="required" type="email" id="email" name="email" placeholder="EMAIL"
+                            class="controlFormulario">
+                    </div>
+                    <div class="campoFormulario">
+                        <input required="required" type="confirmarEmail" id="confirmarEmail" name="confirmarEmail"
+                            placeholder="REPETIR EMAIL" class="controlFormulario">
+                    </div>
+                    <div class="campoFormulario">
+                        <input required="required" type="text" id="usuario" name="usuraio" placeholder="USUARIO"
+                            class="controlFormulario">
+                    </div>
+                    <div class="campoFormulario">
+                        <input required="required" type="password" id="contrasena" name="contrasena"
+                            placeholder="CONTRASEÑA" minlength="6" class="controlFormulario">
+                    </div>
+                    <div class="campoFormulario">
+                        <input required="required" type="password" id="confirmarContrasena" name="confirmarContrasena"
+                            placeholder="REPETIR CONTRASEÑA" minlength="6" class="controlFormulario">
+                    </div>
 
-            </main>
-            <%- include ('../partials/footer') %>
-    </body>
+
+                    <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
+                    <div class="campoFormulario">
+                        <label>Seleccioná un avatar</label>
+                        <div class="contenedorRadioButtonsAvatar">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar01">
+                                <img src="/img/avatars/avatar01.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar02">
+                                <img src="/img/avatars/avatar02.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar03">
+                                <img src="/img/avatars/avatar03.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar04">
+                                <img src="/img/avatars/avatar04.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar05">
+                                <img src="/img/avatars/avatar05.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar06">
+                                <img src="/img/avatars/avatar06.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar07">
+                                <img src="/img/avatars/avatar07.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar08">
+                                <img src="/img/avatars/avatar08.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar09">
+                                <img src="/img/avatars/avatar09.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar10">
+                                <img src="/img/avatars/avatar10.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar11">
+                                <img src="/img/avatars/avatar11.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar12">
+                                <img src="/img/avatars/avatar12.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar13">
+                                <img src="/img/avatars/avatar13.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar14">
+                                <img src="/img/avatars/avatar14.jpg"></input></label>
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15">
+                                <img src="/img/avatars/avatar15.jpg"></input></label>
+                        </div>
+                    </div>
+                    <!-- HASTA ACA HAY QUE BORRAR SI NO QUIEREN DEJAR LOS RADIO BUTTON COMO IMAGEN -->
+
+
+
+
+
+                    <div class="botones">
+                        <button class="btnPrincipal" type="submit"> REGISTRARSE </button>
+                        <button class="btnSecundario" type="reset"> LIMPIAR DATOS </button>
+                    </div>
+                </form>
+            </div>
+
+
+        </main>
+        <%- include ('../partials/footer') %>
+</body>
 
 </html>

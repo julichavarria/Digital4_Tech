@@ -73,6 +73,7 @@ const productController = {
         fs.writeFileSync (pcArmadasFilePath, pcArmadasJSON);
 
         res.redirect ('/products/products');
+        
     },
 
     ////////////////// FIN DE PRODUCTOS NUEVOS
@@ -113,6 +114,7 @@ const productController = {
 
         /// REDIRECCIONAMOS VISTA
         res.redirect ('/products/products')
+       
     },
 
     ///////////////// FIN DE EDITAR PRODUCTOS

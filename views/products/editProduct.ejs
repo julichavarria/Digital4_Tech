@@ -77,22 +77,14 @@
                             </div>
                             
 
-                            <!-- <div class="campoFormulario">
-                                <label for="categoria"> Seleccioná el logo de la Marca </label>
-                                <select name="categoria">
-                                    <option value="AMD">AMD</option>
-                                    <option value="INTEL">INTEL</option>
-                                </select>
-                            </div> -->
-                            
                             <div class="campoFormulario">
-                                <label for="categoria"> Seleccioná la categoría de procesador </label>
-                                <div class="contenedorRadioButtons">
-                                    <div class="inputRadio"><input type="radio" required="required" id="categoria" name="categoria" value="AMD" <% if (pcArmadasJS.categoria == "AMD"){%> checked <%}%>> AMD</div>
-                                    <div class="inputRadio"><input type="radio" required="required" id="categoria" name="categoria" value="INTEL" <% if (pcArmadasJS.categoria == "INTEL"){%> checked <%}%>> INTEL</div>
-                                </div>
+                                <label>Seleccioná la categoría de procesador</label>
+                                <div class="contenedorRadioButtonsLogos">
+                                <label><input type="radio" required="required" id="categoria" name="categoria" value="INTEL"  <% if (pcArmadasJS.categoria == "INTEL"){%> checked <%}%>> <img src="/img/logo_intel.svg"></input></label>
+                                <label><input type="radio" required="required" id="categoria" name="categoria" value="AMD"  <% if (pcArmadasJS.categoria == "AMD"){%> checked <%}%>> <img src="/img/logo_amd.svg"></input></label>
                             </div>
-                            
+                            </div>
+
 
                             <div class="botones">
                                 <button class="btnPrincipal" type="submit"> GUARDAR CAMBIOS </button>
