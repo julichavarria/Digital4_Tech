@@ -66,14 +66,18 @@ const productController = {
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
         }
-        console.log(productNew.logoMarca);
+
+        // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
         pcArmadasJS.push (productNew);
+
+        //ORDENA EL ARRAY POR ID
         pcArmadasJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
+
+        //PASA A JSON Y LO ESCRIBES
         let pcArmadasJSON = JSON.stringify(pcArmadasJS);
         fs.writeFileSync (pcArmadasFilePath, pcArmadasJSON);
 
         res.redirect ('/products/products');
-        
     },
 
     ////////////////// FIN DE PRODUCTOS NUEVOS
@@ -109,12 +113,11 @@ const productController = {
         let pcArmadasOrdenadoJS = pcArmadasJSsinEditado.sort( (a, b) => (a.id > b.id) ? 1 : -1)
 
         /// PASAMOS JS A JSON
-        pcArmadasOrdenadoJS = JSON.stringify(pcArmadasJSsinEditado);
-        fs.writeFileSync (pcArmadasFilePath, pcArmadasOrdenadoJS);
+        let pcArmadasOrdenadoJSON = JSON.stringify(pcArmadasOrdenadoJS);
+        fs.writeFileSync (pcArmadasFilePath, pcArmadasOrdenadoJSON);
 
         /// REDIRECCIONAMOS VISTA
         res.redirect ('/products/products')
-       
     },
 
     ///////////////// FIN DE EDITAR PRODUCTOS
