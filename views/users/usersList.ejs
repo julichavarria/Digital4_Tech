@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head') %>
+        <!-- /////// CARGA CSS  PARTICULAR/////// -->
+        <link rel="stylesheet" href="../css/stylesUserList.css">
+</head>
+
+<body>
+    <%- include ('../partials/header') %>
+        <main>
+
+            <section>
+                <article class="contenedorUsuario">
+                    <div class="contenedorDataUsuario">
+                    <img src="/img/avatars/avatar01.jpg" alt="">
+                    <div class="dataUsuario">Nombre</div>
+                </div>
+                    <div class="contenedorAccionesUsuarios">
+                        <a href=""><i class="far fa-eye"></i></a>
+                        <a href=""><i class="far fa-edit"></i></a>
+                        <a href=""><i class="fa-regular fa-trash-can"></i></a>
+                    </div>
+                </article>
+                
+            </section>
+
+        </main>
+        <%- include ('../partials/footer') %>
+</body>
+
+</html>

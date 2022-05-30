@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head') %>
+        <!-- /////// CARGA CSS  PARTICULAR/////// -->
+        <link rel="stylesheet" href="/css/stylesRegister.css">
+</head>
+
+<body>
+    <%- include ('../partials/header') %>
+        <main class="mainRegister">
+
+            <h1><i class="fa-solid fa-trash-can"></i></h1>
+            <h1>¿Desea borrar el siguiente producto?</h1>
+            <h3>Por favor seleccione una opción para eliminar el producto o mantenerlo publicado</h3>
+            <img src="/img/productos_pcArmadas/pcArmada_01.jpg" alt="Producto_a_eliminar">
+            <p class="tituloDatoProducto">Nombre PC</p>
+            <p>ID</p>
+
+            <div class="controlGeneral">
+                <form action="/products/editProduct/<%= pcArmadasJS.id %>/deleteProduct?_method=DELETE" method="POST">
+                    <div class="botones">
+                        <button class="btnPrincipal" type="submit"> BORRAR </button>
+                        <button class="btnSecundario"> CANCELAR </button>
+                    </div>
+                </form>
+            </div>
+
+
+        </main>
+        <%- include ('../partials/footer') %>
+</body>
+
+</html>

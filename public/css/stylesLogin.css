@@ -42,7 +42,8 @@
     align-items: flex-start;
 }
 
-.login-css .crear-cuenta {
+.login-css .recordarPass {
+    color: #e31a52;
     border:none;
     align-self: center;
     margin-top: 10px;
@@ -54,14 +55,12 @@
 }
 
 .login-css a {
-    color: #e31a52;
+    color: #FFF;
 }
-.login-css .crear-cuenta:hover {
+.login-css .recordarPass:hover {
     cursor: pointer;
 }
-.login-css a:hover {
-    color: rgb(10, 10, 10);
-}
+
 
 .login-css form {
     display: flex;

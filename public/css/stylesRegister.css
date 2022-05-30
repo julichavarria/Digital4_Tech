@@ -147,6 +147,12 @@ margin: 0 auto;
     
 }
 
+.tituloDatoProducto{
+    color: #e31a52;
+    font-size: 18px;
+    margin: 0px;
+}
+
 /* ESTILOS PARA HACER LA PRUEBA DE RADIO BUTTON CON IMAGEN */
 
 /* HIDE RADIO */

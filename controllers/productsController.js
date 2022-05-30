@@ -138,5 +138,11 @@ const productController = {
         res.redirect ('/products/products')
     },
     
+    ////////////////// CONFIRMACION ELIMINAR PRODUCTO
+    confirmDelete:function (req,res) {
+        res.render("products/confirmDelete");
+    }
+
+    
 }
 module.exports = productController;

@@ -1,0 +1,41 @@
+.contenedorUsuario{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
+    justify-content:space-between;
+    text-align: left;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border-bottom: 1px solid #cacaca;
+    align-items: center;
+    font-weight: 400;
+}
+
+.contenedorAccionesUsuarios, .contenedorDataUsuario{
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+}
+
+.contenedorDataUsuario img{
+margin-right: 10px;
+width: 40px;
+}
+
+.contenedorAccionesUsuarios i {
+    margin-left: 15px;
+    border-left: 1px solid #cacaca;
+    padding-left: 15px;
+
+}
+
+.contenedorAccionesUsuarios a {
+    color: #999;
+}
+
+.contenedorAccionesUsuarios a:hover {
+    color: #e31a52;
+    transition: all 200ms;
+    transform: scale(1.05);
+}

@@ -14,7 +14,7 @@ text-align: center;
 margin: 40px;
 }
 
-.mainIndex .carruselPcArmadas, .carruselAccesorios{
+.carruselPcArmadas, .carruselAccesorios{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -23,7 +23,7 @@ margin: 40px;
    
 }
 
-.mainIndex .contenedorArticulos{
+.contenedorArticulos{
     display: flex;
     flex-wrap: wrap;
     max-width: 240px;
@@ -172,6 +172,8 @@ margin: 40px;
 
 .datosdinamicos{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 
