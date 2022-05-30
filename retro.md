@@ -37,6 +37,21 @@ Sprint 3 ------>
 
 3. Continuar haciendo-----> la división de tareas, la buena comunicacion en el grupo.
 
-4. Hacer menos-----> desorden a la hor de poner estilos, tratar de unificar la forma de nombrar las clases.
+4. Hacer menos-----> desorden a la hora de poner estilos, tratar de unificar la forma de nombrar las clases.
 
 5. Dejar de hacer-----> no encontramos nada para dejar de hacer, si para mejorar y coninuar hciendo. Cada semana que pasa estamos mas oranizados a la hora de trabajar y plantear las tareas.
+
+Sprint 4 ---->
+
+1. Comenzar a hacer -----> Tenemos que comenzar a trabajar con ramas en git.
+
+2. Hacer más-----> Cada integrante del equipo tiene que emprezar a hacer pruebas y modificaciones en el proyecto desde su branch de ggit.
+   
+3. Continuar haciendo-----> Las reuniones semanales, analizando  y completando el proyecto compartiendo pantalla.
+
+4. Hacer menos-----> No encontramos que hacr menos porque venimos mejorando cada semana el trabajo y la comunicacion en equipo.
+
+5. Dejar de hacer-----> Cada semana que pasa estamos mas organizados y sincronizados a la hora de trabajar en equipo. Lo que i tenemos que empezar a hacer es usar el git y las ramas, que entendemos que es una mejor practica.
+
+
+Se viene Sprint 5 ---->
