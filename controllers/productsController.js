@@ -4,6 +4,7 @@ const path = require ('path');
 
 const pcArmadasFilePath = path.join (__dirname, '../data/pcArmadas.json');
 const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
+const destinationFolder = '/img/productos_pcArmadas/';
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -29,13 +30,13 @@ const productController = {
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
     product: function(req, res) {
-        res.render("products/products", {pcArmadasJS});
+        res.render("products/products", {pcArmadasJS, destinationFolder});
     },
 
     ////////////////// DETALLE DE PC SELECCIONADA
     productDetail:function (req,res) {
         let prodSelect = obtenerProducto(req.params.id);
-        res.render("products/productDetail", {pcArmadasJS: prodSelect});
+        res.render("products/productDetail", {pcArmadasJS: prodSelect, destinationFolder});
     },
 
     ////////////////// SECCION CARRITO
@@ -49,11 +50,9 @@ const productController = {
     },
 
     createNewProduct: function(req, res) {
-        let destinationFolder = '/img/productos_pcArmadas/';
-        let defoulImage = destinationFolder + 'defoulImage.jpg'
         let productNew = {
             id: pcArmadasJS.length + 1,
-            imagen: (req.file ? destinationFolder + req.file.filename : defoulImage),
+            imagen: (req.file ? req.file.filename : 'defoulImage.jpg'),
             categoria: req.body.categoria,
             logoMarca: (req.body.categoria == 'AMD' ? '/img/logo_amd.jpg' : '/img/logo_intel.jpg'),
             titulo: req.body.nombre,
@@ -66,7 +65,6 @@ const productController = {
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
         }
-
         // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
         pcArmadasJS.push (productNew);
 
@@ -85,14 +83,14 @@ const productController = {
     ////////////////// EDITAR PC ARMADA
     editProduct:function (req,res) {
         let prodSelect = obtenerProducto(req.params.id);
-        res.render("products/editProduct", {pcArmadasJS: prodSelect});
+        res.render("products/editProduct", {pcArmadasJS: prodSelect, destinationFolder});
     },
 
     processEditProduct: function (req, res) {
         let productSelect = obtenerProducto(req.params.id); //podSelect contiene todo el producto[i]
         let productEdit = {
             id: parseInt(req.params.id), //// paseInt CONVIERTE EN NUMERO UN STRING ESTO ES PORQUE DESPUES DE EDITAR UN PRODUCTO DEVOLVIA EL ID EN FORMA DE STRING
-            imagen: (req.file ? req.file.filename : productSelect.imagen),
+            imagen: (req.file ? destinationFolder + req.file.filename : productSelect.imagen),
             categoria: (req.body.categoria ? req.body.categoria : productSelect.categoria),
             logoMarca: (req.body.categoria ? selectorDeMarca(req.body.categoria) : productSelect.logoMarca),
             titulo: req.body.nombre,
@@ -105,6 +103,7 @@ const productController = {
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
         }
+        console.log(req.file);
         /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
         let pcArmadasJSsinEditado = pcArmadasJS.filter (product => product.id != req.params.id);
         /// AGREGA AL NUEVO ARRAY EL PRODUCTO EDITADO
