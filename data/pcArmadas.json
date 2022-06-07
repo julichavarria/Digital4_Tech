@@ -451,7 +451,7 @@
     },
     {
         "id": 31,
-        "imagen": "defoulImage.jpg",
+        "imagen": "/pcArmadas_1654571586304.jpg",
         "categoria": "INTEL",
         "logoMarca": "/img/logo_intel.jpg",
         "titulo": "PC GAMER ",
@@ -462,13 +462,13 @@
         "discoRigido": "DIsco Rígido",
         "gabinete": "Gabinete",
         "fuente": "Fuente",
-        "precio": "5.000"
+        "precio": "50.000"
     },
     {
         "id": 32,
         "imagen": "defoulImage.jpg",
-        "categoria": "INTEL",
-        "logoMarca": "/img/logo_intel.jpg",
+        "categoria": "AMD",
+        "logoMarca": "/img/logo_amd.jpg",
         "titulo": "PC GAMER ",
         "procesador": "Procesador",
         "mother": "Mother",

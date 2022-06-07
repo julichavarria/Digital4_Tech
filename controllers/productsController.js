@@ -65,6 +65,7 @@ const productController = {
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
         }
+        console.log(req.file)
         // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
         pcArmadasJS.push (productNew);
 
@@ -72,7 +73,7 @@ const productController = {
         pcArmadasJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
 
         //PASA A JSON Y LO ESCRIBES
-        let pcArmadasJSON = JSON.stringify(pcArmadasJS);
+        let pcArmadasJSON = JSON.stringify(pcArmadasJS, null, 4);
         fs.writeFileSync (pcArmadasFilePath, pcArmadasJSON);
 
         res.redirect ('/products/products');
@@ -88,9 +89,10 @@ const productController = {
 
     processEditProduct: function (req, res) {
         let productSelect = obtenerProducto(req.params.id); //podSelect contiene todo el producto[i]
+        console.log(req.file);
         let productEdit = {
             id: parseInt(req.params.id), //// paseInt CONVIERTE EN NUMERO UN STRING ESTO ES PORQUE DESPUES DE EDITAR UN PRODUCTO DEVOLVIA EL ID EN FORMA DE STRING
-            imagen: (req.file ? destinationFolder + req.file.filename : productSelect.imagen),
+            imagen: (req.file ? req.file.filename : productSelect.imagen),
             categoria: (req.body.categoria ? req.body.categoria : productSelect.categoria),
             logoMarca: (req.body.categoria ? selectorDeMarca(req.body.categoria) : productSelect.logoMarca),
             titulo: req.body.nombre,
@@ -103,7 +105,6 @@ const productController = {
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
         }
-        console.log(req.file);
         /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
         let pcArmadasJSsinEditado = pcArmadasJS.filter (product => product.id != req.params.id);
         /// AGREGA AL NUEVO ARRAY EL PRODUCTO EDITADO
@@ -112,7 +113,7 @@ const productController = {
         let pcArmadasOrdenadoJS = pcArmadasJSsinEditado.sort( (a, b) => (a.id > b.id) ? 1 : -1)
 
         /// PASAMOS JS A JSON
-        let pcArmadasOrdenadoJSON = JSON.stringify(pcArmadasOrdenadoJS);
+        let pcArmadasOrdenadoJSON = JSON.stringify(pcArmadasOrdenadoJS, null, 4);
         fs.writeFileSync (pcArmadasFilePath, pcArmadasOrdenadoJSON);
 
         /// REDIRECCIONAMOS VISTA
