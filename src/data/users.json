@@ -98,5 +98,20 @@
         "contraseña": "MA4545TR4",
         "rol": "cliente",
         "avatar": null
+    },
+    {
+        "id": 11,
+        "rol": "cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 12,
+        "rol": "cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 13,
+        "rol": "cliente",
+        "avatar": "avatar01.jpg"
     }
-    ]
+]
