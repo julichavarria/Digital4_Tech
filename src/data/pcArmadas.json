@@ -466,9 +466,9 @@
     },
     {
         "id": 32,
-        "imagen": "defoulImage.jpg",
-        "categoria": "AMD",
-        "logoMarca": "/img/logo_amd.jpg",
+        "imagen": "/pcArmadas_1654828947274.jpg",
+        "categoria": "INTEL",
+        "logoMarca": "/img/logo_intel.jpg",
         "titulo": "PC GAMER ",
         "procesador": "Procesador",
         "mother": "Mother",
@@ -477,6 +477,6 @@
         "discoRigido": "DIsco Rígido",
         "gabinete": "Gabinete",
         "fuente": "Fuente",
-        "precio": "5.000"
+        "precio": "87.000"
     }
 ]
