@@ -13,42 +13,38 @@
 
             <h1> REGISTRARSE</h1>
             <h3>Completa la siguiente información para poder registrarse en nuestro sitio Web</h3>
-
+            
+            <% if (locals.errores) {
+            errores.forEach(error => { %>
+                <p> <%= error.msg %> </p>
+            
+            <% })} %>
 
             <div class="controlGeneral">
                 <form method="post" action="/users/register" enctype="multipart/form-data">
                     <div class="campoFormulario">
-                        <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
-                            maxlength="25" class="controlFormulario">
-                    </div>
-                    <div class="campoFormulario">
-                        <input required="required" type="text" id="apellido" name="apellido" placeholder="APELLIDO"
-                            maxlength="20" class="controlFormulario">
-                    </div>
-                    <div class="campoFormulario">
-                        <input required="required" type="email" id="email" name="email" placeholder="EMAIL"
+                        <input type="text" id="nombre" name="nombre" placeholder="NOMBRE"
                             class="controlFormulario">
                     </div>
                     <div class="campoFormulario">
-                        <input required="required" type="confirmarEmail" id="confirmarEmail" name="confirmarEmail"
-                            placeholder="REPETIR EMAIL" class="controlFormulario">
-                    </div>
-                    <div class="campoFormulario">
-                        <input required="required" type="text" id="usuario" name="usuario" placeholder="USUARIO"
+                        <input type="text" id="apellido" name="apellido" placeholder="APELLIDO"
                             class="controlFormulario">
                     </div>
                     <div class="campoFormulario">
-                        <input required="required" type="password" id="contrasena" name="contrasena"
-                            placeholder="CONTRASEÑA" minlength="6" class="controlFormulario">
+                        <input type="email" id="email" name="email" placeholder="EMAIL"
+                            class="controlFormulario">
                     </div>
                     <div class="campoFormulario">
-                        <input required="required" type="password" id="confirmarContrasena" name="confirmarContrasena"
-                            placeholder="REPETIR CONTRASEÑA" minlength="6" class="controlFormulario">
+                        <input type="text" id="usuario" name="usuario" placeholder="USUARIO"
+                            class="controlFormulario">
                     </div>
-
+                    <div class="campoFormulario">
+                        <input type="password" id="contrasena" name="contrasena"
+                            placeholder="CONTRASEÑA" class="controlFormulario">
+                    </div>
 
                     <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
-                    <div class="campoFormulario">
+                    <!-- <div class="campoFormulario">
                         <label>Seleccioná un avatar</label>
                         <div class="contenedorRadioButtonsAvatar">
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar01">
@@ -82,12 +78,8 @@
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15">
                                 <img src="/img/avatars/avatar15.jpg"></input></label>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- HASTA ACA HAY QUE BORRAR SI NO QUIEREN DEJAR LOS RADIO BUTTON COMO IMAGEN -->
-
-
-
-
 
                     <div class="botones">
                         <button class="btnPrincipal" type="submit"> REGISTRARSE </button>

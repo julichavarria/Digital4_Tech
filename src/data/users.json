@@ -5,7 +5,7 @@
         "apellido": "Gonzales",
         "usuario": "Tincho01",
         "email": "martin_gonzales@gmail.com",
-        "contraseña": "E41F56G0",
+        "contrasena": "E41F56G0",
         "rol": "administrador",
         "avatar": null
     },
@@ -15,7 +15,7 @@
         "apellido": "Parra",
         "usuario": "EduParra",
         "email": "edu.parra@gmail.com",
-        "contraseña": "E415G450",
+        "contrasena": "E415G450",
         "rol": "cliente",
         "avatar": null
     },
@@ -25,7 +25,7 @@
         "apellido": "Ramos",
         "usuario": "SofiRamos20",
         "email": "sofia_ramos@gmail.com",
-        "contraseña": "G6G0123",
+        "contrasena": "G6G0123",
         "rol": "administrador",
         "avatar": null
     },
@@ -35,7 +35,7 @@
         "apellido": "Juarez",
         "usuario": "Sebas2022",
         "email": "sebas_juarez@gmail.com",
-        "contraseña": "YYY45678",
+        "contrasena": "YYY45678",
         "rol": "cliente",
         "avatar": null
     },
@@ -45,7 +45,7 @@
         "apellido": "Acosta",
         "usuario": "JAcosta",
         "email": "juana-acosta@gmail.com",
-        "contraseña": "258GEX654",
+        "contrasena": "258GEX654",
         "rol": "cliente",
         "avatar": null
     },
@@ -55,7 +55,7 @@
         "apellido": "Tedin",
         "usuario": "Richard25",
         "email": "richard.tedin@gmail.com",
-        "contraseña": "CJ978HY563",
+        "contrasena": "CJ978HY563",
         "rol": "cliente",
         "avatar": null
     },
@@ -65,7 +65,7 @@
         "apellido": "Taboada",
         "usuario": "Martu-26",
         "email": "martina.taboada@gmail.com",
-        "contraseña": "JL456CH74",
+        "contrasena": "JL456CH74",
         "rol": "cliente",
         "avatar": null
     },
@@ -75,7 +75,7 @@
         "apellido": "Martinez",
         "usuario": "Pily090",
         "email": "pily_martinez@gmail.com",
-        "contraseña": "F4123F5",
+        "contrasena": "F4123F5",
         "rol": "cliente",
         "avatar": null
     },
@@ -85,7 +85,7 @@
         "apellido": "Norte",
         "usuario": "Romi.Nor",
         "email": "romi-norte@gmail.com",
-        "contraseña": "25TY45TG6",
+        "contrasena": "25TY45TG6",
         "rol": "administrador",
         "avatar": null
     },
@@ -95,7 +95,7 @@
         "apellido": "Goytia",
         "usuario": "Vicky19",
         "email": "vicky.g19@gmail.com",
-        "contraseña": "MA4545TR4",
+        "contrasena": "MA4545TR4",
         "rol": "cliente",
         "avatar": null
     },
@@ -111,6 +111,36 @@
     },
     {
         "id": 13,
+        "rol": "cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 14,
+        "rol": "cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 15,
+        "rol": "cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 16,
+        "rol": "cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 17,
+        "rol": "cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 18,
+        "rol": "cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 19,
         "rol": "cliente",
         "avatar": "avatar01.jpg"
     }

@@ -65,7 +65,6 @@ const productController = {
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
         }
-        console.log(req.file)
         // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
         pcArmadasJS.push (productNew);
 

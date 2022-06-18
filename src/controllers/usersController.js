@@ -1,5 +1,6 @@
 const fs = require ('fs');
 const path = require ('path');
+const {validationResult} = require ('express-validator');
 
 
 const usersFilePath = path.join (__dirname, '../data/users.json');
@@ -25,30 +26,45 @@ const usersController = {
         res.render("users/register");
     },
     createNewRegister: function (req,res){
-        let userNew = {
-            id: usersJS.length + 1,
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            usuario: req.body.usuario,
-            email: req.body.email,
-            contrasena: req.body.contrasena,
-            rol: "cliente",
-            avatar: "avatar01.jpg" //(req.file ? req.file.filename : 'defoulImage.jpg')
+        console.log (req.body);
+        let errores = validationResult (req);
+        if (errores.isEmpty ()){
+            let userNew = {
+                id: usersJS.length + 1,
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                usuario: req.body.usuario,
+                email: req.body.email,
+                contrasena: req.body.contrasena,
+                rol: "cliente",
+                avatar: "avatar01.jpg" //(req.file ? req.file.filename : 'defoulImage.jpg')
+            }
+            // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
+            usersJS.push (userNew);
+    
+            //ORDENA EL ARRAY POR ID
+            usersJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
+    
+            //PASA A JSON Y LO ESCRIBES
+            let usersJSON = JSON.stringify(usersJS, null, 4);
+            fs.writeFileSync (usersFilePath, usersJSON);
+    
+            res.redirect ('/users/login');
         }
-        console.log(userNew)
-        // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
-        usersJS.push (userNew);
-
-        //ORDENA EL ARRAY POR ID
-        usersJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
-
-        //PASA A JSON Y LO ESCRIBES
-        let usersJSON = JSON.stringify(usersJS, null, 4);
-        fs.writeFileSync (usersFilePath, usersJSON);
-
-        res.redirect ('/users/login');
+        else {
+            res.render ('/users/register', {errores: errores.array(), old: req.body})
+        }
+        
 
     },
+    editUser: function (req, res) {
+        let userSelect = obtenerUsuarios(req.params.id);
+        res.render("users/editUser", {usersJS: userSelect, destinationFolder});
+    },
+    processEditUser: function (req, res) {
+        console.log (req.body)
+    },
+
     login:function (req,res) {
         res.render("users/login");
     },
