@@ -52,6 +52,13 @@ textarea:-moz-placeholder {
     
 }
 
+.msg-errors {
+    color: #e31a52;
+    font-weight: 100;
+    margin: 0px;
+}
+
+
 .campoFormulario label, .contenedorImgEdit label{
     color: #e31a52;
     font-weight: 400;
@@ -179,9 +186,6 @@ margin: 0 auto;
   .contenedorRadioButtonsAvatar [type=radio] + img {
     width: 60px;
   }
-
-
-
 
 
 /* FIN DE LA PRUEBA DE ESTILO DE RADIO BUTTON CON IMAGEN */

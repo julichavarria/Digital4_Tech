@@ -88,7 +88,6 @@ const productController = {
 
     processEditProduct: function (req, res) {
         let productSelect = obtenerProducto(req.params.id); //podSelect contiene todo el producto[i]
-        console.log(req.file);
         let productEdit = {
             id: parseInt(req.params.id), //// paseInt CONVIERTE EN NUMERO UN STRING ESTO ES PORQUE DESPUES DE EDITAR UN PRODUCTO DEVOLVIA EL ID EN FORMA DE STRING
             imagen: (req.file ? req.file.filename : productSelect.imagen),

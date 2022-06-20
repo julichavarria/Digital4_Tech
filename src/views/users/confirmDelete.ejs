@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head') %>
+        <!-- /////// CARGA CSS  PARTICULAR/////// -->
+        <link rel="stylesheet" href="/css/stylesRegister.css">
+</head>
+
+<body>
+    <%- include ('../partials/header') %>
+        <main class="mainRegister">
+
+            <h1><i class="fa-solid fa-trash-can"></i></h1>
+            <h1>¿Desea borrar el siguiente usuario?</h1>
+            <h3>Por favor seleccione una opción para eliminar el usuario o mantenerlo publicado</h3>
+            <p>ID</p>
+
+            <div class="controlGeneral">
+                <form action="/users/editUser/<%= usersJS.id %>/deleteProduct?_method=DELETE" method="POST">
+                    <div class="botones">
+                        <button class="btnPrincipal" type="submit"> BORRAR </button>
+                        <button class="btnSecundario"> CANCELAR </button>
+                    </div>
+                </form>
+            </div>
+
+
+        </main>
+        <%- include ('../partials/footer') %>
+</body>
+
+</html>

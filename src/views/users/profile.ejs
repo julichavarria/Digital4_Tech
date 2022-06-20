@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head') %>
+        <!-- /////// CARGA CSS  PARTICULAR/////// -->
+        <link rel="stylesheet" href="/css/stylesRegister.css">
+</head>
+
+<body>
+    <%- include ('../partials/header') %>
+        <main>
+
+            <p> Esta es la pagina que muestra el perfile del usuario logeado: <%= usersJS.usuario %> </p>
+            <p> Nombre: <%= usersJS.nombre %> </p>
+            <p> Apellido: <%= usersJS.apellido %> </p>
+            <p> Email: <%= usersJS.email %> </p>
+            <p> Avatar: <img src="/img/avatars/<%= usersJS.avatar %>"> </p>
+            
+        </main>
+        <%- include ('../partials/footer') %>
+</body>
+
+</html>

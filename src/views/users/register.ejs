@@ -13,72 +13,86 @@
 
             <h1> REGISTRARSE</h1>
             <h3>Completa la siguiente información para poder registrarse en nuestro sitio Web</h3>
-            
-            <% if (locals.errores) {
-            errores.forEach(error => { %>
-                <p> <%= error.msg %> </p>
-            
-            <% })} %>
 
             <div class="controlGeneral">
-                <form method="post" action="/users/register" enctype="multipart/form-data">
+                <form method="post" action="/users/register"> <!-- enctype="multipart/form-data" -->
                     <div class="campoFormulario">
-                        <input type="text" id="nombre" name="nombre" placeholder="NOMBRE"
-                            class="controlFormulario">
+                        <label> Nombre </label>
+                        <input type="text" id="nombre" name="nombre" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : null )%>" >
+                            <label> <% if (locals.errors && locals.errors.nombre ) { %>
+                                <p class="msg-errors"> <%= errors.nombre.msg %> </p>
+                                <% } %>
+                            </label>
                     </div>
                     <div class="campoFormulario">
-                        <input type="text" id="apellido" name="apellido" placeholder="APELLIDO"
-                            class="controlFormulario">
+                        <label> Apellido </label>
+                        <input type="text" id="apellido" name="apellido" class="controlFormulario" value="<%=(locals.oldData ? oldData.apellido : null )%>" >
+                            <label> <% if (locals.errors && locals.errors.apellido ) { %>
+                                <p class="msg-errors"> <%= errors.apellido.msg %> </p>
+                                <% } %>
+                            </label>
                     </div>
                     <div class="campoFormulario">
-                        <input type="email" id="email" name="email" placeholder="EMAIL"
-                            class="controlFormulario">
+                        <label> Email </label>
+                        <input type="email" id="email" name="email" class="controlFormulario" value="<%=(locals.oldData ? oldData.email : null )%>" >
+                            <label> <% if (locals.errors && locals.errors.email ) { %>
+                                <p class="msg-errors"> <%= errors.email.msg %> </p>
+                                <% } %>
+                            </label>
                     </div>
                     <div class="campoFormulario">
-                        <input type="text" id="usuario" name="usuario" placeholder="USUARIO"
-                            class="controlFormulario">
+                        <label> Nombre de Usuario </label>
+                        <input type="text" id="usuario" name="usuario" class="controlFormulario" value="<%=(locals.oldData ? oldData.usuario : null )%>" >
+                            <label> <% if (locals.errors && locals.errors.usuario ) { %>
+                                <p class="msg-errors"> <%= errors.usuario.msg %> </p>
+                                <% } %>
+                            </label>
                     </div>
                     <div class="campoFormulario">
-                        <input type="password" id="contrasena" name="contrasena"
-                            placeholder="CONTRASEÑA" class="controlFormulario">
+                        <label> Contraseña </label>
+                        <input type="password" id="contrasena" name="contrasena" class="controlFormulario">
+                            <label> <% if (locals.errors && locals.errors.contrasena ) { %>
+                                <p class="msg-errors"> <%= errors.contrasena.msg %> </p>
+                                <% } %>
+                            </label>
                     </div>
 
                     <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
-                    <!-- <div class="campoFormulario">
+                    <div class="campoFormulario">
                         <label>Seleccioná un avatar</label>
                         <div class="contenedorRadioButtonsAvatar">
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar01">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar01.jpg">
                                 <img src="/img/avatars/avatar01.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar02">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar02.jpg">
                                 <img src="/img/avatars/avatar02.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar03">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar03.jpg">
                                 <img src="/img/avatars/avatar03.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar04">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar04.jpg">
                                 <img src="/img/avatars/avatar04.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar05">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar05.jpg">
                                 <img src="/img/avatars/avatar05.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar06">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar06.jpg">
                                 <img src="/img/avatars/avatar06.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar07">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar07.jpg">
                                 <img src="/img/avatars/avatar07.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar08">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar08.jpg">
                                 <img src="/img/avatars/avatar08.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar09">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar09.jpg">
                                 <img src="/img/avatars/avatar09.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar10">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar10.jpg">
                                 <img src="/img/avatars/avatar10.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar11">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar11.jpg">
                                 <img src="/img/avatars/avatar11.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar12">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar12.jpg">
                                 <img src="/img/avatars/avatar12.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar13">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar13.jpg">
                                 <img src="/img/avatars/avatar13.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar14">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar14.jpg">
                                 <img src="/img/avatars/avatar14.jpg"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15.jpg">
                                 <img src="/img/avatars/avatar15.jpg"></input></label>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- HASTA ACA HAY QUE BORRAR SI NO QUIEREN DEJAR LOS RADIO BUTTON COMO IMAGEN -->
 
                     <div class="botones">

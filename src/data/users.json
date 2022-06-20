@@ -1,147 +1,29 @@
 [
     {
         "id": 1,
-        "nombre": "Martin",
-        "apellido": "Gonzales",
-        "usuario": "Tincho01",
-        "email": "martin_gonzales@gmail.com",
-        "contrasena": "E41F56G0",
-        "rol": "administrador",
-        "avatar": null
+        "nombre": "Adrian",
+        "apellido": "Olivera",
+        "usuario": "wizard",
+        "contrasena": "$2a$10$klBGm6zBwtjXDz53Qs8NxeDnj0A3SYhiDaYTM846ZTALfp4UIulKa",
+        "email": "a@a.com",
+        "avatar": "avatar01.jpg"
     },
     {
         "id": 2,
-        "nombre": "Eduardo",
-        "apellido": "Parra",
-        "usuario": "EduParra",
-        "email": "edu.parra@gmail.com",
-        "contrasena": "E415G450",
-        "rol": "cliente",
-        "avatar": null
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "101010",
+        "contrasena": "$2a$10$XC82MuV/VZpa.1x.cGNpjui7bTbnnhk4hEq5TorTwOjQ.EKPcgOQq",
+        "email": "adrian.olivera.11@gmail.com",
+        "avatar": "avatar12.jpg"
     },
     {
         "id": 3,
-        "nombre": "Sofia",
-        "apellido": "Ramos",
-        "usuario": "SofiRamos20",
-        "email": "sofia_ramos@gmail.com",
-        "contrasena": "G6G0123",
-        "rol": "administrador",
-        "avatar": null
-    },
-    {
-        "id": 4,
-        "nombre": "Sebastian",
-        "apellido": "Juarez",
-        "usuario": "Sebas2022",
-        "email": "sebas_juarez@gmail.com",
-        "contrasena": "YYY45678",
-        "rol": "cliente",
-        "avatar": null
-    },
-    {
-        "id": 5,
-        "nombre": "Juana",
-        "apellido": "Acosta",
-        "usuario": "JAcosta",
-        "email": "juana-acosta@gmail.com",
-        "contrasena": "258GEX654",
-        "rol": "cliente",
-        "avatar": null
-    },
-    {
-        "id": 6,
-        "nombre": "Ricardo",
-        "apellido": "Tedin",
-        "usuario": "Richard25",
-        "email": "richard.tedin@gmail.com",
-        "contrasena": "CJ978HY563",
-        "rol": "cliente",
-        "avatar": null
-    },
-    {
-        "id": 7,
-        "nombre": "Martina",
-        "apellido": "Taboada",
-        "usuario": "Martu-26",
-        "email": "martina.taboada@gmail.com",
-        "contrasena": "JL456CH74",
-        "rol": "cliente",
-        "avatar": null
-    },
-    {
-        "id": 8,
-        "nombre": "Pilar",
-        "apellido": "Martinez",
-        "usuario": "Pily090",
-        "email": "pily_martinez@gmail.com",
-        "contrasena": "F4123F5",
-        "rol": "cliente",
-        "avatar": null
-    },
-    {
-        "id": 9,
-        "nombre": "Romina",
-        "apellido": "Norte",
-        "usuario": "Romi.Nor",
-        "email": "romi-norte@gmail.com",
-        "contrasena": "25TY45TG6",
-        "rol": "administrador",
-        "avatar": null
-    },
-    {
-        "id": 10,
-        "nombre": "Virginia",
-        "apellido": "Goytia",
-        "usuario": "Vicky19",
-        "email": "vicky.g19@gmail.com",
-        "contrasena": "MA4545TR4",
-        "rol": "cliente",
-        "avatar": null
-    },
-    {
-        "id": 11,
-        "rol": "cliente",
-        "avatar": "avatar01.jpg"
-    },
-    {
-        "id": 12,
-        "rol": "cliente",
-        "avatar": "avatar01.jpg"
-    },
-    {
-        "id": 13,
-        "rol": "cliente",
-        "avatar": "avatar01.jpg"
-    },
-    {
-        "id": 14,
-        "rol": "cliente",
-        "avatar": "avatar01.jpg"
-    },
-    {
-        "id": 15,
-        "rol": "cliente",
-        "avatar": "avatar01.jpg"
-    },
-    {
-        "id": 16,
-        "rol": "cliente",
-        "avatar": "avatar01.jpg"
-    },
-    {
-        "id": 17,
-        "rol": "cliente",
-        "avatar": "avatar01.jpg"
-    },
-    {
-        "id": 18,
-        "rol": "cliente",
-        "avatar": "avatar01.jpg"
-    },
-    {
-        "id": 19,
-        "rol": "cliente",
-        "avatar": "avatar01.jpg"
+        "nombre": "pablo",
+        "apellido": "pablo",
+        "usuario": "131313",
+        "contrasena": "$2a$10$w93sCy6bZtBDQLapo724tOAR89c83eshgBkcQLaEdDa6O/0k8m3f6",
+        "email": "pablo@pablo.com",
+        "avatar": "avatar13.jpg"
     }
 ]

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head') %>
+        <!-- /////// CARGA CSS  PARTICULAR/////// -->
+        <link rel="stylesheet" href="/css/stylesRegister.css">
+</head>
+
+<body>
+    <%- include ('../partials/header') %>
+        <main>
+
+            <p> Esta es la pagina que muestra el detalle del usuario: <%= usersJS.usuario %> </p>
+            <p> Nombre: <%= usersJS.nombre %> </p>
+            <p> Apellido: <%= usersJS.apellido %> </p>
+            
+        </main>
+        <%- include ('../partials/footer') %>
+</body>
+
+</html>

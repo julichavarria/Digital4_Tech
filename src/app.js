@@ -1,17 +1,25 @@
 // INSTALAR Y REQUERIR EXPRESS
 const express = require("express");
+const session = require("express-session");
 const methodOverride = require("method-override");
 const app = express();
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddlewares");
 
 // CONFIGURAMOS LA CARPETA ESTATICA
 const path = require("path");
 const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
 
+//CONFIGURACION DE SESIONES 
+app.use(session({secret: 'secret', resave: false, saveUninitialized: false}));
+app.use(userLoggedMiddleware);
+
 // CONFIGURACION DE FORMULARIOS
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); // PARA OPTENER LOS VALORES QUE VENGAN POR POST
 app.use(express.json());
 app.use(methodOverride('_method'));
+
+
 
 // INICIAMOS EL SERVIDOR
 app.listen(3030, ()=> console.log ("Server running in 3030 port ") );
