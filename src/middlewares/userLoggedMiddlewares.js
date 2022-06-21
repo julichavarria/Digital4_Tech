@@ -1,6 +1,6 @@
 let userLoggedMiddleware = function (req, res, next) {
     res.locals.isLogged = null;
-
+    console.log (req.session);
     
     if (req.session.userLogged){
         if (req.session.userLogged.rol == 'Administrador'){
@@ -11,7 +11,7 @@ let userLoggedMiddleware = function (req, res, next) {
     
     }   
     res.locals.userLogged = req.session.userLogged;
-        console.log (res.locals.isLogged)
+        
     next();
 }
 
