@@ -1,29 +1,22 @@
 [
     {
         "id": 1,
-        "nombre": "Adrian",
+        "nombre": "Walter Adrián",
         "apellido": "Olivera",
-        "usuario": "wizard",
-        "contrasena": "$2a$10$klBGm6zBwtjXDz53Qs8NxeDnj0A3SYhiDaYTM846ZTALfp4UIulKa",
-        "email": "a@a.com",
-        "avatar": "avatar01.jpg"
+        "usuario": "Cliente",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$8bgP3Zz7csGSmCwNhYJ1LOacpW1H2zjzXiHvrJjE4lgovUL0DS826",
+        "rol": "Administrador",
+        "avatar": "avatar15.jpg"
     },
     {
         "id": 2,
         "nombre": "Walter Adrián",
         "apellido": "Olivera",
-        "usuario": "101010",
-        "contrasena": "$2a$10$XC82MuV/VZpa.1x.cGNpjui7bTbnnhk4hEq5TorTwOjQ.EKPcgOQq",
-        "email": "adrian.olivera.11@gmail.com",
-        "avatar": "avatar12.jpg"
-    },
-    {
-        "id": 3,
-        "nombre": "pablo",
-        "apellido": "pablo",
-        "usuario": "131313",
-        "contrasena": "$2a$10$w93sCy6bZtBDQLapo724tOAR89c83eshgBkcQLaEdDa6O/0k8m3f6",
-        "email": "pablo@pablo.com",
-        "avatar": "avatar13.jpg"
+        "usuario": "121212",
+        "email": "adrian@sinis.com.ar",
+        "contrasena": "$2a$10$FRFQG2CV2gtWFcbMxQ3xCuAYnVodkFFr/0.LWjOV9hVgYkicXIEse",
+        "rol": "Administrador",
+        "avatar": "avatar11.jpg"
     }
 ]

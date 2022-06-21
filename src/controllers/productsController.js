@@ -30,6 +30,7 @@ const productController = {
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
     product: function(req, res) {
+        const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
         res.render("products/products", {pcArmadasJS, destinationFolder});
     },
 

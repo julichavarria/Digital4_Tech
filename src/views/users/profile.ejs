@@ -15,8 +15,20 @@
             <p> Nombre: <%= usersJS.nombre %> </p>
             <p> Apellido: <%= usersJS.apellido %> </p>
             <p> Email: <%= usersJS.email %> </p>
-            <p> Avatar: <img src="/img/avatars/<%= usersJS.avatar %>"> </p>
-            
+            <p> Avatar: </p>
+            <img src="/img/avatars/<%= usersJS.avatar %>">
+
+            <form action="/users/logout" method="get">
+                <div class="botones">
+                    <button class="btnPrincipal" type="submit"> CERRAR SESIÓN </button>
+                </div>
+            </form>
+            <a href="/users/editUser/<%= usersJS.id %>">
+                <div class="botones">
+                    <button class="btnSecundario" type="submit"><span> EDITAR USUARIO </span> </button>
+                </div>
+            </a>
+
         </main>
         <%- include ('../partials/footer') %>
 </body>

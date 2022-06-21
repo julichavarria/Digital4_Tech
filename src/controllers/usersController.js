@@ -11,6 +11,7 @@ const destinationFolder = '/img/avatars/';
 
 // funcion buscar ojetro segun ID
 function obtenerUsuariosID (idUsuario){
+    const usersJS = JSON.parse (fs.readFileSync (usersFilePath, 'utf-8'));
     let usuario = null;
         for (let i = 0; i<usersJS.length;i++){
             if (idUsuario == (usersJS[i].id)){
@@ -58,7 +59,7 @@ const usersController = {
             usuario: req.body.usuario,
             email: req.body.email,
             contrasena: bcryptjs.hashSync (req.body.contrasena, 10),
-            rol: "cliente",
+            rol: 'Cliente',
             avatar: req.body.avatar,
         }
         // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
@@ -82,15 +83,14 @@ const usersController = {
     processEditUser: function (req, res) {
         let usuarioEditado = obtenerUsuariosID (req.params.id); // aca esta el problema sacamos el campo email
         // OPTENEMOS EL HASH EN UNA VARIABLE YA QUE DIRECTO NO NOS PERMITIO
-        console.log (usuarioEditado);
+        console.log(usuarioEditado);
         let hash = usuarioEditado.contrasena;
         console.log (hash);
         //VALIDAMOS CONTRASEÑA INGRESADA CON HASH
         let validacionPassword = bcryptjs.compareSync (req.body.contrasena, hash);
-        console.log (validacionPassword);
+
         // VERIFICA QUE LA VIEJA CONTRASEÑA SEA CORRECTA
         if ( validacionPassword != true ) {
-            //res.send ('no son iguales las contra')
             res.render ('users/editUser', {errors: {email: { msg: 'La antigua contraseña no es valida'}}, oldData: req.body, usersJS: usuarioEditado});
         }else{
         let emailNoEditable = usuarioEditado.email;
@@ -158,6 +158,10 @@ const usersController = {
         else {
             delete usuarioIngresado.contrasena; //BORRAMOS LA PROPIEDAD CONTRASEÑA PARA NO LLEVARLA POR TODA LA SESSION 
             req.session.userLogged = usuarioIngresado; //GUARDO EL USUARIO LOGEADO EN LA SESION DEL NAVEGADOR
+            //COOKIE
+            if (req.body.recordarUsuario){
+               // res.cookie('')
+            }
             res.render ('users/profile', {usersJS: usuarioIngresado})
         }
     },
@@ -167,7 +171,9 @@ const usersController = {
     },
 
     logout: function(req, res) {
+        console.log(req.session)
         req.session.destroy();
+        console.log(req.session)
         res.redirect ('/');
     },
 

@@ -4,15 +4,17 @@ const session = require("express-session");
 const methodOverride = require("method-override");
 const app = express();
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddlewares");
+const cookies = require("cookie-parser");
 
 // CONFIGURAMOS LA CARPETA ESTATICA
 const path = require("path");
 const publicPath = path.resolve(__dirname, "../public");
 app.use(express.static(publicPath));
 
-//CONFIGURACION DE SESIONES 
+//CONFIGURACION DE SESIONES Y COOKIES
 app.use(session({secret: 'secret', resave: false, saveUninitialized: false}));
 app.use(userLoggedMiddleware);
+app.use(cookies());
 
 // CONFIGURACION DE FORMULARIOS
 app.use(express.urlencoded({ extended: false })); // PARA OPTENER LOS VALORES QUE VENGAN POR POST
@@ -30,6 +32,7 @@ app.set ("views", "./src/views");
 const routerMain = require ("./routes/mainRoutes");
 const routerUsers = require ("./routes/usersRoutes");
 const routerProduct = require ("./routes/productsRoutes");
+const { Cookie } = require("express-session");
 app.use ("/", routerMain);
 app.use ("/users", routerUsers);
 app.use ("/products", routerProduct);

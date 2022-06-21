@@ -1,7 +1,8 @@
 const express = require ("express");
 const path = require ('path');
 const router = express.Router ();
-const guestMiddlewares = require('../middlewares/guestMiddlewares');
+const clientMiddlewares = require('../middlewares/clientMiddlewares');
+const adminMiddlewares = require ('../middlewares/adminMiddlewares');
 const authMiddlewares = require('../middlewares/authMiddlewares');
 const { check } = require ('express-validator');
 const multer = require ('multer');
@@ -27,7 +28,7 @@ const validateUser = [
 
 // RUTAS
 // REGISTRAR USUARIO NUEVO
-router.get ("/register", guestMiddlewares, usersController.register);
+router.get ("/register", clientMiddlewares, usersController.register);
 router.post ("/register", validateUser, usersController.createNewRegister);
 
 // MOSTRAR DETALLES DE UN USUARIO
@@ -43,10 +44,10 @@ router.delete ("/editUser/:id/deleteUser/", usersController.deleteUser);
 //router.get ("/confirmDelete/", usersController.confirmDelete);
 
 //LOGIN
-router.get ("/login", guestMiddlewares, usersController.login);
+router.get ("/login", clientMiddlewares, usersController.login);
 router.post ("/login", usersController.processLogin);
-router.get ("/usersList", authMiddlewares, usersController.usersList);
-router.get ("logout", usersController.logout);
+router.get ("/usersList", adminMiddlewares, usersController.usersList);
+router.get ("/logout", usersController.logout);
 
 
 module.exports = router;

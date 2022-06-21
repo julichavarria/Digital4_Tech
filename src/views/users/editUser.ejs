@@ -31,7 +31,7 @@
                             class="controlFormulario" value="<%=(locals.oldData ? oldData.usuario : usersJS.usuario )%>">
                     </div>
                     <div class="campoFormulario">
-                        <input required="required" type="password" id="contrasena" name="contrasena"
+                        <input type="password" id="contrasena" name="contrasena"
                             placeholder="CONTRASEÑA ACTUAL" minlength="6" class="controlFormulario">
                     </div>
                     <label> <% if (locals.errors && locals.errors.email ) { %>
@@ -39,10 +39,19 @@
                         <% } %>
                     </label>
                     <div class="campoFormulario">
-                        <input required="required" type="password" id="contrasenaNueva" name="contrasenaNueva"
+                        <input type="password" id="contrasenaNueva" name="contrasenaNueva"
                             placeholder="CONTRASEÑA NUEVA" minlength="6" class="controlFormulario">
                     </div>
 
+                    <% if ( locals.isLogged == 'loggedAdmin' ) { %>
+                    <label>Seleccioná el ROL de nuevo Usuario</label>
+                        <div>
+                            <select name="rol" id="rol">
+                                <option value="Administrador">Administrador</option>
+                                <option value="Cliente">Cliente</option>
+                              </select>
+                        </div>
+                    <% } %> 
                     <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
                     <div class="campoFormulario">
                         <label>Seleccioná un avatar</label>

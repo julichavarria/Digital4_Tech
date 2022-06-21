@@ -13,10 +13,12 @@
                 
                 <h2> <span class="txtMagenta">\\</span> COMPUTADORAS ARMADAS <span class="txtMagenta">//</span></h2>
                 
+                <% if ( locals.isLogged ) { %>
                 <div class="admin">
                 <a href="newProduct"><button class="btnPrincipal"><span
                     class="txtMagenta"><i class="fa-solid fa-circle-plus"></i></span>Agregar nueva PC Armada </button></a>
                 </div>
+                <% } %>
 
                 <section class="carruselPcArmadas">
                     <!-- <i class="fas fa-angle-left"></i> -->
@@ -46,9 +48,16 @@
                                     </div>
                                     <div class="caracteristicas"> <%= pcArmadasJS[i].procesador %>, <%= pcArmadasJS[i].memoriaRam %>, <%= pcArmadasJS[i].placaDeVideo %>,
                                         <%= pcArmadasJS[i].discoRigido %>
+                                        
+                                        <% if ( locals.isLogged ) { %>    
                                         <div class="admin">
-                                        <a href="/products/editProduct/<%= pcArmadasJS[i].id%>"><div class="btnSecundario"><i class="fa-solid fa-pen"></i><span>Editar </span> </div></a>
-                                    </div>
+                                        <a href="/products/editProduct/<%= pcArmadasJS[i].id%>">
+                                            <div class="btnSecundario"><i class="fa-solid fa-pen"></i>
+                                                <span>Editar </span> 
+                                            </div>
+                                        </a>
+                                        </div>
+                                        <% } %>
                                     </div>
 
                                 </div>
