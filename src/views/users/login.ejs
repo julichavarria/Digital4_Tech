@@ -22,11 +22,12 @@
                             <input class="completar-login" type="email" name="email" placeholder="EMAIL"> 
                             <input class="completar-login" type="password" name="contrasena" placeholder="CONTRASEÑA" minlength="6">
                         </div>
-
+                        <div class="errorMsj">
                         <label> <% if (locals.errors && errors.email ) { %>
                             <p class="msg-errors"> <%= errors.email.msg %> </p>
                             <% } %>
                         </label>
+                        </div>
 
                         <div class="contenedorBoton">
                             <button class="btnPrincipal" type="submit"> INGRESAR</button>

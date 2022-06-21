@@ -228,5 +228,15 @@
         "contrasena": "$2a$10$bZ5PzDLZ3rf3DYRMUzSneObvLFyFkIy/6/pF5pbjSm91iUjTqzuEm",
         "rol": "Cliente",
         "avatar": "avatar06.jpg"
+    },
+    {
+        "id": 24,
+        "nombre": "Pablo",
+        "apellido": "Bertuccio",
+        "usuario": "Pali123456",
+        "email": "pbertuccio@gmail.com",
+        "contrasena": "$2a$10$wGdFDmKv5P2GybDHHUZt.OnaP.9BEkvqVxnj26o5lwryOgMUdaduO",
+        "rol": "Administrador",
+        "avatar": "avatar02.jpg"
     }
 ]

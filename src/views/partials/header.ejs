@@ -19,10 +19,11 @@
             </div>
         </form>
         <% if ( locals.isLogged ) { %>
-            <div><a href="/users/login"><img src="/img/avatar/<%=locals.userLogged.avatar%>" alt=""><span> <%= locals.userLogged.usuario %> </span></a></div>
+            <div class="avatarHeader"><a href="/users/login"><img src="/img/avatars/<%=locals.userLogged.avatar%>" alt=""><span> <%= locals.userLogged.usuario %> </span></a></div>
             <div><a href="/products/productCart"><img src="/img/icon_shop.svg" alt=""><span>CARRITO</span></a></div>
         <% } else { %>
             <div><a href="/users/login"><img src="/img/icon_login.svg" alt=""><span>INGRESAR</span></a></div> 
+            <div><a href="/users/register"><img src="/img/icon_register.svg" alt=""><span>REGISTRARSE</span></a></div> 
         <% } %>
     </nav>
 </header>

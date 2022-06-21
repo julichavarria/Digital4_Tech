@@ -30,6 +30,19 @@
     justify-content: center;
 
 }
+
+.login-css .errorMsj {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    color: #e31a52;
+    font-weight: 400;
+
+}
+
 .login-css .completar-login {
     height: 40px;
     margin: 10px 0px;

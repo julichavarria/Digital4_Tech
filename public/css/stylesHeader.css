@@ -65,6 +65,10 @@ header{
     cursor: pointer;
 }
 
+.avatarHeader{
+    width: 40px;
+}
+
 
 
 @media (min-width: 768px){
