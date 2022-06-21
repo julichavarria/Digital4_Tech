@@ -11,7 +11,6 @@ const destinationFolder = '/img/avatars/';
 
 // funcion buscar ojetro segun ID
 function obtenerUsuariosID (idUsuario){
-    const usersJS = JSON.parse (fs.readFileSync (usersFilePath, 'utf-8'));
     let usuario = null;
         for (let i = 0; i<usersJS.length;i++){
             if (idUsuario == (usersJS[i].id)){
@@ -42,16 +41,27 @@ const usersController = {
     },
 
     createNewRegister: function (req,res){
+
         let errors = validationResult (req);
         if (!errors.isEmpty()) { // PREGUNTA SI EXISTE ERRORES AL CARGAR FORMULARIO EXPRESS VALIDATION.
             res.render ('users/register', {errors: errors.mapped(), oldData: req.body}); 
         }
         
         // VERIFICA QUE EL MAIL NO ESTE CARGADO
-        if (obtenerUsuariosCampo("email", req.body.email) == false) {
+        let emailAcargar = obtenerUsuarioCampo("email", req.body.email);
+        console.log (emailAcargar);
+        if ( emailAcargar == null ) {
             res.render ('users/register', {errors: {email: { msg: 'Este mail ya esta registrado'}}, oldData: req.body});
         } //CAMBIAR POR LA FUNCION obtenerUsuarioCampo CUANDO VUELVA ANDAR
-
+        
+        let avatar = null;
+        if (req.file){
+            avatar = req.file.filename
+            console.log ('cargo una imagen');
+        }else{
+            avatar = req.body.avatar;
+            console.log ('no cargo imagen');
+        }
         let userNew = {
             id: usersJS.length + 1,
             nombre: req.body.nombre,
@@ -60,8 +70,9 @@ const usersController = {
             email: req.body.email,
             contrasena: bcryptjs.hashSync (req.body.contrasena, 10),
             rol: 'Cliente',
-            avatar: req.body.avatar,
+            avatar:  avatar // (req.file ? req.file.filename : 'defoulAvatar.jpg'),
         }
+        console.log (userNew.avatar)
         // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
         usersJS.push (userNew);
         
@@ -72,7 +83,7 @@ const usersController = {
         let usersJSON = JSON.stringify(usersJS, null, 4);
         fs.writeFileSync (usersFilePath, usersJSON);
         
-        res.redirect ('/users/login');
+        res.redirect ('users/login');
     },
 
     editUser: function (req, res) {

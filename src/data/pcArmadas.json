@@ -477,6 +477,36 @@
         "discoRigido": "a",
         "gabinete": "a",
         "fuente": "a",
-        "precio": "455.041"
+        "precio": "455.655"
+    },
+    {
+        "id": 33,
+        "imagen": "/pcArmadas_1655830133016.jpg",
+        "categoria": "INTEL",
+        "logoMarca": "/img/logo_intel.jpg",
+        "titulo": "a",
+        "procesador": "a",
+        "mother": "a",
+        "placaDeVideo": "a",
+        "memoriaRam": "a",
+        "discoRigido": "a",
+        "gabinete": "a",
+        "fuente": "a",
+        "precio": "455.650"
+    },
+    {
+        "id": 34,
+        "imagen": "/pcArmadas_1655830211659.jpg",
+        "categoria": "INTEL",
+        "logoMarca": "/img/logo_intel.jpg",
+        "titulo": "f",
+        "procesador": "f",
+        "mother": "f",
+        "placaDeVideo": "f",
+        "memoriaRam": "f",
+        "discoRigido": "f",
+        "gabinete": "f",
+        "fuente": "f",
+        "precio": "12"
     }
 ]

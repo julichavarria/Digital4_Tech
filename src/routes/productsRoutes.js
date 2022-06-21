@@ -3,7 +3,6 @@ const path = require ('path');
 const router = express.Router ();
 const multer = require ('multer');
 
-
 // CONFIGURACIÓN DEL MULTER PARA GUARDAR Y ASIGNAR NOMBRE A LA SUBIDA DE ARCHIVOS POR UN FORMULARIO 
 let storage = multer.diskStorage ({
 

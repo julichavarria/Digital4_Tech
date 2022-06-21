@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Walter Adrián",
         "apellido": "Olivera",
-        "usuario": "Cliente",
+        "usuario": "Administrador",
         "email": "adrian.olivera.11@gmail.com",
         "contrasena": "$2a$10$8bgP3Zz7csGSmCwNhYJ1LOacpW1H2zjzXiHvrJjE4lgovUL0DS826",
         "rol": "Administrador",
@@ -13,10 +13,220 @@
         "id": 2,
         "nombre": "Walter Adrián",
         "apellido": "Olivera",
-        "usuario": "121212",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$kcwaWudE/GYXdgj8Dtsdku2gOdUb96C5Y7vM1mgL2j6egreBD6tw6",
+        "rol": "Cliente",
+        "avatar": "avatar14.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmail.com.ar",
+        "contrasena": "$2a$10$p9ImEaJdn7PTj7tuXirceOpQ9AZ1.E7Ka74WWLPJkv8KbrL/92Suy",
+        "rol": "Cliente",
+        "avatar": "/avatars_1655835865461"
+    },
+    {
+        "id": 4,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
         "email": "adrian@sinis.com.ar",
-        "contrasena": "$2a$10$FRFQG2CV2gtWFcbMxQ3xCuAYnVodkFFr/0.LWjOV9hVgYkicXIEse",
+        "contrasena": "$2a$10$z8mxVvGXgLZ4weZkm/wW9e2dag96QouF8NFkvtAF7vya3X1TdIIeO",
+        "rol": "Cliente",
+        "avatar": "/avatars_1655836325682"
+    },
+    {
+        "id": 5,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian@adrian.com",
+        "contrasena": "$2a$10$RQPz0G.peZaTWEAm0S7y2.IyGJDlH4u1qOvOextm84GOfvOHhk9dS",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@a.com",
+        "contrasena": "$2a$10$fuYw/DeKxzkd4ePori/O/OKdO8cFlh3uPe1u38TBFNNeAfaAsIy9W",
+        "rol": "Cliente",
+        "avatar": "/avatars_1655837035419"
+    },
+    {
+        "id": 7,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@1.com",
+        "contrasena": "$2a$10$Kbo34y96SbREKKxXwRnFTeOCPDoyYtZy32Fm/wIS89BiA/9sZuyIK",
+        "rol": "Cliente",
+        "avatar": "avatar13.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$osaqJkNxwl7nMP3cgd9ErOcDKtHcqczQucskUufueCKyxrPWVz7bi",
+        "rol": "Cliente",
+        "avatar": "/avatars_1655837340065"
+    },
+    {
+        "id": 9,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$Qz3iQC9JXnNkynj3mQRWJOAet.3ywUd4x3NVQqjcQmgfn1LRfGZnW",
         "rol": "Cliente",
         "avatar": "avatar11.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$thW/BADXbhNf9b8lcuD5N.Z/ei.bAa1xa4pOOOn6hs5YqOgF8WRQ.",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmailgmail.com",
+        "contrasena": "$2a$10$4yrZuJguZb6di0vMJreCauhi50tU5j6RfLUxZchjSEbh3lmiFQxOu",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmailgmail.com",
+        "contrasena": "$2a$10$0e1Kq5P667UY5ATR2vbIweM8RuCvRrmA0jIL3rQ/07ylAYH4Eae8W",
+        "rol": "Cliente",
+        "avatar": "avatar02.jpg"
+    },
+    {
+        "id": 13,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmailgmail.com",
+        "contrasena": "$2a$10$qDszVtBaxB0T8h8eJGwMRue2DEBCjikVooaqSuFwPTVupqLjaSutG",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 14,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "w@q.com",
+        "contrasena": "$2a$10$f.hhBpWuySfqZ3N0KkLBgevS/2E0F8jg4yCbi26ZzusVKGwt7i4Ri",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 15,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$NXns6LcdC3FO6BNvoqp/a.vCFzRk8NKopZO9oSb44hylujX1klw06",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 16,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$Ecb1Jvs/hTIWi.xNbbLIB.Oq3PyUdMpDpSqWsfUbr.9sIi56pCmBe",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 17,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$h9SZ1nTq4it9SpO4jmh0e.TOmB.vwP.8kbOft74Hh3xLO14dkbkPG",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 18,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$tRD5q.ueycn5zzAUPXAkw.UK9aDwjzxMBesufJbCQTELK8V.Xl6qC",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 19,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$VUWkuJSAzeSa/LsEwjOHI.rP8bRBYWz93tyoOHtgpZdH7vtgsLSWq",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 20,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$/06mSmcjYumXwilrtIY2c.qFFmVM2H2X7j0N/hQgSsAUms4HQgZTe",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 21,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123123",
+        "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$4EtPHMc8YvuYpajXc3AH/uw9nHp8RnGZuVrcAYLYEBH9ffG1PkAaK",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 22,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123123",
+        "email": "adrianolivera1@gmail.com",
+        "contrasena": "$2a$10$A5kv.lyYWVXF7rsvyqZdrei04aRPLARqQ3KCQK4Z/d8C0V/P/WIve",
+        "rol": "Cliente",
+        "avatar": "avatar01.jpg"
+    },
+    {
+        "id": 23,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "121212",
+        "email": "adrian.olivera@gmail.com",
+        "contrasena": "$2a$10$bZ5PzDLZ3rf3DYRMUzSneObvLFyFkIy/6/pF5pbjSm91iUjTqzuEm",
+        "rol": "Cliente",
+        "avatar": "avatar06.jpg"
     }
 ]

@@ -22,6 +22,12 @@ function obtenerProducto (idProducto){
         return producto;
 }
 
+//lectura de bd
+function lecturaBD (){
+    const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
+    return pcArmadasJS;
+}
+
 function selectorDeMarca (marca){
    return marca == 'INTEL' ? '/img/logo_intel.jpg' : '/img/logo_amd.jpg'
 }
@@ -30,7 +36,7 @@ const productController = {
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
     product: function(req, res) {
-        const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
+        let pcArmadasJS = lecturaBD ();
         res.render("products/products", {pcArmadasJS, destinationFolder});
     },
 
@@ -66,6 +72,7 @@ const productController = {
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
         }
+        
         // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
         pcArmadasJS.push (productNew);
 
