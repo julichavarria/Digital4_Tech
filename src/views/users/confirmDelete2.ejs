@@ -11,6 +11,9 @@
     <%- include ('../partials/header') %>
         <main>
 
+            <h1><i class="fa-solid fa-trash-can"></i></h1>
+            <h1>¿Desea borrar el siguiente usuario?</h1>
+            <h3>Por favor seleccione una opción para eliminar el usuario o mantenerlo publicado</h3>
 
             <div class="contenedorPerfil">
                 <div class="contenedorImg">
@@ -22,6 +25,9 @@
                     <h1>
                         <%= usersJS.usuario %>
                     </h1>
+                    <p> ID: <span>
+                        <%= usersJS.id %>
+                    </span></p>
                     <p> Nombre: <span>
                             <%= usersJS.nombre %>
                         </span></p>
@@ -31,31 +37,28 @@
                     <p> Email: <span>
                             <%= usersJS.email %>
                         </span></p>
+                    <p> Rol: <span>
+                            <%= usersJS.rol %>
+                    </span></p>
 
-                        <a href="/users/editUser/<%= usersJS.id %>">
-                            <div class="botones">
-                                <button class="btnSecundario" type="submit"><span> <i class="far fa-edit"></i> EDITAR INFO </span> </button>
-                            </div>
-                        </a>
-                        <form action="/users/logout" method="get">
-                            <div class="botones">
-                                <button class="btnPrincipal" type="submit"> CERRAR SESIÓN </button>
-                            </div>
-                        </form>
+                        
+                    
                 </div>
 
             </div>
 
             <div class="contenedorBotones">
                 
-                
-                <% if ( locals.isLogged=='loggedAdmin' ) { %>
-                    <a href="/users/usersList">
-                        <div class="botones">
-                            <button class="btnSecundario" type="submit"><span><i class="far fa-eye"></i> VER TODOS LOS USUARIOS </span> </button>
-                        </div>
-                    </a>
-                    <% } %>
+                <a href="/users/editUser/<%= usersJS.id %>">
+                    <div class="botones">
+                        <button class="btnSecundario" type="submit"><span> <i class="far fa-edit"></i> CANCELAR </span> </button>
+                    </div>
+                </a>
+                <form action="/users/logout" method="get">
+                    <div class="botones">
+                        <button class="btnPrincipal" type="submit"> BORRAR USUARIO </button>
+                    </div>
+                </form>
 
                    
             </div>

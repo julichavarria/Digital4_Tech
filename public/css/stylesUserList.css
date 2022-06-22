@@ -39,3 +39,8 @@ width: 40px;
     transition: all 200ms;
     transform: scale(1.05);
 }
+
+.userRol{
+    color: #e31a52;
+    font-weight: 100;  
+}

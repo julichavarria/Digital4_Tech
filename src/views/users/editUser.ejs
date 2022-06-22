@@ -11,12 +11,29 @@
     <%- include ('../partials/header') %>
         <main class="mainRegister">
 
-            <h1> EDITAR USUARIO <%= usersJS.email %> </h1>
-            <h3>Completa los campos a editar</h3>
+            <h1> EDITAR USUARIO  </h1>
+            <h3><%= usersJS.email %></h3>
 
 
             <div class="controlGeneral">
                 <form method="post" action="/users/editUser/<%= usersJS.id %>?_method=PUT" enctype="multipart/form-data">
+
+                    <% if ( locals.isLogged == 'loggedAdmin' ) { %>
+                    
+                       
+                        <div class="contenedorRol">
+                            <label>ROL del Usuario</label>
+                                <select name="rol" id="rol">
+                                    <option value="Administrador">ADMINISTRADOR</option>
+                                    <option value="Cliente">CLIENTE</option>
+                                  </select>
+
+                         </div>
+                      
+                     <% } %> 
+                        
+
+
                     <div class="campoFormulario">
                         <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
                             maxlength="25" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : usersJS.nombre )%>">
@@ -43,18 +60,11 @@
                             placeholder="CONTRASEÑA NUEVA" minlength="6" class="controlFormulario">
                     </div>
 
-                    <% if ( locals.isLogged == 'loggedAdmin' ) { %>
-                    <label>Seleccioná el ROL de nuevo Usuario</label>
-                        <div>
-                            <select name="rol" id="rol">
-                                <option value="Administrador">Administrador</option>
-                                <option value="Cliente">Cliente</option>
-                              </select>
-                        </div>
-                    <% } %> 
+                    
                     <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
+                    <div class="contenedorAvatar">
                     <div class="campoFormulario">
-                        <label>Seleccioná un avatar</label>
+                        <label>Seleccioná un avatar o subí una imagen desde tu PC con el botón +</label>
                         <div class="contenedorRadioButtonsAvatar">
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar01.png"
                                 <% if (usersJS.avatar=="avatar01.png" ){%> checked <%}%>>
@@ -131,24 +141,17 @@
                                 <img src="/img/avatars/avatar15.png">
                             </input></label> -->
 
-                            <style>
-                                .image-upload>input {
-                                    display: none;
-                                  }
-        
-                                  .image-upload>img {
-                                    width: 60px !important;
-                                  }
-                            </style>
+                      
                             <div class="image-upload" class="contenedorRadioButtonsAvatar">
-                                <label style="margin: 0 auto;" for="file-input">
-                                  <img style="width: 60px; margin: auto 0; padding:25px 0 0 10px ;" src="/img/avatars/avatarAgregarPropio.png"/>
+                                <label for="file-input">
+                                  <img src="/img/avatars/avatarAgregarPropio.png"/>
                                 </label>
                                 <input name = "avatarPropio" id="file-input" type="file" />
                             </div>
 
                         </div>
                     </div>
+                </div>
                     <!-- HASTA ACA HAY QUE BORRAR SI NO QUIEREN DEJAR LOS RADIO BUTTON COMO IMAGEN -->
 
                     <div class="botones">

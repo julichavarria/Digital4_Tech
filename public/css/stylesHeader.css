@@ -65,10 +65,15 @@ header{
     cursor: pointer;
 }
 
-.avatarHeader{
-    width: 40px;
+.avatarHeader a img{
+padding: 5px;
 }
 
+.avatarHeader a span{
+    display: flex;
+    justify-content: center;
+
+}
 
 
 @media (min-width: 768px){

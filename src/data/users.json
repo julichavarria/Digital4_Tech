@@ -4,8 +4,9 @@
         "nombre": "walter",
         "apellido": "Olivera",
         "usuario": "Wizard11",
-        "contrasena": "$2a$10$c2ltNLJmqtrNN0kAus2rU.1IcXutKG.n8x3gu0LoqvwSCIfyqAAcW",
         "email": "adrian.olivera.11@gmail.com",
+        "contrasena": "$2a$10$c2ltNLJmqtrNN0kAus2rU.1IcXutKG.n8x3gu0LoqvwSCIfyqAAcW",
+        "rol": "Cliente",
         "avatar": "avatar07.png"
     },
     {
@@ -13,8 +14,9 @@
         "nombre": "Walter Adrián",
         "apellido": "Olivera",
         "usuario": "123123",
-        "contrasena": "$2a$10$ZCeKD76aOQTyOgi4JS9jc.huT80qxH/BhRfEjEKw.5Jjl2LZpGLyi",
         "email": "adrian@sinis.com.ar",
+        "contrasena": "$2a$10$ZCeKD76aOQTyOgi4JS9jc.huT80qxH/BhRfEjEKw.5Jjl2LZpGLyi",
+        "rol": "Cliente",
         "avatar": "avatar06.png"
     },
     {
@@ -26,5 +28,15 @@
         "contrasena": "$2a$10$NjJskDXAfvH4hpLaYviQf.NyS5XOWi.2fiEMEKGpj8WB5Jna6DKZe",
         "rol": "Cliente",
         "avatar": "avatar11.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Pablo",
+        "apellido": "Bertuccio",
+        "usuario": "Pali",
+        "email": "pbertuccio@gmail.com",
+        "contrasena": "$2a$10$CMy3EDrY4aiXKZg7fFx1uedkG1gYMM2C7Q.wbaP36NwpD3p6oUbfa",
+        "rol": "Administrador",
+        "avatar": "avatar02.png"
     }
 ]

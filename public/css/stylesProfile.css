@@ -1,0 +1,35 @@
+.contenedorPerfil{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    margin: 40px;
+}
+
+.contenedorPerfil .contenedorImg img {
+    width: 200px;
+}
+
+.contenedorPerfil .contenedorImg  {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.contenedorPerfil .contenedorDatos  {
+    text-align: left;
+    align-items: center;
+    border-left: 1px solid #cacaca;
+    padding-left: 30px;
+}
+
+.contenedorDatos p span {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.contenedorBotones {
+    width: 300px;
+    margin: 0 auto;
+
+}
+

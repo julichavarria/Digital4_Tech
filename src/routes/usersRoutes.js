@@ -57,7 +57,7 @@ router.put ("/editUser/:id",  updateFile.single('avatarPropio'), usersController
 
 // ELIMINAR USUARIO
 router.delete ("/editUser/:id/deleteUser/", usersController.deleteUser);
-//router.get ("/confirmDelete/", usersController.confirmDelete);
+router.get ("/confirmDelete/", usersController.confirmDelete);
 
 //LOGIN
 router.get ("/login", clientMiddlewares, usersController.login);

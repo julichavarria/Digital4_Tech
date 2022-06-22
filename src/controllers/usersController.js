@@ -202,6 +202,10 @@ const usersController = {
         res.render("users/usersList", {usersJS});
     },
 
+    confirmDelete:function (req,res) {
+        res.render("users/confirmDelete2");
+    }
+
 } 
     
 module.exports = usersController;

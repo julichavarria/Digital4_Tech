@@ -20,7 +20,7 @@
                     <form action="/users/login" method="post">
                         <div class="generalCompletar-login">
                             <input class="completar-login" type="email" name="email" placeholder="EMAIL"> 
-                            <input class="completar-login" type="password" name="contrasena" placeholder="CONTRASEÑA" minlength="6">
+                            <input class="completar-login" type="password" name="contrasena" placeholder="CONTRASEÑA">
                         </div>
                         <div class="errorMsj">
                         <label> <% if (locals.errors && errors.email ) { %>
@@ -32,7 +32,7 @@
                         <div class="contenedorBoton">
                             <button class="btnPrincipal" type="submit"> INGRESAR</button>
                             <button class="btnSecundario"> <a href="../users/register">REGISTRARSE</a></button>
-                            <input class="recordarPass" type="checkbox" name="recordarUsuario"> Recordar contraseña
+                            <span> <input class="recordarPass" type="checkbox" name="recordarUsuario"> &nbsp; Recordar contraseña</span>
                         </div>
 
                     </form>

@@ -11,7 +11,11 @@
     <%- include ('../partials/header') %>
         <main class="mainRegister">
 
-            <h1>Registrarse</h1>
+            <div class="iconoRegister">
+                <img src="../img/icon_register.svg">
+            </div>
+
+            <h1>REGISTRARSE</h1>
             <h3>Completa la siguiente información para poder registrarse en nuestro sitio Web</h3>
 
             <div class="controlGeneral">
@@ -58,8 +62,9 @@
                     </div>
                     
                     <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
+                    <div class="contenedorAvatar">
                     <div class="campoFormulario">
-                        <label>Seleccioná un avatar</label>
+                        <label>Seleccioná un avatar o subí una imagen desde tu PC con el botón +</label>
                         <div class="contenedorRadioButtonsAvatar">
                             <label><input type="radio" id="avatar" name="avatar" value="avatar01.png" checked>
                                 <img src="/img/avatars/avatar01.png"></input></label>
@@ -93,13 +98,14 @@
                                 <img src="/img/avatars/avatar15.jpg"></input></label> -->
 
                                 <div class="image-upload" class="contenedorRadioButtonsAvatar">
-                                    <label style="margin: 0 auto;" for="file-input">
-                                      <img style="width: 60px; margin: auto 0; padding:25px 0 0 10px ;" src="/img/avatars/avatarAgregarPropio.png"/>
+                                    <label  for="file-input">
+                                      <img  src="/img/avatars/avatarAgregarPropio.png"/>
                                     </label>
                                     <input name = "avatarPropio" id="file-input" type="file" />
                                 </div>
                         </div>
                     </div>
+                </div>
 
                     <!-- HASTA ACA HAY QUE BORRAR SI NO QUIEREN DEJAR LOS RADIO BUTTON COMO IMAGEN -->
 

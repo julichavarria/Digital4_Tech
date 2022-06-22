@@ -12,23 +12,25 @@
         <main>
 
             <section>
+                <!--  INICIO DE DATOS DINAMICOS //////////////////    -->
+                <% for (let i=0; i < usersJS.length; i++){ %>
                 <article class="contenedorUsuario">
-                    <!--  INICIO DE DATOS DINAMICOS //////////////////    -->
-                    <% for (let i=0; i < usersJS.length; i++){ %>
+                    
                 <div class="contenedorDataUsuario" > 
                     <img src="/img/avatars/<%= usersJS[i].avatar %>" alt="">
-                    <div class="dataUsuario"><%= usersJS[i].nombre %> <%= usersJS[i].apellido %> </div>
+                    <div class="dataUsuario"><%= usersJS[i].nombre %> <%= usersJS[i].apellido %> <span class="userRol">(<%= usersJS[i].rol %>)</span> </div>
                 </div>
                     <div class="contenedorAccionesUsuarios">
                         <a href= "/users/userDetail/<%= usersJS[i].id %>" ><i class="far fa-eye"></i></a>
                         <a href= "/users/editUser/<%= usersJS[i].id %>" ><i class="far fa-edit"></i></a>
-                        
-                        <form action="/users/editUser/<%= usersJS[i].id %>/deleteUser?_method=DELETE" method="POST" >
+                        <a href= "/users/editUser/<%= usersJS[i].id %>" ><i class="fa-regular fa-trash-can"></i></a>
+                        <!-- <form action="/users/editUser/<%= usersJS[i].id %>/deleteUser?_method=DELETE" method="POST" >
                             <button type="submit"><i class="fa-regular fa-trash-can"></i></button>
-                        </form>
+                        </form> -->
                     </div>
-                    <% } %>
+                   
                 </article>   
+                <% } %>
             </section>
 
         </main>
