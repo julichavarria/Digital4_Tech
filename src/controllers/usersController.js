@@ -3,6 +3,7 @@ const path = require ('path');
 const bcryptjs = require ('bcryptjs');
 const {validationResult} = require ('express-validator');
 const req = require('express/lib/request');
+const { on } = require('events');
 
 
 const usersFilePath = path.join (__dirname, '../data/users.json');
@@ -179,9 +180,10 @@ const usersController = {
             //delete usuarioIngresado.contrasena; //BORRAMOS LA PROPIEDAD CONTRASEÑA PARA NO LLEVARLA POR TODA LA SESSION 
             req.session.userLogged = usuarioIngresado; //GUARDO EL USUARIO LOGEADO EN LA SESION DEL NAVEGADOR
             //COOKIE
-            if (req.body.recordarUsuario){
-               // res.cookie('')
+            if (req.body.recordarUsuario != undefined){
+               res.cookie('recordar', usuarioIngresado.email, { maxAge: 1000 * 120})//1000 es un segundo x 120 son 120 segundos = 2 minutos
             }
+            console.log (usuarioIngresado);
             res.redirect ('profile')
         }
     },

@@ -3,8 +3,10 @@ const express = require("express");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const app = express();
-const userLoggedMiddleware = require("./middlewares/userLoggedMiddlewares");
 const cookies = require("cookie-parser");
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddlewares");
+const cookieMiddleware = require("./middlewares/cookiesMiddlewares");
+
 
 // CONFIGURAMOS LA CARPETA ESTATICA
 const path = require("path");
@@ -15,6 +17,9 @@ app.use(express.static(publicPath));
 app.use(session({secret: 'secret', resave: false, saveUninitialized: false}));
 app.use(userLoggedMiddleware);
 app.use(cookies());
+app.use(cookieMiddleware);
+
+
 
 // CONFIGURACION DE FORMULARIOS
 app.use(express.urlencoded({ extended: false })); // PARA OPTENER LOS VALORES QUE VENGAN POR POST

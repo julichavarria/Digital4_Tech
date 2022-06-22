@@ -16,5 +16,15 @@
         "contrasena": "$2a$10$ZCeKD76aOQTyOgi4JS9jc.huT80qxH/BhRfEjEKw.5Jjl2LZpGLyi",
         "email": "adrian@sinis.com.ar",
         "avatar": "avatar06.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
+        "email": "delfina@leiten.com.ar",
+        "contrasena": "$2a$10$NjJskDXAfvH4hpLaYviQf.NyS5XOWi.2fiEMEKGpj8WB5Jna6DKZe",
+        "rol": "Cliente",
+        "avatar": "avatar11.png"
     }
 ]
