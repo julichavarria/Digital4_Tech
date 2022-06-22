@@ -15,7 +15,7 @@
             <h3>Completa la siguiente información para poder registrarse en nuestro sitio Web</h3>
 
             <div class="controlGeneral">
-                <form method="post" action="/users/register"> <!-- enctype="multipart/form-data" -->
+                <form method="post" action="/users/register" > <!-- enctype="multipart/form-data">  -->
                     <div class="campoFormulario">
                         <label> Nombre </label>
                         <input type="text" id="nombre" name="nombre" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : null )%>" >
@@ -56,58 +56,48 @@
                                 <% } %>
                             </label>
                     </div>
-
-                    <style>
-                        .image-upload>input {
-                            display: none;
-                          }
-
-                          .image-upload>img {
-                            width: 60px !important;
-                          }
-                    </style>
                     
                     <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
                     <div class="campoFormulario">
                         <label>Seleccioná un avatar</label>
                         <div class="contenedorRadioButtonsAvatar">
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar01.jpg" checked>
-                                <img src="/img/avatars/avatar01.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar02.jpg">
-                                <img src="/img/avatars/avatar02.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar03.jpg">
-                                <img src="/img/avatars/avatar03.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar04.jpg">
-                                <img src="/img/avatars/avatar04.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar05.jpg">
-                                <img src="/img/avatars/avatar05.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar06.jpg">
-                                <img src="/img/avatars/avatar06.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar07.jpg">
-                                <img src="/img/avatars/avatar07.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar08.jpg">
-                                <img src="/img/avatars/avatar08.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar09.jpg">
-                                <img src="/img/avatars/avatar09.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar10.jpg">
-                                <img src="/img/avatars/avatar10.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar11.jpg">
-                                <img src="/img/avatars/avatar11.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar12.jpg">
-                                <img src="/img/avatars/avatar12.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar13.jpg">
-                                <img src="/img/avatars/avatar13.jpg"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar14.jpg">
-                                <img src="/img/avatars/avatar14.jpg"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar01.png" checked>
+                                <img src="/img/avatars/avatar01.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar02.png">
+                                <img src="/img/avatars/avatar02.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar03.png">
+                                <img src="/img/avatars/avatar03.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar04.png">
+                                <img src="/img/avatars/avatar04.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar05.png">
+                                <img src="/img/avatars/avatar05.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar06.png">
+                                <img src="/img/avatars/avatar06.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar07.png">
+                                <img src="/img/avatars/avatar07.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar08.png">
+                                <img src="/img/avatars/avatar08.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar09.png">
+                                <img src="/img/avatars/avatar09.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar10.png">
+                                <img src="/img/avatars/avatar10.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar11.png">
+                                <img src="/img/avatars/avatar11.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar12.png">
+                                <img src="/img/avatars/avatar12.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar13.png">
+                                <img src="/img/avatars/avatar13.png"></input></label>
+                            <label><input type="radio" id="avatar" name="avatar" value="avatar14.png">
+                                <img src="/img/avatars/avatar14.png"></input></label>
                             <!-- <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15.jpg">
                                 <img src="/img/avatars/avatar15.jpg"></input></label> -->
 
                                 <div class="image-upload" class="contenedorRadioButtonsAvatar">
                                     <label style="margin: 0 auto;" for="file-input">
-                                      <img style="width: 60px; margin: auto 0; padding:25px 0 0 10px ;" src="/img/avatars/avatarAgregarPropio.jpg"/>
+                                      <img style="width: 60px; margin: auto 0; padding:25px 0 0 10px ;" src="/img/avatars/avatarAgregarPropio.png"/>
                                     </label>
                                     <input name = "avatarPropio" id="file-input" type="file" />
-                                  </div>
+                                </div>
                         </div>
                     </div>
 

@@ -28,12 +28,13 @@
                     <button class="btnSecundario" type="submit"><span> EDITAR INFORMACIÓN </span> </button>
                 </div>
             </a>
+            <% if ( locals.isLogged == 'loggedAdmin' ) { %>
             <a href="/users/usersList">
                 <div class="botones">
                     <button class="btnSecundario" type="submit"><span> LISTA DE USUARIOS </span> </button>
                 </div>
             </a>
-
+            <% } %>
         </main>
         <%- include ('../partials/footer') %>
 </body>

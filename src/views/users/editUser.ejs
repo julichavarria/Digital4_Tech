@@ -16,7 +16,7 @@
 
 
             <div class="controlGeneral">
-                <form method="post" action="/users/editUser/<%= usersJS.id %>?_method=PUT" >
+                <form method="post" action="/users/editUser/<%= usersJS.id %>?_method=PUT" enctype="multipart/form-data">
                     <div class="campoFormulario">
                         <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
                             maxlength="25" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : usersJS.nombre )%>">
@@ -56,80 +56,96 @@
                     <div class="campoFormulario">
                         <label>Seleccioná un avatar</label>
                         <div class="contenedorRadioButtonsAvatar">
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar01.jpg"
-                                <% if (usersJS.avatar=="avatar01.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar01.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar01.png"
+                                <% if (usersJS.avatar=="avatar01.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar01.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar02.jpg"
-                                <% if (usersJS.avatar=="avatar02.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar02.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar02.png"
+                                <% if (usersJS.avatar=="avatar02.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar02.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar03.jpg"
-                                <% if (usersJS.avatar=="avatar03.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar03.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar03.png"
+                                <% if (usersJS.avatar=="avatar03.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar03.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar04.jpg"
-                                <% if (usersJS.avatar=="avatar04.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar04.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar04.png"
+                                <% if (usersJS.avatar=="avatar04.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar04.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar05.jpg"
-                                <% if (usersJS.avatar=="avatar05.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar05.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar05.png"
+                                <% if (usersJS.avatar=="avatar05.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar05.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar06.jpg"
-                                <% if (usersJS.avatar=="avatar06.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar06.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar06.png"
+                                <% if (usersJS.avatar=="avatar06.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar06.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar07.jpg"
-                                <% if (usersJS.avatar=="avatar07.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar07.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar07.png"
+                                <% if (usersJS.avatar=="avatar07.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar07.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar08.jpg"
-                                <% if (usersJS.avatar=="avatar08.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar08.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar08.png"
+                                <% if (usersJS.avatar=="avatar08.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar08.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar09.jpg"
-                                <% if (usersJS.avatar=="avatar09.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar09.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar09.png"
+                                <% if (usersJS.avatar=="avatar09.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar09.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar10.jpg"
-                                <% if (usersJS.avatar=="avatar10.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar10.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar10.png"
+                                <% if (usersJS.avatar=="avatar10.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar10.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar11.jpg"
-                                <% if (usersJS.avatar=="avatar11.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar11.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar11.png"
+                                <% if (usersJS.avatar=="avatar11.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar11.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar12.jpg"
-                                <% if (usersJS.avatar=="avatar12.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar12.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar12.png"
+                                <% if (usersJS.avatar=="avatar12.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar12.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar13.jpg"
-                                <% if (usersJS.avatar=="avatar13.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar13.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar13.png"
+                                <% if (usersJS.avatar=="avatar13.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar13.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar14.jpg"
-                                <% if (usersJS.avatar=="avatar14.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar14.jpg">
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar14.png"
+                                <% if (usersJS.avatar=="avatar14.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar14.png">
                             </input></label>
 
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15.jpg"
-                                <% if (usersJS.avatar=="avatar15.jpg" ){%> checked <%}%>>
-                                <img src="/img/avatars/avatar15.jpg">
-                            </input></label>
+                            <!-- <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15.png"
+                                <% if (usersJS.avatar=="avatar15.png" ){%> checked <%}%>>
+                                <img src="/img/avatars/avatar15.png">
+                            </input></label> -->
+
+                            <style>
+                                .image-upload>input {
+                                    display: none;
+                                  }
+        
+                                  .image-upload>img {
+                                    width: 60px !important;
+                                  }
+                            </style>
+                            <div class="image-upload" class="contenedorRadioButtonsAvatar">
+                                <label style="margin: 0 auto;" for="file-input">
+                                  <img style="width: 60px; margin: auto 0; padding:25px 0 0 10px ;" src="/img/avatars/avatarAgregarPropio.png"/>
+                                </label>
+                                <input name = "avatarPropio" id="file-input" type="file" />
+                            </div>
 
                         </div>
                     </div>

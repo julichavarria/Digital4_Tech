@@ -497,8 +497,8 @@
     {
         "id": 34,
         "imagen": "/pcArmadas_1655830211659.jpg",
-        "categoria": "INTEL",
-        "logoMarca": "/img/logo_intel.jpg",
+        "categoria": "AMD",
+        "logoMarca": "/img/logo_amd.jpg",
         "titulo": "f",
         "procesador": "f",
         "mother": "f",
@@ -507,6 +507,6 @@
         "discoRigido": "f",
         "gabinete": "f",
         "fuente": "f",
-        "precio": "12"
+        "precio": "120"
     }
 ]

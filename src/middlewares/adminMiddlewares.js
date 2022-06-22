@@ -1,7 +1,9 @@
-let adminMiddlewares = function  (req, res, next){
+function adminMiddlewares  (req, res, next){
     
-    if ( req.session.userLogged && req.session.userLogged.rol !== 'Administrador' ){
-        res.redirect ('/not-found')
+    if ( !req.session.userLogged || req.session.userLogged.rol != "Administrador"){
+        
+            res.redirect ('/not-found')
+
     }
     next();
 }

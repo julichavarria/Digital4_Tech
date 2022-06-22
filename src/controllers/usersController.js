@@ -20,18 +20,18 @@ function obtenerUsuariosID (idUsuario){
         }
         return usuario;
 }
-// REVISAR PARA BORRAR Y USAR LA DE ABAJO
-function obtenerUsuariosCampo (campo, dato){
-    let usuarios = usersJS;
-    let resultado = null;
-    ( (usuarios.find(usuario => usuario[campo] === dato) ) == undefined ) ? resultado = true : resultado = false;
-    return resultado;
-}
+
 //TRAE UN USUARIO DEPENDIENDO EL CAMPO QUE LE INGRESEMOS BUSCAR
 function obtenerUsuarioCampo (campo, dato){
     let usuario = usersJS;
     let usuarioEncontrado = (usuario.find(unUsuario => unUsuario[campo] === dato) );
     return usuarioEncontrado;
+}
+
+//LECTURA DE BD
+function lecturaBD (){
+    const usersJS = JSON.parse (fs.readFileSync (usersFilePath, 'utf-8'));
+    return usersJS;
 }
 
 const usersController = {
@@ -44,24 +44,26 @@ const usersController = {
 
         let errors = validationResult (req);
         if (!errors.isEmpty()) { // PREGUNTA SI EXISTE ERRORES AL CARGAR FORMULARIO EXPRESS VALIDATION.
-            res.render ('users/register', {errors: errors.mapped(), oldData: req.body}); 
+
+           return res.render ('users/register', {errors: errors.mapped(), oldData: req.body}); 
+           //SIN EL RETURN CONTINUAVA LA EJECUCION, ENVIABA EL ERROR PERO GUARDABA EL USUARIO IGUAL
         }
         
         // VERIFICA QUE EL MAIL NO ESTE CARGADO
-        let emailAcargar = obtenerUsuarioCampo("email", req.body.email);
-        console.log (emailAcargar);
-        if ( emailAcargar == null ) {
-            res.render ('users/register', {errors: {email: { msg: 'Este mail ya esta registrado'}}, oldData: req.body});
+        let emailAcargar;
+        emailAcargar = obtenerUsuarioCampo("email", req.body.email);
+        if ( emailAcargar !== undefined ) {
+            return res.render ('users/register', {errors: {email: { msg: 'Este mail ya esta registrado'}}, oldData: req.body});
         } //CAMBIAR POR LA FUNCION obtenerUsuarioCampo CUANDO VUELVA ANDAR
         
-        let avatar = null;
+        // VERIFICA SI EL AVATAR LLEGA POR USUARIO O PREDISEÑADO
+        let avatarAguardar = null;
         if (req.file){
-            avatar = req.file.filename
-            console.log ('cargo una imagen');
+            avatarAguardar = req.file.filename
         }else{
-            avatar = req.body.avatar;
-            console.log ('no cargo imagen');
+            avatarAguardar = req.body.avatar;
         }
+        
         let userNew = {
             id: usersJS.length + 1,
             nombre: req.body.nombre,
@@ -70,9 +72,8 @@ const usersController = {
             email: req.body.email,
             contrasena: bcryptjs.hashSync (req.body.contrasena, 10),
             rol: 'Cliente',
-            avatar:  avatar // (req.file ? req.file.filename : 'defoulAvatar.jpg'),
+            avatar:  avatarAguardar // (req.file ? req.file.filename : 'defoulAvatar.jpg'),
         }
-        console.log (userNew.avatar)
         // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
         usersJS.push (userNew);
         
@@ -83,27 +84,35 @@ const usersController = {
         let usersJSON = JSON.stringify(usersJS, null, 4);
         fs.writeFileSync (usersFilePath, usersJSON);
         
-        res.redirect ('users/login');
+        res.redirect ('/users/login');
     },
 
     editUser: function (req, res) {
+        //lecturaBD();
         let userSelect = obtenerUsuariosID(req.params.id);
         res.render("users/editUser", {usersJS: userSelect});
     },
 
     processEditUser: function (req, res) {
-        let usuarioEditado = obtenerUsuariosID (req.params.id); // aca esta el problema sacamos el campo email
+        let usuarioEditado = obtenerUsuariosID (req.params.id);
+        // VERIFICA SI EL AVATAR LLEGA POR USUARIO O PREDISEÑADO
+        let avatarAguardar = null;
+        if (req.file){
+            avatarAguardar = req.file.filename
+        }else{
+            avatarAguardar = req.body.avatar;
+        }
+        console.log (avatarAguardar)
+
         // OPTENEMOS EL HASH EN UNA VARIABLE YA QUE DIRECTO NO NOS PERMITIO
-        console.log(usuarioEditado);
         let hash = usuarioEditado.contrasena;
-        console.log (hash);
         //VALIDAMOS CONTRASEÑA INGRESADA CON HASH
         let validacionPassword = bcryptjs.compareSync (req.body.contrasena, hash);
-
         // VERIFICA QUE LA VIEJA CONTRASEÑA SEA CORRECTA
         if ( validacionPassword != true ) {
             res.render ('users/editUser', {errors: {email: { msg: 'La antigua contraseña no es valida'}}, oldData: req.body, usersJS: usuarioEditado});
         }else{
+
         let emailNoEditable = usuarioEditado.email;
         let userToEdit =  {
             id: parseInt(req.params.id),
@@ -112,7 +121,7 @@ const usersController = {
             usuario: req.body.usuario,
             contrasena: bcryptjs.hashSync (req.body.contrasenaNueva, 10),
             email: emailNoEditable,
-            avatar: (req.body.avatar ? req.body.avatar : userSelect.avatar),
+            avatar: avatarAguardar,
         }
         /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
         let usersJSsinEditado = usersJS.filter (user => user.id != req.params.id);
@@ -125,7 +134,7 @@ const usersController = {
         let usersOrdenadoJSON = JSON.stringify(usersOrdenadoJS, null, 4);
         fs.writeFileSync (usersFilePath, usersOrdenadoJSON);
 
-        res.redirect ('/users/usersList')
+        res.redirect ('/users/profile')
         }
 
     },
@@ -167,24 +176,23 @@ const usersController = {
             res.render ('users/login', {errors: {email: { msg: 'Credenciales invalidas'}}});
         }
         else {
-            delete usuarioIngresado.contrasena; //BORRAMOS LA PROPIEDAD CONTRASEÑA PARA NO LLEVARLA POR TODA LA SESSION 
+            //delete usuarioIngresado.contrasena; //BORRAMOS LA PROPIEDAD CONTRASEÑA PARA NO LLEVARLA POR TODA LA SESSION 
             req.session.userLogged = usuarioIngresado; //GUARDO EL USUARIO LOGEADO EN LA SESION DEL NAVEGADOR
             //COOKIE
             if (req.body.recordarUsuario){
                // res.cookie('')
             }
-            res.render ('users/profile', {usersJS: usuarioIngresado})
+            res.redirect ('profile')
         }
     },
 
     profile: (req, res) => {
+        lecturaBD ();
         res.render ('users/profile', {usersJS: req.session.userLogged});
     },
 
     logout: function(req, res) {
-        console.log(req.session)
         req.session.destroy();
-        console.log(req.session)
         res.redirect ('/');
     },
 
