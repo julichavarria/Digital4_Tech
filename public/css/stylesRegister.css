@@ -172,27 +172,27 @@ margin: 0 auto;
 /* ESTILOS PARA HACER LA PRUEBA DE RADIO BUTTON CON IMAGEN */
 
 /* HIDE RADIO */
-.contenedorRadioButtonsAvatar [type=radio] { 
+[type=radio] { 
     opacity: 0;
     width: 1px;
     height: 1px;
     
   }
   /* IMAGE STYLES */
-  .contenedorRadioButtonsAvatar [type=radio] + img {
+  [type=radio] + img {
     cursor: pointer;
     width: 100px;
     opacity: 40%;
   }
   /* CHECKED STYLES */
-  .contenedorRadioButtonsAvatar [type=radio]:checked + img {
+  [type=radio]:checked + img {
     outline: 1px solid #e31a52;
     border-radius: 10%;
     opacity: 100%;
   }
 
   /* IMAGE STYLES */
-  .contenedorRadioButtonsAvatar [type=radio] + img {
+  [type=radio] + img {
     width: 60px;
   }
 

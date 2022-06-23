@@ -35,29 +35,32 @@
 
 
                     <div class="campoFormulario">
+                        <label> Nombre </label>
                         <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
                             maxlength="25" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : usersJS.nombre )%>">
                             
                     </div>
                     <div class="campoFormulario">
+                        <label> Apellido </label>
                         <input required="required" type="text" id="apellido" name="apellido" placeholder="APELLIDO"
                             maxlength="20" class="controlFormulario" value="<%=(locals.oldData ? oldData.apellido : usersJS.apellido )%>">
                     </div>
                     <div class="campoFormulario">
+                        <label> Usuario </label>
                         <input required="required" type="text" id="usuario" name="usuario" placeholder="USUARIO"
                             class="controlFormulario" value="<%=(locals.oldData ? oldData.usuario : usersJS.usuario )%>">
                     </div>
                     <div class="campoFormulario">
-                        <input type="password" id="contrasena" name="contrasena"
-                            placeholder="CONTRASEÑA ACTUAL" minlength="6" class="controlFormulario">
+                        <label> Contraseña Antigua </label>
+                        <input type="password" id="contrasena" name="contrasena" minlength="6" class="controlFormulario">
                     </div>
                     <label> <% if (locals.errors && locals.errors.email ) { %>
                         <p class="msg-errors"> <%= errors.email.msg %> </p>
                         <% } %>
                     </label>
                     <div class="campoFormulario">
-                        <input type="password" id="contrasenaNueva" name="contrasenaNueva"
-                            placeholder="CONTRASEÑA NUEVA" minlength="6" class="controlFormulario">
+                        <label> Contraseña Nueva </label>
+                        <input type="password" id="contrasenaNueva" name="contrasenaNueva" minlength="6" class="controlFormulario">
                     </div>
 
                     
@@ -158,11 +161,17 @@
                         <button class="btnPrincipal" type="submit"> EDITAR </button>
                     </div>
                 </form>
-                <form action="/users/editUser/<%= usersJS.id %>/deleteUser?_method=DELETE" method="POST">
+
+                <% if ( locals.isLogged == 'loggedAdmin' ) { %>
+                    <a href="/users/usersList">
+                <% } else { %>
+                    <a href="/users/profile">
+                <% } %>
+
                     <div class="botones">
-                        <button class="btnSecundario" type="submit"><span>BORRAR USUARIO</span> </button>
+                        <button class="btnSecundario" type="submit"><span> VOLVER </span> </button>
                     </div>
-                </form>
+                </a>
             </div>
 
 

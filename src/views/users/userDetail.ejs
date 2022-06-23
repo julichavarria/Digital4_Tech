@@ -4,17 +4,52 @@
 <head>
     <%- include ('../partials/head') %>
         <!-- /////// CARGA CSS  PARTICULAR/////// -->
-        <link rel="stylesheet" href="/css/stylesRegister.css">
+        <link rel="stylesheet" href="/css/stylesProfile.css">
 </head>
 
 <body>
     <%- include ('../partials/header') %>
         <main>
 
-            <p> Esta es la pagina que muestra el detalle del usuario: <%= usersJS.usuario %> </p>
-            <p> Nombre: <%= usersJS.nombre %> </p>
-            <p> Apellido: <%= usersJS.apellido %> </p>
-            
+            <div class="contenedorPerfil">
+                <div class="contenedorImg">
+                    <img src="/img/avatars/<%= usersJS.avatar %>">
+                </div>
+
+                <div class="contenedorDatos">
+                    <h1>
+                        <%= usersJS.usuario %>
+                    </h1>
+                    <p> ID: <span>
+                        <%= usersJS.id %>
+                    </span></p>
+                    <p> Nombre: <span>
+                            <%= usersJS.nombre %>
+                        </span></p>
+                    <p> Apellido: <span>
+                            <%= usersJS.apellido %>
+                        </span></p>
+                    <p> Email: <span>
+                            <%= usersJS.email %>
+                        </span></p>
+                    <p> Rol: <span>
+                            <%= usersJS.rol %>
+                    </span></p>
+
+                        
+                </div>
+
+            </div>
+
+            <div class="contenedorBotones">
+                
+                <a href="/users/usersList">
+                    <div class="botones">
+                        <button class="btnSecundario" type="submit"><span> VOLVER </span> </button>
+                    </div>
+                </a>
+        
+            </div>
         </main>
         <%- include ('../partials/footer') %>
 </body>

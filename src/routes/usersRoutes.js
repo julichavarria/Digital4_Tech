@@ -5,23 +5,9 @@ const clientMiddlewares = require('../middlewares/clientMiddlewares');
 const adminMiddlewares = require ('../middlewares/adminMiddlewares');
 const authMiddlewares = require('../middlewares/authMiddlewares');
 const { check } = require ('express-validator');
-const multer = require ('multer');
+const multerMiddlewares = require ('../middlewares/multerMiddlewares');
 
-// CONFIGURACIÓN DEL MULTER PARA GUARDAR Y ASIGNAR NOMBRE A LA SUBIDA DE ARCHIVOS POR UN FORMULARIO 
-let storage = multer.diskStorage ({
 
-    destination: (req, file, cb) => {
-        let destinationFolder = path.join (__dirname, '../../public/img/avatars/');
-        cb (null, destinationFolder);
-    },
-
-    filename: (req, file, cb) => {
-        let imageName = "avatars_" + Date.now() + path.extname (file.originalname);
-        cb (null, imageName);
-    }
-})
-
-let updateFile = multer ({storage});
 
 const usersController = require ("../controllers/usersController");
 
@@ -45,19 +31,19 @@ const validateUser = [
 // RUTAS
 // REGISTRAR USUARIO NUEVO
 router.get ("/register", clientMiddlewares, usersController.register);
-router.post ("/register", validateUser, updateFile.single('avatarPropio'), usersController.createNewRegister);
+router.post ("/register", validateUser, multerMiddlewares,  usersController.createNewRegister);
 
 // MOSTRAR DETALLES DE UN USUARIO
-//router.get ('/userDetail/:id', usersController.userDetail); // NO SE ESTA USANDO CONTROLAR Y BORRAR
+router.get ('/userDetail/:id', usersController.userDetail); // NO SE ESTA USANDO CONTROLAR Y BORRAR
 router.get ('/profile', authMiddlewares, usersController.profile)
 
 // EDITAR USUARIO
 router.get ("/editUser/:id", usersController.editUser);
-router.put ("/editUser/:id",  updateFile.single('avatarPropio'), usersController.processEditUser);
+router.put ("/editUser/:id",  multerMiddlewares, usersController.processEditUser);
 
 // ELIMINAR USUARIO
-router.delete ("/editUser/:id/deleteUser/", usersController.deleteUser);
-router.get ("/confirmDelete/", usersController.confirmDelete);
+router.delete ("/deleteUser/:id", usersController.deleteUser);
+router.get ("/confirmDelete/:id", usersController.confirmDelete);
 
 //LOGIN
 router.get ("/login", clientMiddlewares, usersController.login);

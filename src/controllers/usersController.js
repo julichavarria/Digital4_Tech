@@ -2,8 +2,7 @@ const fs = require ('fs');
 const path = require ('path');
 const bcryptjs = require ('bcryptjs');
 const {validationResult} = require ('express-validator');
-const req = require('express/lib/request');
-const { on } = require('events');
+
 
 
 const usersFilePath = path.join (__dirname, '../data/users.json');
@@ -103,7 +102,6 @@ const usersController = {
         }else{
             avatarAguardar = req.body.avatar;
         }
-        console.log (avatarAguardar)
 
         // OPTENEMOS EL HASH EN UNA VARIABLE YA QUE DIRECTO NO NOS PERMITIO
         let hash = usuarioEditado.contrasena;
@@ -123,6 +121,7 @@ const usersController = {
             contrasena: bcryptjs.hashSync (req.body.contrasenaNueva, 10),
             email: emailNoEditable,
             avatar: avatarAguardar,
+            rol: emailNoEditable.rol
         }
         /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
         let usersJSsinEditado = usersJS.filter (user => user.id != req.params.id);
@@ -140,6 +139,11 @@ const usersController = {
 
     },
 
+    confirmDelete:function (req,res) {
+        let usuarioEliminar = obtenerUsuariosID (req.params.id);
+        res.render("users/confirmDelete", {usersJS: usuarioEliminar});
+    },
+
     deleteUser: function (req,res) {
         let idParams = req.params.id;
         
@@ -147,11 +151,11 @@ const usersController = {
         let usersJSsinElEliminado = usersJS.filter (user => user.id != idParams);
         
         /// PASAMOS JS A JSON
-        usersJSONsinELEliminado = JSON.stringify(usersJSsinElEliminado);
+        usersJSONsinELEliminado = JSON.stringify(usersJSsinElEliminado, null, 4);
         fs.writeFileSync (usersFilePath, usersJSONsinELEliminado);
 
         /// REDIRECCIONAMOS VISTA
-        res.redirect ('/users/usersList')
+        res.redirect ('/') // ultimo probelma
     },
 
     // VISTA Y PROCESO DE LOGIN
@@ -183,14 +187,18 @@ const usersController = {
             if (req.body.recordarUsuario != undefined){
                res.cookie('recordar', usuarioIngresado.email, { maxAge: 1000 * 120})//1000 es un segundo x 120 son 120 segundos = 2 minutos
             }
-            console.log (usuarioIngresado);
             res.redirect ('profile')
         }
     },
 
+    userDetail: (req, res) =>{
+        let usuarioVista = obtenerUsuariosID (req.params.id);
+        res.render ('users/userDetail', {usersJS: usuarioVista});
+    },
+
     profile: (req, res) => {
         lecturaBD ();
-        res.render ('users/profile', {usersJS: req.session.userLogged});
+        res.render ('users/profile', {usersJS: req.session.userLogged}); //// mira aca
     },
 
     logout: function(req, res) {
@@ -199,12 +207,10 @@ const usersController = {
     },
 
     usersList:function (req,res) {
-        res.render("users/usersList", {usersJS});
+        //let reLecturaDB = lecturaBD ();
+        lecturaBD ();
+        res.render ("users/usersList", {usersJS});
     },
-
-    confirmDelete:function (req,res) {
-        res.render("users/confirmDelete2");
-    }
 
 } 
     

@@ -19,7 +19,7 @@
             <h3>Completa la siguiente información para poder registrarse en nuestro sitio Web</h3>
 
             <div class="controlGeneral">
-                <form method="post" action="/users/register" > <!-- enctype="multipart/form-data">  -->
+                <form method="post" action="/users/register" enctype="multipart/form-data"> <!--  -->
                     <div class="campoFormulario">
                         <label> Nombre </label>
                         <input type="text" id="nombre" name="nombre" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : null )%>" >

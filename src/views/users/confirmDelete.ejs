@@ -4,28 +4,64 @@
 <head>
     <%- include ('../partials/head') %>
         <!-- /////// CARGA CSS  PARTICULAR/////// -->
-        <link rel="stylesheet" href="/css/stylesRegister.css">
+        <link rel="stylesheet" href="/css/stylesProfile.css">
 </head>
 
 <body>
     <%- include ('../partials/header') %>
-        <main class="mainRegister">
+        <main>
 
             <h1><i class="fa-solid fa-trash-can"></i></h1>
             <h1>¿Desea borrar el siguiente usuario?</h1>
             <h3>Por favor seleccione una opción para eliminar el usuario o mantenerlo publicado</h3>
-            <p>ID</p>
 
-            <div class="controlGeneral">
-                <form action="/users/editUser/<%= usersJS.id %>/deleteProduct?_method=DELETE" method="POST">
-                    <div class="botones">
-                        <button class="btnPrincipal" type="submit"> BORRAR </button>
-                        <button class="btnSecundario"> CANCELAR </button>
-                    </div>
-                </form>
+            <div class="contenedorPerfil">
+                <div class="contenedorImg">
+                    <img src="/img/avatars/<%= usersJS.avatar %>">
+                </div>
+
+
+                <div class="contenedorDatos">
+                    <h1>
+                        <%= usersJS.usuario %>
+                    </h1>
+                    <p> ID: <span>
+                        <%= usersJS.id %>
+                    </span></p>
+                    <p> Nombre: <span>
+                            <%= usersJS.nombre %>
+                        </span></p>
+                    <p> Apellido: <span>
+                            <%= usersJS.apellido %>
+                        </span></p>
+                    <p> Email: <span>
+                            <%= usersJS.email %>
+                        </span></p>
+                    <p> Rol: <span>
+                            <%= usersJS.rol %>
+                    </span></p>
+
+                        
+                    
+                </div>
+
             </div>
 
+            <div class="contenedorBotones">
+                
+                <a href="/users/usersList">
+                    <div class="botones">
+                        <button class="btnSecundario" type="submit"><span> CANCELAR </span> </button>
+                    </div>
+                </a>
+                <form action="/users/deleteUser/<%= usersJS.id%>?_method=DELETE" method="POST">
+                    <div class="botones">
+                        <button class="btnPrincipal" type="submit"> <i class="fa-solid fa-trash-can"></i> BORRAR USUARIO </button>
+                    </div>
+                </form>
 
+                   
+            </div>
         </main>
         <%- include ('../partials/footer') %>
 </body>
