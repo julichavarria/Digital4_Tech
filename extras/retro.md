@@ -33,7 +33,7 @@ Sprint 3 ------>
 
 1. Comenzar a hacer -----> reuniones más seguidas de equipo.
 
-2. Hacer más-----> por lo mnos una reunion, con uno de los integrantes compartiendo pantalla y generar cosas entre todos.
+2. Hacer más-----> por lo menos una reunion, con uno de los integrantes compartiendo pantalla y generar cosas entre todos.
 
 3. Continuar haciendo-----> la división de tareas, la buena comunicacion en el grupo.
 
@@ -46,26 +46,23 @@ Sprint 4 ---->
 1. Comenzar a hacer -----> Tenemos que comenzar a trabajar con ramas en git.
 
 2. Hacer más-----> Cada integrante del equipo tiene que emprezar a hacer pruebas y modificaciones en el proyecto desde su branch de git.
-   
+
 3. Continuar haciendo-----> Las reuniones semanales, analizando  y completando el proyecto compartiendo pantalla.
 
 4. Hacer menos-----> No encontramos que hacer menos porque venimos mejorando cada semana el trabajo y la comunicacion en equipo.
 
 5. Dejar de hacer-----> Cada semana que pasa estamos mas organizados y sincronizados a la hora de trabajar en equipo. Lo que i tenemos que empezar a hacer es usar el git y las ramas, que entendemos que es una mejor practica.
 
-
 Sprint 5 ---->
 
-1. Comenzar a hacer -----> 
+1. Comenzar a hacer -----> Organizar la estructura de las carpetas dentro del proyecto.
 
-2. Hacer más-----> 
-   
-3. Continuar haciendo-----> 
+2. Hacer más-----> Organizar mejor los tiempos para trabajar en el proyecto.
 
-4. Hacer menos-----> 
+3. Continuar haciendo-----> Seguir con la buena comunicación del equipo.
 
-5. Dejar de hacer-----> 
+4. Hacer menos-----> No encontramos que hacer menos porque venimos mejorando cada semana el trabajo y la comunicacion en equipo.
 
-
+5. Dejar de hacer----->  no encontramos nada para dejar de hacer, si para mejorar y coninuar hciendo. Cada semana que pasa estamos mas oranizados a la hora de trabajar y plantear las tareas.
 
 Se viene Sprint 6 ---->
