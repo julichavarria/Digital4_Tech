@@ -1,22 +1,23 @@
 [
     {
         "id": 1,
-        "nombre": "Walter Adrián",
+        "nombre": "Walter",
         "apellido": "Olivera",
         "usuario": "123123",
         "contrasena": "$2a$10$XM0K7GwY2VZnQYBFtkaaV.Sia6OxW0NnuzM3y48T0666jJnp2cTtS",
         "email": "adrian.olivera.11@gmail.com",
         "rol": "Administrador",
-        "avatar": "avatars_1656469534755.jpg"
+        "avatar": "avatar12.png"
     },
     {
         "id": 2,
-        "nombre": "antonio",
-        "apellido": "antonio",
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
         "usuario": "123123",
-        "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
         "email": "adrian@sinis.com.ar",
-        "avatar": "avatar15.png"
+        "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
+        "rol": "Cliente",
+        "avatar": "avatars_1656469534755.jpg"
     },
     {
         "id": 3,
@@ -33,10 +34,10 @@
         "nombre": "Walter Adrián",
         "apellido": "Olivera",
         "usuario": "123123",
-        "email": "delfina@sinis.com.ar",
         "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
-        "rol": "Cliente",
-        "avatar": "avatars_1656469534755.jpg"
+        "email": "delfina@sinis.com.ar",
+        "rol": "Administrador",
+        "avatar": "avatar15.png"
     },
     {
         "id": 5,
@@ -60,23 +61,22 @@
     },
     {
         "id": 7,
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
+        "usuario": "123123",
         "contrasena": "$2a$10$XM0K7GwY2VZnQYBFtkaaV.Sia6OxW0NnuzM3y48T0666jJnp2cTtS",
         "email": "olivera.11@gm.com",
-        "avatar": "avatar15.png"
+        "rol": "Administrador",
+        "avatar": "avatars_1656469534755.jpg"
     },
     {
         "id": 8,
-        "contrasena": "$2a$10$L00KjuoVe8Wasz/Rtf6oKOfYdN4WWdxzykhGRWZinGDtR/lKhCWam",
-        "email": "sinis@sinis.com.ar",
-        "avatar": "avatar15.png"
-    },
-    {
-        "id": 10,
-        "nombre": "carlos",
-        "apellido": "carlos",
+        "nombre": "Walter Adrián",
+        "apellido": "Olivera",
         "usuario": "123123",
-        "contrasena": "$2a$10$fIccVW8gIhValNpOqje7c.iX5HUm8D3kqJWI7UZI9XRhTS5xZd6JK",
-        "email": "",
-        "avatar": "avatar15.png"
+        "email": "sinis@sinis.com.ar",
+        "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
+        "rol": "Cliente",
+        "avatar": "avatars_1656469534755.jpg"
     }
 ]

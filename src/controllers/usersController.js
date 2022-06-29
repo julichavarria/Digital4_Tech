@@ -42,12 +42,9 @@ const usersController = {
 
     createNewRegister: function (req,res){
 
-        let file = req.file;
-
         let errors = validationResult (req);
         if (!errors.isEmpty()) { // PREGUNTA SI EXISTE ERRORES AL CARGAR FORMULARIO EXPRESS VALIDATION.
-            if (req.file){
-                console.log (req.file);
+            if (req.file){ //SE USO EL UNLINK PARA ELIMINAR LA IMAGEN QUE CARGABA AL EJECUTARSE EL VALIDAITOR EN LOS DEMAS CAMPOS
                 fs.unlinkSync ( path.join (__dirname, '../../public' + destinationFolder + req.file.filename));
             }
             return res.render ('users/register', {errors: errors.mapped(), oldData: req.body}); 
@@ -59,7 +56,7 @@ const usersController = {
         emailAcargar = obtenerUsuarioCampo("email", req.body.email);
         if ( emailAcargar !== undefined ) {
             return res.render ('users/register', {errors: {email: { msg: 'Este mail ya esta registrado'}}, oldData: req.body});
-        } //CAMBIAR POR LA FUNCION obtenerUsuarioCampo CUANDO VUELVA ANDAR
+        }
         
         // VERIFICA SI EL AVATAR LLEGA POR USUARIO O PREDISEÑADO
         let avatarAguardar = null;
@@ -101,13 +98,20 @@ const usersController = {
     processEditUser: function (req, res) {
         let usuarioEditado = obtenerUsuariosID (req.params.id);
         // VERIFICA SI EL AVATAR LLEGA POR USUARIO O PREDISEÑADO
-        // let avatarAguardar = null;
-        // if (req.file){
-        //     avatarAguardar = req.file.filename
+        let avatarAguardar = null;
+        if (req.file){
+            avatarAguardar = req.file.filename
+        }else{
+            avatarAguardar = req.body.avatar;
+        }
+
+        // VERIFICA SI EL USUARIO ES ADMIN PARA NO PERDER EL CAMPO AL MOMENTO DE GUARDAR
+        // let rolAguardar = null;
+        // if (usuarioEditado.rol == 'Administrador'){
+        //     rolAguardar = req.file.filename
         // }else{
-        //     avatarAguardar = req.body.avatar;
+        //     rolAguardar = req.body.rol;
         // }
-        let avatarAguardar = (req.file ? req.file.filename : 'avatar15.png')
         let emailNoEditable = usuarioEditado.email;
         let contrasenaNoEditable = usuarioEditado.contrasena;
         let userToEdit =  {
@@ -117,8 +121,8 @@ const usersController = {
             usuario: req.body.usuario,
             contrasena: contrasenaNoEditable,
             email: emailNoEditable,
+            rol: req.body.rol,
             avatar: avatarAguardar,
-            rol: emailNoEditable.rol
         }
         /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
         let usersJSsinEditado = usersJS.filter (user => user.id != req.params.id);

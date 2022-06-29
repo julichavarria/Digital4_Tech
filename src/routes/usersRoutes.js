@@ -57,7 +57,7 @@ router.get ('/profile', authMiddlewares, usersController.profile);
 
 // EDITAR USUARIO
 router.get ("/editUser/:id", usersController.editUser);
-router.put ("/editUser/:id", updateFile.single('avatarPropio'), usersController.processEditUser);
+router.put ("/editUser/:id", updateFile.single('avatarPropio'), validation, usersController.processEditUser);
 
 // EDITAR CONTRASEÑA
 router.get ("/editPassword/:id", usersController.editPassword);

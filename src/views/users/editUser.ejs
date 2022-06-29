@@ -23,8 +23,13 @@
                         <div class="contenedorRol">
                             <label>ROL del Usuario</label>
                                 <select name="rol" id="rol">
-                                    <option value="Administrador">ADMINISTRADOR</option>
-                                    <option value="Cliente">CLIENTE</option>
+                                    <% if (usersJS.rol == 'Administrador') { %>
+                                        <option value="Administrador">ADMINISTRADOR</option>
+                                        <option value="Cliente">CLIENTE</option>
+                                    <% } else { %>
+                                        <option value="Cliente">CLIENTE</option>
+                                        <option value="Administrador">ADMINISTRADOR</option>
+                                    <% } %>
                                 </select>
 
                          </div>
@@ -54,7 +59,7 @@
                     <div class="campoFormulario">
                         <label>Seleccioná un avatar o subí una imagen desde tu PC con el botón +</label>
                         <div class="contenedorRadioButtonsAvatar">
-                            <!-- <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar01.png"
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar01.png"
                                 <% if (usersJS.avatar=="avatar01.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar01.png">
                             </input></label>
@@ -122,12 +127,12 @@
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar14.png"
                                 <% if (usersJS.avatar=="avatar14.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar14.png">
-                            </input></label> -->
+                            </input></label>
 
-                            <!-- <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15.png"
+                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15.png"
                                 <% if (usersJS.avatar=="avatar15.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar15.png">
-                            </input></label> -->
+                            </input></label>
 
                       
                             <div class="image-upload" class="contenedorRadioButtonsAvatar">
