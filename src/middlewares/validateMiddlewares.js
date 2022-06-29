@@ -17,14 +17,8 @@ const validation = [
         .notEmpty().withMessage('Debes ingresar una contraseña').bail()
         .isLength({min: 6}).withMessage('Debe ingresar un minimo de 6 caracterres para la contraseña'),
 
-    body('avatarPropio').custom ((value, {req}) => {
-        
-        let file = req.file;
-        if (!file) {
-            throw new Error ('Debes subir una imagen');
-        }
-        return true;
-    })
+    //body('avatarPropio').custom ((value, {req}) => {
+    //})
 ];
 
 module.exports = validation;

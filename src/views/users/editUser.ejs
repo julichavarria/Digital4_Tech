@@ -16,54 +16,39 @@
 
 
             <div class="controlGeneral">
-                <form method="post" action="/users/editUser/<%= usersJS.id %>?_method=PUT" enctype="multipart/form-data">
+                <form method="post" action="/users/editUser/<%= usersJS.id %>?_method=PUT" enctype="multipart/form-data"> 
 
                     <% if ( locals.isLogged == 'loggedAdmin' ) { %>
                     
-                       
                         <div class="contenedorRol">
                             <label>ROL del Usuario</label>
                                 <select name="rol" id="rol">
                                     <option value="Administrador">ADMINISTRADOR</option>
                                     <option value="Cliente">CLIENTE</option>
-                                  </select>
+                                </select>
 
                          </div>
                       
                      <% } %> 
                         
-
-
                     <div class="campoFormulario">
                         <label> Nombre </label>
                         <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
-                            maxlength="25" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : usersJS.nombre )%>">
-                            
+                            maxlength="25" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : usersJS.nombre )%>">      
                     </div>
+
                     <div class="campoFormulario">
                         <label> Apellido </label>
                         <input required="required" type="text" id="apellido" name="apellido" placeholder="APELLIDO"
                             maxlength="20" class="controlFormulario" value="<%=(locals.oldData ? oldData.apellido : usersJS.apellido )%>">
                     </div>
+
                     <div class="campoFormulario">
                         <label> Usuario </label>
                         <input required="required" type="text" id="usuario" name="usuario" placeholder="USUARIO"
                             class="controlFormulario" value="<%=(locals.oldData ? oldData.usuario : usersJS.usuario )%>">
                     </div>
-                    <div class="campoFormulario">
-                        <label> Contraseña Antigua </label>
-                        <input type="password" id="contrasena" name="contrasena" minlength="6" class="controlFormulario">
-                    </div>
-                    <label> <% if (locals.errors && locals.errors.email ) { %>
-                        <p class="msg-errors"> <%= errors.email.msg %> </p>
-                        <% } %>
-                    </label>
-                    <div class="campoFormulario">
-                        <label> Contraseña Nueva </label>
-                        <input type="password" id="contrasenaNueva" name="contrasenaNueva" minlength="6" class="controlFormulario">
-                    </div>
 
-                    
                     <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
                     <div class="contenedorAvatar">
                     <div class="campoFormulario">
@@ -154,7 +139,7 @@
 
                         </div>
                     </div>
-                </div>
+                    </div>
                     <!-- HASTA ACA HAY QUE BORRAR SI NO QUIEREN DEJAR LOS RADIO BUTTON COMO IMAGEN -->
 
                     <div class="botones">

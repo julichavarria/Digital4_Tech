@@ -42,11 +42,16 @@ const usersController = {
 
     createNewRegister: function (req,res){
 
+        let file = req.file;
+
         let errors = validationResult (req);
         if (!errors.isEmpty()) { // PREGUNTA SI EXISTE ERRORES AL CARGAR FORMULARIO EXPRESS VALIDATION.
-
-           return res.render ('users/register', {errors: errors.mapped(), oldData: req.body}); 
-           //SIN EL RETURN CONTINUAVA LA EJECUCION, ENVIABA EL ERROR PERO GUARDABA EL USUARIO IGUAL
+            if (req.file){
+                console.log (req.file);
+                fs.unlinkSync ( path.join (__dirname, '../../public' + destinationFolder + req.file.filename));
+            }
+            return res.render ('users/register', {errors: errors.mapped(), oldData: req.body}); 
+            //SIN EL RETURN CONTINUAVA LA EJECUCION, ENVIABA EL ERROR PERO GUARDABA EL USUARIO IGUAL
         }
         
         // VERIFICA QUE EL MAIL NO ESTE CARGADO
@@ -63,7 +68,7 @@ const usersController = {
         }else{
             avatarAguardar = req.body.avatar;
         }
-        
+
         let userNew = {
             id: usersJS.length + 1,
             nombre: req.body.nombre,
@@ -96,12 +101,47 @@ const usersController = {
     processEditUser: function (req, res) {
         let usuarioEditado = obtenerUsuariosID (req.params.id);
         // VERIFICA SI EL AVATAR LLEGA POR USUARIO O PREDISEÑADO
-        let avatarAguardar = null;
-        if (req.file){
-            avatarAguardar = req.file.filename
-        }else{
-            avatarAguardar = req.body.avatar;
+        // let avatarAguardar = null;
+        // if (req.file){
+        //     avatarAguardar = req.file.filename
+        // }else{
+        //     avatarAguardar = req.body.avatar;
+        // }
+        let avatarAguardar = (req.file ? req.file.filename : 'avatar15.png')
+        let emailNoEditable = usuarioEditado.email;
+        let contrasenaNoEditable = usuarioEditado.contrasena;
+        let userToEdit =  {
+            id: parseInt(req.params.id),
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            usuario: req.body.usuario,
+            contrasena: contrasenaNoEditable,
+            email: emailNoEditable,
+            avatar: avatarAguardar,
+            rol: emailNoEditable.rol
         }
+        /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
+        let usersJSsinEditado = usersJS.filter (user => user.id != req.params.id);
+        /// AGREGA AL NUEVO ARRAY EL USUARIO EDITADO
+        usersJSsinEditado.push (userToEdit)
+        /// ORDENA EL ARRAY DE OBJETOS LITERALES MEDIANTE EL PARMETRO "id"
+        let usersOrdenadoJS = usersJSsinEditado.sort( (a, b) => (a.id > b.id) ? 1 : -1)
+
+        /// PASAMOS JS A JSON
+        let usersOrdenadoJSON = JSON.stringify(usersOrdenadoJS, null, 4);
+        fs.writeFileSync (usersFilePath, usersOrdenadoJSON);
+
+        res.redirect ('/users/profile')
+    },
+
+    editPassword: function (req, res) {
+        //lecturaBD();
+        let userSelect = obtenerUsuariosID(req.params.id);
+        res.render("users/editPassword", {usersJS: userSelect});
+    },
+
+    processEditPassword: function (req, res) {
+        let usuarioEditado = obtenerUsuariosID (req.params.id);
 
         // OPTENEMOS EL HASH EN UNA VARIABLE YA QUE DIRECTO NO NOS PERMITIO
         let hash = usuarioEditado.contrasena;
@@ -109,19 +149,23 @@ const usersController = {
         let validacionPassword = bcryptjs.compareSync (req.body.contrasena, hash);
         // VERIFICA QUE LA VIEJA CONTRASEÑA SEA CORRECTA
         if ( validacionPassword != true ) {
-            res.render ('users/editUser', {errors: {email: { msg: 'La antigua contraseña no es valida'}}, oldData: req.body, usersJS: usuarioEditado});
+            res.render ('users/editPassword', {errors: {email: { msg: 'La antigua contraseña no es valida'}}, usersJS: {usuarioEditado}});
         }else{
-
         let emailNoEditable = usuarioEditado.email;
+        let nombreNoEditable = usuarioEditado.nombre;
+        let apellidoNoEditable = usuarioEditado.apellido;
+        let usuarioNoEditable = usuarioEditado.usuario;
+        let avatarNoEditable = usuarioEditado.avatar;
+        let rolNoEditable = usuarioEditado.rol;
         let userToEdit =  {
             id: parseInt(req.params.id),
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            usuario: req.body.usuario,
+            nombre: nombreNoEditable,
+            apellido: apellidoNoEditable,
+            usuario: usuarioNoEditable,
             contrasena: bcryptjs.hashSync (req.body.contrasenaNueva, 10),
             email: emailNoEditable,
-            avatar: avatarAguardar,
-            rol: emailNoEditable.rol
+            avatar: avatarNoEditable,
+            rol: rolNoEditable
         }
         /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
         let usersJSsinEditado = usersJS.filter (user => user.id != req.params.id);
