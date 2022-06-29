@@ -1,0 +1,31 @@
+Usuarios Admin
+
+pueden editar, crear y eliminar productos (computadoras)
+
+pueden editar datos, contraseñas y roles de todos los usuarios 
+
+
+Usuarios Clientes
+
+se les habilita el carrito de compra, no pueden editar, crear o eliminar productos
+
+pueden editar sus datos
+
+no pueden cambiar su rol a "administrador"
+
+
+NOTAS: 
+
+el mail registrado no puede ser cambiardo por nadie, ni por un usuario administrador
+
+el sesion funciona al cerrar el navegador completo, no la pestaña solamente
+
+
+
+ERRORES QUE ENCONTRAMOS Y NO SUPIMOS TODAVIA RESOLVER
+
+EL proceso de editar contraseña funciona, en el unico caso que no funciona es cuando la primera vez se ingresa mal la contraseña vieja y se envia a la vista el error. suponemos que tiene que ver con el cambio de url que se produce cuando se actualiza la vista con el en vio de error vuelve con: /users/editPassword/12?_method=PUT
+
+En userList la tercer columna edita las contraseñas, no nos tomo el icono. lo dejamos asi para que el administrador pueda editar la contraseña de un cliente en caso de que la olvide por ejemplo hasta que se implemente el proceso de recuperarla por si solo
+
+Nos dimos cuentas que estando loguea y siendo cliente por URL puede entrar a editar cualqueir usuario... ahi vamos hacer alguna middlewears mas que controle el rol del usuario logueado 

@@ -1,82 +1,82 @@
 [
     {
         "id": 1,
-        "nombre": "Walter",
-        "apellido": "Olivera",
+        "nombre": "Adrian",
+        "apellido": "Adrian",
         "usuario": "123123",
         "contrasena": "$2a$10$XM0K7GwY2VZnQYBFtkaaV.Sia6OxW0NnuzM3y48T0666jJnp2cTtS",
-        "email": "adrian.olivera.11@gmail.com",
+        "email": "adrian@adrian.com.ar",
         "rol": "Administrador",
-        "avatar": "avatar12.png"
+        "avatar": "avatar01.png"
     },
     {
         "id": 2,
-        "nombre": "Walter Adrián",
-        "apellido": "Olivera",
+        "nombre": "Pablo",
+        "apellido": "Pablo",
         "usuario": "123123",
-        "email": "adrian@sinis.com.ar",
+        "email": "pablo@pablo.com",
         "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
         "rol": "Cliente",
-        "avatar": "avatars_1656469534755.jpg"
+        "avatar": "avatar02.png"
     },
     {
         "id": 3,
-        "nombre": "Walter Adrián",
-        "apellido": "Olivera",
+        "nombre": "julieta",
+        "apellido": "Julieta",
         "usuario": "123123",
         "contrasena": "$2a$10$XM0K7GwY2VZnQYBFtkaaV.Sia6OxW0NnuzM3y48T0666jJnp2cTtS",
-        "email": "olivera.11@gmail.com",
-        "rol": "Administrador",
-        "avatar": "avatars_1656469534755.jpg"
+        "email": "julieta@julieta.com",
+        "rol": "Cliente",
+        "avatar": "avatar03.png"
     },
     {
         "id": 4,
-        "nombre": "Walter Adrián",
-        "apellido": "Olivera",
+        "nombre": "Romina",
+        "apellido": "Romina",
         "usuario": "123123",
+        "email": "romina@romina.com",
         "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
-        "email": "delfina@sinis.com.ar",
-        "rol": "Administrador",
-        "avatar": "avatar15.png"
+        "rol": "Cliente",
+        "avatar": "avatar04.png"
     },
-    {
+	{
         "id": 5,
-        "nombre": "Walter Adrián",
-        "apellido": "Olivera",
+        "nombre": "Adrian",
+        "apellido": "Adrian",
         "usuario": "123123",
         "contrasena": "$2a$10$XM0K7GwY2VZnQYBFtkaaV.Sia6OxW0NnuzM3y48T0666jJnp2cTtS",
         "email": "adrian@adrian.com",
-        "rol": "Administrador",
-        "avatar": "avatars_1656469534755.jpg"
+        "rol": "Cliente",
+        "avatar": "avatar05.png"
     },
     {
         "id": 6,
-        "nombre": "Walter Adrián",
-        "apellido": "Olivera",
+        "nombre": "Pablo",
+        "apellido": "Pablo",
         "usuario": "123123",
-        "email": "adrian@adrian.com.ar",
+        "email": "pablo@pablo.com.ar",
         "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
-        "rol": "Cliente",
-        "avatar": "avatars_1656469534755.jpg"
+        "rol": "Administrador",
+        "avatar": "avatar06.png"
     },
     {
         "id": 7,
-        "nombre": "Walter Adrián",
-        "apellido": "Olivera",
+        "nombre": "julieta",
+        "apellido": "Julieta",
         "usuario": "123123",
         "contrasena": "$2a$10$XM0K7GwY2VZnQYBFtkaaV.Sia6OxW0NnuzM3y48T0666jJnp2cTtS",
-        "email": "olivera.11@gm.com",
+        "email": "julieta@julieta.com.ar",
         "rol": "Administrador",
-        "avatar": "avatars_1656469534755.jpg"
+        "avatar": "avatar07.png"
     },
     {
         "id": 8,
-        "nombre": "Walter Adrián",
-        "apellido": "Olivera",
+        "nombre": "Romina",
+        "apellido": "Romina",
         "usuario": "123123",
-        "email": "sinis@sinis.com.ar",
+        "email": "romina@romina.com.ar",
         "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
-        "rol": "Cliente",
-        "avatar": "avatars_1656469534755.jpg"
+        "rol": "Administrador",
+        "avatar": "avatar08.png"
     }
 ]
