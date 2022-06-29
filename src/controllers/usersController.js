@@ -198,7 +198,7 @@ const usersController = {
 
     profile: (req, res) => {
         lecturaBD ();
-        res.render ('users/profile', {usersJS: req.session.userLogged}); //// mira aca
+        res.render ('users/profile', {usersJS: req.session.userLogged, destinationFolder}); //// mira aca
     },
 
     logout: function(req, res) {
@@ -208,7 +208,7 @@ const usersController = {
 
     usersList:function (req,res) {
         //let reLecturaDB = lecturaBD ();
-        lecturaBD ();
+        let usersJS = lecturaBD ();
         res.render ("users/usersList", {usersJS});
     },
 

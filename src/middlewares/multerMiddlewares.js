@@ -1,9 +1,11 @@
 const path = require('path');
 const multer = require('multer');
 
+
+
 function multerMiddlewares(req, res, next) {
-    console.log (req)
-    if (file){
+    
+    if (file !== undefined){
         // CONFIGURACIÓN DEL MULTER PARA GUARDAR Y ASIGNAR NOMBRE A LA SUBIDA DE ARCHIVOS POR UN FORMULARIO 
         let storage = multer.diskStorage({
 
