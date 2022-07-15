@@ -31,6 +31,8 @@ router.post ("/newProduct", updateFile.single('foto'), productsController.create
 router.get ("/products", productsController.product);
 router.get ("/productDetail/:id", productsController.productDetail);
 router.get ("/productCart", productsController.productCart);
+// prueba de base de datos
+router.get ('/productsdb', productsController.listarPCbbdd);
 
 //UPDATE
 router.get ("/editProduct/:id", productsController.editProduct);

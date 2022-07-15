@@ -52,4 +52,22 @@ ADD CONSTRAINT `fk_usuarios_rol`
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
 
+insert into categorias_pc (marca, logo) values ('Intel', 'logo_intel.jpg');
+insert into categorias_pc (marca, logo) values ('Amd', 'logo_amd.jpg');
+
+INSERT INTO Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
+VALUES (
+  'TYRION LANNISTER',
+  'pcArmada_01.jpg',
+  1,
+  'Intel Core i5 12400F',
+  'MSI PRO Z690-A',
+  'XFX Radeon RX 6600 8GB GDDR6',
+  'Kingston DDR4 16GB 3600MHz',
+  'SSD M.2 WD 2TB Black SN750',
+  'Cooler Master Mastercase H500',
+  'AEROCOOL CYLON 500W RGB CON 80 PLUS BRONZE',
+  206.555
+  );
+
 

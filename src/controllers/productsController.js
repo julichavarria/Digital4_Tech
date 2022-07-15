@@ -1,10 +1,11 @@
 const fs = require ('fs');
 const path = require ('path');
-
+const db = require ("../../database/models/");
 
 const pcArmadasFilePath = path.join (__dirname, '../data/pcArmadas.json');
 const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
 const destinationFolder = '/img/productos_pcArmadas/';
+
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -33,6 +34,15 @@ function selectorDeMarca (marca){
 }
 
 const productController = {
+
+    /// prueba base de datos
+    listarPCbbdd: function(req,res){
+        db.Producto.findAll()
+            .then (function(productos){
+                console.log (productos);
+            //res.render("listadoDePC_BBDD", {productos:productos})
+        })
+    },
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
     product: function(req, res) {

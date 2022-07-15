@@ -1,9 +1,6 @@
-// ESTO VA EN EL CONTROLLER
-
+//ESTO VA EN EL CONTROLLER
 
 // let db = require ("../../database/models/");
-
-
 
 // listarPCbbdd: function(req,res){
 //     db.Producto.findAll()
