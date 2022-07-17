@@ -36,11 +36,11 @@ function selectorDeMarca (marca){
 const productController = {
 
     /// prueba base de datos
-    listarPCbbdd: function(req,res){
+    listarPCsql: function(req,res){
         db.Producto.findAll()
             .then (function(productos){
-                console.log (productos);
-            //res.render("listadoDePC_BBDD", {productos:productos})
+                console.log(productos.length);
+            res.render("products/listadoDePC_sql", {productos:productos})
         })
     },
 

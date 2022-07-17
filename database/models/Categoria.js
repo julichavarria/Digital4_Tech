@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias ="Categoria_pc";
+    let alias ="Categoria";
     let cols={
          id:{
              type:DataTypes.INTEGER,
@@ -17,10 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     };
     
     let config={
-     tableName: "categorias_pc", 
-     timestamp: false
+     tableName: "categorias", 
+     timestamps: false
  };
-     const Categoria_pc =sequelize.define(alias, cols, config)
-     return Categoria_pc;
+     const Categoria =sequelize.define(alias, cols, config)
+     return Categoria;
  };
  

@@ -32,7 +32,7 @@ router.get ("/products", productsController.product);
 router.get ("/productDetail/:id", productsController.productDetail);
 router.get ("/productCart", productsController.productCart);
 // prueba de base de datos
-router.get ('/productsdb', productsController.listarPCbbdd);
+router.get ('/productsdb', productsController.listarPCsql);
 
 //UPDATE
 router.get ("/editProduct/:id", productsController.editProduct);

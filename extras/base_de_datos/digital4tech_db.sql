@@ -1,61 +1,3 @@
-
-CREATE TABLE `digital4tech`.`usuarios` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(100) NOT NULL,
-  `apellido` VARCHAR(100) NOT NULL,
-  `usuario` VARCHAR(100) NOT NULL,
-  `email` VARCHAR(150) NOT NULL,
-  `password` VARCHAR(100) NOT NULL,
-  `rol_id` INT NOT NULL,
-  `avatar` VARCHAR(200) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `usuario_UNIQUE` (`usuario` ASC) VISIBLE,    //borrado
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);      //borrado
-
-CREATE TABLE `digital4tech`.`productos` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `titulo` VARCHAR(200) NOT NULL,
-  `imagen` VARCHAR(200) NOT NULL,
-  `categoria_id` VARCHAR(200) NOT NULL,
-  `procesador` VARCHAR(200) NOT NULL,
-  `mother` VARCHAR(200) NOT NULL,
-  `video` VARCHAR(200) NULL,
-  `ram` VARCHAR(200) NOT NULL,
-  `disco` VARCHAR(200) NOT NULL,
-  `gabinete` VARCHAR(200) NOT NULL,
-  `fuente` VARCHAR(200) NOT NULL,
-  `precio` FLOAT NOT NULL,
-  PRIMARY KEY (`id`));
-
-CREATE TABLE `digital4tech`.`categorias_pc` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `marca` VARCHAR(200) NOT NULL,
-  `logo` VARCHAR(200) NOT NULL,
-  PRIMARY KEY (`id`));
-
-// 
-ALTER TABLE `digital4tech`.`productos` 				//borrado	
-ADD INDEX `fk_productos_categoria_idx` (`categoria_id` ASC) VISIBLE;  //borrado
-;
-ALTER TABLE `digital4tech`.`productos` 
-ADD CONSTRAINT `fk_productos_categoria`
-  FOREIGN KEY (`categoria_id`)
-  REFERENCES `digital4tech`.`categorias_pc` (`id`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION;
-
-CREATE TABLE `digital4tech`.`roles` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre_rol` VARCHAR(200) NOT NULL,
-  PRIMARY KEY (`id`));
-
-
-
-
-  /////////////////// DESDE ACA ///////////
-
-
-
 CREATE SCHEMA `digital4tech` ;
 
 CREATE TABLE `digital4tech`.`categorias` (
@@ -189,9 +131,9 @@ VALUES (
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
 VALUES (
+"LUKE SKYWALKER",
  "pcArmada_06.jpg",
 2,
-"LUKE SKYWALKER",
 "AMD RYZEN 7 PRO 4750G 4.45 GHZ",
 "ASUS PRIME B450M-A II",
 "GEFORCE GTX 1660 TI 6GB GALAX 1 CLICK OC",
@@ -459,17 +401,17 @@ VALUES (
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
 VALUES (
-"HUGO HURLEY REYES",
+"HUGO HURLEY II",
 "pcArmada_24.jpg",
 1,
 "INTEL CORE I9 12900 5.1 GHZ",
 "MSI Z690-A WIFI DDR4",
 "RADEON RX 6600 8GB POWERCOLOR FIGHTER",
 "8GB 2666 MHZ CRUCIAL",
-"SOLIDO SSD 240Gb GIGABYTE",
+"SOLIDO SSD 500Gb GIGABYTE",
 "Mid TOWER AEROCOOL PLAYA",
 "GIGABYTE 750W 80 PLUS GOLD",
-306.916
+312.221
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -564,7 +506,3 @@ VALUES (
   
   
   SELECT * FROM `digital4tech`.productos;
-
-
-
-
