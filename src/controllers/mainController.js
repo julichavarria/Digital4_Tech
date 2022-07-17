@@ -1,18 +1,21 @@
-// const pcArmadas =require ("./pcArmadas");
-const fs = require ('fs');
-const path = require ('path');
+const db = require ("../../database/models/");
 
-const pcArmadasFilePath = path.join (__dirname, '../data/pcArmadas.json');
-const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
 const destinationFolder = '/img/productos_pcArmadas/';
+const destinationFolderMarca = '/img/';
 
 
 const mainController = {
     raiz:function (req,res) {
-        res.render("index", {pcArmadasJS: pcArmadasJS, destinationFolder});
+        db.Producto.findAll({ include: [{association:"categorias"}] })
+        .then (function(productos){
+        res.render("index", {productos, destinationFolder, destinationFolderMarca})
+        })
     },
     index:function (req,res) {
-        res.render("index", {pcArmadasJS: pcArmadasJS, destinationFolder});
+        db.Producto.findAll({ include: [{association:"categorias"}] })
+        .then (function(productos){
+        res.render("index", {productos, destinationFolder, destinationFolderMarca})
+        })
     },
     nosotros:function (req,res) {
         res.render("nosotros");

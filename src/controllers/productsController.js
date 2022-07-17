@@ -1,6 +1,7 @@
 const fs = require ('fs');
 const path = require ('path');
 const db = require ("../../database/models/");
+const Op = db.Sequelize.Op;
 
 const pcArmadasFilePath = path.join (__dirname, '../data/pcArmadas.json');
 const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
@@ -64,32 +65,19 @@ const productController = {
     },
 
     createNewProduct: function(req, res) {
-        let productNew = {
-            id: pcArmadasJS.length + 1,
-            imagen: (req.file ? req.file.filename : 'defoulImage.jpg'),
-            categoria: req.body.categoria,
-            logoMarca: (req.body.categoria == 'AMD' ? '/img/logo_amd.jpg' : '/img/logo_intel.jpg'),
+        db.Producto.create({
             titulo: req.body.nombre,
+            imagen: (req.file ? req.file.filename : 'defoulImage.jpg'),
+            categoria_id: (req.body.categoria == 'Amd' ? 2 : 1),
             procesador: req.body.procesador,
             mother: req.body.mother,
-            placaDeVideo: req.body.video,
-            memoriaRam: req.body.ram,
-            discoRigido: req.body.disco,
+            video: req.body.video,
+            ram: req.body.ram,
+            disco: req.body.disco,
             gabinete: req.body.gabinete,
             fuente: req.body.fuente,
             precio: toThousand(req.body.precio),
-        }
-        
-        // AGREGA AL FINAL DEL ARRAY EL NUEVO PRODUTO
-        pcArmadasJS.push (productNew);
-
-        //ORDENA EL ARRAY POR ID
-        pcArmadasJS.sort( (a, b) => (a.id > b.id) ? 1 : -1)
-
-        //PASA A JSON Y LO ESCRIBES
-        let pcArmadasJSON = JSON.stringify(pcArmadasJS, null, 4);
-        fs.writeFileSync (pcArmadasFilePath, pcArmadasJSON);
-
+        })
         res.redirect ('/products/products');
     },
 
@@ -104,32 +92,27 @@ const productController = {
     },
 
     processEditProduct: function (req, res) {
-        let productSelect = obtenerProducto(req.params.id); //podSelect contiene todo el producto[i]
-        let productEdit = {
-            id: parseInt(req.params.id), //// paseInt CONVIERTE EN NUMERO UN STRING ESTO ES PORQUE DESPUES DE EDITAR UN PRODUCTO DEVOLVIA EL ID EN FORMA DE STRING
-            imagen: (req.file ? req.file.filename : productSelect.imagen),
-            categoria: (req.body.categoria ? req.body.categoria : productSelect.categoria),
-            logoMarca: (req.body.categoria ? selectorDeMarca(req.body.categoria) : productSelect.logoMarca),
-            titulo: req.body.nombre,
-            procesador: req.body.procesador,
-            mother: req.body.mother,
-            placaDeVideo: req.body.video,
-            memoriaRam: req.body.ram,
-            discoRigido: req.body.disco,
-            gabinete: req.body.gabinete,
-            fuente: req.body.fuente,
-            precio: toThousand(req.body.precio),
-        }
-        /// FILTRAMOS TODOS MENOS EL EDITADO A UN ARRAY NUEVO Y AGREGAMOS EL CAPTURADO DEL PARAMS 
-        let pcArmadasJSsinEditado = pcArmadasJS.filter (product => product.id != req.params.id);
-        /// AGREGA AL NUEVO ARRAY EL PRODUCTO EDITADO
-        pcArmadasJSsinEditado.push (productEdit)
-        /// ORDENA EL ARRAY DE OBJETOS LITERALES MEDIANTE EL PARMETRO "id"
-        let pcArmadasOrdenadoJS = pcArmadasJSsinEditado.sort( (a, b) => (a.id > b.id) ? 1 : -1)
+        db.Producto.findByPk( req.params.id, { include: [{association:"categorias"}] })
+        .then (function(productos){
+            let imagen = productos.imagen;
 
-        /// PASAMOS JS A JSON
-        let pcArmadasOrdenadoJSON = JSON.stringify(pcArmadasOrdenadoJS, null, 4);
-        fs.writeFileSync (pcArmadasFilePath, pcArmadasOrdenadoJSON);
+            db.Producto.update ({
+                titulo: req.body.nombre,
+                imagen: (req.file ? req.file.filename : imagen),
+                categoria_id: (req.body.categoria == 'Amd' ? 2 : 1),
+                procesador: req.body.procesador,
+                mother: req.body.mother,
+                video: req.body.video,
+                ram: req.body.ram,
+                disco: req.body.disco,
+                gabinete: req.body.gabinete,
+                fuente: req.body.fuente,
+                precio: toThousand(req.body.precio),
+            },
+            {
+                where: {id: req.params.id}
+            });
+        });
 
         /// REDIRECCIONAMOS VISTA
         res.redirect ('/products/products')
@@ -140,15 +123,7 @@ const productController = {
     ///////////////// ELIMINAR PRODUCTOS
 
     deleteProduct: function (req,res) {
-        let idParams = req.params.id;
-        
-        /// FILTRAMOS TODOS MENOS EL PASADO POR ":id" A UN ARRAY NUEVO  
-        let pcArmadasJSsinElEliminado = pcArmadasJS.filter (product => product.id != idParams);
-        
-        /// PASAMOS JS A JSON
-        pcArmadasJSONsinELEliminado = JSON.stringify(pcArmadasJSsinElEliminado);
-        fs.writeFileSync (pcArmadasFilePath, pcArmadasJSONsinELEliminado);
-
+        db.Producto.destroy ({ where: {id: req.params.id} });
         /// REDIRECCIONAMOS VISTA
         res.redirect ('/products/products')
     },
@@ -156,6 +131,31 @@ const productController = {
     ////////////////// CONFIRMACION ELIMINAR PRODUCTO
     confirmDelete:function (req,res) {
         res.render("products/confirmDelete");
+    },
+
+    searchProduct: function (req, res) {
+        console.log (req.body.busqueda);
+        db.Producto.findAll({ 
+            
+            include: [{association:"categorias"}], 
+            
+            where: {
+                [Op.or]: [
+                {titulo: {[Op.like]: '%'+ req.body.busqueda +'%'}},    
+                {procesador: {[Op.like]: '%'+ req.body.busqueda +'%'}},
+                {mother: {[Op.like]: '%'+ req.body.busqueda +'%'}},
+                {video: {[Op.like]: '%'+ req.body.busqueda +'%'}},
+                {ram: {[Op.like]: '%'+ req.body.busqueda +'%'}},
+                {disco: {[Op.like]: '%'+ req.body.busqueda +'%'}},
+                {gabinete: {[Op.like]: '%'+ req.body.busqueda +'%'}},
+                {fuente: {[Op.like]: '%'+ req.body.busqueda +'%'}}
+                ]
+            }
+
+    }).then (function(productos){
+        console.log (productos);
+        res.render("products/products", {productos, destinationFolder, destinationFolderMarca})
+    })
     }
 
     

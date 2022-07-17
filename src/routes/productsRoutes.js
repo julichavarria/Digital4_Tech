@@ -21,6 +21,7 @@ let updateFile = multer ({storage});
 
 // REQUERIMOS EL CONTROLADOR PARA DESPUES ACCEDER A SUS METODOS
 const productsController = require ("../controllers/productsController");
+const { route } = require("express/lib/application");
 
 
 //CREATE
@@ -40,5 +41,9 @@ router.put ("/editProduct/:id", updateFile.single('foto'), productsController.pr
 //DELETE
 router.delete ("/editProduct/:id/deleteProduct/", productsController.deleteProduct);
 router.get ("/confirmDelete/", productsController.confirmDelete);
+
+//SEARCH
+router.post ("/search", productsController.searchProduct);
+
 
 module.exports = router;

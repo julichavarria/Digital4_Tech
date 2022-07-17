@@ -27,29 +27,29 @@
                         <% for (let i=0; i < 4; i++){ %>
                             <div class="contenedorArticulos">
                                 <% let random=(0 + Math.floor(Math.random()*30)) %>
-                                    <div class="fotoProducto"><img src=<%= destinationFolder + pcArmadasJS[random].imagen %>
+                                    <div class="fotoProducto"><img src=<%= destinationFolder + productos[random].imagen %>
                                         alt="Pc Armada 02">
                                     </div>
                                     <div class="contenedorPrecioBtn">
                                         <div class="iconosMarcas">
-                                            <img src=<%=pcArmadasJS[random].logoMarca %> alt="AMD">
+                                            <img src=<%= destinationFolderMarca + productos[random].categorias.logo %> alt="Logo Marca">
                                         </div>
                                         <div class="precioPcArmada">Efectivo: <span><br> $ <%=
-                                                    pcArmadasJS[random].precio %> </span>
+                                                    productos[random].precio %> </span>
                                         </div>
-                                        <a href="/products/productDetail/<%=pcArmadasJS[random].id%>">
+                                        <a href="/products/productDetail/<%=productos[random].id%>">
                                             <button class="btnPrincipal"> INFO
                                                 <span class="txtMagenta">//</span>
                                             </button>
                                         </a>
                                     </div>
                                     <div class="nombrePC">
-                                        <%= pcArmadasJS[random].titulo %>
+                                        <%= productos[random].titulo %>
                                     </div>
                                     <div class="caracteristicas">
-                                        <%= pcArmadasJS[random].procesador %>, <%= pcArmadasJS[random].memoriaRam %>,
-                                                <%= pcArmadasJS[random].placaDeVideo %>,
-                                                    <%= pcArmadasJS[random].discoRigido %>
+                                        <%= productos[random].procesador %>, <%= productos[random].ram %>,
+                                                <%= productos[random].video %>,
+                                                    <%= productos[random].disco %>
                                     </div>
 
                             </div>
