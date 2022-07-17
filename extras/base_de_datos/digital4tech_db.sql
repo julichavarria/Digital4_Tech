@@ -12,7 +12,7 @@ CREATE TABLE `digital4tech`.`usuarios` (
   `apellido` VARCHAR(100) NOT NULL,
   `usuario` VARCHAR(100) NOT NULL,
   `email` VARCHAR(150) NOT NULL,
-  `password` VARCHAR(100) NOT NULL,
+  `clave` VARCHAR(100) NOT NULL,
   `rol_id` INT NOT NULL,
   `avatar` VARCHAR(200) NOT NULL,
   PRIMARY KEY (`id`));
@@ -53,6 +53,9 @@ ADD CONSTRAINT `fk_usuarios_rol`
 
 insert into `digital4tech`.categorias (marca, logo) values ('Intel', 'logo_intel.jpg');
 insert into `digital4tech`.categorias (marca, logo) values ('Amd', 'logo_amd.jpg');
+
+insert into `digital4tech`.roles (nombre_rol) values ('Administrador');
+insert into `digital4tech`.roles (nombre_rol) values ('Cliente');
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
 VALUES (
@@ -504,5 +507,26 @@ VALUES (
 455.647
   );
   
+INSERT INTO `digital4tech`.usuarios (nombre, apellido, usuario, email, clave, rol_id, avatar)
+VALUES (
+"Administrador",
+"AdminApellido",
+"Admin",
+"admin@d4t.com",
+"123456",
+1,
+"avatar01.png"
+  );
+
+INSERT INTO `digital4tech`.usuarios (nombre, apellido, usuario, email, clave, rol_id, avatar)
+VALUES (
+"Cliente",
+"ClienteApellido",
+"Client",
+"client@d4t.com",
+"123456",
+2,
+"avatar02.png"
+  );
   
-  SELECT * FROM `digital4tech`.productos;
+SELECT * FROM `digital4tech`.productos;
