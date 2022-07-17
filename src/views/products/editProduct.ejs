@@ -17,56 +17,56 @@
 
 
             <div class="controlGeneral">
-                <form action="/products/editProduct/<%= pcArmadasJS.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/products/editProduct/<%= productos.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="campoFormulario">
                         <label> Nombre de la PC </label>
                         <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
-                            class="controlFormulario" value="<%= pcArmadasJS.titulo %>">
+                            class="controlFormulario" value="<%= productos.titulo %>">
                     </div>
                     <div class="campoFormulario">
                         <label> Procesador </label>
                         <input required="required" type="text" id="procesador" name="procesador"
-                            placeholder="PROCESADOR" class="controlFormulario" value="<%= pcArmadasJS.procesador %>">
+                            placeholder="PROCESADOR" class="controlFormulario" value="<%= productos.procesador %>">
                     </div>
                     <div class="campoFormulario">
                         <label> Motherboard </label>
                         <input required="required" type="text" id="mother" name="mother" placeholder="MOTHER"
-                            class="controlFormulario" value="<%= pcArmadasJS.mother %>">
+                            class="controlFormulario" value="<%= productos.mother %>">
                     </div>
                     <div class="campoFormulario">
                         <label> Placa de video </label>
                         <input required="required" type="text" id="video" name="video" placeholder="PLACA DE VIDEO"
-                            class="controlFormulario" value="<%= pcArmadasJS.placaDeVideo %>">
+                            class="controlFormulario" value="<%= productos.video %>">
                     </div>
                     <div class="campoFormulario">
                         <label> Memoria Ram </label>
                         <input required="required" type="text" id="ram" name="ram" placeholder="MEMORIA RAM"
-                            class="controlFormulario" value="<%= pcArmadasJS.memoriaRam %>">
+                            class="controlFormulario" value="<%= productos.ram %>">
                     </div>
                     <div class="campoFormulario">
                         <label> Disco Rígido </label>
                         <input required="required" type="text" id="disco" name="disco" placeholder="DISCO RIGIDO"
-                            class="controlFormulario" value="<%= pcArmadasJS.discoRigido %>">
+                            class="controlFormulario" value="<%= productos.disco %>">
                     </div>
                     <div class="campoFormulario">
                         <label> Gabinete </label>
                         <input required="required" type="text" id="gabinete" name="gabinete" placeholder="GABINETE"
-                            class="controlFormulario" value="<%= pcArmadasJS.gabinete %>">
+                            class="controlFormulario" value="<%= productos.gabinete %>">
                     </div>
                     <div class="campoFormulario">
                         <label> Fuente </label>
                         <input required="required" type="text" id="fuente" name="fuente" placeholder="FUENTE"
-                            class="controlFormulario" value="<%= pcArmadasJS.fuente %>">
+                            class="controlFormulario" value="<%= productos.fuente %>">
                     </div>
                     <div class="campoFormulario">
                         <label> Precio </label>
                         <input required="required" type="text" id="precio" name="precio" placeholder="PRECIO"
-                            class="controlFormulario" value="<%= pcArmadasJS.precio %>">
+                            class="controlFormulario" value="<%= productos.precio %>">
                     </div>
 
                     <div class="contenedorImgEdit">
                         <div>
-                            <img src=<%= destinationFolder + pcArmadasJS.imagen %> alt="imagen de equipo">
+                            <img src=<%= destinationFolder + productos.imagen %> alt="imagen de equipo">
                         </div>
                         <div>
                             <p><i class="fas fa-angle-left"></i>Imagen Actual</p>
@@ -80,11 +80,11 @@
                     <div class="campoFormulario">
                         <label>Seleccioná la categoría de procesador</label>
                         <div class="contenedorRadioButtonsLogos">
-                            <label><input type="radio" required="required" id="categoria" name="categoria" value="INTEL"
-                                    <% if (pcArmadasJS.categoria=="INTEL" ){%> checked <%}%>> <img
+                            <label><input type="radio" required="required" id="categoria" name="categoria" value="Intel"
+                                    <% if (productos.categorias.marca =="Intel" ){%> checked <%}%>> <img
                                         src="/img/logo_intel.svg"></input></label>
-                            <label><input type="radio" required="required" id="categoria" name="categoria" value="AMD"
-                                    <% if (pcArmadasJS.categoria=="AMD" ){%> checked <%}%>> <img
+                            <label><input type="radio" required="required" id="categoria" name="categoria" value="Amd"
+                                    <% if (productos.categorias.marca=="Amd" ){%> checked <%}%>> <img
                                         src="/img/logo_amd.svg"></input></label>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                         <button class="btnPrincipal" type="submit"> GUARDAR CAMBIOS </button>
                     </div>
                 </form>
-                <form action="/products/editProduct/<%= pcArmadasJS.id %>/deleteProduct?_method=DELETE" method="POST">
+                <form action="/products/editProduct/<%= productos.id %>/deleteProduct?_method=DELETE" method="POST">
                     <div class="botones">
                         <button class="btnSecundario" type="submit"><span>BORRAR PRODUCTO</span> </button>
                     </div>

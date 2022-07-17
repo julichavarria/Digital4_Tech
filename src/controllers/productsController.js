@@ -5,6 +5,7 @@ const db = require ("../../database/models/");
 const pcArmadasFilePath = path.join (__dirname, '../data/pcArmadas.json');
 const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
 const destinationFolder = '/img/productos_pcArmadas/';
+const destinationFolderMarca = '/img/'
 
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -35,25 +36,21 @@ function selectorDeMarca (marca){
 
 const productController = {
 
-    /// prueba base de datos
-    listarPCsql: function(req,res){
-        db.Producto.findAll()
-            .then (function(productos){
-                console.log(productos.length);
-            res.render("products/listadoDePC_sql", {productos:productos})
-        })
-    },
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
     product: function(req, res) {
-        let pcArmadasJS = lecturaBD ();
-        res.render("products/products", {pcArmadasJS, destinationFolder});
-    },
 
+        db.Producto.findAll({ include: [{association:"categorias"}] })
+        .then (function(productos){
+        res.render("products/products", {productos, destinationFolder, destinationFolderMarca})
+        })
+    },
     ////////////////// DETALLE DE PC SELECCIONADA
     productDetail:function (req,res) {
-        let prodSelect = obtenerProducto(req.params.id);
-        res.render("products/productDetail", {pcArmadasJS: prodSelect, destinationFolder});
+        db.Producto.findByPk( req.params.id, { include: [{association:"categorias"}] })
+        .then (function(productos){
+        res.render("products/productDetail", {productos, destinationFolder, destinationFolderMarca})
+        })
     },
 
     ////////////////// SECCION CARRITO
@@ -100,8 +97,10 @@ const productController = {
 
     ////////////////// EDITAR PC ARMADA
     editProduct:function (req,res) {
-        let prodSelect = obtenerProducto(req.params.id);
-        res.render("products/editProduct", {pcArmadasJS: prodSelect, destinationFolder});
+        db.Producto.findByPk( req.params.id, { include: [{association:"categorias"}] })
+        .then (function(productos){
+        res.render("products/editProduct", {productos, destinationFolder, destinationFolderMarca})
+        })
     },
 
     processEditProduct: function (req, res) {

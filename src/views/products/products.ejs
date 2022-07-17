@@ -27,31 +27,31 @@
                     <article>
                             <div class="datosdinamicos">
                             <!--  INICIO DE DATOS DINAMICOS //////////////////    -->
-                            <% for (let i=0; i < pcArmadasJS.length; i++){ %>
+                            <% for (let i=0; i < productos.length; i++){ %>
                             <div class="contenedorArticulos">
-                                <div class="fotoProducto"><img src= <%= destinationFolder + pcArmadasJS[i].imagen %>
+                                <div class="fotoProducto"><img src= <%= destinationFolder + productos[i].imagen %>
                                     alt="Imagen de Equipo">
                                 </div>
                                 <div class="contenedorPrecioBtn">
                                     <div class="iconosMarcas">
-                                        <img src= <%= pcArmadasJS[i].logoMarca %> alt="Logo Marca">
+                                        <img src=  <%= destinationFolderMarca + productos[i].categorias.logo %> alt="Logo Marca">
                                     </div>
-                                    <div class="precioPcArmada">Efectivo:<span> <br>$ <%= pcArmadasJS[i].precio %> </span>
+                                    <div class="precioPcArmada">Efectivo:<span> <br>$ <%= productos[i].precio %> </span>
                                     </div>
-                                    <a href="/products/productDetail/<%= pcArmadasJS[i].id%>">
+                                    <a href="/products/productDetail/<%= productos[i].id%>">
                                         <button class="btnPrincipal"> INFO 
                                             <span class="txtMagenta">//</span>
                                         </button>
                                     </a>
                                     </div>
-                                    <div class="nombrePC"><%= pcArmadasJS[i].titulo %>
+                                    <div class="nombrePC"><%= productos[i].titulo %>
                                     </div>
-                                    <div class="caracteristicas"> <%= pcArmadasJS[i].procesador %>, <%= pcArmadasJS[i].memoriaRam %>, <%= pcArmadasJS[i].placaDeVideo %>,
-                                        <%= pcArmadasJS[i].discoRigido %>
+                                    <div class="caracteristicas"> <%= productos[i].procesador %>, <%= productos[i].ram %>, <%= productos[i].video %>,
+                                        <%= productos[i].disco %>
                                         
                                         <% if ( locals.isLogged == 'loggedAdmin') { %>    
                                         <div class="admin">
-                                        <a href="/products/editProduct/<%= pcArmadasJS[i].id%>">
+                                        <a href="/products/editProduct/<%= productos[i].id%>">
                                             <div class="btnSecundario"><i class="fa-solid fa-pen"></i>
                                                 <span>Editar </span> 
                                             </div>
