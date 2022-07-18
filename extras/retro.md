@@ -66,3 +66,7 @@ Sprint 5 ---->
 5. Dejar de hacer----->  no encontramos nada para dejar de hacer, si para mejorar y coninuar hciendo. Cada semana que pasa estamos mas oranizados a la hora de trabajar y plantear las tareas.
 
 Se viene Sprint 6 ---->
+
+Para este sprint encaramos de forma diferente la organizacion de las tardeas. Decidimos hacer los diferentes puntos de mandera grupal, no nos fue de mucha utilidad el trello  en esta ocacion ya que al no dividirnos  las tardeas y fuimos siguiendo las consignas desde el sprint de play ground. Estuvimos realizando todo de forma grupal, un integrante del equipo compartía pantalla y entre los 4 ibamos haciendo, para poder afianzar y comprender todo. Esta forma de trabajar, nos resultó mucho mas efectiva ya que todos pudimos pensar las formas de resolverlo y lo ibamos charlando a la medida que avanzaba el trabajo.
+
+Se viene el Sprint 7 ---->
