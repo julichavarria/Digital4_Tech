@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include ('partials/head') %>
+<!-- /////// CARGA CSS  PARTICULAR/////// -->
+<!-- <link rel="stylesheet" href="/css/stylesIndex.css"> -->
+<link rel="stylesheet" href="/css/stylesAllProducts.css">
+</head>
+
+    <body>
+        <%- include ('partials/header') %>
+            <main class="mainIndex">
+                
+                <h2> <span class="txtMagenta">\\</span> COMPUTADORAS ARMADAS <span class="txtMagenta">//</span></h2>
+                
+                <% if ( locals.isLogged == 'loggedAdmin' ) { %>
+                <div class="admin">
+                <a href="newProduct"><button class="btnPrincipal"><span
+                    class="txtMagenta"><i class="fa-solid fa-circle-plus"></i></span>Agregar nueva PC Armada </button></a>
+                </div>
+                <% } %>
+
+                <section class="carruselPcArmadas">
+                    <!-- <i class="fas fa-angle-left"></i> -->
+
+                    <!-- /////////////// PC ARMADA INICIO /////////////// -->
+                    <article>
+                            <div class="datosdinamicos">
+                            <!--  INICIO DE DATOS DINAMICOS //////////////////    -->
+                            <% for (let i=0; i < productos.length; i++){ %>
+                            <div class="contenedorArticulos">
+                                <div class="fotoProducto"><img src= <%= destinationFolder + productos[i].imagen %>
+                                    alt="Imagen de Equipo">
+                                </div>
+                                <div class="contenedorPrecioBtn">
+                                    <div class="iconosMarcas">
+                                        <img src=  <%= destinationFolderMarca + productos[i].categorias.logo %> alt="Logo Marca">
+                                    </div>
+                                    <div class="precioPcArmada">Efectivo:<span> <br>$ <%= productos[i].precio %> </span>
+                                    </div>
+                                    <a href="/products/productDetail/<%= productos[i].id%>">
+                                        <button class="btnPrincipal"> INFO 
+                                            <span class="txtMagenta">//</span>
+                                        </button>
+                                    </a>
+                                    </div>
+                                    <div class="nombrePC"><%= productos[i].titulo %>
+                                    </div>
+                                    <div class="caracteristicas"> <%= productos[i].procesador %>, <%= productos[i].ram %>, <%= productos[i].video %>,
+                                        <%= productos[i].disco %>
+                                        
+                                        <% if ( locals.isLogged == 'loggedAdmin') { %>    
+                                        <div class="admin">
+                                        <a href="/products/editProduct/<%= productos[i].id%>">
+                                            <div class="btnSecundario"><i class="fa-solid fa-pen"></i>
+                                                <span>Editar </span> 
+                                            </div>
+                                        </a>
+                                        </div>
+                                        <% } %>
+                                    </div>
+
+                                </div>
+                            <% } %>
+                            </div>
+                
+                        
+                    </article>
+
+                    <!-- <i class="fas fa-angle-right"></i> -->
+                </section>
+                
+            </main>
+            <%- include ('partials/footer') %>
+    </body>
+
+</html>

@@ -102,30 +102,6 @@ const productController = {
     ////////////////// CONFIRMACION ELIMINAR PRODUCTO
     confirmDelete:function (req,res) {
         res.render("products/confirmDelete");
-    },
-
-    searchProduct: function (req, res) {
-        console.log (req.body.busqueda);
-        db.Producto.findAll({ 
-            
-            include: [{association:"categorias"}], 
-            
-            where: {
-                [Op.or]: [
-                {titulo: {[Op.like]: '%'+ req.body.busqueda +'%'}},    
-                {procesador: {[Op.like]: '%'+ req.body.busqueda +'%'}},
-                {mother: {[Op.like]: '%'+ req.body.busqueda +'%'}},
-                {video: {[Op.like]: '%'+ req.body.busqueda +'%'}},
-                {ram: {[Op.like]: '%'+ req.body.busqueda +'%'}},
-                {disco: {[Op.like]: '%'+ req.body.busqueda +'%'}},
-                {gabinete: {[Op.like]: '%'+ req.body.busqueda +'%'}},
-                {fuente: {[Op.like]: '%'+ req.body.busqueda +'%'}}
-                ]
-            }
-
-    }).then (function(productos){
-        res.render("products/products", {productos, destinationFolder, destinationFolderMarca})
-    })
     }
     
 }

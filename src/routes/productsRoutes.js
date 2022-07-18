@@ -42,8 +42,4 @@ router.put ("/editProduct/:id", updateFile.single('foto'), productsController.pr
 router.delete ("/editProduct/:id/deleteProduct/", productsController.deleteProduct);
 router.get ("/confirmDelete/", productsController.confirmDelete);
 
-//SEARCH
-router.post ("/search", productsController.searchProduct);
-
-
 module.exports = router;
