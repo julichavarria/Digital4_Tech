@@ -17,28 +17,28 @@
 
             <div class="contenedorPerfil">
                 <div class="contenedorImg">
-                    <img src="/img/avatars/<%= usersJS.avatar %>">
+                    <img src="<%= destinationFolder + usuario.avatar %>">
                 </div>
 
 
                 <div class="contenedorDatos">
                     <h1>
-                        <%= usersJS.usuario %>
+                        <%= usuario.usuario %>
                     </h1>
                     <p> ID: <span>
-                        <%= usersJS.id %>
+                        <%= usuario.id %>
                     </span></p>
                     <p> Nombre: <span>
-                            <%= usersJS.nombre %>
+                            <%= usuario.nombre %>
                         </span></p>
                     <p> Apellido: <span>
-                            <%= usersJS.apellido %>
+                            <%= usuario.apellido %>
                         </span></p>
                     <p> Email: <span>
-                            <%= usersJS.email %>
+                            <%= usuario.email %>
                         </span></p>
                     <p> Rol: <span>
-                            <%= usersJS.rol %>
+                            <%= usuario.rol.nombre_rol %>
                     </span></p>
 
                         
@@ -54,7 +54,7 @@
                         <button class="btnSecundario" type="submit"><span> CANCELAR </span> </button>
                     </div>
                 </a>
-                <form action="/users/deleteUser/<%= usersJS.id%>?_method=DELETE" method="POST">
+                <form action="/users/deleteUser/<%= usuario.id%>?_method=DELETE" method="POST">
                     <div class="botones">
                         <button class="btnPrincipal" type="submit"> <i class="fa-solid fa-trash-can"></i> BORRAR USUARIO </button>
                     </div>

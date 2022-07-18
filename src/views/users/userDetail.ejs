@@ -13,27 +13,27 @@
 
             <div class="contenedorPerfil">
                 <div class="contenedorImg">
-                    <img src="/img/avatars/<%= usersJS.avatar %>">
+                    <img src="<%= destinationFolder + usuario.avatar %>">
                 </div>
 
                 <div class="contenedorDatos">
                     <h1>
-                        <%= usersJS.usuario %>
+                        <%= usuario.usuario %>
                     </h1>
                     <p> ID: <span>
-                        <%= usersJS.id %>
+                        <%= usuario.id %>
                     </span></p>
                     <p> Nombre: <span>
-                            <%= usersJS.nombre %>
+                            <%= usuario.nombre %>
                         </span></p>
                     <p> Apellido: <span>
-                            <%= usersJS.apellido %>
+                            <%= usuario.apellido %>
                         </span></p>
                     <p> Email: <span>
-                            <%= usersJS.email %>
+                            <%= usuario.email %>
                         </span></p>
                     <p> Rol: <span>
-                            <%= usersJS.rol %>
+                            <%= usuario.rol.nombre_rol %>
                     </span></p>
 
                         

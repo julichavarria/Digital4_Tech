@@ -13,19 +13,19 @@
 
             <section>
                 <!--  INICIO DE DATOS DINAMICOS //////////////////    -->
-                <% for (let i=0; i < usersJS.length; i++){ %>
+                <% for (let i=0; i < usuarios.length; i++){ %>
                 <article class="contenedorUsuario">
                     
                 <div class="contenedorDataUsuario" > 
-                    <img src="/img/avatars/<%= usersJS[i].avatar %>" alt="">
-                    <div class="dataUsuario"><%= usersJS[i].nombre %> <%= usersJS[i].apellido %> <span class="userRol">(<%= usersJS[i].rol %>)</span> </div>
+                    <img src="<%= destinationFolder + usuarios[i].avatar %>" alt="">
+                    <div class="dataUsuario"><%= usuarios[i].nombre %> <%= usuarios[i].apellido %> <span class="userRol">(<%= usuarios[i].rol.nombre_rol %>)</span> </div>
                 </div>
                     <div class="contenedorAccionesUsuarios">
-                        <a href= "/users/userDetail/<%= usersJS[i].id %>" ><i class="far fa-eye"></i></a>
-                        <a href= "/users/editUser/<%= usersJS[i].id %>" ><i class="far fa-edit"></i></a>
-                        <a href= "/users/editPassword/<%= usersJS[i].id %>" ><i class="far fa-lock"></i></a>
-                        <a href= "/users/confirmDelete/<%= usersJS[i].id %>" ><i class="fa-regular fa-trash-can"></i></a>
-                        <!-- <form action="/users/editUser/<%= usersJS[i].id %>/deleteUser?_method=DELETE" method="POST" >
+                        <a href= "/users/userDetail/<%= usuarios[i].id %>" ><i class="far fa-eye"></i></a>
+                        <a href= "/users/editUser/<%= usuarios[i].id %>" ><i class="far fa-edit"></i></a>
+                        <a href= "/users/editPassword/<%= usuarios[i].id %>" ><i class="far fa-lock"></i></a>
+                        <a href= "/users/confirmDelete/<%= usuarios[i].id %>" ><i class="fa-regular fa-trash-can"></i></a>
+                        <!-- <form action="/users/editUser/<%= usuarios[i].id %>/deleteUser?_method=DELETE" method="POST" >
                             <button type="submit"><i class="fa-regular fa-trash-can"></i></button>
                         </form> -->
                     </div>

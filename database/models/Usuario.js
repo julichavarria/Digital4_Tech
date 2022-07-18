@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
             type:DataTypes.STRING,
             allowNull: false    
         },
-        password:{
+        clave:{
             type:DataTypes.STRING,
             allowNull: false    
         },
@@ -40,6 +40,17 @@ module.exports = (sequelize, DataTypes) => {
     tableName: "usuarios", 
     timestamps: false
 };
-    const Usuario =sequelize.define(alias, cols, config)
+    const Usuario =sequelize.define(alias, cols, config);
+    
+    //CREAR LA RELACION CON LA TABLA ROLES
+    Usuario.associate = function(modelos){
+        Usuario.belongsTo(modelos.Rol,
+        {
+        as:"rol",
+        foreignKey: "rol_id"
+        }
+        );
+    };
+    
     return Usuario;
 };

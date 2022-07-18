@@ -4,7 +4,7 @@
         "nombre": "Adrian",
         "apellido": "Adrian",
         "usuario": "123123",
-        "contrasena": "$2a$10$XM0K7GwY2VZnQYBFtkaaV.Sia6OxW0NnuzM3y48T0666jJnp2cTtS",
+        "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
         "email": "adrian@adrian.com.ar",
         "rol": "Administrador",
         "avatar": "avatar01.png"
@@ -15,7 +15,7 @@
         "apellido": "Pablo",
         "usuario": "123123",
         "email": "pablo@pablo.com",
-        "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
+        "contrasena": "$2a$10$XM0K7GwY2VZnQYBFtkaaV.Sia6OxW0NnuzM3y48T0666jJnp2cTtS",
         "rol": "Cliente",
         "avatar": "avatar02.png"
     },
@@ -34,12 +34,12 @@
         "nombre": "Romina",
         "apellido": "Romina",
         "usuario": "123123",
+        "contrasena": "$2a$10$psR/0jjZHhq39x7.UEG9K.f5NhVsMTXoGPgrEmzPiVCREJCGSgtTe",
         "email": "romina@romina.com",
-        "contrasena": "$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
-        "rol": "Cliente",
-        "avatar": "avatar04.png"
+        "avatar": "avatar04.png",
+        "rol": "Cliente"
     },
-	{
+    {
         "id": 5,
         "nombre": "Adrian",
         "apellido": "Adrian",

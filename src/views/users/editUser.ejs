@@ -12,18 +12,18 @@
         <main class="mainRegister">
 
             <h1> EDITAR USUARIO  </h1>
-            <h3><%= usersJS.email %></h3>
+            <h3><%= usuario.email %></h3>
 
 
             <div class="controlGeneral">
-                <form method="post" action="/users/editUser/<%= usersJS.id %>?_method=PUT" enctype="multipart/form-data"> 
+                <form method="post" action="/users/editUser/<%= usuario.id %>?_method=PUT" enctype="multipart/form-data"> 
 
                     <% if ( locals.isLogged == 'loggedAdmin' ) { %>
                     
                         <div class="contenedorRol">
                             <label>ROL del Usuario</label>
                                 <select name="rol" id="rol">
-                                    <% if (usersJS.rol == 'Administrador') { %>
+                                    <% if (usuario.rol == 'Administrador') { %>
                                         <option value="Administrador">ADMINISTRADOR</option>
                                         <option value="Cliente">CLIENTE</option>
                                     <% } else { %>
@@ -39,19 +39,19 @@
                     <div class="campoFormulario">
                         <label> Nombre </label>
                         <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
-                            maxlength="25" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : usersJS.nombre )%>">      
+                            maxlength="25" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : usuario.nombre )%>">      
                     </div>
 
                     <div class="campoFormulario">
                         <label> Apellido </label>
                         <input required="required" type="text" id="apellido" name="apellido" placeholder="APELLIDO"
-                            maxlength="20" class="controlFormulario" value="<%=(locals.oldData ? oldData.apellido : usersJS.apellido )%>">
+                            maxlength="20" class="controlFormulario" value="<%=(locals.oldData ? oldData.apellido : usuario.apellido )%>">
                     </div>
 
                     <div class="campoFormulario">
                         <label> Usuario </label>
                         <input required="required" type="text" id="usuario" name="usuario" placeholder="USUARIO"
-                            class="controlFormulario" value="<%=(locals.oldData ? oldData.usuario : usersJS.usuario )%>">
+                            class="controlFormulario" value="<%=(locals.oldData ? oldData.usuario : usuario.usuario )%>">
                     </div>
 
                     <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
@@ -60,77 +60,77 @@
                         <label>Seleccioná un avatar o subí una imagen desde tu PC con el botón +</label>
                         <div class="contenedorRadioButtonsAvatar">
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar01.png"
-                                <% if (usersJS.avatar=="avatar01.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar01.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar01.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar02.png"
-                                <% if (usersJS.avatar=="avatar02.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar02.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar02.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar03.png"
-                                <% if (usersJS.avatar=="avatar03.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar03.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar03.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar04.png"
-                                <% if (usersJS.avatar=="avatar04.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar04.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar04.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar05.png"
-                                <% if (usersJS.avatar=="avatar05.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar05.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar05.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar06.png"
-                                <% if (usersJS.avatar=="avatar06.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar06.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar06.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar07.png"
-                                <% if (usersJS.avatar=="avatar07.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar07.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar07.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar08.png"
-                                <% if (usersJS.avatar=="avatar08.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar08.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar08.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar09.png"
-                                <% if (usersJS.avatar=="avatar09.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar09.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar09.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar10.png"
-                                <% if (usersJS.avatar=="avatar10.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar10.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar10.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar11.png"
-                                <% if (usersJS.avatar=="avatar11.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar11.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar11.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar12.png"
-                                <% if (usersJS.avatar=="avatar12.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar12.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar12.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar13.png"
-                                <% if (usersJS.avatar=="avatar13.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar13.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar13.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar14.png"
-                                <% if (usersJS.avatar=="avatar14.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar14.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar14.png">
                             </input></label>
 
                             <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15.png"
-                                <% if (usersJS.avatar=="avatar15.png" ){%> checked <%}%>>
+                                <% if (usuario.avatar=="avatar15.png" ){%> checked <%}%>>
                                 <img src="/img/avatars/avatar15.png">
                             </input></label>
 

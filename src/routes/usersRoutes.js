@@ -52,11 +52,11 @@ router.get ("/register", clientMiddlewares, usersController.register);
 router.post ("/register", updateFile.single('avatarPropio'), validation, usersController.createNewRegister);
 
 // MOSTRAR DETALLES DE UN USUARIO
-router.get ('/userDetail/:id', usersController.userDetail); // NO SE ESTA USANDO CONTROLAR Y BORRAR
 router.get ('/profile', authMiddlewares, usersController.profile);
+router.get ('/userDetail/:id', usersController.userDetail);
 
 // EDITAR USUARIO
-router.get ("/editUser/:id", usersController.editUser);
+router.get ("/editUser/:id", authMiddlewares, usersController.editUser);
 router.put ("/editUser/:id", updateFile.single('avatarPropio'), validation, usersController.processEditUser);
 
 // EDITAR CONTRASEÑA

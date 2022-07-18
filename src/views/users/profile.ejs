@@ -14,30 +14,30 @@
 
             <div class="contenedorPerfil">
                 <div class="contenedorImg">
-                    <img src=<%= destinationFolder + usersJS.avatar %> >
+                    <img src=<%= destinationFolder + usuario.avatar %> >
                 </div>
 
 
                 <div class="contenedorDatos">
                     <h1>
-                        <%= usersJS.usuario %>
+                        <%= usuario.usuario %>
                     </h1>
                     <p> Nombre: <span>
-                            <%= usersJS.nombre %>
+                            <%= usuario.nombre %>
                         </span></p>
                     <p> Apellido: <span>
-                            <%= usersJS.apellido %>
+                            <%= usuario.apellido %>
                         </span></p>
                     <p> Email: <span>
-                            <%= usersJS.email %>
+                            <%= usuario.email %>
                         </span></p>
 
-                        <a href="/users/editUser/<%= usersJS.id %>">
+                        <a href="/users/editUser/<%= usuario.id %>">
                             <div class="botones">
                                 <button class="btnSecundario" type="submit"><span> <i class="far fa-edit"></i> EDITAR INFO </span> </button>
                             </div>
                         </a>
-                        <a href="/users/editPassword/<%= usersJS.id %>">
+                        <a href="/users/editPassword/<%= usuario.id %>">
                             <div class="botones">
                                 <button class="btnSecundario" type="submit"><span> <i class="far fa-edit"></i> EDITAR PASSWORD </span> </button>
                             </div>

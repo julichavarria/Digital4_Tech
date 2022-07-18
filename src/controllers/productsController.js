@@ -1,42 +1,12 @@
-const fs = require ('fs');
-const path = require ('path');
 const db = require ("../../database/models/");
 const Op = db.Sequelize.Op;
 
-const pcArmadasFilePath = path.join (__dirname, '../data/pcArmadas.json');
-const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
 const destinationFolder = '/img/productos_pcArmadas/';
 const destinationFolderMarca = '/img/'
 
-
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-// funciones necesarias para usar controladores
-
-// funcion buscar ojetro segun ID
-function obtenerProducto (idProducto){
-    let producto = null;
-         for (let i = 0; i<pcArmadasJS.length;i++){
-            if (idProducto == (pcArmadasJS[i].id)){
-                producto = pcArmadasJS[i];
-                break;
-            }
-        }
-        return producto;
-}
-
-//lectura de bd
-function lecturaBD (){
-    const pcArmadasJS = JSON.parse (fs.readFileSync (pcArmadasFilePath, 'utf-8'));
-    return pcArmadasJS;
-}
-
-function selectorDeMarca (marca){
-   return marca == 'INTEL' ? '/img/logo_intel.jpg' : '/img/logo_amd.jpg'
-}
-
 const productController = {
-
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
     product: function(req, res) {
@@ -112,10 +82,11 @@ const productController = {
             {
                 where: {id: req.params.id}
             });
+            res.redirect ('/products/products')
         });
 
         /// REDIRECCIONAMOS VISTA
-        res.redirect ('/products/products')
+       
     },
 
     ///////////////// FIN DE EDITAR PRODUCTOS
@@ -153,11 +124,9 @@ const productController = {
             }
 
     }).then (function(productos){
-        console.log (productos);
         res.render("products/products", {productos, destinationFolder, destinationFolderMarca})
     })
     }
-
     
 }
 module.exports = productController;

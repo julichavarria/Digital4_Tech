@@ -16,7 +16,18 @@ module.exports = (sequelize, DataTypes) => {
      tableName: "roles", 
      timestamps: false
  };
-     const Rol =sequelize.define(alias, cols, config)
+     const Rol =sequelize.define(alias, cols, config);
+
+     //CREAMOS LA RELACION CON LA TABLA USUARIO
+     Rol.associate = function (modelos){
+        Rol.hasMany(modelos.Usuario,
+        {
+        as:"usuario",
+        foreignKey:"rol_id"
+        }
+        );
+    };
+
      return Rol;
  };
  

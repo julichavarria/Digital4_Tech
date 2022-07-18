@@ -15,7 +15,8 @@ CREATE TABLE `digital4tech`.`usuarios` (
   `clave` VARCHAR(100) NOT NULL,
   `rol_id` INT NOT NULL,
   `avatar` VARCHAR(200) NOT NULL,
-  PRIMARY KEY (`id`));
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
 
 CREATE TABLE `digital4tech`.`productos` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -513,7 +514,7 @@ VALUES (
 "AdminApellido",
 "Admin",
 "admin@d4t.com",
-"123456",
+"$2a$10$c59MG0X55hlGZH7xjSExyegwTI8zDzpqv3.TmVwdkyx8THGmv1bYa",
 1,
 "avatar01.png"
   );
@@ -524,7 +525,7 @@ VALUES (
 "ClienteApellido",
 "Client",
 "client@d4t.com",
-"123456",
+"$2a$10$XM0K7GwY2VZnQYBFtkaaV.Sia6OxW0NnuzM3y48T0666jJnp2cTtS",
 2,
 "avatar02.png"
   );
