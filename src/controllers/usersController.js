@@ -114,13 +114,18 @@ const usersController = {
 
         db.Usuario.findOne({ where: { email: req.body.email } })
             .then(function (usuario) {
-                //VALIDAMOS CONTRASEÑA INGRESADA CON HASH
-                if ((bcryptjs.compareSync(req.body.contrasena, usuario.clave))) {
-                    req.session.userLogged = usuario; //GUARDO EL USUARIO LOGEADO EN LA SESION DEL NAVEGADOR
-                    res.redirect('profile')
-                } else {
-                    res.render('users/login', { errors: { email: { msg: 'Credenciales invalidas' } } });
+                if (req.body.email != ''){
+                    //VALIDAMOS CONTRASEÑA INGRESADA CON HASH
+                    if ((bcryptjs.compareSync(req.body.contrasena, usuario.clave))) {
+                        req.session.userLogged = usuario; //GUARDO EL USUARIO LOGEADO EN LA SESION DEL NAVEGADOR
+                        res.redirect('profile')
+                    } else {
+                        res.render('users/login', { errors: { email: { msg: 'Credenciales invalidas' } } });
+                    }
+                }else{
+                    res.render('users/login', { errors: { email: { msg: 'Debe ingresar un email' } } });
                 }
+                
             }).catch(function (error) {
                 res.render('users/login', { errors: { email: { msg: 'Email no Registrado' } } });
             })
