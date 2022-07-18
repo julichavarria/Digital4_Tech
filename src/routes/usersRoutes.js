@@ -53,25 +53,24 @@ router.post ("/register", updateFile.single('avatarPropio'), validation, usersCo
 
 // MOSTRAR DETALLES DE UN USUARIO
 router.get ('/profile', authMiddlewares, usersController.profile);
-router.get ('/userDetail/:id', usersController.userDetail);
+router.get ('/userDetail/:id', authMiddlewares, usersController.userDetail);
 
 // EDITAR USUARIO
 router.get ("/editUser/:id", authMiddlewares, usersController.editUser);
 router.put ("/editUser/:id", updateFile.single('avatarPropio'), validation, usersController.processEditUser);
 
 // EDITAR CONTRASEÑA
-router.get ("/editPassword/:id", usersController.editPassword);
+router.get ("/editPassword/:id", authMiddlewares, usersController.editPassword);
 router.put ("/editPassword/:id", usersController.processEditPassword);
 
 // ELIMINAR USUARIO
+router.get ("/confirmDelete/:id", authMiddlewares, usersController.confirmDelete);
 router.delete ("/deleteUser/:id", usersController.deleteUser);
-router.get ("/confirmDelete/:id", usersController.confirmDelete);
 
 //LOGIN
 router.get ("/login", clientMiddlewares, usersController.login);
 router.post ("/login", usersController.processLogin);
 router.get ("/usersList", adminMiddlewares, usersController.usersList);
 router.get ("/logout", usersController.logout);
-
 
 module.exports = router;

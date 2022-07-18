@@ -22,7 +22,6 @@ const mainController = {
         res.render("nosotros");
     },
     searchProduct: function (req, res) {
-        console.log (req.body.busqueda);
         db.Producto.findAll({ 
             
             include: [{association:"categorias"}], 

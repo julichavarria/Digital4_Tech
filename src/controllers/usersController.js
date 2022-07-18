@@ -114,7 +114,6 @@ const usersController = {
 
         db.Usuario.findOne({ where: { email: req.body.email } })
             .then(function (usuario) {
-                console.log (usuario);
                 //VALIDAMOS CONTRASEÑA INGRESADA CON HASH
                 if ((bcryptjs.compareSync(req.body.contrasena, usuario.clave))) {
                     req.session.userLogged = usuario; //GUARDO EL USUARIO LOGEADO EN LA SESION DEL NAVEGADOR
