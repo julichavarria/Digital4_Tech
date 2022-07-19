@@ -43,7 +43,6 @@ const mainController = {
         res.render("search", {productos, destinationFolder, destinationFolderMarca})
     })
     }
-    // prueba de commit desde visual sin comando 
 }    
     
 module.exports = mainController;
