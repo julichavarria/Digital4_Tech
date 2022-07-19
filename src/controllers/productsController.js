@@ -92,7 +92,7 @@ const productController = {
             res.redirect ('/products/products')
         });
 
-        /// REDIRECCIONAMOS VISTA
+        /// REDIRECCIONAMOS VIS
        
     },
 
