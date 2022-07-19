@@ -4,12 +4,7 @@ const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require("../../database/models/");
 const Op = db.Sequelize.Op;
-
-
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const usersJS = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const destinationFolder = '/img/avatars/';
-
 
 const usersController = {
 
@@ -17,29 +12,40 @@ const usersController = {
         res.render("users/register");
     },
 
-    createNewRegister: function (req, res) {
-        
-        // VERIFICA SI EL AVATAR LLEGA POR USUARIO O PREDISEÑADO
-        let avatarAguardar = null;
-        if (req.file) {
-            avatarAguardar = req.file.filename
-        } else {
-            avatarAguardar = req.body.avatar;
+    createNewRegister: async function (req, res) {
+        try {
+            // VERIFICA SI EL AVATAR LLEGA POR USUARIO O PREDISEÑADO
+            let avatarAguardar = null;
+            if (req.file) {
+                avatarAguardar = req.file.filename
+            } else {
+                avatarAguardar = req.body.avatar;
+            }
+
+            let [registro, creado] = await db.Usuario.findOrCreate({
+                where:{
+                    email: req.body.email
+                },
+                defaults: {
+                    nombre: req.body.nombre,
+                    apellido: req.body.apellido,
+                    usuario: req.body.usuario,
+                    email: req.body.email,
+                    clave: bcryptjs.hashSync(req.body.contrasena, 10),
+                    rol_id: 2,
+                    avatar: avatarAguardar
+                } 
+            });
+            if (creado == true){
+                res.redirect('/users/login');
+            } else {
+                res.render('users/register', { errors: { email: { msg: 'Este email ya existe' } }, oldData: req.body});
+            }
+            
+        } catch (error) {
+            console.log(error);
         }
-
-        db.Usuario.create({
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            usuario: req.body.usuario,
-            email: req.body.email,
-            clave: bcryptjs.hashSync(req.body.contrasena, 10),
-            rol_id: 2,
-            avatar: avatarAguardar
-        })
-
-        res.redirect('/users/login');
     },
-
 
     editUser: function (req, res) {
 
@@ -160,6 +166,3 @@ const usersController = {
 }
 
 module.exports = usersController;
-
-
-

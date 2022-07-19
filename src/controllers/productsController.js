@@ -9,12 +9,19 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productController = {
 
     ////////////////// SECCION COMPUTADORAS ARMADAS
-    product: function(req, res) {
+    product: async function(req, res) {
+        try {
+            let productos = await db.Producto.findAll ({ include: [{association:"categorias"}] });
+            res.render("products/products", {productos, destinationFolder, destinationFolderMarca})
+        } catch (error) {
+            console.log(error);
+        }
+        
 
-        db.Producto.findAll({ include: [{association:"categorias"}] })
-        .then (function(productos){
-        res.render("products/products", {productos, destinationFolder, destinationFolderMarca})
-        })
+        // db.Producto.findAll({ include: [{association:"categorias"}] })
+        // .then (function(productos){
+        // res.render("products/products", {productos, destinationFolder, destinationFolderMarca})
+        // })
     },
     ////////////////// DETALLE DE PC SELECCIONADA
     productDetail:function (req,res) {

@@ -1,0 +1,3 @@
+Clave de Acceso para usuarios admin@d4t.com y client@d4t.com es '123123'
+
+Archivo 'digital4tech.sql' = estructura + datos de la base de datos
