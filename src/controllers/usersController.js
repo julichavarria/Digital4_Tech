@@ -13,6 +13,11 @@ const usersController = {
     },
 
     createNewRegister: async function (req, res) {
+        // let resultValidation = validationResult (req);
+        // if (resultValidation.error.length < 0){
+
+        // }
+        console.log (validationResult(req))
         try {
             // VERIFICA SI EL AVATAR LLEGA POR USUARIO O PREDISEÑADO
             let avatarAguardar = null;

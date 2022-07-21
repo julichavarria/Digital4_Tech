@@ -1,8 +1,7 @@
 const { body } = require ('express-validator');
 
 // VALIDACIONES 
-
-const validation = [ 
+function validation (req, res, next){
     body('nombre')
         .notEmpty().withMessage('Debes completar el nombre').bail()
         .isLength({max: 25}).withMessage('25 caracteres como máximo para el nombre'),
@@ -15,10 +14,15 @@ const validation = [
     body('usuario').notEmpty().withMessage('Debes completar el nombre de usuario'),
     body('contrasena')
         .notEmpty().withMessage('Debes ingresar una contraseña').bail()
-        .isLength({min: 6}).withMessage('Debe ingresar un minimo de 6 caracterres para la contraseña'),
+        .isLength({min: 6}).withMessage('Debe ingresar un minimo de 6 caracterres para la contraseña')
 
-    //body('avatarPropio').custom ((value, {req}) => {
-    //})
-];
+    next();
+}
+// const validation = [ 
+    
+
+//     //body('avatarPropio').custom ((value, {req}) => {
+//     //})
+// ];
 
 module.exports = validation;

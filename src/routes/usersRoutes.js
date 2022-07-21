@@ -5,7 +5,7 @@ const multer = require('multer');
 const clientMiddlewares = require('../middlewares/clientMiddlewares');
 const adminMiddlewares = require ('../middlewares/adminMiddlewares');
 const authMiddlewares = require('../middlewares/authMiddlewares');
-//const multerMiddlewares = require ('../middlewares/multerMiddlewares');
+const multerMiddlewares = require ('../middlewares/multerMiddlewares');
 const validateFormMiddlewares = require ('../middlewares/validateMiddlewares');
 const { body } = require ('express-validator');
 
@@ -45,6 +45,7 @@ const validation = [
     //body('avatarPropio').custom ((value, {req}) => {
     //})
 ];
+
 
 // RUTAS
 // REGISTRAR USUARIO NUEVO
