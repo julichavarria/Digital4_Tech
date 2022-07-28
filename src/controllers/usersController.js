@@ -13,43 +13,48 @@ const usersController = {
     },
 
     createNewRegister: async function (req, res) {
-        // let resultValidation = validationResult (req);
-        // if (resultValidation.error.length < 0){
-
-        // }
-        console.log (validationResult(req))
-        try {
-            // VERIFICA SI EL AVATAR LLEGA POR USUARIO O PREDISEÑADO
-            let avatarAguardar = null;
-            if (req.file) {
-                avatarAguardar = req.file.filename
-            } else {
-                avatarAguardar = req.body.avatar;
-            }
-
-            let [registro, creado] = await db.Usuario.findOrCreate({
-                where:{
-                    email: req.body.email
-                },
-                defaults: {
-                    nombre: req.body.nombre,
-                    apellido: req.body.apellido,
-                    usuario: req.body.usuario,
-                    email: req.body.email,
-                    clave: bcryptjs.hashSync(req.body.contrasena, 10),
-                    rol_id: 2,
-                    avatar: avatarAguardar
-                } 
-            });
-            if (creado == true){
-                res.redirect('/users/login');
-            } else {
-                res.render('users/register', { errors: { email: { msg: 'Este email ya existe' } }, oldData: req.body});
-            }
-            
-        } catch (error) {
-            console.log(error);
+        // VERIFICA SI EL AVATAR LLEGA POR USUARIO O PREDISEÑADO
+        let avatarAguardar = null;
+        if (req.file) {
+            avatarAguardar = req.file.filename
+        } else {
+            avatarAguardar = req.body.avatar;
         }
+        let resultValidation = validationResult (req);
+        if (resultValidation.errors.length <= 0){
+            try {
+    
+                let [registro, creado] = await db.Usuario.findOrCreate({
+                    where:{
+                        email: req.body.email
+                    },
+                    defaults: {
+                        nombre: req.body.nombre,
+                        apellido: req.body.apellido,
+                        usuario: req.body.usuario,
+                        email: req.body.email,
+                        clave: bcryptjs.hashSync(req.body.contrasena, 10),
+                        rol_id: 2,
+                        avatar: avatarAguardar
+                    }
+                });
+                
+                if (creado == true){
+                    res.redirect('/users/login');
+                } else {
+                    res.render('users/register', { errors: { email: { msg: 'Este email ya existe' } }, oldData: req.body});
+                }
+            } 
+            
+            catch (error) {
+                console.log(error);
+            }
+
+        }
+        else{
+            res.render('users/register', { errors: resultValidation.mapped(), oldData: req.body}); 
+        }
+
     },
 
     editUser: function (req, res) {
