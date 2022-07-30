@@ -38,7 +38,7 @@
                     </div>
                     <div class="campoFormulario">
                         <label> Email </label>
-                        <input type="email" id="email" name="email" class="controlFormulario" value="<%=(locals.oldData ? oldData.email : null )%>" >
+                        <input type="text" id="email" name="email" class="controlFormulario" value="<%=(locals.oldData ? oldData.email : null )%>" >
                             <label id="errorEmail"> <% if (locals.errors && locals.errors.email ) { %>
                                 <p class="msg-errors"> <%= errors.email.msg %> </p>
                                 <% } %>
