@@ -19,19 +19,19 @@
             <h3>Completa la siguiente información para poder registrarse en nuestro sitio Web</h3>
 
             <div class="controlGeneral">
-                <form method="post" action="/users/register" enctype="multipart/form-data"> <!--  -->
+                <form method="post" action="/users/register" enctype="multipart/form-data" id="userForm"> <!--  -->
                     <div class="campoFormulario">
                         <label> Nombre </label>
                         <input type="text" id="nombre" name="nombre" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : null )%>" >
-                            <label> <% if (locals.errors && locals.errors.nombre ) { %>
+                            <label id="errorNombre"> <% if (locals.errors && locals.errors.nombre ) { %>
                                 <p class="msg-errors"> <%= errors.nombre.msg %> </p>
                                 <% } %>
                             </label>
                     </div>
                     <div class="campoFormulario">
-                        <label> Apellido </label>
+                        <label > Apellido </label>
                         <input type="text" id="apellido" name="apellido" class="controlFormulario" value="<%=(locals.oldData ? oldData.apellido : null )%>" >
-                            <label> <% if (locals.errors && locals.errors.apellido ) { %>
+                            <label id="errorApellido"> <% if (locals.errors && locals.errors.apellido ) { %>
                                 <p class="msg-errors"> <%= errors.apellido.msg %> </p>
                                 <% } %>
                             </label>
@@ -39,7 +39,7 @@
                     <div class="campoFormulario">
                         <label> Email </label>
                         <input type="email" id="email" name="email" class="controlFormulario" value="<%=(locals.oldData ? oldData.email : null )%>" >
-                            <label> <% if (locals.errors && locals.errors.email ) { %>
+                            <label id="errorEmail"> <% if (locals.errors && locals.errors.email ) { %>
                                 <p class="msg-errors"> <%= errors.email.msg %> </p>
                                 <% } %>
                             </label>
@@ -47,7 +47,7 @@
                     <div class="campoFormulario">
                         <label> Nombre de Usuario </label>
                         <input type="text" id="usuario" name="usuario" class="controlFormulario" value="<%=(locals.oldData ? oldData.usuario : null )%>" >
-                            <label> <% if (locals.errors && locals.errors.usuario ) { %>
+                            <label id="errorUsuario"> <% if (locals.errors && locals.errors.usuario ) { %>
                                 <p class="msg-errors"> <%= errors.usuario.msg %> </p>
                                 <% } %>
                             </label>
@@ -55,7 +55,7 @@
                     <div class="campoFormulario">
                         <label> Contraseña </label>
                         <input type="password" id="contrasena" name="contrasena" class="controlFormulario">
-                            <label> <% if (locals.errors && locals.errors.contrasena ) { %>
+                            <label id="errorContrasena"> <% if (locals.errors && locals.errors.contrasena ) { %>
                                 <p class="msg-errors"> <%= errors.contrasena.msg %> </p>
                                 <% } %>
                             </label>
@@ -66,35 +66,35 @@
                     <div class="campoFormulario">
                         <label>Seleccioná un avatar o subí una imagen desde tu PC con el botón +</label>
                         <div class="contenedorRadioButtonsAvatar">
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar01.png" checked>
+                            <label><input type="radio" name="avatar" value="avatar01.png" checked>
                                 <img src="/img/avatars/avatar01.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar02.png">
+                            <label><input type="radio" name="avatar" value="avatar02.png">
                                 <img src="/img/avatars/avatar02.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar03.png">
+                            <label><input type="radio" name="avatar" value="avatar03.png">
                                 <img src="/img/avatars/avatar03.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar04.png">
+                            <label><input type="radio" name="avatar" value="avatar04.png">
                                 <img src="/img/avatars/avatar04.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar05.png">
+                            <label><input type="radio" name="avatar" value="avatar05.png">
                                 <img src="/img/avatars/avatar05.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar06.png">
+                            <label><input type="radio" name="avatar" value="avatar06.png">
                                 <img src="/img/avatars/avatar06.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar07.png">
+                            <label><input type="radio" name="avatar" value="avatar07.png">
                                 <img src="/img/avatars/avatar07.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar08.png">
+                            <label><input type="radio" name="avatar" value="avatar08.png">
                                 <img src="/img/avatars/avatar08.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar09.png">
+                            <label><input type="radio" name="avatar" value="avatar09.png">
                                 <img src="/img/avatars/avatar09.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar10.png">
+                            <label><input type="radio" name="avatar" value="avatar10.png">
                                 <img src="/img/avatars/avatar10.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar11.png">
+                            <label><input type="radio" name="avatar" value="avatar11.png">
                                 <img src="/img/avatars/avatar11.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar12.png">
+                            <label><input type="radio" name="avatar" value="avatar12.png">
                                 <img src="/img/avatars/avatar12.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar13.png">
+                            <label><input type="radio" name="avatar" value="avatar13.png">
                                 <img src="/img/avatars/avatar13.png"></input></label>
-                            <label><input type="radio" id="avatar" name="avatar" value="avatar14.png">
+                            <label><input type="radio" name="avatar" value="avatar14.png">
                                 <img src="/img/avatars/avatar14.png"></input></label>
-                            <label><input type="radio" required="required" id="avatar" name="avatar" value="avatar15.jpg">
+                            <label><input type="radio" required="required" name="avatar" value="avatar15.jpg">
                                 <img src="/img/avatars/avatar15.png"></input></label>
 
                                 <div class="image-upload" class="contenedorRadioButtonsAvatar">
