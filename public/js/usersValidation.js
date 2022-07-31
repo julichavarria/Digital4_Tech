@@ -1,6 +1,5 @@
-const db = require("../../database/models/");
-
-window.addEventListener("load", function(){    
+console.log ('llega a load')
+window.addEventListener("load", function(){   
     let formulario = document.querySelector("#userForm");
     formulario.addEventListener("submit", function(e){
         e.preventDefault();
@@ -9,9 +8,16 @@ window.addEventListener("load", function(){
         let campoUsuario = document.querySelector("#usuario");
         let campoEmail = document.querySelector("#email");
         let campoContrasena = document.querySelector("#contrasena");
+        
+        // CONDICIONES REQUERIDAS PARA UN MAIL VALIDO
         let validMail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-        let validacionEmail =  db.Usuario.findOne({ where: { email: req.body.email } }) ;
-        console.log(validacionEmail);
+        
+        //VARIABLES PARA VALIDACION DE FORMA INDIVIDUAL
+        let errorsPassword =[];
+        let validPaswordSymbol = /^(?=.*[!@#$%^&*._])/;
+        let validPaswordNumber = /^(?=.*[0-9])/;
+        let validPaswordLower = /^(?=.*[a-z])/;
+        let validPaswordUpper = /^(?=.*[A-Z])/;
 
         //NO HACEMOS LA VALIDACION DE IMAGEN PORQUE POR DEFAULT TENEMOS AVATAR EN PREDISEÑADO Y SI EL USUARIO ELIJE UNO DE ESTOS AVATAR, VA A DAR ERROR
 
@@ -66,29 +72,43 @@ window.addEventListener("load", function(){
             document.querySelector("#errorEmail").innerHTML ="No es un formato de mail valido";
             document.querySelector("#email").classList.add("formLabelErrors");
             location.href="#userForm";
-        }else if (validacionEmail){
-            document.querySelector("#errorEmail").innerHTML ="Este mail ya esta registrado";
-            document.querySelector("#email").classList.add("formLabelErrors");
-            location.href="#userForm";
+        // }else if (validacionEmail){
+        //     document.querySelector("#errorEmail").innerHTML ="Este mail ya esta registrado";
+        //     document.querySelector("#email").classList.add("formLabelErrors");
+        //     location.href="#userForm";
         }else {       
             document.querySelector("#errorEmail").innerHTML ="";
             document.querySelector("#email").classList.remove("formLabelErrors");
         };
         
-        //VALIDACION CONTRASENA
+        //VALIDACION CONTRASENA DE FORMA INDIVIDUAL
         if(campoContrasena.value==""){
-            document.querySelector("#errorContrasena").innerHTML ="No es un formato de mail valido";
-            document.querySelector("#contrasena").classList.add("formLabelErrors");
-            location.href="#userForm";
-        }else if(campoContrasena.value.length<2 ){
-            document.querySelector("#errorContrasena").innerHTML ="Debe tener mas de 2 letras";
-            document.querySelector("#contrasena").classList.add("formLabelErrors");
-            location.href="#userForm";
-        }else {       
-            document.querySelector("#errorContrasena").innerHTML ="";
-            document.querySelector("#contrasena").classList.remove("formLabelErrors");
+            errorsPassword.push ("Debe ingresar una contraseña");
+        }
+        if(campoContrasena.value.length<8){
+            errorsPassword.push ("Debe ingresar minimo 8 caracteres"); 
+        }
+        if(!(validPaswordNumber.test(campoContrasena.value))){
+            errorsPassword.push ("Debe tener al menos un número");
+        }
+        if(!(validPaswordSymbol.test(campoContrasena.value))){
+            errorsPassword.push ("Debe tener al menos un Caracter especial");       
         };
-
+        if(!(validPaswordLower.test(campoContrasena.value))){
+            errorsPassword.push ("Debe contener letras en minusculas");       
+        };
+        if(!(validPaswordUpper.test(campoContrasena.value))){
+            errorsPassword.push ("Debe contener letras en mayusculas");       
+        };
+        if(errorsPassword.length>0){
+            document.querySelector("#errorContrasena ul").innerHTML ="";
+            errorsPassword.forEach (error => document.querySelector("#errorContrasena ul").innerHTML += "<li>" + error + "</li>");
+            document.querySelector("#contrasena").classList.add("formLabelErrors");
+            location.href="#userForm";
+        }else {
+            document.querySelector("#errorContrasena ul").innerHTML ="";
+            document.querySelector("#contrasena").classList.remove("formLabelErrors");
+        }
 });
 
 })

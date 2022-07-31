@@ -55,10 +55,10 @@
                     <div class="campoFormulario">
                         <label> Contraseña </label>
                         <input type="password" id="contrasena" name="contrasena" class="controlFormulario">
-                            <label id="errorContrasena"> <% if (locals.errors && locals.errors.contrasena ) { %>
+                            <div id="errorContrasena"> <ul></ul> <% if (locals.errors && locals.errors.contrasena ) { %>
                                 <p class="msg-errors"> <%= errors.contrasena.msg %> </p>
                                 <% } %>
-                            </label>
+                            </div>
                     </div>
                     
                     <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
