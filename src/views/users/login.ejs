@@ -5,6 +5,7 @@
 <%- include ('../partials/head') %>
 <!-- /////// CARGA CSS  PARTICULAR/////// -->
 <link rel="stylesheet" href="../css/stylesLogin.css">
+<link rel="stylesheet" href="/css/stylesRegister.css">
 </head>
     <body>
         <%- include ('../partials/header') %>
@@ -17,13 +18,16 @@
                 <h1>INGRESAR</h1>
 
                 <div class="contenedorForms">
-                    <form action="/users/login" method="post">
+                    <form action="/users/login" method="post" id="loginForm">
                         <div class="generalCompletar-login">
-                            <input class="completar-login" type="email" name="email" placeholder="EMAIL"> 
-                            <input class="completar-login" type="password" name="contrasena" placeholder="CONTRASEÑA">
+                            <input class="completar-login" id="email" type="text" name="email" placeholder="EMAIL"> 
+                            <input class="completar-login" id="contrasena" type="password" name="contrasena" placeholder="CONTRASEÑA">
                         </div>
                         <div class="errorMsj">
-                        <label> <% if (locals.errors && errors.email ) { %>
+                        <label> 
+                            <p id="errorEmail" class="msg-errors-front"></p>
+                            <p id="errorContrasena" class="msg-errors-front"></p>
+                            <% if (locals.errors && errors.email ) { %>
                             <p class="msg-errors"> <%= errors.email.msg %> </p>
                             <% } %>
                         </label>
@@ -43,5 +47,6 @@
 
             
     </body>
-
+    <script src="/js/loginValidation.js" > </script>
+    
 </html>

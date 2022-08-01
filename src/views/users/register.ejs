@@ -23,7 +23,9 @@
                     <div class="campoFormulario">
                         <label> Nombre </label>
                         <input type="text" id="nombre" name="nombre" class="controlFormulario" value="<%=(locals.oldData ? oldData.nombre : null )%>" >
-                            <label id="errorNombre"> <% if (locals.errors && locals.errors.nombre ) { %>
+                            <label> 
+                                <p id="errorNombre" class="msg-errors-front"></p>
+                                <% if (locals.errors && locals.errors.nombre ) { %>
                                 <p class="msg-errors"> <%= errors.nombre.msg %> </p>
                                 <% } %>
                             </label>
@@ -31,7 +33,9 @@
                     <div class="campoFormulario">
                         <label > Apellido </label>
                         <input type="text" id="apellido" name="apellido" class="controlFormulario" value="<%=(locals.oldData ? oldData.apellido : null )%>" >
-                            <label id="errorApellido"> <% if (locals.errors && locals.errors.apellido ) { %>
+                            <label > 
+                                <p id="errorApellido" class="msg-errors-front"></p>
+                                <% if (locals.errors && locals.errors.apellido ) { %>
                                 <p class="msg-errors"> <%= errors.apellido.msg %> </p>
                                 <% } %>
                             </label>
@@ -39,7 +43,9 @@
                     <div class="campoFormulario">
                         <label> Email </label>
                         <input type="text" id="email" name="email" class="controlFormulario" value="<%=(locals.oldData ? oldData.email : null )%>" >
-                            <label id="errorEmail"> <% if (locals.errors && locals.errors.email ) { %>
+                            <label> 
+                                <p id="errorEmail" class="msg-errors-front"></p>
+                                <% if (locals.errors && locals.errors.email ) { %>
                                 <p class="msg-errors"> <%= errors.email.msg %> </p>
                                 <% } %>
                             </label>
@@ -47,7 +53,9 @@
                     <div class="campoFormulario">
                         <label> Nombre de Usuario </label>
                         <input type="text" id="usuario" name="usuario" class="controlFormulario" value="<%=(locals.oldData ? oldData.usuario : null )%>" >
-                            <label id="errorUsuario"> <% if (locals.errors && locals.errors.usuario ) { %>
+                            <label> 
+                                <p id="errorUsuario" class="msg-errors-front"></p>
+                                <% if (locals.errors && locals.errors.usuario ) { %>
                                 <p class="msg-errors"> <%= errors.usuario.msg %> </p>
                                 <% } %>
                             </label>
@@ -55,10 +63,12 @@
                     <div class="campoFormulario">
                         <label> Contraseña </label>
                         <input type="password" id="contrasena" name="contrasena" class="controlFormulario">
-                            <div id="errorContrasena"> <ul></ul> <% if (locals.errors && locals.errors.contrasena ) { %>
+                            <p>
+                                <ul id="errorContrasena" class="msg-errors-front"></ul> 
+                                <% if (locals.errors && locals.errors.contrasena ) { %>
                                 <p class="msg-errors"> <%= errors.contrasena.msg %> </p>
                                 <% } %>
-                            </div>
+                            </p>
                     </div>
                     
                     <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
@@ -101,7 +111,7 @@
                                     <label  for="file-input">
                                       <img  src="/img/avatars/avatarAgregarPropio.png"/>
                                     </label>
-                                    <input name = "avatarPropio" id="file-input" type="file" />
+                                    <input name = "avatarPropio" id="file-input" type="file" accept=".jpg,.jpeg,.png,.gif"/>
                                     <% if (locals.errors && locals.errors.avatarPropio ) { %>
                                         <p class="msg-errors"> <%= errors.avatarPropio.msg %> </p>
                                         <% } %>

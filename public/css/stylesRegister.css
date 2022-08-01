@@ -61,11 +61,7 @@ textarea:-moz-placeholder {
     
 }
 
-.msg-errors {
-    color: #e31a52;
-    font-weight: 100;
-    margin: 0px;
-}
+
 
 
 .campoFormulario label, .contenedorImgEdit label{
@@ -247,7 +243,21 @@ margin: 0 auto;
     border:#e31a52 1px solid;
 }
 
+.msg-errors {
+    color: #e31a52;
+    font-weight: 100;
+    margin: 0px;
+}
 
+.msg-errors-front {
+    color: #999;
+    font-weight: 200;
+    margin:0 auto;
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
 
 
 

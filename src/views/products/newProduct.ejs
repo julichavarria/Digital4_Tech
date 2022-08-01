@@ -17,57 +17,48 @@
                         <form method="post"  action="/products/newProduct"  id="productForm" enctype="multipart/form-data">
                             <div class="campoFormulario">
                                 <label for="nombre">Nombre</label>
-                                <input  type="text" id="nombre" name="nombre" placeholder="NOMBRE"
-                                    class="controlFormulario">
-                                <label id="errorNombre"></label>
+                                <input type="text" id="nombre" name="nombre" class="controlFormulario">
+                                    <p id="errorNombre" class="msg-errors-front"></p>
                             </div>
                             <div class="campoFormulario">
                                 <label for="procesador">Procesador</label>
-                                <input  type="text" id="procesador" name="procesador"
-                                    placeholder="PROCESADOR" class="controlFormulario">
-                                    <label id="errorProcesador"></label>
+                                <input  type="text" id="procesador" name="procesador" class="controlFormulario">
+                                    <p id="errorProcesador" class="msg-errors-front"></p>
                             </div>
                             <div class="campoFormulario">
                                 <label for="mother">Motherboard</label>
-                                <input  type="text" id="mother" name="mother"
-                                    placeholder="MOTHER" class="controlFormulario">
-                                    <label id="errorMother"></label>
+                                <input  type="text" id="mother" name="mother" class="controlFormulario">
+                                    <p id="errorMother" class="msg-errors-front"></p>
                             </div>
                             <div class="campoFormulario">
                                 <label for="video">Placa de video</label>
-                                <input  type="text" id="video" name="video"
-                                    placeholder="PLACA DE VIDEO" class="controlFormulario">
-                                    <label id="errorVideo"></label>
+                                <input  type="text" id="video" name="video" class="controlFormulario">
+                                    <p id="errorVideo" class="msg-errors-front"></p>
                             </div>
                             <div class="campoFormulario">
                                 <label for="ram">Memoria RAM</label>
-                                <input  type="text" id="ram" name="ram"
-                                    placeholder="MEMORIA RAM" class="controlFormulario">
-                                    <label id="errorRam"></label>
+                                <input  type="text" id="ram" name="ram" class="controlFormulario">
+                                    <p id="errorRam" class="msg-errors-front"></p>
                             </div>
                             <div class="campoFormulario">
                                 <label for="disco">Disco Rígido</label>
-                                <input  type="text" id="disco" name="disco"
-                                    placeholder="DISCO RIGIDO" class="controlFormulario">
-                                    <label id="errorDisco"></label>
+                                <input  type="text" id="disco" name="disco" class="controlFormulario">
+                                    <p id="errorDisco" class="msg-errors-front"></p>
                             </div>
                             <div class="campoFormulario">
                                 <label for="gabinete">Gabinete</label>
-                                <input  type="text" id="gabinete" name="gabinete"
-                                    placeholder="GABINETE" class="controlFormulario">
-                                    <label id="errorGabinete"></label>
+                                <input  type="text" id="gabinete" name="gabinete" class="controlFormulario">
+                                    <p id="errorGabinete" class="msg-errors-front"></p>
                             </div>
                             <div class="campoFormulario">
                                 <label for="fuente">Fuente</label>
-                                <input  type="text" id="fuente" name="fuente"
-                                    placeholder="FUENTE" class="controlFormulario">
-                                    <label id="errorFuente"></label>
+                                <input  type="text" id="fuente" name="fuente" class="controlFormulario">
+                                    <p id="errorFuente" class="msg-errors-front"></p>
                             </div>
                             <div class="campoFormulario">
                                 <label for="precio">Precio (Ingrese solo números)</label>
-                                <input  type="text" id="precio" name="precio"
-                                    placeholder="PRECIO" class="controlFormulario">
-                                    <label id="errorPrecio"></label>
+                                <input  type="text" id="precio" name="precio" class="controlFormulario">
+                                    <p id="errorPrecio" class="msg-errors-front"></p>
                             </div>
                             <div class="contenedorImgEdit">
                             <div>
@@ -81,9 +72,11 @@
                                 <div class="contenedorRadioButtonsLogos">
                                 <label> <input type="radio"  id="categoriaIntel" name="categoria" value="Intel"> <img src="/img/logo_intel.svg"></input></label>
                                 <label><input type="radio"   id="categoriaAmd" name="categoria" value="Amd"> <img src="/img/logo_amd.svg"></input></label>
+                                </div>
                             </div>
-                            <label id="errorCategoria"></label>
-                            </div>
+                            <p id="errorCategoria" class="msg-errors-front"></p>
+
+
                             <!-- HASTA ACA HAY QUE BORRAR SI NO QUIEREN DEJAR LOS RADIO BUTTON COMO IMAGEN -->
                             <div class="botonesNew">
                                 <button type="submit" class="btnPrincipal"  > CREAR PRODUCTO  </button>

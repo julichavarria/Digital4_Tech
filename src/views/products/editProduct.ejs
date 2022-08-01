@@ -20,60 +20,71 @@
                 <form action="/products/editProduct/<%= productos.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="productForm">
                     <div class="campoFormulario">
                         <label> Nombre de la PC </label>
-                        <input  type="text" id="nombre" name="nombre" placeholder="NOMBRE" class="controlFormulario" value="<%= productos.titulo %>">
-                        <label id="errorNombre">
-                            <!-- <% if (locals.errors && locals.errors.nombre ) { %>
+                        <input  type="text" id="nombre" name="nombre" class="controlFormulario" value="<%= productos.titulo %>">
+                        <label>
+                            <p id="errorNombre" class="msg-errors-front"></p>
+                            <% if (locals.errors && locals.errors.nombre ) { %>
                             <p class="msg-errors"> <%= errors.nombre.msg %> </p>
-                            <% } %> -->
+                            <% } %>
                         </label>    
                     </div>
                     <div class="campoFormulario">
                         <label> Procesador </label>
-                        <input  type="text" id="procesador" name="procesador"
-                            placeholder="PROCESADOR" class="controlFormulario" value="<%= productos.procesador %>">
-                            <label id="errorProcesador"></label>
+                        <input  type="text" id="procesador" name="procesador" class="controlFormulario" value="<%= productos.procesador %>">
+                            <label >
+                                <p id="errorProcesador" class="msg-errors-front"></p>
+                            </label>
+                            
                         </div>
                     <div class="campoFormulario">
                         <label> Motherboard </label>
-                        <input  type="text" id="mother" name="mother" placeholder="MOTHER"
-                            class="controlFormulario" value="<%= productos.mother %>">
-                            <label id="errorMother"></label>
+                        <input  type="text" id="mother" name="mother" class="controlFormulario" value="<%= productos.mother %>">
+                            <label>
+                                <p id="errorMother" class="msg-errors-front"></p>
+                            </label>
                         </div>
                     <div class="campoFormulario">
                         <label> Placa de video </label>
-                        <input  type="text" id="video" name="video" placeholder="PLACA DE VIDEO"
-                            class="controlFormulario" value="<%= productos.video %>">
-                            <label id="errorVideo"></label>
+                        <input  type="text" id="video" name="video" class="controlFormulario" value="<%= productos.video %>">
+                            <label>
+                                <p id="errorVideo" class="msg-errors-front"></p>
+                            </label>
                         </div>
                     <div class="campoFormulario">
                         <label> Memoria Ram </label>
-                        <input  type="text" id="ram" name="ram" placeholder="MEMORIA RAM"
-                            class="controlFormulario" value="<%= productos.ram %>">
-                            <label id="errorRam"></label>
+                        <input  type="text" id="ram" name="ram" class="controlFormulario" value="<%= productos.ram %>">
+                            <label>
+                                <p id="errorRam" class="msg-errors-front"></p>
+                            </label>
                         </div>
                     <div class="campoFormulario">
                         <label> Disco Rígido </label>
-                        <input  type="text" id="disco" name="disco" placeholder="DISCO RIGIDO"
-                            class="controlFormulario" value="<%= productos.disco %>">
-                            <label id="errorDisco"></label>
+                        <input  type="text" id="disco" name="disco" class="controlFormulario" value="<%= productos.disco %>">
+                            <label>
+                                <p id="errorDisco" class="msg-errors-front"></p>
+                            </label>
                         </div>
                     <div class="campoFormulario">
                         <label> Gabinete </label>
-                        <input  type="text" id="gabinete" name="gabinete" placeholder="GABINETE"
-                            class="controlFormulario" value="<%= productos.gabinete %>">
+                        <input  type="text" id="gabinete" name="gabinete" class="controlFormulario" value="<%= productos.gabinete %>">
                     
-                            <label id="errorGabinete"></label>    </div>
+                            <label>
+                                <p id="errorGabinete" class="msg-errors-front"></p>
+                            </label>
+                        </div>
                     <div class="campoFormulario">
                         <label> Fuente </label>
-                        <input  type="text" id="fuente" name="fuente" placeholder="FUENTE"
-                            class="controlFormulario" value="<%= productos.fuente %>">
-                            <label id="errorFuente"></label>
+                        <input  type="text" id="fuente" name="fuente" class="controlFormulario" value="<%= productos.fuente %>">
+                            <label>
+                                <p id="errorFuente" class="msg-errors-front"></p>
+                            </label>
                         </div>
                     <div class="campoFormulario">
                         <label> Precio </label>
-                        <input  type="text" id="precio" name="precio" placeholder="PRECIO"
-                            class="controlFormulario" value="<%= productos.precio %>"
-                            <label id="errorPrecio"></label>
+                        <input  type="text" id="precio" name="precio" class="controlFormulario" value='<%=productos.precio %>'>
+                            <label>
+                                <p id="errorPrecio" class="msg-errors-front"></p>
+                            </label>
                         </div>
                     <div class="contenedorImgEdit">
                         <div>
@@ -83,7 +94,7 @@
                             <p><i class="fas fa-angle-left"></i>Imagen Actual</p>
                             <label for="foto"><i class="fa-solid fa-camera"></i>Seleccioná la fotografía del producto
                             </label>
-                            <input type="file" id="foto" name="foto" accept=".jpg" class="controlFormulario">
+                            <input type="file" id="foto" name="foto" accept=".jpg,.jpeg,.png,.gif" class="controlFormulario">
                         </div>
                     </div>
 
@@ -98,7 +109,9 @@
                                     <% if (productos.categorias.marca=="Amd" ){%> checked <%}%>> <img
                                         src="/img/logo_amd.svg"></input></label>
                         </div>
-                        <label id="errorCategoria"></label>
+                        <label>
+                            <p id="errorCategoria" class="msg-errors-front"></p>
+                        </label>
                     </div>
                     <div class="botones">
                         <button class="btnPrincipal" type="submit"> GUARDAR CAMBIOS </button>
@@ -114,6 +127,6 @@
                     hacer cambios</a> </p>
         </main>
         <%- include ('../partials/footer') %>
-        <!-- <script src="/js/newProductsValidation.js" > </script> -->
+        <script src="/js/newProductsValidation.js" > </script>
 </body>
 </html>
