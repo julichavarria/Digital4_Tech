@@ -3,20 +3,21 @@ const path = require ('path');
 const router = express.Router ();
 const multer = require ('multer');
 const authMiddlewares = require('../middlewares/authMiddlewares');
+const validateProductMiddlewares = require ('../middlewares/validateProductMiddlewares');
 
 // CONFIGURACIÓN DEL MULTER PARA GUARDAR Y ASIGNAR NOMBRE A LA SUBIDA DE ARCHIVOS POR UN FORMULARIO 
-let storage = multer.diskStorage ({
+    let storage = multer.diskStorage ({
 
-    destination: (req, file, cb) => {
-        let destinationFolder = path.join (__dirname, '../../public/img/productos_pcArmadas');
-        cb (null, destinationFolder);
-    },
+        destination: (req, file, cb) => {
+            let destinationFolder = path.join (__dirname, '../../public/img/productos_pcArmadas');
+            cb (null, destinationFolder);
+        },
 
-    filename: (req, file, cb) => {
-        let imageName = "/pcArmadas_" + Date.now() + path.extname (file.originalname);
-        cb (null, imageName);
-    }
-})
+        filename: (req, file, cb) => {
+            let imageName = "/pcArmadas_" + Date.now() + path.extname (file.originalname);
+            cb (null, imageName);
+        }
+    })
 
 let updateFile = multer ({storage});
 
@@ -36,7 +37,7 @@ router.get ("/productCart", productsController.productCart);
 
 //UPDATE
 router.get ("/editProduct/:id", authMiddlewares, productsController.editProduct);
-router.put ("/editProduct/:id", updateFile.single('foto'), productsController.processEditProduct);
+router.put ("/editProduct/:id", updateFile.single('foto'), validateProductMiddlewares, productsController.processEditProduct);
 // router.get ("/products/productDetail/:id?/editProduct", productsController.editIndProduct);
 
 //DELETE

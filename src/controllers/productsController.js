@@ -1,6 +1,7 @@
 const db = require ("../../database/models/");
 const Op = db.Sequelize.Op;
-
+//const path = require ('path');
+//const { validationResult } = require('express-validator');
 const destinationFolder = '/img/productos_pcArmadas/';
 const destinationFolderMarca = '/img/'
 
@@ -17,7 +18,6 @@ const productController = {
             console.log(error);
         }
         
-
         // db.Producto.findAll({ include: [{association:"categorias"}] })
         // .then (function(productos){
         // res.render("products/products", {productos, destinationFolder, destinationFolderMarca})
@@ -69,31 +69,37 @@ const productController = {
     },
 
     processEditProduct: function (req, res) {
-        db.Producto.findByPk( req.params.id, { include: [{association:"categorias"}] })
-        .then (function(productos){
-            let imagen = productos.imagen;
-
-            db.Producto.update ({
-                titulo: req.body.nombre,
-                imagen: (req.file ? req.file.filename : imagen),
-                categoria_id: (req.body.categoria == 'Amd' ? 2 : 1),
-                procesador: req.body.procesador,
-                mother: req.body.mother,
-                video: req.body.video,
-                ram: req.body.ram,
-                disco: req.body.disco,
-                gabinete: req.body.gabinete,
-                fuente: req.body.fuente,
-                precio: toThousand(req.body.precio),
-            },
-            {
-                where: {id: req.params.id}
-            });
-            res.redirect ('/products/products')
-        });
-
-        /// REDIRECCIONAMOS VIS
-       
+        //let resultValidation = validationResult (req);
+        //if (resultValidation.errors.length <= 0){
+            //let valueExt = path.extname(req.file.originalname);
+            //if (valueExt == '.png' || valueExt == '.jpg' || valueExt == '.jpeg' || valueExt == '.gif'){
+                db.Producto.findByPk( req.params.id, { include: [{association:"categorias"}] })
+                .then (function(productos){
+                    let imagen = productos.imagen;
+                    db.Producto.update ({
+                        titulo: req.body.nombre,
+                        imagen: (req.file ? req.file.filename : imagen),
+                        categoria_id: (req.body.categoria == 'Amd' ? 2 : 1),
+                        procesador: req.body.procesador,
+                        mother: req.body.mother,
+                        video: req.body.video,
+                        ram: req.body.ram,
+                        disco: req.body.disco,
+                        gabinete: req.body.gabinete,
+                        fuente: req.body.fuente,
+                        precio: toThousand(req.body.precio),
+                    },
+                    {
+                        where: {id: req.params.id}
+                    });
+                    /// REDIRECCIONAMOS VIS
+                    res.redirect ('/products/products')
+                });    
+            
+            //}else{
+                //res.render('products/editProduct', { errors: { imgProduct: { msg: 'Extensión no valida, solo .jpg .jpeg, .gif y .png' } }, oldData: req.body});
+            //}
+        //}  
     },
 
     ///////////////// FIN DE EDITAR PRODUCTOS

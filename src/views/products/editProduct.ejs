@@ -20,9 +20,12 @@
                 <form action="/products/editProduct/<%= productos.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="productForm">
                     <div class="campoFormulario">
                         <label> Nombre de la PC </label>
-                        <input  type="text" id="nombre" name="nombre" placeholder="NOMBRE"
-                            class="controlFormulario" value="<%= productos.titulo %>">
-                        <label id="errorNombre"></label>    
+                        <input  type="text" id="nombre" name="nombre" placeholder="NOMBRE" class="controlFormulario" value="<%= productos.titulo %>">
+                        <label id="errorNombre">
+                            <!-- <% if (locals.errors && locals.errors.nombre ) { %>
+                            <p class="msg-errors"> <%= errors.nombre.msg %> </p>
+                            <% } %> -->
+                        </label>    
                     </div>
                     <div class="campoFormulario">
                         <label> Procesador </label>
@@ -111,6 +114,6 @@
                     hacer cambios</a> </p>
         </main>
         <%- include ('../partials/footer') %>
-        <script src="/js/newProductsValidation.js" > </script>
+        <!-- <script src="/js/newProductsValidation.js" > </script> -->
 </body>
 </html>
