@@ -1,24 +1,19 @@
 window.addEventListener("load", function(){  
     let formulario = document.querySelector("#productForm");  
     formulario.addEventListener( "submit", function( e ){
-        e.preventDefault ();
 
 let campoNombre = document.querySelector("#nombre");
 let campoProcesador = document.querySelector("#procesador");
 let campoMother = document.querySelector("#mother");
-let campoVideo = document.querySelector("#video");
 let campoRam = document.querySelector("#ram");
-let campoDisco = document.querySelector("#disco");
 let campoGabinete = document.querySelector("#gabinete");
 let campoFuente = document.querySelector("#fuente");
 let campoPrecio = document.querySelector("#precio");
-let campoCategoria = document.querySelector("#categoriaIntel");
 
 
 let formErrors = [];
 //VARIABLES PARA VALIDACION DE FORMA INDIVIDUAL
-    //let validPasswordNumber = /^(?=.*[0-9])/;
-    let validPasswordNumber = /^[0-9]*$/;
+let validPrice = /^[0-9]*$/;
 
 /// VALIDACION CAMPO TITULO     
 if(campoNombre.value==""){
@@ -133,29 +128,33 @@ if(campoFuente.value==""){
     
 };
 /// VALIDACION CAMPO PRECIO
-if(!(validPasswordNumber.test(campoPrecio.value))){
+if( campoPrecio.value == ""){
+    document.querySelector("#errorPrecio").innerHTML ="Debe ingresar un precio ";
+    document.querySelector("#precio").classList.add("formLabelErrors");
+    location.href="#productForm";
+    formErrors.push ('Precio vacío');
+
+} else if(!(validPrice.test(campoPrecio.value))){
     document.querySelector("#errorPrecio").innerHTML ="Debe ingresar un precio valido";
     document.querySelector("#precio").classList.add("formLabelErrors");
     location.href="#productForm";
-    formErrors.push ('Precio vacío')
+    formErrors.push ('Precio no numérico');
     
 }else {       
     document.querySelector("#errorPrecio").innerHTML ="";
     document.querySelector("#precio").classList.remove("formLabelErrors");
-    
 };
 /// VALIDACION CATEGORIA
 let elementoActivo = document.querySelector('input[name="categoria"]:checked');
 if(!elementoActivo) {
     document.querySelector ("#errorCategoria").innerHTML ="Debe elegir una Marca";
+    formErrors.push ('Categoria Vacía')
 }else {
     document.querySelector("#errorCategoria").innerHTML ="";
 };
 
-
-//if (formErrors.length > 0){
-    //e.preventDefault();
-//}
+if (formErrors.length > 0){
+    e.preventDefault();
+    }
 });
-
 });
