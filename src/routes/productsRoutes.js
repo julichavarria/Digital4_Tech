@@ -2,6 +2,7 @@ const express = require ("express");
 const path = require ('path');
 const router = express.Router ();
 const multer = require ('multer');
+const authMiddlewares = require('../middlewares/authMiddlewares');
 
 // CONFIGURACIÓN DEL MULTER PARA GUARDAR Y ASIGNAR NOMBRE A LA SUBIDA DE ARCHIVOS POR UN FORMULARIO 
 let storage = multer.diskStorage ({
@@ -25,7 +26,7 @@ const { route } = require("express/lib/application");
 
 
 //CREATE
-router.get ("/newProduct", productsController.newProduct);
+router.get ("/newProduct", authMiddlewares, productsController.newProduct);
 router.post ("/newProduct", updateFile.single('foto'), productsController.createNewProduct);
 
 //READ
@@ -34,12 +35,12 @@ router.get ("/productDetail/:id", productsController.productDetail);
 router.get ("/productCart", productsController.productCart);
 
 //UPDATE
-router.get ("/editProduct/:id", productsController.editProduct);
+router.get ("/editProduct/:id", authMiddlewares, productsController.editProduct);
 router.put ("/editProduct/:id", updateFile.single('foto'), productsController.processEditProduct);
 // router.get ("/products/productDetail/:id?/editProduct", productsController.editIndProduct);
 
 //DELETE
-router.delete ("/editProduct/:id/deleteProduct/", productsController.deleteProduct);
+router.delete ("/editProduct/:id/deleteProduct/", authMiddlewares, productsController.deleteProduct);
 router.get ("/confirmDelete/", productsController.confirmDelete);
 
 module.exports = router;
