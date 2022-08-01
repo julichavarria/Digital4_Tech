@@ -1,4 +1,3 @@
-console.log ('llega a load')
 window.addEventListener("load", function(){   
     let formulario = document.querySelector("#userForm");
     formulario.addEventListener("submit", function(e){
@@ -130,10 +129,10 @@ window.addEventListener("load", function(){
                 document.querySelector("#contrasena").classList.remove("formLabelErrors");
             }
         
-            console.log (formErrors)
+            
             if (formErrors.length > 0){
                 e.preventDefault();
             }
 });
 
-})
+});

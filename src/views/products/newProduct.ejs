@@ -13,84 +13,86 @@
                 <h1><i class="fa-solid fa-circle-plus"></i></h1>
                     <h1> PRODUCTO NUEVO</h1>
                     <h3>Completa la información del nuevo producto</h3>
-
-
                     <div class="controlGeneral">
-                        <form method="post" action="/products/newProduct" enctype="multipart/form-data">
+                        <form method="post"  action="/products/newProduct"  id="productForm" enctype="multipart/form-data">
                             <div class="campoFormulario">
                                 <label for="nombre">Nombre</label>
-                                <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
-                                     class="controlFormulario">
+                                <input  type="text" id="nombre" name="nombre" placeholder="NOMBRE"
+                                    class="controlFormulario">
+                                <label id="errorNombre"></label>
                             </div>
                             <div class="campoFormulario">
                                 <label for="procesador">Procesador</label>
-                                <input required="required" type="text" id="procesador" name="procesador"
+                                <input  type="text" id="procesador" name="procesador"
                                     placeholder="PROCESADOR" class="controlFormulario">
+                                    <label id="errorProcesador"></label>
                             </div>
                             <div class="campoFormulario">
                                 <label for="mother">Motherboard</label>
-                                <input required="required" type="text" id="mother" name="mother"
+                                <input  type="text" id="mother" name="mother"
                                     placeholder="MOTHER" class="controlFormulario">
+                                    <label id="errorMother"></label>
                             </div>
                             <div class="campoFormulario">
                                 <label for="video">Placa de video</label>
-                                <input required="required" type="text" id="video" name="video"
+                                <input  type="text" id="video" name="video"
                                     placeholder="PLACA DE VIDEO" class="controlFormulario">
+                                    <label id="errorVideo"></label>
                             </div>
                             <div class="campoFormulario">
                                 <label for="ram">Memoria RAM</label>
-                                <input required="required" type="text" id="ram" name="ram"
+                                <input  type="text" id="ram" name="ram"
                                     placeholder="MEMORIA RAM" class="controlFormulario">
+                                    <label id="errorRam"></label>
                             </div>
                             <div class="campoFormulario">
                                 <label for="disco">Disco Rígido</label>
-                                <input required="required" type="text" id="disco" name="disco"
+                                <input  type="text" id="disco" name="disco"
                                     placeholder="DISCO RIGIDO" class="controlFormulario">
+                                    <label id="errorDisco"></label>
                             </div>
                             <div class="campoFormulario">
                                 <label for="gabinete">Gabinete</label>
-                                <input required="required" type="text" id="gabinete" name="gabinete"
+                                <input  type="text" id="gabinete" name="gabinete"
                                     placeholder="GABINETE" class="controlFormulario">
+                                    <label id="errorGabinete"></label>
                             </div>
                             <div class="campoFormulario">
                                 <label for="fuente">Fuente</label>
-                                <input required="required" type="text" id="fuente" name="fuente"
+                                <input  type="text" id="fuente" name="fuente"
                                     placeholder="FUENTE" class="controlFormulario">
+                                    <label id="errorFuente"></label>
                             </div>
                             <div class="campoFormulario">
-                                <label for="precio">Precio</label>
-                                <input required="required" type="text" id="precio" name="precio"
+                                <label for="precio">Precio (Ingrese solo números)</label>
+                                <input  type="text" id="precio" name="precio"
                                     placeholder="PRECIO" class="controlFormulario">
+                                    <label id="errorPrecio"></label>
                             </div>
-                            
                             <div class="contenedorImgEdit">
-                               
-                                <div>
+                            <div>
                                     <label for="foto"><i class="fa-solid fa-camera"></i>Seleccioná la fotografía del producto </label>
-                                    <input type="file" id="foto" name="foto" accept=".jpg" class="controlFormulario">
+                                    <input type="file" id="foto" name="foto" accept=".jpg,.jpeg,.png,.gif" class="controlFormulario">
                                 </div>
                             </div>
-
                             <!-- PRUEBA PARA HACER RADIO BUTTON CON IMAGEN -->
                             <div class="campoFormulario">
                                 <label>Seleccioná la categoría de procesador</label>
                                 <div class="contenedorRadioButtonsLogos">
-                                <label> <input type="radio" required="required" id="categoria" name="categoria" value="Intel"> <img src="/img/logo_intel.svg"></input></label>
-                                <label><input type="radio" required="required" id="categoria" name="categoria" value="Amd"> <img src="/img/logo_amd.svg"></input></label>
+                                <label> <input type="radio"  id="categoriaIntel" name="categoria" value="Intel"> <img src="/img/logo_intel.svg"></input></label>
+                                <label><input type="radio"   id="categoriaAmd" name="categoria" value="Amd"> <img src="/img/logo_amd.svg"></input></label>
                             </div>
+                            <label id="errorCategoria"></label>
                             </div>
                             <!-- HASTA ACA HAY QUE BORRAR SI NO QUIEREN DEJAR LOS RADIO BUTTON COMO IMAGEN -->
-
                             <div class="botonesNew">
-                                <button class="btnPrincipal" type="submit"> CREAR PRODUCTO  </button>
+                                <button type="submit" class="btnPrincipal"  > CREAR PRODUCTO  </button>
                                 <button class="btnSecundario" type="reset"> LIMPIAR FORMULARIO </button>
                             </div>
                         </form>
                     </div>
-               
-
             </main>
             <%- include ('../partials/footer') %>
+            <script src="/js/newProductsValidation.js" > </script>
     </body>
-
 </html>
