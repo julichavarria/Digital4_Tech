@@ -1,7 +1,7 @@
 window.addEventListener("load", function(){  
+    
     let formulario = document.querySelector("#productForm");  
     formulario.addEventListener( "submit", function( e ){
-
 let campoNombre = document.querySelector("#nombre");
 let campoProcesador = document.querySelector("#procesador");
 let campoMother = document.querySelector("#mother");
@@ -139,7 +139,7 @@ if( campoPrecio.value == ""){
     document.querySelector("#precio").classList.add("formLabelErrors");
     location.href="#productForm";
     formErrors.push ('Precio no numérico');
-    
+
 }else {       
     document.querySelector("#errorPrecio").innerHTML ="";
     document.querySelector("#precio").classList.remove("formLabelErrors");
@@ -155,6 +155,8 @@ if(!elementoActivo) {
 
 if (formErrors.length > 0){
     e.preventDefault();
+    
     }
 });
+
 });

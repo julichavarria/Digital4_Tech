@@ -17,53 +17,61 @@
 
 
             <div class="controlGeneral">
-                <form action="/products/editProduct/<%= productos.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <form action="/products/editProduct/<%= productos.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="productForm">
                     <div class="campoFormulario">
                         <label> Nombre de la PC </label>
-                        <input required="required" type="text" id="nombre" name="nombre" placeholder="NOMBRE"
+                        <input  type="text" id="nombre" name="nombre" placeholder="NOMBRE"
                             class="controlFormulario" value="<%= productos.titulo %>">
+                        <label id="errorNombre"></label>    
                     </div>
                     <div class="campoFormulario">
                         <label> Procesador </label>
-                        <input required="required" type="text" id="procesador" name="procesador"
+                        <input  type="text" id="procesador" name="procesador"
                             placeholder="PROCESADOR" class="controlFormulario" value="<%= productos.procesador %>">
-                    </div>
+                            <label id="errorProcesador"></label>
+                        </div>
                     <div class="campoFormulario">
                         <label> Motherboard </label>
-                        <input required="required" type="text" id="mother" name="mother" placeholder="MOTHER"
+                        <input  type="text" id="mother" name="mother" placeholder="MOTHER"
                             class="controlFormulario" value="<%= productos.mother %>">
-                    </div>
+                            <label id="errorMother"></label>
+                        </div>
                     <div class="campoFormulario">
                         <label> Placa de video </label>
-                        <input required="required" type="text" id="video" name="video" placeholder="PLACA DE VIDEO"
+                        <input  type="text" id="video" name="video" placeholder="PLACA DE VIDEO"
                             class="controlFormulario" value="<%= productos.video %>">
-                    </div>
+                            <label id="errorVideo"></label>
+                        </div>
                     <div class="campoFormulario">
                         <label> Memoria Ram </label>
-                        <input required="required" type="text" id="ram" name="ram" placeholder="MEMORIA RAM"
+                        <input  type="text" id="ram" name="ram" placeholder="MEMORIA RAM"
                             class="controlFormulario" value="<%= productos.ram %>">
-                    </div>
+                            <label id="errorRam"></label>
+                        </div>
                     <div class="campoFormulario">
                         <label> Disco Rígido </label>
-                        <input required="required" type="text" id="disco" name="disco" placeholder="DISCO RIGIDO"
+                        <input  type="text" id="disco" name="disco" placeholder="DISCO RIGIDO"
                             class="controlFormulario" value="<%= productos.disco %>">
-                    </div>
+                            <label id="errorDisco"></label>
+                        </div>
                     <div class="campoFormulario">
                         <label> Gabinete </label>
-                        <input required="required" type="text" id="gabinete" name="gabinete" placeholder="GABINETE"
+                        <input  type="text" id="gabinete" name="gabinete" placeholder="GABINETE"
                             class="controlFormulario" value="<%= productos.gabinete %>">
-                    </div>
+                    
+                            <label id="errorGabinete"></label>    </div>
                     <div class="campoFormulario">
                         <label> Fuente </label>
-                        <input required="required" type="text" id="fuente" name="fuente" placeholder="FUENTE"
+                        <input  type="text" id="fuente" name="fuente" placeholder="FUENTE"
                             class="controlFormulario" value="<%= productos.fuente %>">
-                    </div>
+                            <label id="errorFuente"></label>
+                        </div>
                     <div class="campoFormulario">
                         <label> Precio </label>
-                        <input required="required" type="text" id="precio" name="precio" placeholder="PRECIO"
-                            class="controlFormulario" value="<%= productos.precio %>">
-                    </div>
-
+                        <input  type="text" id="precio" name="precio" placeholder="PRECIO"
+                            class="controlFormulario" value="<%= productos.precio %>"
+                            <label id="errorPrecio"></label>
+                        </div>
                     <div class="contenedorImgEdit">
                         <div>
                             <img src=<%= destinationFolder + productos.imagen %> alt="imagen de equipo">
@@ -80,16 +88,15 @@
                     <div class="campoFormulario">
                         <label>Seleccioná la categoría de procesador</label>
                         <div class="contenedorRadioButtonsLogos">
-                            <label><input type="radio" required="required" id="categoria" name="categoria" value="Intel"
+                            <label><input type="radio"  id="categoriaIntel" name="categoria" value="Intel"
                                     <% if (productos.categorias.marca =="Intel" ){%> checked <%}%>> <img
                                         src="/img/logo_intel.svg"></input></label>
-                            <label><input type="radio" required="required" id="categoria" name="categoria" value="Amd"
+                            <label><input type="radio"  id="categoriaAmd" name="categoria" value="Amd"
                                     <% if (productos.categorias.marca=="Amd" ){%> checked <%}%>> <img
                                         src="/img/logo_amd.svg"></input></label>
                         </div>
+                        <label id="errorCategoria"></label>
                     </div>
-
-
                     <div class="botones">
                         <button class="btnPrincipal" type="submit"> GUARDAR CAMBIOS </button>
                     </div>
@@ -102,12 +109,8 @@
             </div>
             <p class="btnVolver"><i class="fas fa-angle-left"></i><a href="/index"> Volver a la página principal sin
                     hacer cambios</a> </p>
-
-
         </main>
         <%- include ('../partials/footer') %>
-
-        
+        <script src="/js/newProductsValidation.js" > </script>
 </body>
-
 </html>
