@@ -13,7 +13,7 @@ const productController = {
     product: async function(req, res) {
         try {
             let productos = await db.Producto.findAll ({ include: [{association:"categorias"}] });
-            res.render("products/products", {productos, destinationFolder, destinationFolderMarca})
+            res.render("products/products", {productos, destinationFolder, destinationFolderMarca,toThousand})
         } catch (error) {
             console.log(error);
         }
@@ -27,7 +27,7 @@ const productController = {
     productDetail:function (req,res) {
         db.Producto.findByPk( req.params.id, { include: [{association:"categorias"}] })
         .then (function(productos){
-        res.render("products/productDetail", {productos, destinationFolder, destinationFolderMarca})
+        res.render("products/productDetail", {productos, destinationFolder, destinationFolderMarca,toThousand})
         })
     },
 
@@ -53,7 +53,7 @@ const productController = {
             disco: req.body.disco,
             gabinete: req.body.gabinete,
             fuente: req.body.fuente,
-            precio: toThousand(req.body.precio),
+            precio: req.body.precio,
         })
         res.redirect ('/products/products');
     },
@@ -87,7 +87,7 @@ const productController = {
                         disco: req.body.disco,
                         gabinete: req.body.gabinete,
                         fuente: req.body.fuente,
-                        precio: toThousand(req.body.precio),
+                        precio: req.body.precio,
                     },
                     {
                         where: {id: req.params.id}

@@ -35,8 +35,7 @@
                                         <div class="iconosMarcas">
                                             <img src=<%= destinationFolderMarca + productos[random].categorias.logo %> alt="Logo Marca">
                                         </div>
-                                        <div class="precioPcArmada">Efectivo: <span><br> $ <%=
-                                                    productos[random].precio %> </span>
+                                        <div class="precioPcArmada">Efectivo: <span><br> $ <%=toThousand(productos[random].precio) %> </span>
                                         </div>
                                         <a href="/products/productDetail/<%=productos[random].id%>">
                                             <button class="btnPrincipal"> INFO

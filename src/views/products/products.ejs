@@ -36,7 +36,7 @@
                                     <div class="iconosMarcas">
                                         <img src=  <%= destinationFolderMarca + productos[i].categorias.logo %> alt="Logo Marca">
                                     </div>
-                                    <div class="precioPcArmada">Efectivo:<span> <br>$ <%= productos[i].precio %> </span>
+                                    <div class="precioPcArmada">Efectivo:<span> <br>$ <%= toThousand(productos[i].precio) %> </span>
                                     </div>
                                     <a href="/products/productDetail/<%= productos[i].id%>">
                                         <button class="btnPrincipal"> INFO 

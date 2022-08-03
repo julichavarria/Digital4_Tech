@@ -4,18 +4,19 @@ const Op = db.Sequelize.Op;
 const destinationFolder = '/img/productos_pcArmadas/';
 const destinationFolderMarca = '/img/';
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const mainController = {
     raiz:function (req,res) {
         db.Producto.findAll({ include: [{association:"categorias"}] })
         .then (function(productos){
-        res.render("index", {productos, destinationFolder, destinationFolderMarca})
+        res.render("index", {productos, destinationFolder, destinationFolderMarca,toThousand})
         })
     },
     index:function (req,res) {
         db.Producto.findAll({ include: [{association:"categorias"}] })
         .then (function(productos){
-        res.render("index", {productos, destinationFolder, destinationFolderMarca})
+        res.render("index", {productos, destinationFolder, destinationFolderMarca,toThousand})
         })
     },
     nosotros:function (req,res) {

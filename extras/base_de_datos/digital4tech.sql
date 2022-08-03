@@ -70,7 +70,7 @@ VALUES (
 "SSD M.2 WD 2TB Black SN750",
 "Cooler Master Mastercase H500",
 "AEROCOOL CYLON 500W RGB CON 80 PLUS BRONZE",
-206.555
+206555
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -85,7 +85,7 @@ VALUES (
 "1TB SEAGATE BARRACUDA",
 "Mid TOWER SENTEY Z20",
 "THERMALTAKE SMART 600W 80 PLUS WHITE",
-159.779
+159779
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -100,7 +100,7 @@ VALUES (
 "1TB SEAGATE BARRACUDA",
 "GAMER RGB LED AEROCOOL BOLT",
 "THERMALTAKE SMART 600W 80 PLUS WHITE",
-151.079
+151079
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -115,7 +115,7 @@ VALUES (
 "SSD - 480GB - PARA ENSAMBLADO",
 "Mid TOWER AEROCOOL PLAYA",
 "GIGABYTE 750W 80 PLUS GOLD",
-300.755
+300755
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -130,7 +130,7 @@ VALUES (
 "SSD - 480GB - PARA ENSAMBLADO",
 "Mid TOWER AEROCOOL PLAYA",
 "GIGABYTE 750W 80 PLUS GOLD",
-267.638
+267638
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -145,7 +145,7 @@ VALUES (
 "SOLIDO SSD 240Gb GIGABYTE",
 "Mid TOWER AEROCOOL PLAYA",
 "GIGABYTE 750W 80 PLUS GOLD",
-193.598
+193598
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -160,7 +160,7 @@ VALUES (
 "SOLIDO SSD 480Gb KINGSTON",
 "Mid TOWER AEROCOOL PLAYA",
 "THERMALTAKE SMART 600W 80 PLUS WHITE",
-184.578
+184578
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -175,7 +175,7 @@ VALUES (
 "SOLIDO SSD 240Gb KINGSTON",
 "Mid TOWER SENTEY Z20 LITE",
 "THERMALTAKE SMART 600W 80 PLUS WHITE",
-163.479
+163479
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -190,7 +190,7 @@ VALUES (
 "SOLIDO SSD 480Gb KINGSTON",
 "Mid TOWER SENTEY Z20 LITE",
 "GIGABYTE 750W 80 PLUS GOLD",
-452.248
+452248
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -205,7 +205,7 @@ VALUES (
 "SOLIDO SSD 480Gb KINGSTON",
 "Mid TOWER SENTEY Z20 LITE",
 "GIGABYTE 750W 80 PLUS GOLD",
-207.719
+207719
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -220,7 +220,7 @@ VALUES (
 "1TB SEAGATE BARRACUDA",
 "Mid TOWER SENTEY Z20 LITE",
 "GIGABYTE 750W 80 PLUS GOLD",
-199.689
+199689
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -235,7 +235,7 @@ VALUES (
 "1TB SEAGATE BARRACUDA",
 "MINI TOWER SENTEY F10 RGB",
 "CROMAX KC-DAA-500 500W",
-97.329
+97329
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -250,7 +250,7 @@ VALUES (
 "1TB SEAGATE BARRACUDA",
 "MINI TOWER SENTEY F10 RGB",
 "GIGABYTE 750W 80 PLUS GOLD",
-164.379
+164379
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -265,7 +265,7 @@ VALUES (
 "1TB SEAGATE BARRACUDA",
 "MINI TOWER SENTEY F10 RGB",
 "GIGABYTE 750W 80 PLUS GOLD",
-164.379
+164379
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -280,7 +280,7 @@ VALUES (
 "SOLIDO SSD M2 PCI-E - 960GB",
 "Mid TOWER SENTEY Z20 LITE",
 "GIGABYTE 750W 80 PLUS GOLD",
-277.128
+277128
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -295,7 +295,7 @@ VALUES (
 "SOLIDO SSD 240Gb KINGSTON",
 "Mid TOWER SENTEY Z20 LITE",
 "THERMALTAKE SMART 600W 80 PLUS WHITE",
-205.316
+205316
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -310,7 +310,7 @@ VALUES (
 "SOLIDO SSD 240Gb KINGSTON",
 "Mid TOWER AEROCOOL PLAYA",
 "GIGABYTE 750W 80 PLUS GOLD",
-268.327
+268327
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -325,7 +325,7 @@ VALUES (
 "SOLIDO SSD 240Gb KINGSTON",
 "Mid TOWER AEROCOOL PLAYA",
 "THERMALTAKE SMART 600W 80 PLUS WHITE",
-241.248
+241248
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -340,7 +340,7 @@ VALUES (
 "SOLIDO SSD 480Gb KINGSTON",
 " Mid TOWER SENTEY Z20 LITE",
 "THERMALTAKE SMART 600W 80 PLUS WHITE",
-200.258
+200258
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -355,7 +355,7 @@ VALUES (
 "SOLIDO SSD 240Gb KINGSTON",
 " Mid TOWER SENTEY Z20 LITE",
 "THERMALTAKE SMART 600W 80 PLUS WHITE",
-255.279
+255279
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -370,7 +370,7 @@ VALUES (
 "SOLIDO SSD 480Gb KINGSTON",
 " Mid TOWER SENTEY Z20 LITE",
 "THERMALTAKE SMART 600W 80 PLUS WHITE",
-280.838
+280838
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -385,7 +385,7 @@ VALUES (
 "SOLIDO SSD 240Gb GIGABYTE",
 "Mid TOWER AEROCOOL PLAYA",
 "AEROCOOL DORADO 850W RGB 80 PLUS GOLD",
-495.008
+495008
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -400,7 +400,7 @@ VALUES (
 "SOLIDO SSD 240Gb GIGABYTE",
 "Mid TOWER AEROCOOL PLAYA",
 "GIGABYTE 750W 80 PLUS GOLD",
-306.916
+306916
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -415,7 +415,7 @@ VALUES (
 "SOLIDO SSD 500Gb GIGABYTE",
 "Mid TOWER AEROCOOL PLAYA",
 "GIGABYTE 750W 80 PLUS GOLD",
-312.221
+312221
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -430,7 +430,7 @@ VALUES (
 "SOLIDO SSD 240Gb GIGABYTE",
 "Mid TOWER AEROCOOL PLAYA",
 "GIGABYTE 750W 80 PLUS GOLD",
-271.517
+271517
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -445,7 +445,7 @@ VALUES (
 "SOLIDO SSD 480Gb GIGABYTE",
 "Mid TOWER SENTEY Z20 LITE",
 "GIGABYTE 750W 80 PLUS GOLD",
-320.678
+320678
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -460,7 +460,7 @@ VALUES (
 "SOLIDO SSD 480Gb GIGABYTE",
 "Mid TOWER SENTEY Z20 LITE",
 "GIGABYTE 750W 80 PLUS GOLD",
-340.841
+340841
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -475,7 +475,7 @@ VALUES (
 "SOLIDO SSD 480Gb GIGABYTE",
 "Mid TOWER SENTEY Z20 LITE",
 "GIGABYTE 750W 80 PLUS GOLD",
-357.245
+357245
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -490,7 +490,7 @@ VALUES (
 "SOLIDO SSD M2 - 240GB",
 "Mid TOWER SENTEY Z20 LITE",
 "THERMALTAKE SMART 600W 80 PLUS WHITE",
-180.031
+180031
   );
 
 INSERT INTO `digital4tech`.Productos (titulo, imagen, categoria_id, procesador, mother, video, ram, disco, gabinete, fuente, precio)
@@ -505,7 +505,7 @@ VALUES (
 "SOLIDO SSD 480Gb KINGSTON",
 "Mid TOWER AEROCOOL PLAYA",
 "GIGABYTE 750W 80 PLUS GOLD",
-455.647
+455647
   );
   
 INSERT INTO `digital4tech`.usuarios (nombre, apellido, usuario, email, clave, rol_id, avatar)
