@@ -1,7 +1,7 @@
 const db = require ("../../database/models/");
 const Op = db.Sequelize.Op;
-//const path = require ('path');
-//const { validationResult } = require('express-validator');
+const path = require ('path');
+const { validationResult } = require('express-validator');
 const destinationFolder = '/img/productos_pcArmadas/';
 const destinationFolderMarca = '/img/'
 
@@ -69,10 +69,8 @@ const productController = {
     },
 
     processEditProduct: function (req, res) {
-        //let resultValidation = validationResult (req);
-        //if (resultValidation.errors.length <= 0){
-            //let valueExt = path.extname(req.file.originalname);
-            //if (valueExt == '.png' || valueExt == '.jpg' || valueExt == '.jpeg' || valueExt == '.gif'){
+        let resultValidation = validationResult (req);
+            if (resultValidation.errors.length <= 0){
                 db.Producto.findByPk( req.params.id, { include: [{association:"categorias"}] })
                 .then (function(productos){
                     let imagen = productos.imagen;
@@ -94,12 +92,13 @@ const productController = {
                     });
                     /// REDIRECCIONAMOS VIS
                     res.redirect ('/products/products')
-                });    
-            
-            //}else{
-                //res.render('products/editProduct', { errors: { imgProduct: { msg: 'Extensión no valida, solo .jpg .jpeg, .gif y .png' } }, oldData: req.body});
-            //}
-        //}  
+                });
+            }else{
+                db.Producto.findByPk( req.params.id, { include: [{association:"categorias"}] })
+                .then (function(productos){
+                res.render("products/editProduct", {productos, destinationFolder, destinationFolderMarca, errors: resultValidation.mapped(), oldData: req.body})
+                })
+            }
     },
 
     ///////////////// FIN DE EDITAR PRODUCTOS
