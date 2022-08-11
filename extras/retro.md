@@ -69,4 +69,6 @@ Se viene Sprint 6 ---->
 
 Para este sprint encaramos de forma diferente la organizacion de las tardeas. Decidimos hacer los diferentes puntos de mandera grupal, no nos fue de mucha utilidad el trello  en esta ocacion ya que al no dividirnos  las tardeas y fuimos siguiendo las consignas desde el sprint de play ground. Estuvimos realizando todo de forma grupal, un integrante del equipo compartía pantalla y entre los 4 ibamos haciendo, para poder afianzar y comprender todo. Esta forma de trabajar, nos resultó mucho mas efectiva ya que todos pudimos pensar las formas de resolverlo y lo ibamos charlando a la medida que avanzaba el trabajo.
 
-Se viene el Sprint 7 ---->
+Se viene el Sprint 7 ----> 
+
+Para este Sprint seguimos con la misma forma de trabajo, nos reunimos los 4 integrantes del equipo y uno comparte pantalla y entre todos hicimos los puntos de este Sprint y revisamos si quedaban cosas pendientes. 
