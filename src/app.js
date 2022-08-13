@@ -37,10 +37,13 @@ app.set ("views", "./src/views");
 const routerMain = require ("./routes/mainRoutes");
 const routerUsers = require ("./routes/usersRoutes");
 const routerProduct = require ("./routes/productsRoutes");
+const routerApi = require ("./routes/apiRoutes");
 const { Cookie } = require("express-session");
 app.use ("/", routerMain);
 app.use ("/users", routerUsers);
 app.use ("/products", routerProduct);
+app.use ("/api", routerApi);
+
 
 
 app.use((req, res, next) => {
