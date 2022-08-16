@@ -33,6 +33,18 @@ app.listen(3030, ()=> console.log ("Server running in 3030 port ") );
 app.set ("view engine", "ejs");
 app.set ("views", "./src/views");
 
+//Middleware CORS
+app.use( ( req, res, next ) => {
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    next();
+
+});
+
+
 // REQUERIMOS Y UTILIZAMOS LAS RUTAS
 const routerMain = require ("./routes/mainRoutes");
 const routerUsers = require ("./routes/usersRoutes");

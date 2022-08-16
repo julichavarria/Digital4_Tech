@@ -4,7 +4,7 @@ const Op = db.Sequelize.Op;
 // const destinationFolder = '/img/productos_pcArmadas/';
 // const destinationFolderMarca = '/img/';
 
-const usersApiController = {
+const apiController = {
     listUsers:function (req,res) {
         db.Usuario.findAll()
         .then (function(usuarios){
@@ -22,8 +22,26 @@ const usersApiController = {
                 nombre: user, //consultar por http://localhost en este caso o la direcion el dia de mañana, si es manual o existe una forma correcta
             })
         })
-    },
+    },    
 
-}    
-    
-module.exports = usersApiController;
+    listProducts:function (req,res) {
+        db.Producto.findAll()
+        .then (function(product){
+            return res.status(200).json({
+                total: product.length,
+                data: product,
+            })
+        })
+    },
+    productDetail: function(req, res){
+        db.Producto.findByPk(req.params.id)
+        .then (function (product){
+            return res.status(200).json({
+                nombre: product, 
+            })
+        })
+    },
+}
+
+module.exports = apiController;
+
