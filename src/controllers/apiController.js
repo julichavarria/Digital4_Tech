@@ -39,7 +39,7 @@ const apiController = {
                 apellido: user.apellido,
                 usuario: user.usuario,
                 email: user.email,
-                detalle: destinationAvatar + user.avatar
+                imagen: destinationAvatar + user.avatar
             }
             return res.status(200).json({   
                 data: usuario, //consultar por http://localhost en este caso o la direcion el dia de mañana, si es manual o existe una forma correcta
@@ -51,7 +51,12 @@ const apiController = {
         //let listadoMarcas = {};
         db.Producto.findAll({ include: [{association:"categorias"}] })
         .then (function(productos){
-            
+            // productos.foreach ((producto) => {
+            //     let nombreMarca = producto.marca.nombre;
+            //     listadoMarcas[nombreMarca] = productos.filter(product =>{
+            //         return nombreMarca == product.marca.nombre
+            //     }).length
+            // })
             productos = productos.map(producto => {
                 return {
                 id: producto.id,
@@ -67,8 +72,8 @@ const apiController = {
             })
             return res.status(200).json({
                 total: productos.length,
+                //countByCategory: listadoMarcas,  falta esto para la entrega
                 data: productos,
-                //fata countByCategory
             })
         })
     },
