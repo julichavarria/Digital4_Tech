@@ -48,20 +48,20 @@ const apiController = {
     },   
 
     listProducts:function (req,res) {
-        //let listadoMarcas = {};
+        let listadoMarcas = {};
         db.Producto.findAll({ include: [{association:"categorias"}] })
         .then (function(productos){
-            // productos.foreach ((producto) => {
-            //     let nombreMarca = producto.marca.nombre;
-            //     listadoMarcas[nombreMarca] = productos.filter(product =>{
-            //         return nombreMarca == product.marca.nombre
-            //     }).length
-            // })
+            marca = productos.forEach ((producto) => {
+                let nombreMarca = producto.categorias.marca;
+                listadoMarcas[nombreMarca] = productos.filter(product =>{
+                    return nombreMarca == product.categorias.marca
+                }).length
+            })
             productos = productos.map(producto => {
                 return {
                 id: producto.id,
                 titulo: producto.titulo,
-                marca: producto.catedoria_id,
+                marca: producto.categorias.marca, //MISMA CONSULTA QUE FILA 86
                 procesador: producto.procesador,
                 mother: producto.mother,
                 video: producto.video,
@@ -72,7 +72,7 @@ const apiController = {
             })
             return res.status(200).json({
                 total: productos.length,
-                //countByCategory: listadoMarcas,  falta esto para la entrega
+                countByCategory: listadoMarcas,
                 data: productos,
             })
         })
@@ -83,7 +83,7 @@ const apiController = {
             let producto = {
                 id: product.id,
                 titulo: product.titulo,
-                //falta la relacion de categoria. ya sea solo el campomarca o toda la tabla
+                marca: product.categorias.marca, //CONSULTAR SI EL PUNTO "un array por cada relación de uno a muchos" ALCANZA ASI O ES LA FILA 99
                 procesador: product.procesador,
                 mother: product.mother,
                 video: product.video,
@@ -96,6 +96,7 @@ const apiController = {
                 }
             return res.status(200).json({
                 data: producto,
+                categoria: product.categorias.marca,
             })
         })
     }
