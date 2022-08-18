@@ -3,7 +3,7 @@ import React from "react";
 
 function List (){
     return(
-        <div>
+
            <div className="contenedorListado">           
                 <div className="contenedorItemListado">
                     <div>PRODUCTO NUMERO 1</div>
@@ -14,7 +14,6 @@ function List (){
                     </div>
                 </div> 
             </div>
-        </div>
     )
 }
 

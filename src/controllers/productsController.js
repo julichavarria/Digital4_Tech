@@ -96,7 +96,7 @@ const productController = {
             }else{
                 db.Producto.findByPk( req.params.id, { include: [{association:"categorias"}] })
                 .then (function(productos){
-                res.render("products/editProduct", {productos, destinationFolder, destinationFolderMarca, errors: resultValidation.mapped(), oldData: req.body})
+                res.render("products/editProduct", {errors: resultValidation.mapped(), oldData: req.body,productos, destinationFolder, destinationFolderMarca})
                 })
             }
     },
