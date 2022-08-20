@@ -3,8 +3,7 @@ import Header from "./Header";
 import DataContainer from "./DataContainer";
 
 
-class Content extends Component {
-    render (){
+function Content () {
         return(
             <div>
             <Header/>
@@ -12,6 +11,5 @@ class Content extends Component {
             </div>
         )
     }
-}
 
 export default Content;

@@ -9,12 +9,12 @@ class DataContainer extends Component {
     return (
         <div className="contenedorBloques">
             <div className="contenedorDatosProductos">
-                <Counter/>
+                <Counter api= 'http://localhost:3030/api/products'/>
                 <LastRegister/>
                 <List/>
             </div>
             <div className="contenedorDatosUsuarios">
-                <Counter/>
+                <Counter api='http://localhost:3030/api/users'/>
                 <LastRegister/>
                 <List/>
             </div>

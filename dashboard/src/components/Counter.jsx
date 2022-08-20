@@ -4,18 +4,22 @@ import icon from "../assets/images/icon_products.svg"
 
 
 class Counter extends Component {
-    constructor( ) {
-        super ();
+    constructor(props) {
+        super (props);
         this.state = {
-        PcMarcas: '',
-        totalPc: '',
+            apiUrl: props.api,
+            //totalCategoria: '',
+            totalRegistros: ''
         }
     }
 
     componentDidMount(){
-        fetch('http://localhost:3030/api/products')
+        fetch(this.state.apiUrl)
             .then(response => response.json())
-            .then(data => {this.setState({PcMarcas: data.countByCategory, totalPc: data.total})})
+            .then(data => {this.setState({
+                //totalCategoria: data.countByCategory, 
+                totalRegistros: data.total
+            })})
             .catch(e => {console.log(e)})
         }
 
@@ -49,11 +53,11 @@ class Counter extends Component {
             <div className="contenedorDatosProductos">
                     <h1> <img src={icon} alt="icono productos"/>PC ARMADAS</h1>
                     <div className="contenedorContador">
-                        <div className="contador">{this.state.totalPc}</div>
+                        <div className="contador">{this.state.totalRegistros}</div>
                         <div>
-                            <p><span> {this.state.PcMarcas.Intel} </span>INTEL</p>
+                            {/* <p><span> {this.state.totalCategoria.Intel} </span>INTEL</p>
                             <hr/>
-                            <p><span>{this.state.PcMarcas.Amd}</span>AMD</p>
+                            <p><span>{this.state.totalCategoria.Amd}</span>AMD</p> */}
                         </div>
                     </div>
                 </div>  
