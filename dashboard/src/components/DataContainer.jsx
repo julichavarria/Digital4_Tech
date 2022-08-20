@@ -1,10 +1,12 @@
-import React from "react";
+import React, { Component } from 'react';
 import List from "./List";
 import LastRegister from "./LastRegister";
 import Counter from "./Counter";
 
-function DataContainer (){
-    return(
+
+class DataContainer extends Component {
+    render () {
+    return (
         <div className="contenedorBloques">
             <div className="contenedorDatosProductos">
                 <Counter/>
@@ -16,17 +18,10 @@ function DataContainer (){
                 <LastRegister/>
                 <List/>
             </div>
-        </div>
-            
-    )
+        </div>        
+            );
+        };
 }
-
+    
 export default DataContainer;
 
-// <!-- CONTENEDOR BLOQUES-->
-
-//     <!-- COUNTER-->
-//     <!-- LAST REGISTER-->
-//     <!-- LIST-->
-       
-// </div>

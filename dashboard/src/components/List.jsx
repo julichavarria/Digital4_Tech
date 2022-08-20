@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from 'react';
 
 
-function List (){
-    return(
-
-           <div className="contenedorListado">           
+class List extends Component {
+render () {
+return (
+    <div className="contenedorListado">           
                 <div className="contenedorItemListado">
                     <div>PRODUCTO NUMERO 1</div>
                     <div className="contenedorEdicion">
@@ -14,10 +14,13 @@ function List (){
                     </div>
                 </div> 
             </div>
-    )
+        );
+    };
 }
 
 export default List;
+
+
 
 
 
