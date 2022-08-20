@@ -8,8 +8,12 @@ class Counter extends Component {
         super (props);
         this.state = {
             apiUrl: props.api,
-            //totalCategoria: '',
-            totalRegistros: ''
+            categoria1: props.categoria1,
+            categoria2: props.categoria2,
+            totalCategoria1: '',
+            totalCategoria2: '',
+            totalRegistros: '',
+            
         }
     }
 
@@ -17,7 +21,8 @@ class Counter extends Component {
         fetch(this.state.apiUrl)
             .then(response => response.json())
             .then(data => {this.setState({
-                //totalCategoria: data.countByCategory, 
+                totalCategoria1: data.countByCategory[this.state.categoria1],
+                totalCategoria2: data.countByCategory[this.state.categoria2],
                 totalRegistros: data.total
             })})
             .catch(e => {console.log(e)})
@@ -51,13 +56,13 @@ class Counter extends Component {
     render () {
         return (
             <div className="contenedorDatosProductos">
-                    <h1> <img src={icon} alt="icono productos"/>PC ARMADAS</h1>
+                    <h1> <img src={icon} alt="icono productos"/>{this.props.titulo}</h1>
                     <div className="contenedorContador">
                         <div className="contador">{this.state.totalRegistros}</div>
                         <div>
-                            {/* <p><span> {this.state.totalCategoria.Intel} </span>INTEL</p>
+                            <p><span> {this.state.totalCategoria1} </span>INTEL</p>
                             <hr/>
-                            <p><span>{this.state.totalCategoria.Amd}</span>AMD</p> */}
+                            <p><span>{this.state.totalCategoria2}</span>AMD</p>
                         </div>
                     </div>
                 </div>  
