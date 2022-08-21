@@ -22,8 +22,8 @@ class DataContainer extends Component {
                 <Counter 
                     api='http://localhost:3030/api/users'
                     titulo= 'USUARIOS'
-                    categoria1= '1'
-                    categoria2= '2'
+                    categoria1= 'Administrador'
+                    categoria2= 'Cliente'
                 />
                 <LastRegister/>
                 <List/>

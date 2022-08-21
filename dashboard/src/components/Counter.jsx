@@ -20,7 +20,9 @@ class Counter extends Component {
     componentDidMount(){
         fetch(this.state.apiUrl)
             .then(response => response.json())
-            .then(data => {this.setState({
+            .then(data => {
+                console.log (data.countByCategory)
+                this.setState({
                 totalCategoria1: data.countByCategory[this.state.categoria1],
                 totalCategoria2: data.countByCategory[this.state.categoria2],
                 totalRegistros: data.total
@@ -60,9 +62,9 @@ class Counter extends Component {
                     <div className="contenedorContador">
                         <div className="contador">{this.state.totalRegistros}</div>
                         <div>
-                            <p><span> {this.state.totalCategoria1} </span>INTEL</p>
+                            <p><span> {this.state.totalCategoria1} </span>{this.props.categoria1}</p>
                             <hr/>
-                            <p><span>{this.state.totalCategoria2}</span>AMD</p>
+                            <p><span>{this.state.totalCategoria2}</span>{this.props.categoria2}</p>
                         </div>
                     </div>
                 </div>  
