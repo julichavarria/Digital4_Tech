@@ -13,7 +13,7 @@ const apiController = {
     listUsers:function (req,res) {
         let listadoRoles = {};
         db.Usuario.findAll({ 
-            attributes: [ 'id', 'usuario', 'email'],
+            attributes: [ 'id', 'usuario', 'nombre', 'apellido', 'email'],
             include: [{association:"rol"}] })
 
         .then (function(usuarios){
@@ -27,7 +27,10 @@ const apiController = {
             return {
             id: usuario.id,
             usuario: usuario.usuario,
+            nombre: usuario.nombre,
+            apellido: usuario.apellido,
             email: usuario.email,
+            rol: usuario.rol.nombre_rol,
             detalle: destinationUser + usuario.id,
             }
         })
