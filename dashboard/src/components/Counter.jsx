@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import icon_products from "../assets/images/icon_products.svg"
-import icon_users from "../assets/images/icon_users.svg"
+//import icon_products from "../assets/images/icon_products.svg"
+//import icon_users from "../assets/images/icon_users.svg"
 //import propTypes from "propTypes"
 
 
@@ -23,9 +23,8 @@ class Counter extends Component {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                console.log (data.countByCategory)
                 this.setState({
-                totalCategoria1: data.countByCategory[this.state.categoria1],
+                totalCategoria1: data.countByCategory[this.state.categoria1], //muestra numero de countByCategory[Intel] y [Administrador]
                 totalCategoria2: data.countByCategory[this.state.categoria2],
                 totalRegistros: data.total
             })})

@@ -15,7 +15,12 @@ class DataContainer extends Component {
                     categoria1= 'Intel'
                     categoria2= 'Amd'
                 />
-                <LastRegister/>
+                <LastRegister
+                    api= 'products'
+                    titulo = 'titulo'
+                    categoria1= 'Intel'
+                    categoria2= 'Amd'
+                />
                 <List/>
             </div>
             <div className="contenedorDatosUsuarios">
@@ -25,7 +30,12 @@ class DataContainer extends Component {
                     categoria1= 'Administrador'
                     categoria2= 'Cliente'
                 />
-                <LastRegister/>
+                <LastRegister
+                    api='users'
+                    titulo = 'usuario'
+                    categoria1= 'Administrador'
+                    categoria2= 'Cliente'
+                />
                 <List/>
             </div>
         </div>        
