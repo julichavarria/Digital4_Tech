@@ -10,7 +10,7 @@ class DataContainer extends Component {
         <div className="contenedorBloques">
             <div className="contenedorDatosProductos">
                 <Counter 
-                    api= 'http://localhost:3030/api/products'
+                    api= 'products'
                     titulo= 'PC ARMADAS'
                     categoria1= 'Intel'
                     categoria2= 'Amd'
@@ -20,7 +20,7 @@ class DataContainer extends Component {
             </div>
             <div className="contenedorDatosUsuarios">
                 <Counter 
-                    api='http://localhost:3030/api/users'
+                    api='users'
                     titulo= 'USUARIOS'
                     categoria1= 'Administrador'
                     categoria2= 'Cliente'

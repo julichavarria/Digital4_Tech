@@ -31,7 +31,9 @@ const apiController = {
             detalle: destinationUser + usuario.id,
             }
         })
+
         return res.status(200).json({
+            ultimoRegistro: usuarios[usuarios.length-1],
             total: usuarios.length,
             countByCategory: listadoRoles,
             data: usuarios,
@@ -80,6 +82,7 @@ const apiController = {
                 }
             })
             return res.status(200).json({
+                ultimoRegistro: productos[productos.length-1],
                 total: productos.length,
                 countByCategory: listadoMarcas,
                 data: productos,
@@ -112,4 +115,3 @@ const apiController = {
 }
 
 module.exports = apiController;
-

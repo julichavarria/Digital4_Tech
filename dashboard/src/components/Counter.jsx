@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import icon from "../assets/images/icon_products.svg"
+import icon_products from "../assets/images/icon_products.svg"
+import icon_users from "../assets/images/icon_users.svg"
 //import propTypes from "propTypes"
 
 
@@ -13,12 +14,13 @@ class Counter extends Component {
             totalCategoria1: '',
             totalCategoria2: '',
             totalRegistros: '',
-            
+            icono: 'icon_' + props.api
         }
     }
 
     componentDidMount(){
-        fetch(this.state.apiUrl)
+        let url = "http://localhost:3030/api/" + this.state.apiUrl;
+        fetch(url)
             .then(response => response.json())
             .then(data => {
                 console.log (data.countByCategory)
@@ -30,35 +32,10 @@ class Counter extends Component {
             .catch(e => {console.log(e)})
         }
 
-    // apiCall (url, consecuencia){
-    //     fetch (url)
-    //         .then( response => response.json())
-    //         .then ( data => consecuencia(data))
-    //         .chatch ( error => console.log (error))
-            
-    // }
-
-    // componentDidMount (){
-    //     this.apiCall("http://localhost:3030/api/products", this.datosProducts2)
-    // }
-
-    // datosProducts2 = (data) => {
-    //     return 'datosProducts2'
-    // }
-
-    // datosProducts = (data) =>{
-    //     console.log (data)
-    //     this.setState (
-    //         { 
-    //             PcMarcas: 'hola PcMacas'
-                
-    //     })
-    // }
-
     render () {
         return (
             <div className="contenedorDatosProductos">
-                    <h1> <img src={icon} alt="icono productos"/>{this.props.titulo}</h1>
+                    <h1> <img src={this.state.icono} alt="icono"/>{this.props.titulo}</h1>
                     <div className="contenedorContador">
                         <div className="contador">{this.state.totalRegistros}</div>
                         <div>
