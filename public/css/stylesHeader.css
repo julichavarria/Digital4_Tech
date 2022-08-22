@@ -75,6 +75,33 @@ padding: 5px;
 
 }
 
+.btnDashboard{
+    position: fixed;
+    left:-100px
+}
+
+.btnDashboard a{
+    position:fixed;
+    bottom: 40px;
+    right: 40px;
+    color: #e31a52;
+    background-color: black;
+    border-radius: 100%;
+    border: 1px #e31a52 solid;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    padding-top: 7px;
+}
+
+.btnDashboard a:hover{
+    background-color: #e31a52;
+    color: #FFFFFF;
+    transition: all 400ms;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 @media (min-width: 768px){
     .iconBurgerMobile{

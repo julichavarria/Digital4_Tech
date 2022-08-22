@@ -55,7 +55,7 @@ h1 img{
 
 h1{
     font-size: 35px;  
-    margin-top: 40px;
+    margin-top: -10px;
     padding-bottom: 10px ;
 }
 
@@ -207,6 +207,10 @@ h3{
 
 .contenedorEdicion a img{
 height: 30px;
+}
+
+.contenedorItemListado .contenedorEdicion{
+    padding: 0px;
 }
 
 .contenedorDatosUsuarios .contenedorItemListado{

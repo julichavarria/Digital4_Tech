@@ -20,7 +20,8 @@ class LastRegisterUser extends Component {
             .then(data => {
                 this.setState({
                 ultimoRegistro: data.ultimoRegistro, //muestra el Titulo de dataContainer que a su vez apuntan a TITULO y USUARIO de la api
-                componente: 2,
+                componente: 5,
+             
             })})
             .catch(e => {console.log(e)})
     }
@@ -42,12 +43,14 @@ class LastRegisterUser extends Component {
                 <h2>ÚLTIMO USUARIO CARGADO</h2>
                 <div className="contenedorUltimoItem">
                     <h3>{this.state.ultimoRegistro.usuario}</h3>
-                    <p> {this.array()[this.state.componente]} </p>
+                    <p> 
+                    {
+                    this.state.componente == 2 ? (this.array()[2] +" "+ this.array()[3]) : this.array()[this.state.componente]
+                    } </p>
                     <div className="contenedorEdicion">
-                        <a onClick={ () => this.cambiarComponente(2) }><img src={icon_name} alt="nombre"/></a>
-                        <a onClick={ () => this.cambiarComponente(3) }><img src={icon_name} alt="nombre"/></a>
-                        <a onClick={ () => this.cambiarComponente(4) }><img src={icon_mail} alt="mail"/></a>
                         <a onClick={ () => this.cambiarComponente(5) }><img src={icon_rol} alt="rol"/></a>
+                        <a onClick={ () => this.cambiarComponente(2) }><img src={icon_name} alt="nombre"/></a>
+                        <a onClick={ () => this.cambiarComponente(4) }><img src={icon_mail} alt="mail"/></a>
                         <a onClick={ () => this.cambiarComponente(6) }><img src={icon_open} alt="detalle"/></a>
                     </div>
                 </div>

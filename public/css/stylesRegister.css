@@ -22,7 +22,6 @@
 
 .mainRegister .botones .btnPrincipal, .mainRegister .botones .btnSecundario {
     width: 100%;
-    height: 50px;
 }
 
 /* main form input {

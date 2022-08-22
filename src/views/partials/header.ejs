@@ -26,5 +26,13 @@
             <div><a href="/users/login"><img src="/img/icon_login.svg" alt=""><span>INGRESAR</span></a></div> 
             <div><a href="/users/register"><img src="/img/icon_register.svg" alt=""><span>REGISTRARSE</span></a></div> 
         <% } %>
+        
+
+        <% if ( locals.isLogged == 'loggedAdmin' ) { %>
+            <button class="btnDashboard"><a> <i class="fas fa-database"></i></a></button>
+            <% } %>
+
+
     </nav>
+    
 </header>

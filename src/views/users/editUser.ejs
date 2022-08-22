@@ -23,11 +23,11 @@
                         <div class="contenedorRol">
                             <label>ROL del Usuario</label>
                                 <select name="rol" id="rol">
-                                    <% if (usuario.rol == 'Administrador') { %>
-                                        <option value="Administrador">ADMINISTRADOR</option>
+                                    <% if (usuario.rol_id == 1) { %>
+                                        <option selected="selected" value="Administrador" >ADMINISTRADOR</option>
                                         <option value="Cliente">CLIENTE</option>
                                     <% } else { %>
-                                        <option value="Cliente">CLIENTE</option>
+                                        <option selected="selected" value="Cliente" >CLIENTE</option>
                                         <option value="Administrador">ADMINISTRADOR</option>
                                     <% } %>
                                 </select>
