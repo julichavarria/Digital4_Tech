@@ -191,6 +191,11 @@ margin: 0 auto;
     width: 60px;
   }
 
+  .image-upload {
+    margin-top: 15px;
+    margin-right: 5px;
+    width: 80px;
+  }
 
   .image-upload input {
     display: none;
