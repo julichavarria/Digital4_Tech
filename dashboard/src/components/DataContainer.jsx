@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import List from "./List";
+//import List from "./List";
+import ListProducts from './ListProducts';
+import ListUsers from './ListUsers';
 import LastRegisterUser from "./LastRegisterUser";
 import LastRegisterProduct from './LastRegisterProduct';
 import Counter from "./Counter";
 import icon_products from "../assets/images/icon_products.svg"
 import icon_users from "../assets/images/icon_users.svg"
-import ListProducts from './ListProducts';
+
 
 class DataContainer extends Component {
     render () {
@@ -22,7 +24,10 @@ class DataContainer extends Component {
                 <LastRegisterProduct
                     componente= '2'
                 />
-                <ListProducts/>
+                <ListProducts
+                    // api= 'products'
+                    // campoListado= 'titulo'
+                />
             </div>
             <div className="contenedorDatosUsuarios">
             <img src={icon_users} width="80px"></img>
@@ -35,7 +40,10 @@ class DataContainer extends Component {
                 <LastRegisterUser
                     componente= '2'
                 />
-                <List/>
+                <ListUsers
+                    // api='users'
+                    // campoListado= 'usuario'
+                />
             </div>
         </div>        
             );

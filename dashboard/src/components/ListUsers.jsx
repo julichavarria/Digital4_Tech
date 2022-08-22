@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class ListProducts extends Component {
+class ListUsers extends Component {
     constructor(props) {
         super (props);
         this.state = {
@@ -10,7 +10,7 @@ class ListProducts extends Component {
     }
 
     componentDidMount(){
-        let url = "http://localhost:3030/api/products";
+        let url = "http://localhost:3030/api/users";
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -28,12 +28,12 @@ class ListProducts extends Component {
         let salida = this.array().map( (produt, i) => 
             <div className="contenedorItemListado">
                 <div key={ produt + i}>
-                    {this.array()[i].titulo}
+                    {this.array()[i].usuario}
                 </div>
                 <div className="contenedorEdicion">
-                    <a href={`http://localhost:3030/products/productDetail/${this.array()[i].id}`}><i className="far fa-eye"></i></a>
-                    <a href={`http://localhost:3030/products/editProduct/${this.array()[i].id}`}><i className="far fa-edit"></i></a>
-                    <a href={`http://localhost:3030/products/productDetail/${this.array()[i].id}`}><i className="fa-regular fa-trash-can"></i></a>
+                    <a href={`http://localhost:3030/users/userDetail/${this.array()[i].id}`}><i className="far fa-eye"></i></a>
+                    <a href={`http://localhost:3030/users/editUser/${this.array()[i].id}`}><i className="far fa-edit"></i></a>
+                    <a href={`http://localhost:3030/users/confirmDelete/${this.array()[i].id}`}><i className="fa-regular fa-trash-can"></i></a>
                 </div>
             </div>
             )
@@ -43,14 +43,14 @@ class ListProducts extends Component {
 render () {
     return (
         <div className="contenedorListado">           
-            <h2>LISTADO DE PRODUCTOS</h2>
+            <h2>LISTADO DE USUARIOS</h2>
             <div>{this.listar()}</div>
         </div> 
         );
     };
 }
 
-export default ListProducts;
+export default ListUsers;
 
 
 
