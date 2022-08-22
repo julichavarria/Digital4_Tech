@@ -48,8 +48,8 @@ class LastRegisterProduct extends Component {
                     <p> {this.array()[this.state.componente]} </p>
                     <div className="contenedorEdicion">
                     <a onClick={ () => this.cambiarComponente(2) }><img src={icon_close} alt="Marca"/></a>
-                        <a onClick={ () => this.cambiarComponente(3) }><img src={icon_mother} alt="mother"/></a>
-                        <a onClick={ () => this.cambiarComponente(4) }><img src={icon_procesador} alt="procesador"/></a>
+                        <a onClick={ () => this.cambiarComponente(3) }><img src={icon_procesador} alt="procesador"/></a>
+                        <a onClick={ () => this.cambiarComponente(4) }><img src={icon_mother} alt="mother"/></a>
                         <a onClick={ () => this.cambiarComponente(5) }><img src={icon_video} alt="video"/></a>
                         <a onClick={ () => this.cambiarComponente(6) }><img src={icon_ram} alt="ram"/></a>
                         <a onClick={ () => this.cambiarComponente(7) }><img src={icon_disco} alt="disco"/></a>
