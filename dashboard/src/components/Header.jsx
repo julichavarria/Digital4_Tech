@@ -12,7 +12,7 @@ function Header (){
             <div className="backButtonContainer">
                 <hr/>
             </div>
-            <div className="backButtonContainer"><button className="btnPrincipal" type="submit"> VOLVER AL SITIO </button></div>
+            <div className="backButtonContainer"><button className="btnPrincipal" type="submit"> <a href="http://localhost:3030/">VOLVER AL SITIO</a></button></div>
             <div className="backButtonContainer">
                 <hr/>
             </div>

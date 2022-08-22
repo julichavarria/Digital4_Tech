@@ -42,6 +42,6 @@ router.put ("/editProduct/:id", updateFile.single('foto'), validateProductMiddle
 
 //DELETE
 router.delete ("/confirmDelete/:id", authMiddlewares, productsController.deleteProduct);
-router.get ("/confirmDelete/:id", productsController.confirmDelete);
+router.get ("/confirmDelete/:id", authMiddlewares, productsController.confirmDelete);
 
 module.exports = router;

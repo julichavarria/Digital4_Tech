@@ -15,8 +15,13 @@ i {
     padding: 0px 5px;
 }
 
+a {
+    text-decoration: none;
+    color:#FFF;
+}
+
 a:hover i, a:hover{
-    color: #e31a52;
+    color: #fff;
     transition: all 200ms;
     transform: scale(1.05);
     cursor: pointer;

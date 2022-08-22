@@ -33,7 +33,7 @@ class ListProducts extends Component {
                 <div className="contenedorEdicion">
                     <a href={`http://localhost:3030/products/productDetail/${this.array()[i].id}`}><i className="far fa-eye"></i></a>
                     <a href={`http://localhost:3030/products/editProduct/${this.array()[i].id}`}><i className="far fa-edit"></i></a>
-                    <a href={`http://localhost:3030/products/productDetail/${this.array()[i].id}`}><i className="fa-regular fa-trash-can"></i></a>
+                    <a href={`http://localhost:3030/products/confirmDelete/${this.array()[i].id}`}><i className="fa-regular fa-trash-can"></i></a>
                 </div>
             </div>
             )
