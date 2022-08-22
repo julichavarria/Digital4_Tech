@@ -14,17 +14,22 @@
             <h1><i class="fa-solid fa-trash-can"></i></h1>
             <h1>¿Desea borrar el siguiente producto?</h1>
             <h3>Por favor seleccione una opción para eliminar el producto o mantenerlo publicado</h3>
-            <img src="/img/productos_pcArmadas/pcArmada_01.jpg" alt="Producto_a_eliminar">
-            <p class="tituloDatoProducto">Nombre PC</p>
-            <p>ID</p>
+            <img src=<%= destinationFolder + productos.imagen %> alt="imagen de equipo">
+            <p class="tituloDatoProducto"> <%= productos.titulo %> </p>
+            <p> ID: <%= productos.id %></p>
 
-            <div class="controlGeneral">
-                <form action="/products/editProduct/<%= pcArmadasJS.id %>/deleteProduct?_method=DELETE" method="POST">
+            <div class="contenedorBotones">
+                
+                <a href="/products/products">
                     <div class="botones">
-                        <button class="btnPrincipal" type="submit"> BORRAR </button>
-                        <button class="btnSecundario"> CANCELAR </button>
+                        <button class="btnSecundario" type="submit"><span> CANCELAR </span> </button>
                     </div>
-                </form>
+                </a>
+                <form action="/products/confirmDelete/<%= productos.id %>?_method=DELETE" method="POST">
+                    <div class="botones">
+                        <button class="btnPrincipal" type="submit"> <i class="fa-solid fa-trash-can"></i> BORRAR USUARIO </button>
+                    </div>
+                </form>    
             </div>
 
 

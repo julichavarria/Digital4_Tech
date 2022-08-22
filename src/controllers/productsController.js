@@ -113,7 +113,10 @@ const productController = {
     
     ////////////////// CONFIRMACION ELIMINAR PRODUCTO
     confirmDelete:function (req,res) {
-        res.render("products/confirmDelete");
+        db.Producto.findByPk( req.params.id, { include: [{association:"categorias"}] })
+        .then (function(productos){
+        res.render("products/confirmDelete", {productos, destinationFolder, destinationFolderMarca})
+        })
     }
     
 }

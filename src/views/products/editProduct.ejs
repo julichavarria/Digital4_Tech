@@ -135,11 +135,11 @@
                         <button class="btnPrincipal" type="submit"> GUARDAR CAMBIOS </button>
                     </div>
                 </form>
-                <form action="/products/editProduct/<%= productos.id %>/deleteProduct?_method=DELETE" method="POST">
+                 
                     <div class="botones">
-                        <button class="btnSecundario" type="submit"><span>BORRAR PRODUCTO</span> </button>
+                        <a href="/products/confirmDelete/<%= productos.id %>" class="btnSecundario" type="submit"><span>BORRAR PRODUCTO</span> </a>
                     </div>
-                </form>
+                
             </div>
             <p class="btnVolver"><i class="fas fa-angle-left"></i><a href="/index"> Volver a la página principal sin
                     hacer cambios</a> </p>
