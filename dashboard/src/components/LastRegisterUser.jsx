@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import icon_name from "../assets/images/icon_name.svg"
+import icon_mail from "../assets/images/icon_mail.svg"
+import icon_rol from "../assets/images/icon_rol.svg"
+import icon_open from "../assets/images/icon_openuser.svg"
 
 class LastRegisterUser extends Component {
     constructor(props) {
@@ -23,7 +27,6 @@ class LastRegisterUser extends Component {
     
     array (){
         let lastUser = Object.values(this.state.ultimoRegistro);
-        console.log(this.state.componente)
         return lastUser;
     }
 
@@ -41,11 +44,11 @@ class LastRegisterUser extends Component {
                     <h3>{this.state.ultimoRegistro.usuario}</h3>
                     <p> {this.array()[this.state.componente]} </p>
                     <div className="contenedorEdicion">
-                        <a onClick={ () => this.cambiarComponente(2) }><i className="far fa-eye"></i></a>
-                        <a onClick={ () => this.cambiarComponente(3) }><i className="far fa-eye"></i></a>
-                        <a onClick={ () => this.cambiarComponente(4) }><i className="far fa-eye"></i></a>
-                        <a onClick={ () => this.cambiarComponente(5) }><i className="far fa-eye"></i></a>
-                        <a onClick={ () => this.cambiarComponente(6) }><i className="far fa-eye"></i></a>
+                        <a onClick={ () => this.cambiarComponente(2) }><img src={icon_name} alt="nombre"/></a>
+                        <a onClick={ () => this.cambiarComponente(3) }><img src={icon_name} alt="nombre"/></a>
+                        <a onClick={ () => this.cambiarComponente(4) }><img src={icon_mail} alt="mail"/></a>
+                        <a onClick={ () => this.cambiarComponente(5) }><img src={icon_rol} alt="rol"/></a>
+                        <a onClick={ () => this.cambiarComponente(6) }><img src={icon_open} alt="detalle"/></a>
                     </div>
                 </div>
             </div>

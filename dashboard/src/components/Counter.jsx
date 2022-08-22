@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-//import icon_products from "../assets/images/icon_products.svg"
-//import icon_users from "../assets/images/icon_users.svg"
+import icon_products from "../assets/images/icon_products.svg"
+import icon_users from "../assets/images/icon_users.svg"
 //import propTypes from "propTypes"
 
 
@@ -14,7 +14,6 @@ class Counter extends Component {
             totalCategoria1: '',
             totalCategoria2: '',
             totalRegistros: '',
-            icono: 'icon_' + props.api
         }
     }
 
@@ -34,7 +33,7 @@ class Counter extends Component {
     render () {
         return (
             <div className="contenedorDatosProductos">
-                    <h1> <img src={this.state.icono} alt="icono"/>{this.props.titulo}</h1>
+                    <h1> <img src={this.state.icono} alt="img"/>{this.props.titulo}</h1>
                     <div className="contenedorContador">
                         <div className="contador">{this.state.totalRegistros}</div>
                         <div>
