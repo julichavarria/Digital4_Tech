@@ -45,6 +45,7 @@ class LastRegisterUser extends Component {
                     <h3>{this.state.ultimoRegistro.usuario}</h3>
                     <p> 
                     {
+                    this.state.componente == 6 ? <a href={this.array()[this.state.componente]}>{this.array()[this.state.componente]}</a> : 
                     this.state.componente == 2 ? (this.array()[2] +" "+ this.array()[3]) : this.array()[this.state.componente]
                     } </p>
                     <div className="contenedorEdicion">
