@@ -30,26 +30,15 @@ class ListProducts extends Component {
                         <div key={ produt + i}>
                             {this.array()[i].titulo}
                         </div>
-
                         <div className="contenedorEdicion">
-                            <a href="#"><i className="far fa-eye"></i></a>
-                            <a href="#"><i className="far fa-edit"></i></a>
-                            <a href="#"><i className="fa-regular fa-trash-can"></i></a>
+                            <a href={`http://localhost:3030/products/productDetail/${this.array()[i].id}`}><i className="far fa-eye"></i></a>
+                            <a href={`http://localhost:3030/products/editProduct/${this.array()[i].id}`}><i className="far fa-edit"></i></a>
+                            <a href={`http://localhost:3030/products/productDetail/${this.array()[i].id}`}><i className="fa-regular fa-trash-can"></i></a>
                         </div>
                     </div>
-
                   )
         return salida
     }
-
-    // listar (){
-    //       {this.state.ultimoRegistro.map( (produt, i) => 
-    //         <li key={ produt + i}>
-    //             {produt}
-    //         </li>
-    //       )}
-    // }
-    
 
 render () {
     return (
