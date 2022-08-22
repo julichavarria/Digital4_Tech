@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import List from "./List";
-import LastRegister from "./LastRegister";
+import LastRegisterUser from "./LastRegisterUser";
+import LastRegisterProduct from './LastRegisterProduct';
 import Counter from "./Counter";
 
 
@@ -9,13 +10,27 @@ class DataContainer extends Component {
     return (
         <div className="contenedorBloques">
             <div className="contenedorDatosProductos">
-                <Counter/>
-                <LastRegister/>
+                <Counter 
+                    api= 'products'
+                    titulo= 'PC ARMADAS'
+                    categoria1= 'Intel'
+                    categoria2= 'Amd'
+                />
+                <LastRegisterProduct
+                    componente= '2'
+                />
                 <List/>
             </div>
             <div className="contenedorDatosUsuarios">
-                <Counter/>
-                <LastRegister/>
+                <Counter 
+                    api='users'
+                    titulo= 'USUARIOS'
+                    categoria1= 'Administrador'
+                    categoria2= 'Cliente'
+                />
+                <LastRegisterUser
+                    componente= '2'
+                />
                 <List/>
             </div>
         </div>        

@@ -11,22 +11,36 @@ const destinationImgProduct = 'http://localhost:3030/img/productos_pcArmadas/';
 
 const apiController = {
     listUsers:function (req,res) {
-        db.Usuario.findAll({
-            attributes: [ 'id', 'usuario', 'email']
-        })
+        let listadoRoles = {};
+        db.Usuario.findAll({ 
+            attributes: [ 'id', 'usuario', 'nombre', 'apellido', 'email'],
+            include: [{association:"rol"}] })
+
         .then (function(usuarios){
-            usuarios = usuarios.map(usuario => {
-                return {
-                id: usuario.id,
-                usuario: usuario.usuario,
-                email: usuario.email,
-                detalle: destinationUser + usuario.id,
-                }
-            })
-            return res.status(200).json({
-                total: usuarios.length,
-                data: usuarios,
-            })
+            rol = usuarios.forEach ((usuario) => {
+                let nombreRoles = usuario.rol.nombre_rol;
+                listadoRoles[nombreRoles] = usuarios.filter(user =>{
+                    return nombreRoles == user.rol.nombre_rol
+                }).length
+        }) 
+        usuarios = usuarios.map(usuario => {
+            return {
+            id: usuario.id,
+            usuario: usuario.usuario,
+            nombre: usuario.nombre,
+            apellido: usuario.apellido,
+            email: usuario.email,
+            rol: usuario.rol.nombre_rol,
+            detalle: destinationUser + usuario.id,
+            }
+        })
+
+        return res.status(200).json({
+            ultimoRegistro: usuarios[usuarios.length-1],
+            total: usuarios.length,
+            countByCategory: listadoRoles,
+            data: usuarios,
+        })
         })
     },
     
@@ -71,6 +85,7 @@ const apiController = {
                 }
             })
             return res.status(200).json({
+                ultimoRegistro: productos[productos.length-1],
                 total: productos.length,
                 countByCategory: listadoMarcas,
                 data: productos,
@@ -103,4 +118,3 @@ const apiController = {
 }
 
 module.exports = apiController;
-
